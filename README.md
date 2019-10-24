@@ -1,4 +1,4 @@
-# KCC Startup Template
+# KCC Core | www.kcc.edu
 
 #### Jekyll + Webpack + Babel + Gulp + Sass + Autoprefixer + imagemin + BrowserSync + ...
 
@@ -12,23 +12,23 @@
 
 ### Terminal TODO:
 
-- [ ] At terminal, add all the files to be tracked by git: `git add .`
-- [ ] At terminal, make the first commit: `git commit -m "First commit for <REPOSITORIES_NAME>"`
-- [ ] At terminal, add the project's remote origin: `git remote add origin git@github.com:KankakeeCommunityCollege/<REPOSITORIES_NAME_IN_GITHUB>.git`
-- [ ] At terminal, push the first commit using `-u` flag: `git push -u origin master`
+- [x] At terminal, add all the files to be tracked by git: `git add .`
+- [x] At terminal, make the first commit: `git commit -m "First commit for <REPOSITORIES_NAME>"`
+- [x] At terminal, add the project's remote origin: `git remote add origin git@github.com:KankakeeCommunityCollege/<REPOSITORIES_NAME_IN_GITHUB>.git`
+- [x] At terminal, push the first commit using `-u` flag: `git push -u origin master`
 
 ### README TODO:
 
-- [ ] `README.md` - replace "KCC Startup Template" with an appropriate title for this project.
+- [x] `README.md` - replace "KCC Startup Template" with an appropriate title for this project.
 - [ ] `README.md` - replace "***A startup repo for creating new websites in the KCC website redesign project***" with an appropriate description for this project.
 
 ### package.json TODO:
 
-- [ ] `package.json` - replace `"name": "kcc-startup"` with an appropriate name value.
+- [x] `package.json` - replace `"name": "kcc-startup"` with an appropriate name value.
 
 ### Jekyll config TODO:
 
-- [ ] `_config.yml` - replace `public-url: "https://www.kcc.edu"` with the appropriate sub-domain.
+- [x] `_config.yml` - replace `public-url: "https://www.kcc.edu"` with the appropriate sub-domain.
 - [ ] `_config.yml` - replace Google Tag Manager placeholder-text with a key: `google-tag_key: Google Tag Manager key goes here`.
 
 ---
@@ -141,7 +141,7 @@ $ npm install --global gulp-cli # mac users may need sudo
 
 ## Installation
 
-> This project has two different possible installations methods 
+> This project has two different possible installations methods
 
 ---
 
