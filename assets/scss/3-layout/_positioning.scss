@@ -72,3 +72,13 @@
   width: 100%;
   height: 100%;
 }
+
+.position__video-wrapper {
+  position: relative;
+}
+
+.position__video-controls {
+  bottom: 1.5rem;
+  position: absolute;
+  right: 2rem;
+}
