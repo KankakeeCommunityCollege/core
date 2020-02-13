@@ -1,6 +1,6 @@
 process.traceDeprecation = true;
 const path = require('path');
-//const HashPlugin = require('hash-webpack-plugin');
+const HashPlugin = require('hash-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
@@ -29,7 +29,7 @@ const config = {
     ]
   },
   plugins: [
-    //new HashPlugin({ path: './_data/', fileName: 'hash.yml' }),
+    new HashPlugin({ path: './_data/', fileName: 'hash.yml' }),
     new CleanWebpackPlugin({ path: './assets/js/dist/' })
   ],
   resolve: {
