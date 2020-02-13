@@ -1,26 +1,27 @@
 ---
-layout: page
+layout: default-core
 baseurl: ''
 title: KCC Startup Template
+homepage: true
 description: ''
+video_sources:
+  - src: https://cdn.kcc.edu/core/community.mp4
+    type: video/mp4
 ---
 
-<!-- Build -->
-<main class="position__offset-fixed-nav">
-  <div class="container">
+<main>
+  <div class="container-fluid padding__x--none">
     <div class="row">
-      <div class="col">
-        <h1 class="display-1">Hello Core | kcc.edu</h1>
-        <h2 class="typography__h2">Calendar Embed Test</h2>
-          <script type="text/javascript" src="//25livepub.collegenet.com/scripts/spuds.js"></script>
-          <script type="text/javascript">
-            $Trumba.addSpud({
-              webName: "kcc-academic-calendar",
-              spudType: "main"
-            });
-          </script>
+      <div class="col position__video-wrapper">
+        <video autoplay muted loop id="videoElement" class="width__full">
+          {% for source in page.video_sources %}
+          <source src="{{ source.src }}" type="{{ source.type }}" >
+          {% endfor %}
+        </video>
+        <div class="position__video-controls" id="videoControls">
+          <button type="button" id="playPause" class="position__video-constrols--button buttons__play-pause play pause"><span class="sr-only">Pause</span></button>
+        </div>
       </div>
     </div>
   </div>
 </main>
-{% include contacts.html %}
