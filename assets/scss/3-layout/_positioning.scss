@@ -77,6 +77,13 @@
   position: relative;
 }
 
+@media screen and (orientation: landscape) and (min-width: 992px) {
+  .position__video-wrapper {
+    overflow-y: hidden;
+    max-height: 89vh;
+  }
+}
+
 .position__video-controls {
   bottom: 1.5rem;
   position: absolute;
