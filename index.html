@@ -9,6 +9,8 @@ video_sources:
     type: video/webm
   - src: https://cdn.kcc.edu/core/community.mp4
     type: video/mp4
+  - src: https://cdn.kcc.edu/core/community.ogv
+    type: video/ogg
 ---
 
 <main>
@@ -19,6 +21,7 @@ video_sources:
           {% for source in page.video_sources %}
           <source src="{{ source.src }}" type="{{ source.type }}" >
           {% endfor %}
+          Your browser does not support the HTML5 video tag.
         </video>
         <div class="position__video-controls" id="videoControls">
           <button type="button" id="playPause" class="position__video-constrols--button buttons__play-pause play pause"><span class="sr-only">Pause</span></button>
