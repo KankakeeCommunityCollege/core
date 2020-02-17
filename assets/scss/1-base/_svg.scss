@@ -1,0 +1,47 @@
+.svg {
+  height: 36px;
+  width: 36px;
+  & .st0 {
+    fill: none;
+  }
+  & .st1 {
+    fill: #ffffff;
+  }
+}
+
+.svg__action--place {
+  margin-left: -2rem;
+}
+
+@media screen and (min-width: 360px) {
+  .svg__action--place {
+    margin-left: -3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .svg__action--place {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .svg {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .svg {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .svg {
+    height: 48px;
+    width: 48px;
+  }
+}
