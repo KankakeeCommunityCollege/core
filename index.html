@@ -4,6 +4,7 @@ baseurl: ''
 title: KCC Startup Template
 homepage: true
 description: ''
+video_loading_image: 'uploads/poster_medical-2.jpg'
 video_sources:
   - src: https://cdn.kcc.edu/core/community.webm
     type: video/webm
@@ -17,7 +18,10 @@ video_sources:
   <div class="container-fluid padding__x--none">
     <div class="row">
       <div class="col position__video-wrapper">
-        <video autoplay muted loop id="videoElement" class="width__full">
+        <video autoplay muted loop
+          poster="{{ page.baseurl }}{{ page.video_loading_image }}"
+          id="videoElement"
+          class="width__full">
           {% for source in page.video_sources %}
           <source src="{{ source.src }}" type="{{ source.type }}" >
           {% endfor %}
