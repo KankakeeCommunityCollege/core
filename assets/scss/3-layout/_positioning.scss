@@ -93,5 +93,11 @@
 .position__video-heading--wrapper {
   position: absolute;
   bottom: 1.1rem;
-  left: 5rem;
+  left: 1.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .position__video-heading--wrapper {
+    left: 5rem;
+  }
 }
