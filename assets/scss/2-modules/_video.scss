@@ -4,3 +4,7 @@
     display: none;
   }
 }
+
+.video__heading--margin { // Make sure the "The POWER of Community" heading doesn't overlap the pause-button for the video.
+  margin-right: 7rem;
+}
