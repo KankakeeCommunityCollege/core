@@ -56,18 +56,18 @@ function createEntryElements(items, a, div, span) {
     //console.log(items.textContent);
   } else if ( items.tagName == SUMMARY_TAG_FROM_NEWS_FEED ) {
     // SUMMARY
-    console.log('SUMMARY: ' + items.textContent);
+    //console.log('SUMMARY: ' + items.textContent);
     createSummaryEl(items.textContent, div, a);
   } else if ( items.tagName == IMAGE_TAG_FROM_NEWS_FEED ) {
     // IMAGE
-    console.log('IMAGE: ' + items.getAttribute('url'));
+    //console.log('IMAGE: ' + items.getAttribute('url'));
     createImageDiv(items.getAttribute('url'), a);
   }
   return a;
 }
 
 function loopOverEntryItems(entry, ol, count) {
-  console.log(count);
+  //console.log(count);
   let entryItems = entry.childNodes;
   const li = document.createElement('li');
   const a = document.createElement('a');

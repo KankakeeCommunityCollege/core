@@ -1,4 +1,5 @@
 const VIDEO_ELEMENT_ID_STRING = 'videoElement';
+const VIDEO_CONTROLS_ID_STRING = 'videoControls';
 const PLAY_PAUSE_BUTTON_ID_STRING = 'playPause';
 const SR_ONLY_PLAY = '<span class="sr-only">Play</span>';
 const SR_ONLY_PAUSE = '<span class="sr-only">Pause</span>';
@@ -40,17 +41,25 @@ function addEventListenerToElement(el, event, handler) {
   el.addEventListener(event, handler);
 }
 
+function makeVideoControlsVisible(videoControls) {
+  videoControls.classList.remove('video__controls--hidden');
+  videoControls.classList.add('video__controls');
+  videoControls.setAttribute('aria-hidden', 'false');
+}
+
 function createVideoControls() {
   if ( ! document.getElementById(VIDEO_ELEMENT_ID_STRING) )
     return;
 
   const video = document.getElementById(VIDEO_ELEMENT_ID_STRING);
   const button = document.getElementById(PLAY_PAUSE_BUTTON_ID_STRING);
+  const videoControls = document.getElementById(VIDEO_CONTROLS_ID_STRING);
 
   playPauseClickHandler.button_element = button;
   playPauseClickHandler.video_element = video;
   createInitialPauseButton(video, button);
   addEventListenerToElement(button, 'click', playPauseClickHandler);
+  makeVideoControlsVisible(videoControls);
 }
 
 export default createVideoControls;
