@@ -80,7 +80,13 @@
 @media screen and (orientation: landscape) and (min-width: 992px) {
   .position__video-wrapper {
     overflow-y: hidden;
-    max-height: 89vh;
+    max-height: 76vh;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1600px) {
+  .position__video-wrapper {
+    max-height: 75vh;
   }
 }
 
