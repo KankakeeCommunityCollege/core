@@ -73,9 +73,9 @@ programs:
       </div>
       <div class="slick-slider">
         {% for program in page.programs %}
-        <div>
+        <div class="programs__slide">
           <img src="{{ page.baseurl }}{{ program.image }}" class="img-fluid" alt="{{ program.alt_text }}">
-          <h4 style="position: relative; height: 0; margin-bottom: 0; top: -5rem; line-height: 1;" class="text-center px-1">{{ program.name }}</h4>
+          <h4 style="position: absolute; top: 2rem; left: 0; right: 0; line-height: 1;" class="text-center px-1">{{ program.name }}</h4>
         </div>
         {% endfor %}
       </div>
@@ -117,31 +117,67 @@ programs:
     </div>
   </div>
 
-      <div class="container py-5">
-        <div class="row">
-          <div class="col">
-            <h5 class="benefits__typography--h5 benefits__testimonials--mb text-center">What Our Students Say</h5>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col">
+        <h5 class="benefits__typography--h5 benefits__testimonials--mb text-center">What Our Students Say</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4 text-center">
+        <img src="{{ page.baseurl }}assets/img/d-daun2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
+      </div>
+      <div class="col-12 col-md-8 align-self-center">
+        <p class="benefits__typography--student-p"><em>“I completed finals the week of my 60th birthday, something I am proud of. In 1980 I received a B.S. in Biology, but this Associate’s Degree in Computer Graphics Technology means even more to me. Each thing I have learned has made me that much more capable in today’s world, allowing me to find job opportunities that I couldn’t have taken advantage of before. KCC has made a huge difference in my life, both in learning and in the people I have come to know here.”</em></p>
+        <span class="benefits__typography--img-cap">-&nbspDebra A. Daun, Class of 2018</span>
+      </div>
+    </div>
+    <div class="row benefits__row--pad">
+      <div class="col-12 col-md-8 order-2 order-md-1 align-self-center">
+        <p class="benefits__typography--student-p"><em>“I’m the first one in my family to graduate. The professors would take their time to know you. That’s what I really liked about this. It was smaller....everybody knows you here. I really liked KCC. I’m really excited to see where this takes me next.”</em></p>
+        <span class="benefits__typography--img-cap">-&nbsp;Miguel Angel Diaz Ramirez, Class of 2018</span>
+      </div>
+      <div class="col-12 col-md-4 text-center order-1 order-md-2">
+        <img src="{{ page.baseurl }}assets/img/miguel2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
+      </div>
+    </div>
+  </div>
+
+  <section class="container-fluid benefits__background-color py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h5 class="benefits__typography--h5 benefits__typography--h5--mb text-center">Recognized & Accredited</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-4 text-center text-lg-left">
+          <div class="benefits__accredited--card mx-auto">
+            <div class="text-center">
+              {% include svg/check.html %}
+              <span class="benefits__accredited--span-l">KCC  is Accredited</span>
+              <span class="benefits__accredited--span-s">by the Higher Learning Commission (hlcommission.org), a regional accreditation agency recognized by the U.S. Department of Education.</span>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-md-4 text-center">
-            <img src="{{ page.baseurl }}assets/img/d-daun2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
-          </div>
-          <div class="col-12 col-md-8 align-self-center">
-            <p class="benefits__typography--student-p"><em>“I completed finals the week of my 60th birthday, something I am proud of. In 1980 I received a B.S. in Biology, but this Associate’s Degree in Computer Graphics Technology means even more to me. Each thing I have learned has made me that much more capable in today’s world, allowing me to find job opportunities that I couldn’t have taken advantage of before. KCC has made a huge difference in my life, both in learning and in the people I have come to know here.”</em></p>
-            <span class="benefits__typography--img-cap">-&nbspDebra A. Daun, Class of 2018</span>
-          </div>
+        <div class="col-12 col-lg-4 text-center">
+          <img src="{{ page.baseurl }}assets/img/zippia.png" class="benefits__idfpr-img img-fluid" alt="#1 community college in Illinois for job placement according to Zippia.com">
+          <span class="benefits__accredited--span--source text-left w-50 mx-auto">Source: Zippia.com</span>
         </div>
-        <div class="row benefits__row--pad">
-          <div class="col-12 col-md-8 order-2 order-md-1 align-self-center">
-            <p class="benefits__typography--student-p"><em>“I’m the first one in my family to graduate. The professors would take their time to know you. That’s what I really liked about this. It was smaller....everybody knows you here. I really liked KCC. I’m really excited to see where this takes me next.”</em></p>
-            <span class="benefits__typography--img-cap">-&nbsp;Miguel Angel Diaz Ramirez, Class of 2018</span>
+        <div class="col-12 col-lg-4">
+          <div class="row">
+            <div class="col">
+              <img src="{{ page.baseurl }}assets/img/itransfer.png" alt="Illinois Itransfer logo" class="benefits__itransfer-img float-right
+              float-ls-none">
+            </div>
+            <div class="col">
+              <span class="benefits__typography-itransfer">Illinois<br> Transfer<br> Articulation<br></span>
+            </div>
           </div>
-          <div class="col-12 col-md-4 text-center order-1 order-md-2">
-            <img src="{{ page.baseurl }}assets/img/miguel2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
           </div>
         </div>
       </div>
+  </section>
 
   <div class="container mt-3">
     <div class="row mb-1">
