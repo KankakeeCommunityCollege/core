@@ -1,0 +1,16 @@
+<div class="container-fluid padding__x--none">
+  <div class="row">
+    <div class="col position__video-wrapper">
+      <div id="videoContainer">
+        <div id="video" data-videos="{% for source in page.video_sources %}{{ source.src }}{% unless forloop.last == true %},{% endunless %}{% endfor %}" data-video-types="{% for source in page.video_sources %}{{ source.type }}{% unless forloop.last == true %},{% endunless %}{% endfor %}" data-poster="{{ page.baseurl }}{{ page.video_loading_image }}"><img src="{{ page.baseurl }}{{ page.video_loading_image }}" class="img__full-width" alt="{{ page.video_loading_image_alt }}"></div>
+      </div>
+      <div class="position__video-controls video__controls--hidden" aria-hidden="true" id="videoControls">
+        <button type="button" role="button" id="playPause" class="position__video-constrols--button buttons__play-pause play pause"><span class="sr-only">Pause</span></button>
+      </div>
+      <div class="position__video-heading--wrapper">
+        <h2 class="typography__video-heading">
+          The&nbsp;<span class="typography__video-heading--power">POWER</span> of&nbsp;Community
+      </div>
+    </div>
+  </div>
+</div>
