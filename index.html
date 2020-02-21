@@ -1,10 +1,11 @@
 ---
 layout: default-core
 baseurl: ''
-title: KCC Startup Template
+title: Kankakee Community College
 homepage: true
 description: ''
-video_loading_image: 'uploads/poster_medical-2.jpg'
+video_loading_image: 'uploads/poster_welding.jpg'
+video_loading_image_alt: ''
 video_sources:
   - src: https://cdn.kcc.edu/core/community.webm
     type: video/webm
@@ -12,35 +13,139 @@ video_sources:
     type: video/mp4
   - src: https://cdn.kcc.edu/core/community.ogv
     type: video/ogg
+programs:
+  - name: Continuing Education
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Adult Education
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Agriculture and Horticulture
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Business
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Computer Technology
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Construction
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Education
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: General
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Health Careers
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Humanities and Social Sciences
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Industrial and Manufacturing Technologies
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Law Enforcement - Legal Studies
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Math Science and Engineering
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: Info and electives - Transfer programs
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
+  - name: General Information and electives
+    image: 'assets/img/kcc-placeholder.png'
+    alt_text:
 ---
 
 <main>
-  <div class="container-fluid padding__x--none">
+  {% include video-header.html %}
+  <div class="container py-2 background__color--tan">
+    {% include main-call-to-action.html %}
+    <div class="row mt-3">
+      <div class="col">
+        <h3 class="typography__call-to-action text-center">Programs of Study</h3>
+      </div>
+    </div>
+      {% for program in page.programs %}
+      {% if forloop.first == true %}<div class="row no-gutters">{% endif %}
+      <div class="col-sm-6 col-md-4">
+        <img src="{{ page.baseurl }}{{ program.image }}" class="img-fluid" alt="{{ program.alt_text }}">
+        <h4 class="text-center">{{ program.name }}</h4>
+      </div>
+      {% if forloop.last == true %}</div>{% elsif forloop.index == 9 or forloop.index == 18 %}</div><div class="row no-gutters">{% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="container benefits__background-color py-5">
     <div class="row">
-      <div class="col position__video-wrapper">
-        <video autoplay muted loop
-          poster="{{ page.baseurl }}{{ page.video_loading_image }}"
-          id="videoElement"
-          class="width__full">
-          {% for source in page.video_sources %}
-          <source src="{{ source.src }}" type="{{ source.type }}" >
-          {% endfor %}
-          Your browser does not support the HTML5 video tag.
-        </video>
-        <div class="position__video-controls" id="videoControls">
-          <button type="button" id="playPause" class="position__video-constrols--button buttons__play-pause play pause"><span class="sr-only">Pause</span></button>
+      <div class="col text-center">
+        <h5 class="text-center benefits__typography--h5  benefits__typography--h5--mb">Why Choose KCC?</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div id="colSave" class="col-12 col-md-4">
+        <div class="text-center">
+          {% include svg/save-money.html %}
         </div>
-        <div class="position__video-heading--wrapper">
-          <h2 class="typography__video-heading">
-            The&nbsp;<span class="typography__video-heading--power">POWER</span> of&nbsp;Community
+        <h6 class="benefits__typography--h6 text-center editable">Save Money</h6>
+        <div class="editable">
+          <p class="text-center typography__larger-p"><strong>KCC costs 1/3 less</strong> than 4-year colleges and universities and offers the same great education. Plus, financial aid & scholarships can&nbsp;help.</p>
         </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="text-center">
+          {% include svg/love.html %}
+        </div>
+        <h6 class="benefits__typography--h6 text-center editable">Love What You Do</h6>
+        <p class="text-center typography__larger-p">KCC has degree & certificate <strong>options to fit your interests</strong>. You can transfer after KCC to complete a bachelor’s degree, or enter the&nbsp;workforce.</p>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="text-center">
+          {% include svg/goals.html %}
+        </div>
+        <h6 class="benefits__typography--h6 text-center editable">Reach Your Goals</h6>
+        <p class="text-center typography__larger-p">We care about your progress and want you to succeed. KCC’s small class sizes, faculty and support services <strong>help you stay on track to&nbsp;graduate.</strong></p>
       </div>
     </div>
   </div>
-  <div class="container py-2 background__color--tan">
-    {% include main-call-to-action.html %}
-  </div>
+
+      <div class="container py-5">
+        <div class="row">
+          <div class="col">
+            <h5 class="benefits__typography--h5 benefits__testimonials--mb text-center">What Our Students Say</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 text-center">
+            <img src="{{ page.baseurl }}assets/img/d-daun2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
+          </div>
+          <div class="col-12 col-md-8 align-self-center">
+            <p class="benefits__typography--student-p"><em>“I completed finals the week of my 60th birthday, something I am proud of. In 1980 I received a B.S. in Biology, but this Associate’s Degree in Computer Graphics Technology means even more to me. Each thing I have learned has made me that much more capable in today’s world, allowing me to find job opportunities that I couldn’t have taken advantage of before. KCC has made a huge difference in my life, both in learning and in the people I have come to know here.”</em></p>
+            <span class="benefits__typography--img-cap">-&nbspDebra A. Daun, Class of 2018</span>
+          </div>
+        </div>
+        <div class="row benefits__row--pad">
+          <div class="col-12 col-md-8 order-2 order-md-1 align-self-center">
+            <p class="benefits__typography--student-p"><em>“I’m the first one in my family to graduate. The professors would take their time to know you. That’s what I really liked about this. It was smaller....everybody knows you here. I really liked KCC. I’m really excited to see where this takes me next.”</em></p>
+            <span class="benefits__typography--img-cap">-&nbsp;Miguel Angel Diaz Ramirez, Class of 2018</span>
+          </div>
+          <div class="col-12 col-md-4 text-center order-1 order-md-2">
+            <img src="{{ page.baseurl }}assets/img/miguel2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
+          </div>
+        </div>
+      </div>
+
   <div class="container mt-3">
+    <div class="row mb-1">
+      <div class="col margins__col--top section__heading-underline">
+        <h3 class="typography__section--heading margins__heading--btm editable">News & Events</h3>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-6">
         <div id="news"></div>
