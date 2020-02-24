@@ -53,7 +53,7 @@ function loadVideo() {
     'autoplay': '',
     'muted': '',
     'loop': '',
-    'playsinline': '',
+    'playsinline': '',  //https://developer.apple.com/documentation/webkit/safari_tools_and_features/delivering_video_content_for_safari
     'poster': videoPoster,
     'id': 'videoElement',
     'class': 'width__full'
