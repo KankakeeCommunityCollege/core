@@ -49,34 +49,40 @@
     source: 'assets/img/fafsa-early-bird-banner-18.jpg'
     alt: 'The early bird gets the money. FAFSA available Oct. 1. Apply at fafsa.gov. More details and workshop info at www.kcc.edu/finaid'
   dropdown:
-    - text: Action
+    - text: Types of Aid
       href: '#'
-    - text: Another action
+    - text: Tuition Payment
       href: '#'
-    - text: Another action
+    - text: Forms
       href: '#'
-    - text: Another action
-      href: '#'
-    - text: dropdown-divider
-    - text: Something else here
+    - text: Veteran's Resources
       href: '#'
 - link_text: Student Resources
   image:
     source: 'assets/img/DSC_5650_helpful.jpg'
     alt: 'Receptionist answering the phone'
   dropdown:
-    - text: Action
+    - text: Bookstore
       href: '#'
-    - text: Another action
+    - text: Clubs & Organizations
       href: '#'
-    - text: Another action
+    - text: Fitness Center
       href: '#'
-    - text: Another action
+    - text: Advising
       href: '#'
-    - text: Another action
+    - text: Transfer
       href: '#'
-    - text: dropdown-divider
-    - text: Something else here
+    - text: Social Services
+      href: '#'
+    - text: Disibility Services
+      href: '#'
+    - text: Student Representatives
+      href: '#'
+    - text: Student Complaint Policy
+      href: '#'
+    - text: Career Resources
+      href: '#'
+    - text: TRIO
       href: '#'
 - link_text: Community
   image:
