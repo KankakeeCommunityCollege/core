@@ -12,3 +12,18 @@
 .video__heading-wrapper--unclickable {
   pointer-events: none;
 }
+
+#pause,
+#play {
+  fill: $primary-red;
+  height: 22px;
+  width: 22px;
+}
+
+@media screen and (min-width: 400px) {
+  #pause,
+  #play {
+    width: 32px;
+    height: 32px;
+  }
+}
