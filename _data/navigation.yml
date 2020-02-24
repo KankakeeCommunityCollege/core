@@ -89,28 +89,28 @@
     source: 'assets/img/go_cavs_20171002_193828-web.jpg'
     alt: 'Group photo of students holding Cavalier signs'
   dropdown:
-    - text: Action
+    - text: Testing Services
       href: '#'
-    - text: Another action
+    - text: Continuing Education
       href: '#'
-    - text: Another action
+    - text: Sustainability
       href: '#'
-    - text: dropdown-divider
-    - text: Something else here
+    - text: Speakers Bureau
+      href: '#'
+    - text: Arts & Culture
       href: '#'
 - link_text: About
   image:
     source: 'assets/img/ATEC-DSC_1033.jpeg'
     alt: 'The new Advanced Technology Education Center building'
   dropdown:
-    - text: Action
+    - text: Leadership
       href: '#'
-    - text: Another action
+    - text: Institutional Effectiveness
       href: '#'
-    - text: Another action
+    - text: Police & Safety
       href: '#'
-    - text: Another action
+    - text: Newsroom
       href: '#'
-    - text: dropdown-divider
-    - text: Something else here
+    - text: Emplyment/Jobs
       href: '#'
