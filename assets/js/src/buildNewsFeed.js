@@ -131,6 +131,10 @@ function addEventListeners(el, eventsArray, handlerFunctionArray) {
 }
 
 function buildNewsFeed() {
+
+  if ( window.location.pathname != '/' )
+    return;
+
   const xhr = new XMLHttpRequest();
 
   addEventListeners(xhr, ['load', 'error'], [requestListener, errorListener]);
