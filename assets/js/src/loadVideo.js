@@ -53,6 +53,7 @@ function loadVideo() {
     'autoplay': '',
     'muted': '',
     'loop': '',
+    'playsinline': '',
     'poster': videoPoster,
     'id': 'videoElement',
     'class': 'width__full'
