@@ -2,34 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         
-        <loc>www.kcc.edu/</loc>
+        <loc>https://www.kcc.edu/</loc>
     
         
-        <lastmod>2020-02-13T17:45:03.026Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>www.kcc.edu/landing-page/</loc>
-    
-        
-        <lastmod>2020-02-13T17:45:03.026Z</lastmod>
+        <lastmod>2020-06-04T20:26:49.471Z</lastmod>
     
     </url>
     <url>
         
-        <loc>www.kcc.edu/search/</loc>
+        <loc>https://www.kcc.edu/search/</loc>
     
         
-        <lastmod>2020-02-13T17:45:03.026Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>www.kcc.edu/thank-you/</loc>
-    
-        
-        <lastmod>2020-02-13T17:45:03.026Z</lastmod>
+        <lastmod>2020-06-04T20:26:49.471Z</lastmod>
     
     </url>
 </urlset>
