@@ -12,7 +12,7 @@ const config = {
     'slim': './assets/js/slim/slim.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[hash].bundle.js',
     path: path.resolve(__dirname, 'assets', 'js', 'dist')
   },
   module: {
