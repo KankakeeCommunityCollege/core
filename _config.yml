@@ -4,6 +4,7 @@ public-url: "https://www.kcc.edu"
 theme: "kcc-gem-theme"
 google-tag_key: Google Tag Manager key goes here
 core_site: true
+core_root: true
 #translate: true ## Uncomment to activate Google Translate Powers!!
 #nav_links:
 #  - link_text: Home

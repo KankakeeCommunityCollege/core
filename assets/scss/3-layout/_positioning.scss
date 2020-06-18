@@ -95,3 +95,10 @@
     left: 5rem;
   }
 }
+
+.position__offset-alert-core--root {
+  margin-top: 0;
+  &.position__offset-alert--visible {
+    margin-top: .5rem;
+  }
+}
