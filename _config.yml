@@ -2,9 +2,11 @@ title: "Kankakee Community College"
 site_name: KCC
 public-url: "https://www.kcc.edu"
 theme: "kcc-gem-theme"
+timezone: America/Chicago
 google-tag_key: Google Tag Manager key goes here
 core_site: true
 core_root: true
+humans_file: true
 #BUILD
 #translate: true ## Uncomment to activate Google Translate Powers!!
 #nav_links:
