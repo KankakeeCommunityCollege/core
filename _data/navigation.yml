@@ -24,7 +24,7 @@
   link_href: admissions
   image:
     source: 'assets/img/2016-senior-viewbook.jpg'
-    alt: 'Take the first step to achieveing your goals, dreams & ambitions'
+    alt: 'Take the first step to achieving your goals, dreams & ambitions'
   dropdown:
     - text: Placement Testing
       href: 'testing'
@@ -38,8 +38,8 @@
       href: 'cav-day'
     - text: 'Start in High School'
       href: 'high-school'
-    - text: Veteran's Resources
-      href: 'veterans-resources'
+    - text: Veteran Services
+      href: 'veterans'
 - link_text:  Tuition & Aid
   link_href: 'tuition-and-aid'
   image:
