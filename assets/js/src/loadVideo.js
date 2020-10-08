@@ -41,10 +41,9 @@ function loadVideo() {
     return;
 
   const t0 = performance.now();
-
   const videoPlaceholder = document.getElementById(VIDEO_PLACEHOLDER_ID);
   const videoContainer = document.getElementById(VIDEO_CONTAINER_ID);
-  // `data-*=""` attributes built into the HTML
+  // Below are `data-*=""` attributes built into the HTML
   const videoSourcesArray = videoPlaceholder.dataset.videos.split(',');
   const videoSourceTypesArray = videoPlaceholder.dataset.videoTypes.split(',');
   const videoPoster = videoPlaceholder.dataset.poster;
@@ -53,7 +52,7 @@ function loadVideo() {
     'autoplay': '',
     'muted': '',
     'loop': '',
-    'playsinline': '',  //https://developer.apple.com/documentation/webkit/safari_tools_and_features/delivering_video_content_for_safari
+    'playsinline': '',  // <https://developer.apple.com/documentation/webkit/safari_tools_and_features/delivering_video_content_for_safari>
     'poster': videoPoster,
     'id': 'videoElement',
     'class': 'width__full'
@@ -61,16 +60,13 @@ function loadVideo() {
 
   const video = createVideoElement(videoAttributes);
 
-  //setElementAttributes(video, videoAttributes);
-  console.log(video);
   window.addEventListener('load', function(){
-
   const t1 = performance.now();
   if ( t1 - t0 > 6000 ) {
     return console.error('Slow network speeds. Aborting video load');
   } else {
-
     const source = createSourceElements(video, videoSourcesArray, videoSourceTypesArray);
+    
     videoContainer.innerHTML = '';
     videoContainer.innerHTML = video.outerHTML;
     createVideoControls();

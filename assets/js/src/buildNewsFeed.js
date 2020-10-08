@@ -1,5 +1,5 @@
 const NEWS_FEED_URL = 'https://news.kcc.edu/feed.xml'; // Ummmm...that's just the way this is...
-const NEW_FEED_PARENT_ELEMENT_ID_STRING = 'news'; // ID built into the HTML | wrapper element to hold the list
+const NEWS_FEED_PARENT_ELEMENT_ID = 'news'; // ID built into the HTML | wrapper element to hold the list
 // *_TAG_FROM_NEWS_FEED = The tags that actually get built into our newsroom XML news-feed
 const LINK_TAG_FROM_NEWS_FEED = 'link';  // tag built into the XML feed
 const TITLE_TAG_FROM_NEWS_FEED = 'title';  // tag built into the XML feed
@@ -104,7 +104,7 @@ function createOrderedList(parent) {
 }
 
 function findFeedEntries(xmlDoc) {
-  const parent = document.getElementById(NEW_FEED_PARENT_ELEMENT_ID_STRING);
+  const parent = document.getElementById(NEWS_FEED_PARENT_ELEMENT_ID);
   const ol = createOrderedList(parent);
   const entries =  xmlDoc.getElementsByTagName('entry');
   //console.log(entries);
@@ -139,6 +139,7 @@ function buildNewsFeed() {
 
   addEventListeners(xhr, ['load', 'error'], [requestListener, errorListener]);
   xhr.open('GET', NEWS_FEED_URL);
+  xhr.responseType = 'document';
   xhr.send();
 }
 
