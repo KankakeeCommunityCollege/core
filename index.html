@@ -13,191 +13,160 @@ video_sources:
     type: video/mp4
   - src: https://cdn.kcc.edu/core/community.ogv
     type: video/ogg
-programs:
-  - name: Continuing Education
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Adult Education
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Agriculture and Horticulture
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Business
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Computer Technology
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Construction
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Education
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: General
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Health Careers
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Humanities and Social Sciences
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Industrial and Manufacturing Technologies
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Law Enforcement - Legal Studies
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Math Science and Engineering
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: Info and electives - Transfer programs
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
-  - name: General Information and electives
-    image: 'assets/img/kcc-placeholder.png'
-    alt_text:
+slides:
+  - image: uploads/spr-classes-register-web-banner-spr-21.jpg
+    alt-text:
+    url: 'http://www.kcc.edu/campaigns/Pages/register.aspx'
+  - image: uploads/scholarship-deadline-banner_2020_720x405_for-web.jpg
+    alt-text:
+    url: 'https://foundation.kcc.edu'
+  - image: uploads/transfer-fair-web-banner-2020.jpg
+    alt-text:
+    url: 'http://www.kcc.edu/students/helpful/transfer/Pages/transferfair.aspx'
+    white_background: true
+  - image: uploads/Learn-org-recognized-school-home-pg-banner.png
+    alt-text:
+    url: 'http://www.kcc.edu/future/choosing/Pages/default.aspx'
 ---
 
-<main class="position__offset-core-nav">
-  {% include video-header.html %}
-  {% include emergency-alerts.html %}
-  <div class="container-fluid background__color--tan">
-    <div class="container py-2">
-      {% include main-call-to-action.html %}
-      <div class="row mt-3">
-        <div class="col">
-          <h3 class="typography__call-to-action text-center">Programs of Study</h3>
+    <main class="position__offset-core-nav">
+{% include video-header.html %}
+{% include emergency-alerts.html %}
+      <div class="container-fluid background__color--tan pt-3">
+        <div class="container py-5">
+          {% include hero-slider.html %}
         </div>
       </div>
-      <div class="slick-slider">
-        {% for program in page.programs %}
-        <div class="programs__slide">
-          <img src="{{ page.baseurl }}{{ program.image }}" class="img-fluid" alt="{{ program.alt_text }}">
-          <h4 style="position: absolute; top: 2rem; left: 0; right: 0; line-height: 1;" class="text-center px-1">{{ program.name }}</h4>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-<div class="benefits__background-color py-5">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col margins__col--top section__heading-underline--transparent">
-        <h5 class="typography__section--heading margins__heading--btm editable">Why Choose KCC?</h5>
-      </div>
-    </div>
-    <div class="container pt-1 pb-5">
-      <div class="row">
-        <div id="colSave" class="col-12 col-md-4">
-          <div class="text-center">
-            {% include svg/save-money.html %}
-          </div>
-          <h6 class="benefits__typography--h6 text-center editable">Save Money</h6>
-          <div class="editable">
-            <p class="text-center typography__larger-p"><strong>KCC costs 1/3 less</strong> than 4-year colleges and universities and offers the same great education. Plus, financial aid & scholarships can&nbsp;help.</p>
+    <div class="benefits__background-color py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col margins__col--top section__heading-underline--transparent">
+            <h5 class="typography__section--heading margins__heading--btm editable">Why Choose KCC?</h5>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="text-center">
-            {% include svg/love.html %}
-          </div>
-          <h6 class="benefits__typography--h6 text-center editable">Love What You Do</h6>
-          <p class="text-center typography__larger-p">KCC has degree & certificate <strong>options to fit your interests</strong>. You can transfer after KCC to complete a bachelor’s degree, or enter the&nbsp;workforce.</p>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="text-center">
-            {% include svg/goals.html %}
-          </div>
-          <h6 class="benefits__typography--h6 text-center editable">Reach Your Goals</h6>
-          <p class="text-center typography__larger-p">We care about your progress and want you to succeed. KCC’s small class sizes, faculty and support services <strong>help you stay on track to&nbsp;graduate.</strong></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <div class="container py-5">
-    <div class="row mb-5">
-      <div class="col margins__col--top section__heading-underline">
-        <h5 class="typography__section--heading margins__heading--btm editable">What Our Students Say</h5>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-4 text-center">
-        <img src="{{ page.baseurl }}assets/img/d-daun2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
-      </div>
-      <div class="col-12 col-md-8 align-self-center">
-        <p class="benefits__typography--student-p"><em>“I completed finals the week of my 60th birthday, something I am proud of. In 1980 I received a B.S. in Biology, but this Associate’s Degree in Computer Graphics Technology means even more to me. Each thing I have learned has made me that much more capable in today’s world, allowing me to find job opportunities that I couldn’t have taken advantage of before. KCC has made a huge difference in my life, both in learning and in the people I have come to know here.”</em></p>
-        <span class="benefits__typography--img-cap">-&nbspDebra A. Daun, Class of 2018</span>
-      </div>
-    </div>
-    <div class="row benefits__row--pad">
-      <div class="col-12 col-md-8 order-2 order-md-1 align-self-center">
-        <p class="benefits__typography--student-p"><em>“I’m the first one in my family to graduate. The professors would take their time to know you. That’s what I really liked about this. It was smaller....everybody knows you here. I really liked KCC. I’m really excited to see where this takes me next.”</em></p>
-        <span class="benefits__typography--img-cap">-&nbsp;Miguel Angel Diaz Ramirez, Class of 2018</span>
-      </div>
-      <div class="col-12 col-md-4 text-center order-1 order-md-2">
-        <img src="{{ page.baseurl }}assets/img/miguel2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="benefits__background-color py-5">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col margins__col--top section__heading-underline--transparent">
-          <h5 class="typography__section--heading margins__heading--btm editable">Recognized & Accredited</h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-4 text-center text-lg-left">
-          <div class="benefits__accredited--card mx-auto">
-            <div class="text-center">
-              {% include svg/check.html %}
-              <span class="benefits__accredited--span-l">KCC  is Accredited</span>
-              <span class="benefits__accredited--span-s">by the Higher Learning Commission (hlcommission.org), a regional accreditation agency recognized by the U.S. Department of Education.</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 text-center">
-          <img src="{{ page.baseurl }}assets/img/zippia.png" class="benefits__idfpr-img img-fluid" alt="#1 community college in Illinois for job placement according to Zippia.com">
-          <span class="benefits__accredited--span--source text-left w-50 mx-auto">Source: Zippia.com</span>
-        </div>
-        <div class="col-12 col-lg-4">
+        <div class="container pt-1 pb-5">
           <div class="row">
-            <div class="col">
-              <img src="{{ page.baseurl }}assets/img/itransfer.png" alt="Illinois Itransfer logo" class="benefits__itransfer-img float-right
-              float-ls-none">
+            <div id="colSave" class="col-12 col-md-4">
+              <div class="text-center">
+{% include svg/save-money.html %}
+              </div>
+              <h6 class="benefits__typography--h6 text-center editable">Save Money</h6>
+              <div class="editable">
+                <p class="text-center typography__larger-p">
+                  <strong>KCC costs 1/3 less</strong> than 4-year colleges and universities and offers the same great education. Plus, financial aid & scholarships can&nbsp;help.</p>
+              </div>
             </div>
-            <div class="col">
-              <span class="benefits__typography-itransfer">Illinois<br> Transfer<br> Articulation<br></span>
+            <div class="col-12 col-md-4">
+              <div class="text-center">
+{% include svg/love.html %}
+              </div>
+              <h6 class="benefits__typography--h6 text-center editable">Love What You Do</h6>
+              <p class="text-center typography__larger-p">
+                KCC has degree & certificate <strong>options to fit your interests</strong>. 
+                You can transfer after KCC to complete a bachelor’s degree, or enter the&nbsp;workforce.</p>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="text-center">
+{% include svg/goals.html %}
+              </div>
+              <h6 class="benefits__typography--h6 text-center editable">Reach Your Goals</h6>
+              <p class="text-center typography__larger-p">
+                We care about your progress and want you to succeed. 
+                KCC’s small class sizes, faculty and support services 
+                <strong>help you stay on track to&nbsp;graduate.</strong></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container mt-3">
-    <div class="row mb-1">
-      <div class="col margins__col--top section__heading-underline">
-        <h5 class="typography__section--heading margins__heading--btm editable">News & Events</h5>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div id="news"></div>
-        <div class="text-center">
-          <a href="https://news.kcc.edu" class="btn btn-primary">More News</a>
+      <div class="container py-5">
+        <div class="row mb-5">
+          <div class="col margins__col--top section__heading-underline">
+            <h5 class="typography__section--heading margins__heading--btm editable">What Our Students Say</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 text-center">
+            <img src="{{ page.baseurl }}assets/img/d-daun2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
+          </div>
+          <div class="col-12 col-md-8 align-self-center">
+            <p class="benefits__typography--student-p">
+              <em>“I completed finals the week of my 60th birthday, something I am proud of. 
+                In 1980 I received a B.S. in Biology, but this Associate’s Degree in Computer Graphics Technology means even more to me. 
+                Each thing I have learned has made me that much more capable in today’s world, allowing me to find job opportunities that I couldn’t have taken advantage of before. 
+                KCC has made a huge difference in my life, both in learning and in the people I have come to know here.”</em></p>
+            <span class="benefits__typography--img-cap">-&nbspDebra A. Daun, Class of 2018</span>
+          </div>
+        </div>
+        <div class="row benefits__row--pad">
+          <div class="col-12 col-md-8 order-2 order-md-1 align-self-center">
+            <p class="benefits__typography--student-p"><em>“I’m the first one in my family to graduate. 
+              The professors would take their time to know you. 
+              That’s what I really liked about this. 
+              It was smaller....everybody knows you here. I really liked KCC.
+              I’m really excited to see where this takes me next.”</em></p>
+            <span class="benefits__typography--img-cap">-&nbsp;Miguel Angel Diaz Ramirez, Class of 2018</span>
+          </div>
+          <div class="col-12 col-md-4 text-center order-1 order-md-2">
+            <img src="{{ page.baseurl }}assets/img/miguel2.jpg" class="benefits__borders--circle-img img-fluid rounded-circle" alt="">
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div data-tockify-component="calendar" data-tockify-calendar="kankakeecc"></div>
-        <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
+      <div class="benefits__background-color py-5">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col margins__col--top section__heading-underline--transparent">
+              <h5 class="typography__section--heading margins__heading--btm editable">Recognized & Accredited</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-4 text-center text-lg-left">
+              <div class="benefits__accredited--card mx-auto">
+                <div class="text-center">
+{% include svg/check.html %}
+                  <span class="benefits__accredited--span-l">KCC  is Accredited</span>
+                  <span class="benefits__accredited--span-s">by the Higher Learning Commission (hlcommission.org), a regional accreditation agency recognized by the U.S. Department of Education.</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 text-center">
+              <img src="{{ page.baseurl }}assets/img/zippia.png" class="benefits__idfpr-img img-fluid" alt="#1 community college in Illinois for job placement according to Zippia.com">
+              <span class="benefits__accredited--span--source text-left w-50 mx-auto">Source: Zippia.com</span>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="row">
+                <div class="col">
+                  <img src="{{ page.baseurl }}assets/img/itransfer.png" alt="Illinois Itransfer logo" class="benefits__itransfer-img float-right
+                  float-ls-none">
+                </div>
+                <div class="col">
+                  <span class="benefits__typography-itransfer">Illinois<br> Transfer<br> Articulation<br></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="container my-3">
-    {% include main-call-to-action.html %}
-  </div>
-</main>
+      <div class="container mt-3">
+        <div class="row mb-1">
+          <div class="col margins__col--top section__heading-underline">
+            <h5 class="typography__section--heading margins__heading--btm editable">News & Events</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="news"></div>
+            <div class="text-center">
+              <a href="https://news.kcc.edu" class="btn btn-primary">More News</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div data-tockify-component="calendar" data-tockify-calendar="kankakeecc"></div>
+            <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="container my-3">
+{% include main-call-to-action.html %}
+      </div>
+    </main>
