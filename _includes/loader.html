@@ -1,0 +1,129 @@
+<script>
+    (function() {
+      function loadScript(src, callback, attributeObject) {
+        let script = document.createElement('script');
+        script.src = src;
+        script.type = 'text/javascript';
+        //script.setAttribute('async', '');
+
+        if ( attributeObject != undefined && typeof attributeObject == 'object' ) {
+          for (const attr in attributeObject) {
+            if (attributeObject.hasOwnProperty(attr)) {
+              const value = attributeObject[attr];
+              
+              script.setAttribute(attr, value);
+            }
+          }
+        }
+
+        script.onload = () => callback(null, script);
+        script.onerror = () => callback(new Error(`Script load error for ${src}`));
+        
+        document.body.append(script);
+      }
+      //'https://apis.google.com/js/api.js'
+      loadScript(
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
+        step1,
+        { integrity: 'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=',
+          crossorigin: 'anonymous' }
+      );
+      function step1(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          loadScript(
+            'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
+            step2,
+            { integrity: 'sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1',
+              crossorigin: 'anonymous' }
+          );
+        }
+      }
+      function step2(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          loadScript(
+            'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', 
+            step3,
+            { integrity: 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM',
+              crossorigin: 'anonymous' }
+            );
+        }
+      }
+      function step3(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          loadScript(
+            'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js',
+            step4,
+            undefined
+          );
+        }
+      }
+      function step4(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          loadScript(
+            '{{page.baseurl}}assets/js/theme/dist/kcc-mega-nav.bundle.js',
+            step5,
+            undefined
+          );
+        }
+      }
+      function step5(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          loadScript(
+            'https://apis.google.com/js/api.js',
+            step6,
+            undefined
+          );
+        }
+      }
+      function step6(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          loadScript(
+            '{{ page.baseurl }}assets/js/theme/dist/alerts.bundle.js',
+            step7,
+            undefined
+          );
+        }
+      }
+      function step7(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          loadScript(
+            '{{ page.baseurl }}assets/js/theme/dist/kcc-theme.bundle.js',
+            step8,
+            undefined
+          );
+        }
+      }
+      function step8(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          loadScript(
+            '{{page.baseurl}}assets/js/dist/main{% if site.data.hash %}.{{ site.data.hash }}{% endif %}.bundle.js',
+            step9,
+            undefined
+          );
+        }
+      }
+      function step9(error, script) {
+        if (error) {
+          handleError(error);
+        } else {
+          console.log(`All scripts loaded!`);
+        }
+      }
+    })();
+</script>
