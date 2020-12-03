@@ -120,14 +120,15 @@ function requestListener() {
   }
 }
 
-function errorListener() {
-  console.error(`Network Error: unable to make XMLHttpsRequest`);
+function errorListener(err) {
+  console.error(`Network Error: unable to make XMLHttpsRequest`, err);
 }
 
 function addEventListeners(el, eventsArray, handlerFunctionArray) {
   for (let i = 0, len = eventsArray.length; i < len; i++) {
     el.addEventListener(eventsArray[i], handlerFunctionArray[i]);
   }
+  return el;
 }
 
 function buildNewsFeed() {
