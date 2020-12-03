@@ -1,11 +1,21 @@
 .svg {
-  height: 36px;
-  width: 36px;
-  & .st0 {
+  max-width: 100%;
+  &__graphic {
+    height: 100px;
+    width: 100px;
+  }
+  &__button {
+    height: 48px;
+    width: 48px;
+  }
+  &--fill-none {
     fill: none;
   }
-  & .st1 {
-    fill: #ffffff;
+  &--fill-white {
+    fill: $white;
+  }
+  &--fill-blue {
+    fill: $primary-blue;
   }
 }
 
@@ -26,21 +36,21 @@
 }
 
 @media screen and (min-width: 360px) {
-  .svg {
+  .svg__button {
     height: 48px;
     width: 48px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .svg {
+  .svg__button {
     height: 36px;
     width: 36px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .svg {
+  .svg__button {
     height: 48px;
     width: 48px;
   }
