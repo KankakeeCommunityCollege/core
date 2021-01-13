@@ -105,9 +105,11 @@
     alt: 'The new Advanced Technology Education Center building'
   dropdown:
     - text: Newsroom
-      href: 'https://newsroom.kcc.edu'
+      href: 'https://news.kcc.edu'
     - text: Leadership
       href: 'leadership'
+    - text: Board of Trustees
+      href: board-of-trustees
     - text: 'Police & Safety'
       href: 'police-and-safety'
     - text: Human Resources
