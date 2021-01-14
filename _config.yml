@@ -16,7 +16,6 @@ compress_html:
     blanklines: false
     profile: false
     startings: []
-#BUILD
 #translate: true ## Uncomment to activate Google Translate Powers!!
 #nav_links:
 #  - link_text: Home
