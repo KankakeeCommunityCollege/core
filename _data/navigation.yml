@@ -39,7 +39,7 @@
     - text: 'Start in High School'
       href: 'high-school'
     - text: Veteran's Resources
-      href: 'veterans-resources'
+      href: 'veterans'
 - link_text:  Tuition & Aid
   link_href: 'tuition-and-aid'
   image:
