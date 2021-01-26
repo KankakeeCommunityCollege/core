@@ -4,8 +4,6 @@
     source: 'assets/img/e-tech_a-roberts_mar2016_D41_6690.jpg'
     alt: 'Student working in an electrical technology lab'
   dropdown:
-    - text: Courses & Areas of Study
-      href: 'courses'
     - text: Class Schedule
       href: 'schedule'
     - text: Academic Calendar
@@ -108,6 +106,8 @@
       href: 'https://news.kcc.edu'
     - text: Leadership
       href: 'leadership'
+    - text: 'President'
+      href: president
     - text: Board of Trustees
       href: board-of-trustees
     - text: 'Police & Safety'
@@ -122,3 +122,5 @@
       href: 'marketing'
     - text: 'Institutional Effectiveness'
       href: 'institutional-effectiveness'
+    - text: 'Contact Us'
+      href: 'contact-us'
