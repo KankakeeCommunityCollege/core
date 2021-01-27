@@ -21,8 +21,8 @@
 - link_text:  Admissions
   link_href: admissions
   image:
-    source: 'assets/img/2016-senior-viewbook.jpg'
-    alt: 'Take the first step to achieveing your goals, dreams & ambitions'
+    source: 'assets/img/admissions-navigation-menu.jpg'
+    alt: "Student posing in front of the metal sculpture in KCC's courtyard"
   dropdown:
     - text: Placement Testing
       href: 'testing'
