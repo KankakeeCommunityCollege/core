@@ -90,6 +90,7 @@ exclude:
   - "siteicon.png"
   - "page-startups"
   - "UPDATE_PROCEDURE.md"
+  - "REDIRECTS.web.config"
 
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"
