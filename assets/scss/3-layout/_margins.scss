@@ -3,3 +3,13 @@
     margin-bottom: 1rem;
   }
 }
+
+.margins__404 .position__offset-alert-core--root.position__offset-alert--visible {
+  margin-top: 115px;
+}
+
+@media screen and (min-width: 992px) {
+  .margins__404 .position__offset-alert-core--root.position__offset-alert--visible {
+    margin-top: 110px;
+  }
+}
