@@ -36,6 +36,8 @@
       href: 'cav-day'
     - text: 'Start in High School'
       href: 'high-school'
+    - text: Request KCC Transcripts
+      href: '#request-your-transcript'
     - text: 'Veterans Services'
       href: 'veterans'
 - link_text:  Tuition & Aid
@@ -82,8 +84,6 @@
       href: 'student-representatives'
     - text: Student Complaint Policy
       href: 'student-complaint-policy'
-    - text: Career Resources
-      href: 'career-resources'
     - text: Start the Semester Right
       href: 'welcome'
 - link_text: Community
@@ -92,8 +92,8 @@
     source: 'assets/img/go_cavs_20171002_193828-web.jpg'
     alt: 'Group photo of students holding Cavalier signs'
   dropdown:
-    - text: Testing Services
-      href: 'testing-services'
+    - text: Adult & Community Education
+      href: 'https://adulted.kcc.edu/'
     - text: Continuing Education
       href: 'https://continuinged.kcc.edu'
     - text: Sustainability
