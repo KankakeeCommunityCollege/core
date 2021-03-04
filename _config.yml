@@ -6,6 +6,7 @@ timezone: America/Chicago
 google-tag_key: Google Tag Manager key goes here
 core_site: true
 core_root: true
+# build
 humans_file: true
 compress_html:
     clippings: all
