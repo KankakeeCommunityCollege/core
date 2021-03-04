@@ -86,6 +86,8 @@
       href: 'student-complaint-policy'
     - text: Start the Semester Right
       href: 'welcome'
+    - text: KCC Food Pantry
+      href: 'food-pantry'
 - link_text: Community
   link_href: 'community'
   image:
