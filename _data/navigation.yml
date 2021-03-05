@@ -88,6 +88,8 @@
       href: 'welcome'
     - text: KCC Food Pantry
       href: 'food-pantry'
+    - text: Tutoring
+      href: 'https://library.kcc.edu/tutoring/'
 - link_text: Community
   link_href: 'community'
   image:
