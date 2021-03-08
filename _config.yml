@@ -3,7 +3,7 @@ site_name: KCC
 public-url: "http://www.kcc.edu"
 theme: "kcc-gem-theme"
 timezone: America/Chicago
-google-tag_key: Google Tag Manager key goes here
+google-tag_key: GTM-KTGWMMW
 core_site: true
 core_root: true
 # Build
