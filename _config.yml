@@ -6,7 +6,6 @@ timezone: America/Chicago
 google-tag_key: GTM-KTGWMMW
 core_site: true
 core_root: true
-# Build
 humans_file: true
 compress_html:
     clippings: all
