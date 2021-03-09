@@ -92,6 +92,8 @@
       href: 'food-pantry'
     - text: Tutoring
       href: 'https://library.kcc.edu/tutoring/'
+    - text: TRIO Student Support Services
+      href: 'trio'
 - link_text: Community
   link_href: 'community'
   image:
