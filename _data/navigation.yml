@@ -18,6 +18,8 @@
       href: 'final-exams'
     - text: Register for Classes
       href: 'register'
+    - text: Academic Catalog
+      href: 'https://kcc.smartcatalogiq.com/current/Academic-Catalog'
 - link_text:  Admissions
   link_href: admissions
   image:
