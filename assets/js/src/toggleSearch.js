@@ -80,7 +80,7 @@ function searchHandler(e) {
 function toggleSearch() {
   const path = window.location.pathname;
   
-  if ( path.search('/404') === -1 )
+  if (! document.getElementById(SEARCH_ID) )
     return;
 
   const searchButtonOn404Page = document.getElementById(SEARCH_ID);
