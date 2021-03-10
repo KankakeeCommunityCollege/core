@@ -5,13 +5,24 @@ layout: null
 /* TEAM */
 
 Name: Wesley Zajicek
-Role: Developer/DevOps/Site-maintanace
+Role: Developer/Gem theme developer/Project build-template developer/Site-maintenance
 Site: https://wesleyzajicek.com
 Github: https://github.com/wdzajicek
+
+Name: Roger Ehmpke
+Role: Developer/Site-maintenance/Project research
+Site: https://rogerehmpke.com
+Github: https://github.com/rehmpke
+
+Name: Diane Soltis
+Role: Visual-mockup design/Graphic-design
+
+Name: Shaun McSparin
+Role: Visual-mockup design/Graphic-design/Icon design
 
 /* SITE */
 
 Copyright {{ site.time | date: "%Y" }} Kankakee Community College
 Last update: {{ site.time | date: "%m/%d/%Y %H:%M" }} CST
 Standards: HTML5, CSS3, ES6/JavaScript, CommonJS, SCSS, YAML, Liquid - templating language, and more. Oh, yes, and a tiny JQuery when absolutely necessary
-Tools: Jekyll, Webpack, Babel/Corejs-3, Autoprefixer, Nodejs, ES6, Google YouTube & Sheets API's, gulp, CloudCannon, and other open-source packages
+Tools: Jekyll, Webpack, Babel/Corejs-3, Autoprefixer, Nodejs, ES6, Google YouTube & Sheets API's, Gulp, CloudCannon, and other open-source packages
