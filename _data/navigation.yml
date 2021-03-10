@@ -94,6 +94,8 @@
       href: 'https://library.kcc.edu/tutoring/'
     - text: TRIO Student Support Services
       href: 'trio'
+    - text: Career Services
+      href: 'https://continuinged.kcc.edu/career-services/'
 - link_text: Community
   link_href: 'community'
   image:
