@@ -7,7 +7,6 @@ google-tag_key: GTM-KTGWMMW
 core_site: true
 core_root: true
 humans_file: true
-# BUILD.
 compress_html:
     clippings: all
     comments: []
