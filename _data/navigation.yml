@@ -96,6 +96,8 @@
       href: 'trio'
     - text: Career Services
       href: 'https://continuinged.kcc.edu/career-services/'
+    - text: Food Services
+      href: 'food-services'
 - link_text: Community
   link_href: 'community'
   image:
