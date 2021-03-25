@@ -3,7 +3,7 @@ site_name: KCC
 public-url: "http://www.kcc.edu"
 theme: "kcc-gem-theme"
 timezone: America/Chicago
-google-tag_key: GTM-KTGWMMW
+google-tag_key: GTM-TNVWT2L
 core_site: true
 core_root: true
 humans_file: true
