@@ -38,7 +38,14 @@ function gulpSitemap(done) {
     read: false
   })
     .pipe(sitemap({
-      siteUrl: (config.sitemap.siteUrl),
+      siteUrl: (config.sitemap.siteUrl),  // siteUrl is required by gulp-sitemap
+      mappings: [{  // Mappings allows customization of the generated sitemap
+        pages: [ '*.pdf', 'uploads/*.pdf', 'uploads/docs/*.pdf', 'uploads/pdf/*.pdf'], // This array looks for all PDF files using Glob patterns
+        getLoc(siteUrl, loc, entry) {  // getLoc allows us to modify the loc element's values //! even tho siteUrl & entry are not used the sitemap won't process PDF files without them.
+          loc = loc.replace(/&/g, '%26');
+            return loc.replace(/\s/g, '%20'); // Replace all spaces in PDF titles with "%20" otherwise sitemap will error
+        }
+      }]
     }))
     .pipe(gulpif(PRODUCTION, gulp.dest('./')))
     .pipe(gulpif(PRODUCTION, gulp.dest('./_site')));

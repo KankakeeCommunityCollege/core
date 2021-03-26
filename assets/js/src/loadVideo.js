@@ -2,6 +2,7 @@ import createVideoControls from './createVideoControls.js';
 
 const VIDEO_PLACEHOLDER_ID = 'video';
 const VIDEO_CONTAINER_ID = 'videoContainer';
+const MOBILE_USERAGENT_REGEXP = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i;
 
 function setElementAttributes(el, attributeArgument) {
   for (var attribute in attributeArgument) {
@@ -28,8 +29,6 @@ function appendSourceToVideo(video, videoSource, videoSourceType) {
 
 function createSourceElements(video, videoSourcesArray, videoSourceTypesArray) {
   for (var i = 0, len = videoSourcesArray.length; i < len; i++) {
-    const source = document.createElement('source');
-
     appendSourceToVideo(video, videoSourcesArray[i], videoSourceTypesArray[i]);
   }
   return video;
@@ -38,6 +37,9 @@ function createSourceElements(video, videoSourcesArray, videoSourceTypesArray) {
 function loadVideo() {
   // Bail-out if the element needed is missing
   if ( ! document.getElementById(VIDEO_PLACEHOLDER_ID) )
+    return;
+  // Bail-out if the user is on a mobile device (we don't want to download a video file of mobile networks!)
+  if ( navigator.userAgent.search(MOBILE_USERAGENT_REGEXP) !== -1 )
     return;
 
   const t0 = performance.now();
@@ -62,10 +64,10 @@ function loadVideo() {
 
   window.addEventListener('load', function(){
   const t1 = performance.now();
-  if ( t1 - t0 > 6000 ) {
+  if ( t1 - t0 > 5000 ) {
     return console.error('Slow network speeds. Aborting video load');
   } else {
-    const source = createSourceElements(video, videoSourcesArray, videoSourceTypesArray);
+    createSourceElements(video, videoSourcesArray, videoSourceTypesArray);
     
     videoContainer.innerHTML = '';
     videoContainer.innerHTML = video.outerHTML;
