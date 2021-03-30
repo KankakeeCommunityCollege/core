@@ -148,3 +148,7 @@
       href: 'title-ix'
     - text: 'Contact Us'
       href: 'contact-us'
+    - text: Web Services
+      href: 'marketing/web-services'
+    - text: Consumer Info and Disclosures
+      href: 'consumer-info'
