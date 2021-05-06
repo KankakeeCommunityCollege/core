@@ -1,10 +1,20 @@
-<!-- preconnect to the Eurstile typekit font -->
-<link rel="preconnect" href="https://use.typekit.net">
-<!-- preconnect to Google assets -->
+<!-- preconnect to assets -->
 <!-- fonts -->
+<!-- preconnect to the Eurostile typekit font -->
+<link rel="preconnect" href="https://use.typekit.net">
+<!-- Google fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<!-- GCS -->
+<!-- Google Cusom Search -->
 <link rel="preconnect" href="https://clients1.google.com">
 <link rel="preconnect" href="https://www.google.com">
+<!-- Google API -->
+<link rel="preconnect" as="script" href="https://apis.google.com/js/api.js">
+<!-- Custom theme JS -->
+<link rel="preconnect" as="script" href="{{page.baseurl}}assets/js/dist/kcc-theme.bundle.js?version={% include hash/theme_hash.yml %}">
 <!-- preconnect to newsroom for fetching the newsfeed -->
 <link rel="preconnect" href="https://news.kcc.edu">
+{%- if page.title == 'KCC' -%}
+<link rel="preload" as="image" href="{{ page.baseurl }}uploads/poster_welding_sm.jpg">
+<link rel="preload" as="script" href="https://public.tockify.com/browser/embed.js">
+{%- endif -%}
+<!-- End of preconnects -->

@@ -1,12 +1,12 @@
-      <div class="container-fluid padding__x--none">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col position__video-wrapper">
+          <div class="col position__video-wrapper padding__x--none">
             <div id="videoContainer">
               <div id="video"
                 data-videos="{% for source in page.video_sources %}{{ source.src }}{% unless forloop.last == true %}, {% endunless %}{% endfor %}"
                 data-video-types="{% for source in page.video_sources %}{{ source.type }}{% unless forloop.last == true %}, {% endunless %}{% endfor %}"
                 data-poster="{{ page.baseurl }}{{ page.video_loading_image }}">
-                <img src="{{ page.baseurl }}{{ page.video_loading_image }}" class="img__full-width" alt="{{ page.video_loading_image_alt }}">
+                <img src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg" data-src="{{ page.baseurl }}{{ page.video_loading_image }}" class="img__full-width" alt="{{ page.video_loading_image_alt }}">
               </div>
             </div>
             <div id="videoControls"
