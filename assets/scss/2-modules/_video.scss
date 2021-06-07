@@ -23,3 +23,12 @@
     height: 32px;
   }
 }
+
+// Remove this rule if the video-heading and video-heading--wrapper
+// are added back into the DOM.
+@media screen and (min-width: 1600px) {
+  #videoContainer {
+    position: relative;
+    bottom: 12vh;
+  }
+}
