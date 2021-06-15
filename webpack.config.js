@@ -1,28 +1,49 @@
-process.traceDeprecation = true;
 const path = require('path');
-const HashPlugin = require('hash-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WebpackHashFilePlugin = require('./buildtools/WebpackHashFilePlugin'); // Our custom plugin found in `/buildtools`
+const devMode = process.env.NODE_ENV !== 'production';
 
-const config = {
-  mode: 'production',
-  watch: true,
-  //entry: path.join(__dirname, 'webpack', 'main'),
-  entry: {
-    'main': './assets/js/src/all.js'
-    //'slim': './assets/js/slim/slim.js'
-  },
+const plugins = [
+  new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: devMode ? '[name].css' : '[name].[contenthash].css',
+    chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
+  }),
+  new WebpackHashFilePlugin({
+    path: '../_data/',
+    fileName: 'hash.yml'
+  }), // HASH IS USED TO KICK-OFF JEKYLL
+];
+
+const devServerSettings = {
+  contentBase: './_site',
+  host: '0.0.0.0',
+  port: '4000',
+}
+
+module.exports = {
+  mode: devMode ? 'development' : 'production',
+  plugins,
+  devServer: devServerSettings,
+  entry: './assets/js/src/all.js',
   output: {
     filename: '[name].[hash].bundle.js',
     path: path.resolve(__dirname, 'assets', 'js', 'dist'),
     publicPath: '/assets/js/dist/',
-  },
-  optimization: {
-    namedModules: true,
-    namedChunks: true,
+    clean: true,
   },
   module: {
     rules: [
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
+      },
       {
         test: /\.js$/,
         exclude: [
@@ -32,25 +53,13 @@ const config = {
           loader: 'babel-loader'
         }
       },
-      // {
-      //   test: /\.(sa|sc|c)ss$/,
-      //   use: [
-      //     MiniCssExtractPlugin.loader,
-      //     'css-loader',
-      //     'postcss-loader',
-      //     'sass-loader',
-      //   ],
-      // },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff)$/i,
+        type: 'asset/resource'
+      },
     ]
   },
-  plugins: [
-    new HashPlugin({ path: './_data/', fileName: 'hash.yml' }),
-    new CleanWebpackPlugin({ path: './assets/js/dist/' }),
-    // new MiniCssExtractPlugin(),
-  ],
   resolve: {
     extensions: ['.json', '.js', '.jsx']
   }
 };
-
-module.exports = config;
