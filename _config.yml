@@ -1,6 +1,6 @@
 title: "Kankakee Community College"
 site_name: KCC
-public-url: "http://www.kcc.edu"
+public-url: "https://www.kcc.edu"
 port: 3000
 theme: "kcc-gem-theme"
 timezone: America/Chicago
@@ -8,6 +8,11 @@ google-tag_key: GTM-TNVWT2L
 core_site: true
 core_root: true
 humans_file: true
+# Jekyll sass configuration options:
+sass: # Use jekyll to compile a simple CloudCannon (CC) stylesheet found in `/assets/css/content.scss`
+  sass_dir: /assets/scss/ # tell Jekyll where our sass partials are (default is _sass/)
+  sourcemap: never # Jekyll command breaks with default sourcemap settings - it's tiny stylesheet anyways
+  style: expanded # CC requires an expanded css file for custom CC styles
 compress_html:
     clippings: all
     comments: []
