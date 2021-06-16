@@ -7,7 +7,7 @@ const plugins = [
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional
-    filename: devMode ? '[name].css' : '[name].[contenthash].css',
+    filename: devMode ? '[name].css' : '[name].[fullhash].css',
     chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
   }),
   new WebpackHashFilePlugin({
@@ -16,19 +16,12 @@ const plugins = [
   }), // HASH IS USED TO KICK-OFF JEKYLL
 ];
 
-const devServerSettings = {
-  contentBase: './_site',
-  host: '0.0.0.0',
-  port: '4000',
-}
-
 module.exports = {
   mode: devMode ? 'development' : 'production',
   plugins,
-  devServer: devServerSettings,
   entry: './assets/js/src/all.js',
   output: {
-    filename: '[name].[hash].bundle.js',
+    filename: '[name].[fullhash].bundle.js',
     path: path.resolve(__dirname, 'assets', 'js', 'dist'),
     publicPath: '/assets/js/dist/',
     clean: true,
@@ -39,7 +32,12 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {  // Do not let css-loader resolve `url()`s
+              url: false, // Will throw errors when trying to resolve url() for local assets if set to default (true)
+            },
+          },
           'postcss-loader',
           'sass-loader',
         ],
@@ -50,8 +48,12 @@ module.exports = {
           path.resolve(__dirname, 'node_modules')
         ],
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true, // Cache the babel compilation // Cached files are stored & gzipped in `/node_modules/.cache/babel-loader/`
+            // Set a custom `cacheIdentifier: '<my_custom_cache_identifier>',` SHOULD you need to manually bust the babel-loader cache.
+          },
+        },
       },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff)$/i,
