@@ -1,35 +1,22 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    {%- for page in site.pages -%}
+    {% unless page.url contains '.xml' or page.url contains '.txt' %}
     <url>
-        
-        <loc>https://www.kcc.edu/google36c9c775f7337b66.html</loc>
-    
-        
-        <lastmod>2021-03-25T16:27:00.000Z</lastmod>
-    
+        <loc>{{ site.public-url }}{{ page.url }}</loc>
+        <lastmod>{% if page.last-mod-time %}{{ page.last-mod-time | date: '%Y-%m-%dT%H:%M:%S.%LZ' }}{% else %}{{ 'today' | date: '%Y-%m-%dT%H:%M:%S.%LZ' }}{% endif %}</lastmod>
     </url>
+    {%- endunless -%}
+    {%- endfor -%}
+    {%- for file in site.static_files -%}
+    {% if file.extname == '.pdf' %}
     <url>
-        
-        <loc>https://www.kcc.edu/</loc>
-    
-        
-        <lastmod>2021-06-14T18:42:29.235Z</lastmod>
-    
+        <loc>{{ site.public-url }}{{ file.path }}</loc>
+        <lastmod>{{ file.modified_time | date: '%Y-%m-%dT%H:%M:%S.%LZ' }}</lastmod>
     </url>
-    <url>
-        
-        <loc>https://www.kcc.edu/search/</loc>
-    
-        
-        <lastmod>2021-06-14T18:42:29.236Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://www.kcc.edu/settings/</loc>
-    
-        
-        <lastmod>2021-06-14T18:42:29.236Z</lastmod>
-    
-    </url>
+    {%- endif -%}
+    {% endfor %}
 </urlset>
