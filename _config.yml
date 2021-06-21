@@ -70,6 +70,8 @@ exclude:
   - "page-startups"
   - "UPDATE_PROCEDURE.md"
   - "REDIRECTS.web.config"
+  - "buildtools/"
+  - "postcss.config.js"
 
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"
