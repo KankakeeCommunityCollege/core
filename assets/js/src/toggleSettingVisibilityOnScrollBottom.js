@@ -1,5 +1,14 @@
 // Since mobile users cannot hover over the settings link to make it visible:
 // This JS makes the setting-link visible when mobile users hit the bottom of the page.
+// ============================================================== //
+// TODO:
+//
+//    Switch to use the Intersection Observer API:
+//      - Better performance especially in mobile
+//      - More reliable detection than scroll event
+//
+// ============================================================== //
+//
 const SETTINGS_LINK_QUERY = '.setting__link'; // Built into HTML DOM
 
 function toggleLinkVisibility(el) {
@@ -7,6 +16,7 @@ function toggleLinkVisibility(el) {
 
   window.setTimeout(() => {
     el.classList.toggle('setting__link--visible');
+    window.removeEventListener('scroll', scrollHandler);
   }, 4000);
 }
 
@@ -37,7 +47,7 @@ function passiveEventSupport() {
 
 function scrollHandler() {
   const settingLink = document.querySelector(SETTINGS_LINK_QUERY);
-  const scrolledToBottom = (window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight
+  const scrolledToBottom = (window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight - 1
 
   scrolledToBottom ? wait(settingLink) : null;
 }

@@ -1,0 +1,21 @@
+---
+---
+//
+// ================================================================== //
+//  **DO NOT REMOVE EMPTY YAML-FRONTMATTER FROM THIS FILE!!!**        //
+//                                                                    //
+//  `/assets/css/content.scss` compilation is handled by Jekyll       //
+//                                                                    //
+//  See the `sass:` key in `_config.yml` for configuration options    //
+// ================================================================== //
+//
+/**
+*
+*  This file is to enable custom styles in CloudCannon
+*  It MUST be uncompressed or it won't work
+*
+*/
+// Variables
+@import '0-tools/vars';
+
+@import '3-layout/content';

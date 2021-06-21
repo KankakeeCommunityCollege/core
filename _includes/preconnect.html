@@ -13,8 +13,8 @@
 <link rel="preconnect" as="script" href="{{page.baseurl}}assets/js/dist/kcc-theme.bundle.js?version={% include hash/theme_hash.yml %}">
 <!-- preconnect to newsroom for fetching the newsfeed -->
 <link rel="preconnect" href="https://news.kcc.edu">
-{%- if page.title == 'KCC' -%}
-<link rel="preload" as="image" href="{{ page.baseurl }}uploads/poster_welding_sm.jpg">
+{%- if page.url == '/' -%}
+<link rel="preload" as="image" href="{{ page.baseurl }}{{ page.video_loading_image }}">
 <link rel="preload" as="script" href="https://public.tockify.com/browser/embed.js">
 {%- endif -%}
 <!-- End of preconnects -->

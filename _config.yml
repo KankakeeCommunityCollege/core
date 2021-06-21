@@ -1,12 +1,19 @@
 title: "Kankakee Community College"
 site_name: KCC
-public-url: "http://www.kcc.edu"
+public-url: "https://www.kcc.edu"
+port: 3000
 theme: "kcc-gem-theme"
+#open_url: true ## Uncomment if you want the site to open automatically in your browser
 timezone: America/Chicago
 google-tag_key: GTM-TNVWT2L
 core_site: true
 core_root: true
 humans_file: true
+# Jekyll sass configuration options:
+sass: # Use jekyll to compile a simple CloudCannon (CC) stylesheet found in `/assets/css/content.scss`
+  sass_dir: /assets/scss/ # tell Jekyll where our sass partials are (default is _sass/)
+  sourcemap: never # Jekyll command breaks with default sourcemap settings - it's tiny stylesheet anyways
+  style: expanded # CC requires an expanded css file for custom CC styles
 compress_html:
     clippings: all
     comments: []
@@ -17,34 +24,7 @@ compress_html:
     profile: false
     startings: []
 #translate: true ## Uncomment to activate Google Translate Powers!!
-#nav_links:
-#  - link_text: Home
-#    link_href: ''
-#    button: false
-#  - link_text: Landing Page
-#    link_href: 'landing-page'
-#    button: false
-#  - link_text: Example External Link
-#    link_href: 'https://example-external-link.com'
-#    button: false
-#    external: true  <---- #### Add the `external: true` key & value to make an external link ####
-#
-#### Example sub-nav configuration below #### ======================================================= #
-##                                                                                                   ##
-##   link_href's must have a single '/' in the link (no '/' in the begining or end of the string)    ##
-##                                                                                                   ##
-## ================================================================================================== #
-#
-#sub-nav_links:
-#  - link_text: Sheets
-#    link_href: 'reference/gsheets'
-#  - link_text: CloudCannon
-#    link_href: 'reference/cloudcannon'
-#
 collections:
-  posts:
-    output: false
-    _hide_content: true
   contacts:
     output: false
 defaults:
@@ -58,7 +38,6 @@ defaults:
     baseurl: ../../../
     categories: news
 permalink: pretty
-email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
 # Delete this comment and place description on this line
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -95,7 +74,7 @@ exclude:
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"
 
-_comments:
+_comments: # Custom hjelper comments/descriptions for CloudCannon
   layout: Do NOT modify layouts. It may break things.
   baseurl: Do NOT modify baseurl. It WILL break all page links.
   categories: "FOR CATEGORIES <br/>SPORTS-SPECIFIC: <br/>1.) First enter the sport's category from this list <br/>2.) followed by the \"news\" category. <br/>(e.g. mens-basketball news) <br/>GENERAL NEWS: <br/>1.) Enter \"news\" category first <br/>2.) followed by the \"general\" category. <br/>(e.g. news general)"
