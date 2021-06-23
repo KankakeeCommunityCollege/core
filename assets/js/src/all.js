@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-if ( true || window.location.pathname == '/' && mobileMediaQueryList.matches ) {
+if ( window.location.pathname == '/' && mobileMediaQueryList.matches ) {
   window.addEventListener('load', function () { // This not-so-important JS should happen after window.onload
     import( /* webpackChunkName: 'toggleSettingVisibilityOnScrollBottom' */ './toggleSettingVisibilityOnScrollBottom').then(({
       default: toggleSettingVisibilityOnScrollBottom
