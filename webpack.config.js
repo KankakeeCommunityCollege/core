@@ -9,7 +9,7 @@ const plugins = [
     // Options similar to the same options in webpackOptions.output
     // both options are optional
     filename: devMode ? '[name].css' : '[name].[fullhash].css',
-    chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
+    chunkFilename: devMode ? '[id].css' : '[id].[fullhash].css',
   }),
   new WebpackHashFilePlugin({
     path: '../_data/',
