@@ -8,6 +8,7 @@ google-tag_key: GTM-TNVWT2L
 core_site: true
 core_root: true
 humans_file: true
+# BUILD
 # Jekyll sass configuration options:
 sass: # Use jekyll to compile a simple CloudCannon (CC) stylesheet found in `/assets/css/content.scss`
   sass_dir: /assets/scss/ # tell Jekyll where our sass partials are (default is _sass/)
