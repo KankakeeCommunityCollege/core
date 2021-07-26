@@ -108,6 +108,8 @@
       href: 'food-services'
     - text: Workforce Services
       href: 'https://wioa.kcc.edu/'
+    - text: Student Handbook
+      href: handbook
 - link_text: Community
   link_href: 'community'
   image:
