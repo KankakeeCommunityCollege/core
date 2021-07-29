@@ -7,6 +7,7 @@ timezone: America/Chicago
 google-tag_key: GTM-TNVWT2L
 core_site: true
 core_root: true
+# BUILD
 humans_file: true
 # Jekyll sass configuration options:
 sass: # Use jekyll to compile a simple CloudCannon (CC) stylesheet found in `/assets/css/content.scss`
