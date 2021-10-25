@@ -77,16 +77,17 @@
 .news__div--img {
   background-size: cover;
   background-position: 50% 50%;
-  width: 50px;
+  background-color: rgba(0,0,0,.125);
+  border-radius: 50%;
+  float: right;
   height: 50px;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 5px;
   margin-top: 0;
-  min-width: 50px;
   min-height: 50px;
-  float: right;
-  border-radius: 50%;
+  min-width: 50px;
+  width: 50px;
 }
 
 @media (min-width: 350px) {
