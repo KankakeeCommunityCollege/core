@@ -7,12 +7,7 @@ const PUBLISHED_TAG_FROM_NEWS_FEED = 'published';  // You get the idea...
 const SUMMARY_TAG_FROM_NEWS_FEED = 'summary';
 const  IMAGE_TAG_FROM_NEWS_FEED = 'media:thumbnail';
 
-function setLinkAttributes(href, a) {
-  a.setAttribute('href', href);
-  return a;
-}
-
-function createTitleEl(title, div) {
+function createHeading(title, div) {
   const h3 = document.createElement('h3');
 
   h3.innerHTML = title;
@@ -21,7 +16,7 @@ function createTitleEl(title, div) {
   return h3;
 }
 
-function createSummaryEl(summaryText, div, a) {
+function createSummaryParagraph(summaryText, div, a) {
   const p = document.createElement('p');
 
   p.innerHTML = summaryText;
@@ -34,7 +29,7 @@ function createSummaryEl(summaryText, div, a) {
 function createImageDiv(imageLocation, a) {
   const div = document.createElement('div');
 
-  div.setAttribute('style', "background-image: url('" + imageLocation + "');");
+  div.style = `background-image: url('${imageLocation}')`;
   div.classList.add('news__div--img');
   a.appendChild(div);
   return div;
@@ -43,24 +38,16 @@ function createImageDiv(imageLocation, a) {
 function createEntryElements(items, a, div, span) {
 
   if ( items.tagName == LINK_TAG_FROM_NEWS_FEED ) {
-    // LINK
-    //console.log(items.getAttribute('href'));
-    setLinkAttributes(items.getAttribute('href'), a);
+    a.href = items.getAttribute('href');
   } else if ( items.tagName == TITLE_TAG_FROM_NEWS_FEED ) {
-    // TITLE
-    //console.log(items.textContent);
     div.appendChild(span);
-    createTitleEl(items.textContent, div);
-  } else if ( items.tagName == PUBLISHED_TAG_FROM_NEWS_FEED ) {
+    createHeading(items.textContent, div);
+  // } else if ( items.tagName == PUBLISHED_TAG_FROM_NEWS_FEED ) {
     // PUBLISHED DATE
     //console.log(items.textContent);
   } else if ( items.tagName == SUMMARY_TAG_FROM_NEWS_FEED ) {
-    // SUMMARY
-    //console.log('SUMMARY: ' + items.textContent);
-    createSummaryEl(items.textContent, div, a);
+    createSummaryParagraph(items.textContent, div, a);
   } else if ( items.tagName == IMAGE_TAG_FROM_NEWS_FEED ) {
-    // IMAGE
-    //console.log('IMAGE: ' + items.getAttribute('url'));
     createImageDiv(items.getAttribute('url'), a);
   }
   return a;
@@ -132,10 +119,6 @@ function addEventListeners(el, eventsArray, handlerFunctionArray) {
 }
 
 function buildNewsFeed() {
-
-  if ( window.location.pathname != '/' )
-    return;
-
   const xhr = new XMLHttpRequest();
 
   addEventListeners(xhr, ['load', 'error'], [requestListener, errorListener]);
