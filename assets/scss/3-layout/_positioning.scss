@@ -81,7 +81,13 @@
 .position__video-controls {
   bottom: 1.5rem;
   position: absolute;
-  right: 2rem;
+  right: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .position__video-controls {
+    right: 2rem;
+  }
 }
 
 .position__video-heading--wrapper {
@@ -90,9 +96,12 @@
   left: 1.5rem;
 }
 
+
+
 @media screen and (min-width: 992px) {
   .position__video-heading--wrapper {
-    left: 5rem;
+    left: 2rem;
+    right: 75px;
   }
 }
 
@@ -117,4 +126,9 @@
     margin-top: 0 !important;
     padding-top: 110px !important;
   }
+}
+
+#homePage .position__offset-alert-core--root {
+  padding-top: .55rem;
+  padding-bottom: .5rem;
 }

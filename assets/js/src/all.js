@@ -28,7 +28,7 @@ if (
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname === '/settings/') {
-    loadModule('settings');
+    loadModule('userSettings');
   }
 });
 

@@ -10,6 +10,7 @@
 */
 const NEWS_FEED_URL = 'https://news.kcc.edu/feed.xml'; // Ummmm...that's just the way this is...
 const NEWS_FEED_PARENT_ELEMENT_ID = 'news'; // ID built into the HTML | wrapper element to hold the list
+const PARENT = document.getElementById(NEWS_FEED_PARENT_ELEMENT_ID);
 
 function loadImage(src, div) {
   return new Promise((resolve, reject) => {
@@ -20,28 +21,30 @@ function loadImage(src, div) {
   })
 }
 
+function createListItem(entry, imageArr, htmlArr, i) {
+  const title = entry.querySelector('title').innerHTML;
+  const link = entry.querySelector('link').getAttribute('href');
+  const summary = entry.querySelector('summary').innerHTML;
+  const image = entry.getElementsByTagName('media:thumbnail')[0].getAttribute('url');
+
+  imageArr.push(`${image}`); // populate imageArr in order with the URL for each image
+  htmlArr.push('<li class="news__li">',
+    `<a class="news__a" href="${link}">`,
+    '<div class="news__div">',
+    `<span class="news__span">${i + 1}</span>`,
+    `<h3 class="news__h3">${title}</h3>`,
+    `<p class="news__p">${summary}</p>\n</div>\n<div class="news__div--img"></div>\n</a>\n</li>`);
+}
+
 function requestHandler() {
-  const PARENT = document.getElementById(NEWS_FEED_PARENT_ELEMENT_ID)
-  let xml, entriesList;
-  let imageArr = [];
-  let htmlArr = ['<ol class="news__ol">'];
   const createListPromise = new Promise((resolve, reject) => {
     this.status != 200 ? console.error(`Error ${this.status}: ${this.statusText}`) : null;
-    xml = this.responseXML;
-    entriesList = xml.getElementsByTagName('entry');
-    entriesList.forEach((entry,i) => {
-      const title = entry.querySelector('title').innerHTML;
-      const link = entry.querySelector('link').getAttribute('href');
-      const summary = entry.querySelector('summary').innerHTML;
-      const image = entry.getElementsByTagName('media:thumbnail')[0].getAttribute('url');
-  
-      imageArr.push(`${image}`);
-      htmlArr.push('<li class="news__li">',
-        `<a class="news__a" href="${link}">`,
-        '<div class="news__div">',
-        `<span class="news__span">${i + 1}</span>`,
-        `<h3 class="news__h3">${title}</h3>`,
-      `<p class="news__p">${summary}</p>\n</div>\n<div class="news__div--img"></div>\n</a>\n</li>`)
+    const entriesList = this.responseXML.getElementsByTagName('entry');
+    let imageArr = [];
+    let htmlArr = ['<ol class="news__ol">'];
+
+    entriesList.forEach((entry, i) => {
+      createListItem(entry, imageArr, htmlArr, i);
     });
     htmlArr.push('\n</ol>');
     PARENT.innerHTML = htmlArr.join('');
@@ -69,7 +72,6 @@ function getNewsFeed() {
 
   xhr.onerror = () => console.error('Error fetching the news feed XML-file!')
   xhr.addEventListener('load', requestHandler);
-  // addEventListeners(xhr, ['load', 'error'], [requestListener, errorListener]);
   xhr.open('GET', NEWS_FEED_URL);
   xhr.responseType = 'document';
   xhr.send();
