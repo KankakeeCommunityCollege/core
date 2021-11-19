@@ -5,8 +5,8 @@ import '../../scss/main.scss';
  *  for Kankakee Community College
  *
  */
-
 const VIDEO_ELEMENT_ID = 'video'; // ID is built into the HTML
+const path = window.location.pathname;
 let mobileMediaQueryList = window.matchMedia('(max-width: 768px)'); // 768px is the Bootstrap tablet breakpoint
 
 function loadModule(...moduleArgs) {
@@ -18,23 +18,28 @@ function loadModule(...moduleArgs) {
 }
 
 if (
-    window.location.pathname == '/' &&
+    path == '/' &&
     !mobileMediaQueryList.matches &&
     document.getElementById(VIDEO_ELEMENT_ID) &&
     window.localStorage.getItem('playVideoOnHomePageSetting') != 'false'
   ) {
   loadModule('loadVideo');
+} else if (
+    path == '/' &&
+    mobileMediaQueryList.matches
+) {
+  loadModule('createPlayButtonForVideo');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.pathname === '/settings/') {
+  if (path === '/settings/') {
     loadModule('userSettings');
   }
 });
 
 window.addEventListener('load', function () {
-  window.location.pathname == '/' ? loadModule('getNewsFeed') : null;
-  if (window.location.pathname == '/' && mobileMediaQueryList.matches) {
+  path == '/' ? loadModule('getNewsFeed') : null;
+  if (path == '/' && mobileMediaQueryList.matches) {
     loadModule('toggleSettingVisibilityOnScrollBottom');
   }
 });
