@@ -81,7 +81,19 @@
 .position__video-controls {
   bottom: 1.5rem;
   position: absolute;
-  right: 1rem;
+  right: .5rem;
+}
+
+@media screen and (min-width: 350px) {
+  .position__video-controls {
+    right: 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .position__video-controls {
+    right: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -93,10 +105,20 @@
 .position__video-heading--wrapper {
   position: absolute;
   bottom: 1.1rem;
-  left: 1.5rem;
+  left: .5rem;
 }
 
+@media screen and (min-width: 350px) {
+  .position__video-heading--wrapper {
+    left: 1rem;
+  }
+}
 
+@media screen and (min-width: 576px) {
+  .position__video-heading--wrapper {
+    left: 1.5rem;
+  }
+}
 
 @media screen and (min-width: 992px) {
   .position__video-heading--wrapper {

@@ -1,88 +1,89 @@
-import createVideoControls from './createVideoControls.js';
+/**
+ * 
+ * Custom JS written by Wesley Zajicek for:
+ * © 2021 Kankakee Community College
+ * 
+ * @author Wesley Zajicek <https://github.com/wdzajicek>
+ * @copyright © 2021 Kankakee Community College
+ * 
+ * @const {string} VIDEO_PLACEHOLDER_ID - ID of a placeholder <div> element with data-attributes that correspond to the video files/info
+ * @const {string} VIDEO_CONTAINER_ID - ID for the parent element of the above VIDEO_PLACEHOLDER_ID <div>.
+ * if loadVideo() was imported after DOMContentLoaded (from clicking play button) it will be `true`
+ * 
+ */
+// =========================================================================================
 
-const VIDEO_PLACEHOLDER_ID = 'video';
 const VIDEO_CONTAINER_ID = 'videoContainer';
-const MOBILE_USERAGENT_REGEXP = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i;
-
-function setElementAttributes(el, attributeArgument) {
-  for (var attribute in attributeArgument) {
-    if (attributeArgument.hasOwnProperty(attribute)) {
-      el.setAttribute(attribute, attributeArgument[attribute]);
-    }
-  }
-}
+const VIDEO_PLACEHOLDER_ID = 'video';
 
 function createVideoElement(attributesObject) {
   const video = document.createElement('video');
 
-  setElementAttributes(video, attributesObject);
+  Object.keys(attributesObject).map(key => {
+    video.setAttribute(key, attributesObject[key]);
+  })
   return video;
 }
 
-function appendSourceToVideo(video, videoSource, videoSourceType) {
-  const source = document.createElement('source');
+function createSourceElements(video, srcArr, srcTypesArr) {
+  srcArr.forEach((src, i) => {
+    const source = document.createElement('source');
 
-  setElementAttributes(source, {'src': videoSource, 'type': videoSourceType});
-  video.appendChild(source);
-  return source;
+    source.src = src;
+    source.setAttribute('type', srcTypesArr[i]);
+    video.appendChild(source);
+  });
+  return video;
 }
 
-function createSourceElements(video, videoSourcesArray, videoSourceTypesArray) {
-  for (var i = 0, len = videoSourcesArray.length; i < len; i++) {
-    appendSourceToVideo(video, videoSourcesArray[i], videoSourceTypesArray[i]);
-  }
-  return video;
+function handleSlowNetwork(message, time) {
+  window.setTimeout(() => {
+    import('./createPlayButtonForVideo').then(({default: createPlayButtonForVideo}) => createPlayButtonForVideo())
+  }, 1e3);
+  return console.error(message, time);
 }
 
 function loadVideo() {
-  // Bail-out if the element needed is missing
-  if ( ! document.getElementById(VIDEO_PLACEHOLDER_ID) )
-    return;
-  // Bail-out if the user is on a mobile device (we don't want to download a video file of mobile networks!)
-  if ( navigator.userAgent.search(MOBILE_USERAGENT_REGEXP) !== -1 )
-    return;
-
-  const t0 = performance.now();
-  const videoPlaceholder = document.getElementById(VIDEO_PLACEHOLDER_ID);
   const videoContainer = document.getElementById(VIDEO_CONTAINER_ID);
-  // Below are `data-*=""` attributes built into the HTML
-  const videoSourcesArray = videoPlaceholder.dataset.videos.split(',');
-  const videoSourceTypesArray = videoPlaceholder.dataset.videoTypes.split(',');
-  const videoPoster = videoPlaceholder.dataset.poster;
-
-  const videoAttributes = {
+  // `data-*=""` attributes built into the HTML contain the settings for the video sources, types, and poster
+  const data = videoContainer.querySelector(`#${VIDEO_PLACEHOLDER_ID}`).dataset; // This element is a placeholder div for the video w/ it's data-attributes representing video settings
+  let [ srcArr, srcTypesArr, poster ] = [ data.videos.split(','), data.videoTypes.split(','), data.poster ]; /** @var {array} srcArr - array of video-sources separated by a comma + space -- each source corresponds to a video file @var {array} srcTypesArr - array of video-types separated by a comma + space -- each type matches a source in srcArr @var {string} poster - The location of the poster image for the video */
+  const videoAttributes = { // Settings for our video player
     'autoplay': '',
     'muted': '',
     'loop': '',
     'playsinline': '',  // <https://developer.apple.com/documentation/webkit/safari_tools_and_features/delivering_video_content_for_safari>
-    'poster': videoPoster,
+    'poster': poster,
     'id': 'videoElement',
     'class': 'width__full'
   };
-
   const video = createVideoElement(videoAttributes);
 
-  window.addEventListener('load', function(){
-  const t1 = performance.now();
-  if ( t1 - t0 > 5000 ) {
-    return console.error('Slow network speeds. Aborting video load');
-  } else {
-    createSourceElements(video, videoSourcesArray, videoSourceTypesArray);
-    
-    videoContainer.innerHTML = '';
-    videoContainer.innerHTML = video.outerHTML;
-    createVideoControls();
-  }
-  });
+  Promise.resolve()
+    .then(() => createSourceElements(video, srcArr, srcTypesArr))
+    .then(() => {
+      if (arguments[0] != undefined) { // If an argument comes through this loadVideo module, it is a time-mark for performance
+        const t0 = arguments[0];
+        const t1 = performance.now();
+        // Tested by simulating slow connections speeds:
+        // Over a fast-ish 3G network, t1 - t0 comes to an average around 600ms
+        // Over a slow 3G connection it can be anywhere from 1000ms to 2000ms+
+        if (t1 - t0 > 1000) { // If 750ms is too aggressive (i.e. if too many users encounter the `handleSlowNetwork()` func, then try 1000ms or higher)
+          handleSlowNetwork('Slow network speeds:', t1 - t0);
+        } else {
+          t1 - t0 > 675 ? console.info(`Performance: ${t1 - t0}ms`) : null; // Log performance if speed is flakey
+          videoContainer.innerHTML = '';
+          // We need to "flatten" the video element to inject it as HTML for autoplay to work.
+          videoContainer.innerHTML = video.outerHTML; // Autoplay does not work if the video element were injected directly via `appendChild(video)`
+        }
+      } else {
+        videoContainer.innerHTML = '';
+        videoContainer.appendChild(video); 
+      }
+    })
+    .then(() => {
+      import('./createVideoControls').then(({default: createVideoControls}) => createVideoControls())
+    })
 }
 
 export default loadVideo;
-//  USAGE:
-//
-//  //Fire immediately. Do NOT fire inside `DOMContentLoaded` watcher
-//
-//  loadVideo();
-//
-//  document.addEventListener('DOMContentLoaded', function() {
-//    // Normal JS that fires after the DOM has loaded...
-//  });

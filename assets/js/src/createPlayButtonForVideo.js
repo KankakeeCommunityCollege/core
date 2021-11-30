@@ -1,7 +1,7 @@
 const VIDEO_CONTROLS_PARENT_ID = 'videoControls';
 const BUTTON_ID = 'playPause';
-const VIDEO_CONTAINER_ID = 'videoContainer'
-const VIDEO_CONTROLS_HIDDEN_CLASS = 'video__controls--hidden'
+const VIDEO_CONTAINER_ID = 'videoContainer';
+const VIDEO_CONTROLS_HIDDEN_CLASS = 'video__controls--hidden';
 const button = document.getElementById(BUTTON_ID);
 const PLAY_SVG = `<svg id="play" class="img-fluid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
   <path d="M45.27,27.16L11.41,7.61c-0.65-0.37-1.45,0.09-1.45,0.84v39.1c0,0.75,0.81,1.21,1.45,0.84 
@@ -27,23 +27,21 @@ function playVideoClickHandler(e) {
   button.removeEventListener('click', playVideoClickHandler);
   createLoader();
   window.setTimeout(() => {
-    import('./loadVideoForMobile').then(({default: loadVideoForMobile}) => loadVideoForMobile())
+    import('./loadVideo').then(({ default: loadVideo }) => loadVideo())
   }, 1e3);
 }
 
 function showVideoPlayButton(buttonParent, button, cb) {
-  button.innerHTML = '<span class="sr-only">Play video...</span>' + PLAY_SVG;
+  button.innerHTML = '<span class="sr-only">Download and play the video...</span>' + PLAY_SVG;
   buttonParent.classList.remove(VIDEO_CONTROLS_HIDDEN_CLASS);
   buttonParent.setAttribute('aria-hidden', 'false');
   return cb();
 }
 
-function createPlayButtonForVideo() {
+export default function createPlayButtonForVideo() {
   const div = document.getElementById(VIDEO_CONTROLS_PARENT_ID);
 
   showVideoPlayButton(div, button, ()=> {
     button.addEventListener('click', playVideoClickHandler);
   });
 }
-
-export default createPlayButtonForVideo;
