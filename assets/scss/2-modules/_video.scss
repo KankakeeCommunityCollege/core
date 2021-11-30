@@ -9,11 +9,18 @@
   pointer-events: none;
 }
 
+// Targets the button element for pausing/playing video
+#playPause {
+  filter: drop-shadow(2px 2px 5px rgba(0,0,0,.75));
+}
+
+// Targets inline SVG elements inside button#playPause
 #pause,
 #play {
   fill: $primary-red;
   height: 22px;
   width: 22px;
+  filter: drop-shadow(2px 3px 6px rgba(0,0,0,.75));
 }
 
 @media screen and (min-width: 400px) {
@@ -31,4 +38,14 @@
     position: relative;
     bottom: 12vh;
   }
+}
+
+.video__loader {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 15%;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
