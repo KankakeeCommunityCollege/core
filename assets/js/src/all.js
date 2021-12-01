@@ -28,7 +28,7 @@ function loadModule(...moduleArgs) {
   });
 }
 
-!mobileMediaQueryList.matches && PLAY_VIDEO_SETTING_IS_ON ? loadModule({module: 'loadVideo', arg: t0 })
+!mobileMediaQueryList.matches && PLAY_VIDEO_SETTING_IS_ON && path == '/' ? loadModule({module: 'loadVideo', arg: t0 })
   : path == '/' && mobileMediaQueryList.matches ? loadModule('createPlayButtonForVideo')
   : null;
 
