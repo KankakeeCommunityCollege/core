@@ -63,6 +63,7 @@ function loadVideo() {
     .then(() => createSourceElements(video, srcArr, srcTypesArr))
     .then(() => {
       if (arguments[0] != undefined) { // If an argument comes through this loadVideo module, it is a time-mark for performance
+        // If the argument exists the video is being loaded on a large/XL screen otherwise it's mobile
         const t0 = arguments[0];
         const t1 = performance.now();
         // Tested by simulating slow connections speeds:
@@ -72,11 +73,14 @@ function loadVideo() {
           handleSlowNetwork('Slow network speeds:', t1 - t0);
         } else {
           t1 - t0 > 675 ? console.info(`Performance: ${t1 - t0}ms`) : null; // Log performance if speed is flakey
+          // preload="auto" attribute is set for desktop viewers ONLY and NOT MOBILE!
+          video.setAttribute('preload', 'auto');
           videoContainer.innerHTML = '';
           // We need to "flatten" the video element to inject it as HTML for autoplay to work.
           videoContainer.innerHTML = video.outerHTML; // Autoplay does not work if the video element were injected directly via `appendChild(video)`
         }
-      } else {
+      } else { // Mobile, tablet, and small devices will have `( arguments[0] == undefined )` is true and...
+        // ...execute this code:
         videoContainer.innerHTML = '';
         videoContainer.appendChild(video); 
       }
