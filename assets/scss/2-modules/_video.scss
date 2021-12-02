@@ -9,18 +9,19 @@
   pointer-events: none;
 }
 
-// Targets the button element for pausing/playing video
+// Targets the circular red button element for pausing/playing video
 #playPause {
-  filter: drop-shadow(2px 2px 5px rgba(0,0,0,.75));
+  filter: drop-shadow(1.5px 2.5px 2.5px rgba(0,0,0,0.75));
 }
 
-// Targets inline SVG elements inside button#playPause
+// Targets the pause symbol (two parallel/vertical bars)...
+// ...which is an inline-SVG elements inside the button#playPause
 #pause,
 #play {
   fill: $primary-red;
+  stroke: $pause-button-stroke-color;
   height: 22px;
   width: 22px;
-  filter: drop-shadow(2px 3px 6px rgba(0,0,0,.75));
 }
 
 @media screen and (min-width: 400px) {
