@@ -1,8 +1,9 @@
 {
   "name": "Kankakee Community College",
   "short_name": "KCC",
+  "display": "fullscreen",
   "lang": "en",
-  "theme_color": "#0f3b63",
+  "theme_color": "#b8babc",
   "description": "KCC's small class sizes, faculty and support services help you stay on track to graduate.",
   "icons": [{
       "src": "/icon.png",
