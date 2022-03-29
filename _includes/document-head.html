@@ -6,7 +6,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{page.title}} - {{site.title}}</title>
     <meta name="description" content="{{page.description}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.keywords and page.keywords != '' %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    <!-- Required Bootstrap 4 viewport meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% include preconnect.html %}
     <!-- ==============================
       KCC GEM THEME
