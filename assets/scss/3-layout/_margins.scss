@@ -5,11 +5,12 @@
 }
 
 .margins__404 .position__offset-alert-core--root.position__offset-alert--visible {
-  margin-top: 115px;
+  margin-top: 100px;
+  padding-top: 1.2rem;
 }
 
 @media screen and (min-width: 992px) {
   .margins__404 .position__offset-alert-core--root.position__offset-alert--visible {
-    margin-top: 110px;
+    margin-top: 95px;
   }
 }
