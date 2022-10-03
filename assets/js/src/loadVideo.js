@@ -31,7 +31,7 @@ function createSourceElements(video, srcArr, srcTypesArr) {
 
     source.src = src;
     source.setAttribute('type', srcTypesArr[i]);
-    video.appendChild(source);
+    video.append(source);
   });
   return video;
 }
@@ -72,7 +72,7 @@ function loadVideo() {
         if (t1 - t0 > 1000) { // If 750ms is too aggressive (i.e. if too many users encounter the `handleSlowNetwork()` func, then try 1000ms or higher)
           handleSlowNetwork('Slow network speeds:', t1 - t0);
         } else {
-          t1 - t0 > 675 ? console.info(`Performance: ${t1 - t0}ms`) : null; // Log performance if speed is flakey
+          if (t1 - t0 > 675) console.info(`Performance: ${t1 - t0}ms`); // Log performance if speed is flakey
           // preload="auto" attribute is set for desktop viewers ONLY and NOT MOBILE!
           video.setAttribute('preload', 'auto');
           videoContainer.innerHTML = '';
@@ -82,7 +82,7 @@ function loadVideo() {
       } else { // Mobile, tablet, and small devices will have `( arguments[0] == undefined )` is true and...
         // ...execute this code:
         videoContainer.innerHTML = '';
-        videoContainer.appendChild(video); 
+        videoContainer.append(video);
       }
     })
     .then(() => {

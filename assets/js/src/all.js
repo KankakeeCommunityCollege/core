@@ -8,11 +8,6 @@
  */
 import '../../scss/main.scss';
 
-const t0 = performance.now();
-const PLAY_VIDEO_SETTING_IS_ON = window.localStorage.getItem('playVideoOnHomePageSetting') != 'false'
-const path = window.location.pathname;
-const mobileMediaQueryList = window.matchMedia('(max-width: 768px)'); // 768px is the Bootstrap tablet breakpoint
-
 function loadModule(...moduleArgs) {
   const simpleImport = typeof moduleArgs[0] == 'string';
   const module = simpleImport ? moduleArgs[0] : moduleArgs[0].module;
@@ -28,11 +23,17 @@ function loadModule(...moduleArgs) {
   });
 }
 
-!mobileMediaQueryList.matches && PLAY_VIDEO_SETTING_IS_ON && path == '/' ? loadModule({module: 'loadVideo', arg: t0 })
-  : path == '/' && mobileMediaQueryList.matches ? loadModule('createPlayButtonForVideo')
-  : null;
+const t0 = performance.now();
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
+  const PLAY_VIDEO_SETTING_IS_ON = window.localStorage.getItem('playVideoOnHomePageSetting') != 'false'
+  const path = window.location.pathname;
+  const mobileMediaQueryList = window.matchMedia('(max-width: 768px)'); // 768px is the Bootstrap tablet breakpoint
+
+  if (!mobileMediaQueryList.matches && PLAY_VIDEO_SETTING_IS_ON && path == '/') loadModule({ module: 'loadVideo', arg: t0 });
+
+  if (path == '/' && mobileMediaQueryList.matches) loadModule('createPlayButtonForVideo');
+
   if (path == '/') {
     Promise.resolve()
       .then(() => loadModule('getNewsFeed'))
