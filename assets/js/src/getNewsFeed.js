@@ -12,15 +12,6 @@ const NEWS_FEED_URL = 'https://news.kcc.edu/feed.xml'; // Ummmm...that's just th
 const NEWS_FEED_PARENT_ELEMENT_ID = 'news'; // ID built into the HTML | wrapper element to hold the list
 const PARENT = document.getElementById(NEWS_FEED_PARENT_ELEMENT_ID);
 
-function loadImage(src, div) {
-  return new Promise((resolve, reject) => {
-    const image = new Image();
-    image.addEventListener('load', () => div.style = `background-image: url('${src}')`);
-    image.addEventListener('error', (err) => console.error(err));
-    image.src = src;
-  })
-}
-
 function createListItem(entry, imageArr, htmlArr, i) {
   const title = entry.querySelector('title').innerHTML;
   const link = entry.querySelector('link').getAttribute('href');
@@ -28,41 +19,40 @@ function createListItem(entry, imageArr, htmlArr, i) {
   const image = entry.getElementsByTagName('media:thumbnail')[0].getAttribute('url');
 
   imageArr.push(`${image}`); // populate imageArr in order with the URL for each image
-  htmlArr.push('<li class="news__li">',
+  htmlArr.push(`<li class="news__li">`,
     `<a class="news__a" href="${link}">`,
-    '<div class="news__div">',
+    `<div class="news__div">`,
     `<span class="news__span">${i + 1}</span>`,
     `<h3 class="news__h3">${title}</h3>`,
-    `<p class="news__p">${summary}</p>\n</div>\n<div class="news__div--img"></div>\n</a>\n</li>`);
+    `<p class="news__p">${summary}</p>`,
+    `\n</div>\n<div class="news__div--img"></div>\n</a>\n</li>`);
 }
 
 function requestHandler() {
+  if (this.status != 200) {
+    return console.error(`Error ${this.status}: ${this.statusText}`);
+  }
+
   const createListPromise = new Promise((resolve, reject) => {
-    this.status != 200 ? console.error(`Error ${this.status}: ${this.statusText}`) : null;
-    const entriesList = this.responseXML.getElementsByTagName('entry');
+    const entriesList = this.responseXML.querySelectorAll('entry');
     let imageArr = [];
     let htmlArr = ['<ol class="news__ol">'];
 
-    entriesList.forEach((entry, i) => {
+    [...entriesList].forEach((entry, i) => {
       createListItem(entry, imageArr, htmlArr, i);
     });
+
     htmlArr.push('\n</ol>');
     PARENT.innerHTML = htmlArr.join('');
     resolve(imageArr);
   });
+
   createListPromise
     .then((imageArr) => {
       const list = PARENT.querySelector('ol');
       const imageDiv = list.querySelectorAll('.news__div--img');
-      let promises = [];
 
-      imageDiv.forEach((div, i) => {
-        promises.push(loadImage(imageArr[i], div));
-      });
-      Promise.all(promises)
-        .then(result => {
-          console.log('all resolved', result);
-        })
+      [...imageDiv].forEach((div, i) => div.style = `background-image: url('${imageArr[i]}')`);
     })
 
 }
@@ -70,7 +60,8 @@ function requestHandler() {
 function getNewsFeed() {
   const xhr = new XMLHttpRequest();
 
-  xhr.onerror = () => console.error('Error fetching the news feed XML-file!')
+  xhr.addEventListener('error', (err) => console.error(`Error fetching the news feed XML-file!`, err));
+
   xhr.addEventListener('load', requestHandler);
   xhr.open('GET', NEWS_FEED_URL);
   xhr.responseType = 'document';
