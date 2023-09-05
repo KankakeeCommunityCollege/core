@@ -4,6 +4,8 @@
 
 ***The core websites for the KCC website redesign project***
 
+This project's version of Ruby: `ruby-3.1.3`.
+
 -----
 
 <br>
