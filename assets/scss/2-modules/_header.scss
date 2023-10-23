@@ -15,3 +15,40 @@
 //    height: auto;
 //  }
 //}
+
+@media screen and (min-width: 1100px) {
+  .header__bg {
+    height: 60%;
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__bg {
+    height: 65%;
+    height: 65vh;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .header__bg {
+    height: 70%;
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .header__bg {
+    height: auto;
+  }
+}
+
+.header__margin-top {
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 992px) {
+  .header__margin-top {
+    margin-top: 97px;
+  }
+}
