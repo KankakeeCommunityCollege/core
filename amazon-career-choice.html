@@ -5,25 +5,17 @@ title: Amazon Career Choice
 description: >-
   Choice empowers employees to learn new skills
   for career success at Amazon or elsewhere.
+form_heading: Request Information
 ---
-<main>
+{% include amazon-career-choice_header.html %}
+<main class="mt-3">
   <div class="container">
     <div class="row">
-      <div class="col">
-        {% include breadcrumbs.html %}
-        <h2 class="typography__h2">{{ page.title }}</h2>
-        <div class="text-center mb-3">
-          <a href="#232554891289065" class="btn btn-lg btn-outline-primary mx-2">
-            Request Info
-          </a>
-          <a href="https://www.kcc.edu/student-resources/advising/#schedule-online" class="btn btn-lg btn-primary mx-2">
-            Book Advising Appointment
-          </a>
-        </div>
+      <div class="col pt-0">
         <div class="text-center float-none float-lg-right">
           <img
             src="{{ page.baseurl }}uploads/amazon-career-choice_rgb_amazon-orange.png"
-            class="img-fluid p-3"
+            class="img-fluid px-3 pb-3"
             height="71"
             width="300"
             alt="Amazon | Career Choice"
@@ -31,28 +23,13 @@ description: >-
         </div>
         <div class="editable">
           <p>
-            Career Choice is an education benefit that empowers employees to
-            learn new skills for career success at Amazon or elsewhere. We meet
-            individual learners where they are on their education journey through
-            a variety of education and upskilling opportunities including full
-            college tuition, industry certifications designed to lead to in-demand
-            jobs, and foundational skills such as English language proficiency,
-            high school diplomas, and&nbsp;GEDs.
-          </p>
-          <p>
-            The educators in the Amazon Career Choice partner network deliver
-            on Amazon&apos;s commitment to provide hourly employees with
-            best-in-class support in their path to career success at Amazon or
-            elsewhere. Together, we are committed to providing excellent
-            education, job placement resources, and continuous improvements to
-            the student&nbsp;experience.
+            KCC is excited to partner with Amazon Career Choice to help you do what you love
+            and reach your goals! Eligible Amazon Associates can apply their Career Choice
+            benefits to complete a certificate or associate degree at KCC.
           </p>
         </div>
-        <script
-          type="text/javascript"
-          src="https://form.jotform.com/jsform/232554891289065"
-        ></script>
       </div>
     </div>
   </div>
+  {% include amazon-career-choice_benefits.html %}
 </main>

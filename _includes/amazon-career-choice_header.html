@@ -1,0 +1,24 @@
+<header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-xxl-8 header__bg" {% if page.background_image %}style="background-image: url('{{ page.background_image }}');"{% endif %}>
+          <div class="row positioning__heading--row">
+            <div class="col-8 offset-4 positioning__col--offset text-center">
+              <h2 class="typography__register--h2 typography--text-shadow">{{ page.main_heading }}</h2>
+              <h3 class="typography__register--h3 typography--text-shadow">{{ page.sub_heading }}</h3>  
+            </div>
+          </div>
+          <span class="typography__register--caption">Adrian Benfield, Class of 2017</span>
+        </div>
+        <div class="col-12 col-xxl-4 px-0 positioning__form--margins">
+          <h4 id="page-top" class="typography__register-h4 text-center">{{ page.form_heading }}</h4>
+          <div class="jotform__wrapper">
+            <script
+              type="text/javascript"
+              src="https://form.jotform.com/jsform/232554891289065"
+            ></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

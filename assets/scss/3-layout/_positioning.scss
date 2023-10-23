@@ -154,3 +154,15 @@
   padding-top: .55rem;
   padding-bottom: .5rem;
 }
+
+// Used in Amazon Career Choice landing page
+.positioning__form--margins { // Add space between header-graphic and form/Request Info heading in mobile
+  margin-top: 1.5rem;
+}
+
+// Used in Amazon Career Choice landing page
+@media screen and (min-width: 1450px) { // Space is not needed in larger screens as the form goes to the side of the header graphic
+  .positioning__form--margins {
+    margin-top: 0;
+  }
+}
