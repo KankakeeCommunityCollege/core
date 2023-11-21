@@ -3,9 +3,15 @@
       <div class="row">
         <div class="col-12 col-xxl-8 header__bg" {% if page.background_image %}style="background-image: url('{{ page.background_image }}');"{% endif %}>
           <div class="row positioning__heading--row">
-            <div class="col-8 offset-4 positioning__col--offset text-center">
+            <div class="col-5 offset-7 positioning__col--offset text-center">
+              <img
+                src="{{ page.baseurl }}assets/img/amazon_career_choice_purple.png"
+                class="img-fluid"
+                alt="Amazon Career Choice">
+              {% comment %}
               <h2 class="typography__register--h2 typography--text-shadow">{{ page.main_heading }}</h2>
               <h3 class="typography__register--h3 typography--text-shadow">{{ page.sub_heading }}</h3>  
+              {% endcomment %}
             </div>
           </div>
           {% if page.background_image_caption %}<span class="typography__register--caption">{{ page.background_image_caption }}</span>{% endif %}
