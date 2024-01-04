@@ -2,7 +2,6 @@ title: "Kankakee Community College"
 site_name: KCC
 public-url: "https://www.kcc.edu"
 port: 3000
-# BUILD
 theme: "kcc-gem-theme"
 timezone: America/Chicago
 google-tag_key: GTM-TNVWT2L
