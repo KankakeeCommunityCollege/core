@@ -23,6 +23,7 @@
 .pathways__slider .slick-prev {
   height: 25px;
   width: 25px;
+  z-index: 1; // z-index needed to ensure prev/next buttons are above slides
 }
 
 @media screen and (min-width: 992px) {
