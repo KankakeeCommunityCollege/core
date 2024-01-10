@@ -42,7 +42,6 @@ window.addEventListener('load', () => {
   path == '/settings/' ? loadModule('userSettings') : null;
 
   if (document.querySelector('.pathways__slider')) {
-    console.log(document.querySelector('.pathways__slider'));
     $('.pathways__slider').slick({
       dots: false,
       slidesToShow: 3,
