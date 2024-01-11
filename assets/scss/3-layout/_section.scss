@@ -1,3 +1,9 @@
 .section__heading-underline--transparent {
   background-image: url(/uploads/heading-bg-underline-transparent-dark.png);
 }
+
+@media screen and (max-width: 335px) {
+  .section__heading-underline--long-heading {
+    background-position: 0 calc(2rem * 2.6);
+  }
+}
