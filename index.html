@@ -43,6 +43,30 @@ slides:
       https://skills.kcc.edu
     url: https://skills.kcc.edu
     white_background: false
+pathways:
+  - pathway_name: Arts & Culture
+    pathway_url: https://www.kcc.edu/academics/#arts-and-culture
+    pathway_image: /assets/img/pathways_arts-and-culture.jpg
+  - pathway_name: Business & Communications
+    pathway_url: https://www.kcc.edu/academics/#business-and-communications
+    pathway_image: /assets/img/pathways_business-and-communications.jpg
+  - pathway_name: General/Exploration
+    pathway_url: https://www.kcc.edu/academics/#exploration
+    pathway_image: /assets/img/pathways_general-exploration.jpg
+  - pathway_name: Helping Professions
+    pathway_url: https://www.kcc.edu/academics/#helping-professions
+    pathway_image: /assets/img/pathways_helping-professions-opt2.jpg
+  - pathway_name: Medical Professions
+    pathway_url: https://www.kcc.edu/academics/#medical-professions
+    pathway_image: /assets/img/pathways_medical-professions.jpg
+  - pathway_name: STEM
+    pathway_url: https://www.kcc.edu/academics/#stem
+    pathway_image: /assets/img/pathways_stem.jpg
+pathway_buttons:
+  - text: Explore Pathways
+    url: https://www.kcc.edu/academics/
+  - text: Request Program Info
+    url: https://info.kcc.edu
 _inputs:
   homepage:
     hidden: true
@@ -65,116 +89,32 @@ _inputs:
         </div>
       </div>
       <div class="pathways__slider mb-3">
+        {% for path in page.pathways %}
         <div>
-          <a href="https://www.kcc.edu/academics/#arts-and-culture"
+          <a href="{{ path.pathway_url }}"
             class="links__no-underline pathways__link"
-            title="Arts & Culture"
+            title="{{ path.pathway_name }}"
           >
             <img
-              data-src="{{ page.baseurl }}assets/img/pathways_arts-and-culture.jpg"
+              data-src="{{ page.baseurl }}{{ path.pathway_image | replace: '/assets/', 'assets/' | replace: '/uploads/', 'uploads/' }}"
               src="{{ page.baseurl }}assets/img/placeholder_square.jpg"
               class="img-fluid"
               height="340"
               width="340"
-              alt="Arts & Culture">
+              alt="{{ path.pathway_name }}">
             <div class="text-center pathways__heading-wrapper d-flex flex-column py-3">
-              <h4 class="typography__h4 text-white my-auto">Arts & Culture</h4>
+              <h4 class="typography__h4 text-white my-auto">{{ path.pathway_name }}</h4>
             </div>
           </a>
         </div>
-        <div>
-          <a href="https://www.kcc.edu/academics/#business-and-communications"
-            class="links__no-underline pathways__link"
-            title="Business & Communications"
-          >
-            <img
-              data-src="{{ page.baseurl }}assets/img/pathways_business-and-communications.jpg"
-              src="{{ page.baseurl }}assets/img/placeholder_square.jpg"
-              class="img-fluid"
-              height="340"
-              width="340"
-              alt="Business & Communications">
-            <div class="text-center pathways__heading-wrapper d-flex flex-column py-3">
-              <h4 class="typography__h4 text-white my-auto">Business & Communications</h4>
-            </div>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.kcc.edu/academics/#exploration"
-            class="links__no-underline pathways__link"
-             title="General/Exploration"
-          >
-            <img
-              data-src="{{ page.baseurl }}assets/img/pathways_general-exploration.jpg"
-              src="{{ page.baseurl }}assets/img/placeholder_square.jpg"
-              class="img-fluid"
-              height="340"
-              width="340"
-              alt="General/Exploration">
-            <div class="text-center pathways__heading-wrapper d-flex flex-column py-3">
-              <h4 class="typography__h4 text-white my-auto">General/Exploration</h4>
-            </div>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.kcc.edu/academics/#helping-professions"
-            class="links__no-underline pathways__link"
-             title="Helping Professions"
-          >
-            <img
-              data-src="{{ page.baseurl }}assets/img/pathways_helping-professions-opt2.jpg"
-              src="{{ page.baseurl }}assets/img/placeholder_square.jpg"
-              class="img-fluid"
-              height="340"
-              width="340"
-              alt="Helping Professions">
-            <div class="text-center pathways__heading-wrapper d-flex flex-column py-3">
-              <h4 class="typography__h4 text-white my-auto">Helping Professions</h4>
-            </div>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.kcc.edu/academics/#medical-professions"
-            class="links__no-underline pathways__link"
-             title="Medical Professions"
-          >
-            <img
-              data-src="{{ page.baseurl }}assets/img/pathways_medical-professions.jpg"
-              src="{{ page.baseurl }}assets/img/placeholder_square.jpg"
-              class="img-fluid"
-              height="340"
-              width="340"
-              alt="Medical Professions">
-            <div class="text-center pathways__heading-wrapper d-flex flex-column py-3">
-              <h4 class="typography__h4 text-white my-auto">Medical Professions</h4>
-            </div>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.kcc.edu/academics/#stem"
-            class="links__no-underline pathways__link"
-            title="STEM"
-          >
-            <img
-              data-src="{{ page.baseurl }}assets/img/pathways_stem.jpg"
-              src="{{ page.baseurl }}assets/img/placeholder_square.jpg"
-              class="img-fluid"
-              height="340"
-              width="340"
-              alt="STEM">
-            <div class="text-center pathways__heading-wrapper d-flex flex-column py-3">
-              <h4 class="typography__h4 text-white my-auto">STEM</h4>
-            </div>
-          </a>
-        </div>
+        {% endfor %}
       </div>
       <div class="text-center mb-5">
-        <a href="https://www.kcc.edu/academics/" class="btn btn-primary btn-lg mx-2">
-          Explore Pathways
+        {% for button in page.pathway_buttons %}
+        <a href="{{ button.url }}" class="btn btn-primary btn-lg mx-2 my-2">
+          {{ button.text }}
         </a>
-        <a href="https://info.kcc.edu" class="btn btn-primary btn-lg mx-2">
-          Request Program Info
-        </a>
+        {% endfor %}
       </div>
     </div>
   </div>
