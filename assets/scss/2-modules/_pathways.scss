@@ -1,0 +1,49 @@
+
+.pathways__link {
+  display: block;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pathways--bg-primary {
+  background-color: $primary-blue;
+}
+
+.pathways__heading-wrapper {
+  background-color: $primary-blue;
+  min-height: 110px;
+}
+
+.pathways__slider .slick-slide {
+  padding: 0 .625rem;
+}
+
+.pathways__slider .slick-next,
+.pathways__slider .slick-prev {
+  height: 25px;
+  width: 25px;
+  z-index: 1; // z-index needed to ensure prev/next buttons are above slides
+}
+
+@media screen and (min-width: 992px) {
+  .pathways__slider .slick-next,
+  .pathways__slider .slick-prev {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pathways__slider .slick-next {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pathways__slider .slick-prev {
+    left: 0;
+    z-index: 1;
+  }
+}
+
