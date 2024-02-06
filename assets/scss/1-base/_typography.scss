@@ -35,13 +35,19 @@
 
 @media screen and (min-width: 992px) {
   .typography__video-heading {
-    font-size: 5rem;
+    font-size: 3.95rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .typography__video-heading {
-    font-size: 5.5rem;
+    font-size: 4.55rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .typography__video-heading {
+    font-size: 5rem;
   }
 }
 
@@ -69,12 +75,18 @@
 
 @media screen and (min-width: 992px) {
   .typography__video-heading--sub {
-    font-size: 2.75rem;
+    font-size: 2.15rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .typography__video-heading--sub {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .typography__video-heading--sub {
+    font-size: 2.75rem;
   }
 }
