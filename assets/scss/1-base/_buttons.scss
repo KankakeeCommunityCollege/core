@@ -54,3 +54,13 @@
     width: 56px;
   }
 }
+
+.buttons__action--width-auto {
+  width: auto;
+  &:nth-child(1) {
+    margin-right: .25rem;
+  }
+  &:nth-child(2) {
+    margin-left: .25rem;
+  }
+}
