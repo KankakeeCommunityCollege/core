@@ -18,15 +18,21 @@
                   <span class="sr-only">Pause</span>
               </button>
             </div>
-            <div class="position__video-heading--wrapper video__heading-wrapper--unclickable">
+            <div class="position__video-heading--wrapper">
               <h2 class="typography__video-heading">
-                The&nbsp;<span class="typography__video-heading--power">POWER</span> of&nbsp;Community
+                The&nbsp;<span class="typography__video-heading--power">POWER</span><br>
+                of&nbsp;Community
               </h2>
+              <h3 class="typography__video-heading--sub">Get ahead. Get started at KCC.</h3>
+              <div class="text-center d-none d-lg-flex mb-2">
+                <a href="https://apply.kcc.edu" class="btn buttons__action buttons__action--width-auto flex-fill ga_call_to_action">
+                  {% include svg/check_circle-24px.html %}&nbsp;Apply
+                </a>
+                <a href="https://visit.kcc.edu" class="btn buttons__action buttons__action--width-auto flex-fill ga_call_to_action">
+                  {% include svg/place-24px.html %}&nbsp;Visit KCC
+                </a>
+              </div>
             </div>
-            {% comment %}
-            <!-- Remove h2.sr-only element below if video heading/heading-wrapper above is added back -->
-            <h2 class="sr-only">The power of community</h2>
-            {% endcomment %}
           </div>
         </div>
       </div>
