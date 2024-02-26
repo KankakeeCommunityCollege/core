@@ -43,4 +43,30 @@ window.addEventListener('load', () => {
     import('./landingPage')
       .then(({ default: landingPage }) => landingPage());
   }
+
+  if (document.querySelector('.pathways__slider')) {
+    $('.pathways__slider').slick({
+      dots: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      prevArrow:'<button type="button" data-role="none" class="prev slick-prev" aria-label="Previous" role="button" style="display: block;">Previous</button>',  // TODO: change to <button> el
+      nextArrow: '<button type="button" data-role="none" class="next slick-next" aria-label="Next" role="button" style="display: block;">Next</button>',  // TODO: change to <button> el
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 820,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  }
 });
