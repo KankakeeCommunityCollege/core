@@ -166,3 +166,25 @@
     margin-top: 0;
   }
 }
+
+.positioning__heading--row {
+  margin-top: 15vh;
+}
+
+@media screen and (min-width: 768px) {
+  .positioning__heading--row {
+    margin-top: 18vh;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .positioning__heading--row {
+    margin-top: 15vh;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .positioning__heading--row {
+    margin-top: 30vh;
+  }
+}
