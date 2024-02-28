@@ -8,21 +8,6 @@
  */
 import '../../scss/main.scss';
 
-function loadModule(...moduleArgs) {
-  const simpleImport = typeof moduleArgs[0] == 'string';
-  const module = simpleImport ? moduleArgs[0] : moduleArgs[0].module;
-  const moduleTakesArg = !simpleImport && 'arg' in moduleArgs[0];
-  let defaultFn;
-
-  simpleImport ? defaultFn = moduleArgs[0]
-    : 'default' in moduleArgs[0] ? defaultFn = moduleArgs[0].default
-    : defaultFn = module;
-
-  return import(`./${module}`).then(({ default: defaultFn }) => {
-    moduleTakesArg ? defaultFn(moduleArgs[0].arg) : defaultFn();
-  });
-}
-
 const t0 = performance.now();
 
 window.addEventListener('load', () => {
@@ -30,16 +15,34 @@ window.addEventListener('load', () => {
   const path = window.location.pathname;
   const mobileMediaQueryList = window.matchMedia('(max-width: 768px)'); // 768px is the Bootstrap tablet breakpoint
 
-  if (!mobileMediaQueryList.matches && PLAY_VIDEO_SETTING_IS_ON && path == '/') loadModule({ module: 'loadVideo', arg: t0 });
+  if (!mobileMediaQueryList.matches && PLAY_VIDEO_SETTING_IS_ON && path == '/') {
+    import('./loadVideo')
+      .then(({ default: loadVideo }) => loadVideo(t0));
+  }
 
-  if (path == '/' && mobileMediaQueryList.matches) loadModule('createPlayButtonForVideo');
+  if (path == '/' && mobileMediaQueryList.matches) {
+    import('./createPlayButtonForVideo')
+      .then(({ default: createPlayButtonForVideo }) => createPlayButtonForVideo());
+  }
 
   if (path == '/') {
-    Promise.resolve()
-      .then(() => loadModule('getNewsFeed'))
-      .then(() => mobileMediaQueryList.matches ? loadModule('toggleSettingVisibilityOnScrollBottom') : null)
+    import('./getNewsFeed')
+      .then(({ default: getNewsFeed }) => getNewsFeed());
+    import('./toggleSettingVisibilityOnScrollBottom')
+      .then(({ default: toggleSettingVisibilityOnScrollBottom }) => toggleSettingVisibilityOnScrollBottom());
   }
-  path == '/settings/' ? loadModule('userSettings') : null;
+
+  if (path == '/settings/') {
+    import('./userSettings')
+      .then(({ default: userSettings }) => userSettings());
+  }
+
+  // Use smooth scrolling & prevent altering page URL with hash link
+  // Fires on amazon-career-choice page
+  if (document.querySelector('a[href="#page-top"]')) {
+    import('./landingPage')
+      .then(({ default: landingPage }) => landingPage());
+  }
 
   if (document.querySelector('.pathways__slider')) {
     $('.pathways__slider').slick({
