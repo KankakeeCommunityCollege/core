@@ -1,6 +1,7 @@
 // Variables
 @import '0-tools/vars';
 @import '0-tools/overrides';
+@import '0-tools/bs4-additions';
 
 // Base items
 @import '1-base/typography';
@@ -21,6 +22,7 @@
 @import '2-modules/programs';
 @import '2-modules/setting';
 @import '2-modules/loader';
+@import '2-modules/jotform';
 @import '2-modules/pathways';
 
 // Layout items
