@@ -1,6 +1,7 @@
 title: "Kankakee Community College"
 site_name: KCC
 public-url: "https://www.kcc.edu"
+canonical_baseurl: https://www.kcc.edu
 port: 3000
 theme: "kcc-gem-theme"
 # BUILD
