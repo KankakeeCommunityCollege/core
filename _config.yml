@@ -1,7 +1,7 @@
 title: "Kankakee Community College"
 site_name: KCC
 public-url: "https://www.kcc.edu"
-canonical_baseurl: https://www.kcc.edu
+canonical_baseurl: https://www.kcc.edu # NO trailing slash ## Used to build canonical link elements in document head
 port: 3000
 theme: "kcc-gem-theme"
 # BUILD
