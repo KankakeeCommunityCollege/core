@@ -36,7 +36,7 @@ GEM
       sass-embedded (~> 1.54)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    kcc-gem-theme (3.0.4)
+    kcc-gem-theme (3.0.5)
       jekyll (~> 4)
     kramdown (2.4.0)
       rexml

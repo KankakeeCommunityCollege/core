@@ -7,8 +7,8 @@ const options = {
 
 const htmlFileRegExp = /.+\.(html)$/;
 // const jsFileRegExp = /.+\.(js)$/;
-const deprecatedClassRegExp = /["\s]([pm][lr](?:-(?:sm|md|lg|xl))?-[0-5]|(?:text|float)(?:-(?:sm|md|lg|xl))?-(?:left|right)|sr-only|text-muted|close)["\s]/;
-const deprecatedClassRegExpGlobal = /["\s]([pm][lr](?:-(?:sm|md|lg|xl))?-[0-5]|(?:text|float)(?:-(?:sm|md|lg|xl))?-(?:left|right)|sr-only|text-muted|close)["\s]/g;
+const deprecatedClassRegExp = /["\s]([pm][lr](?:-(?:sm|md|lg|xl))?-[0-5]|(?:text|float)(?:-(?:sm|md|lg|xl))?-(?:left|right)|sr-only|text-muted|close|table-responsive)["\s]/;
+const deprecatedClassRegExpGlobal = /["\s]([pm][lr](?:-(?:sm|md|lg|xl))?-[0-5]|(?:text|float)(?:-(?:sm|md|lg|xl))?-(?:left|right)|sr-only|text-muted|close|table-responsive)["\s]/g;
 
 console.log(`\n==== [SEARCHING in: ${path}] ====`);
 
