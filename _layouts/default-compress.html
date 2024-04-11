@@ -5,7 +5,7 @@ layout: compress
 {% include styles/fonts.html %}
 {% include scripts/google-tag.html %}
 {% include styles/vendor.html %}
-{%- if page.sheet_key -%}
+{%- if page.sheet_key or page.include_datatables -%}
 <!-- dataTables stylesheets -->
 <!-- dataTables Bootstrap4 themed stylesheet -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" crossorigin="anonymous">
@@ -24,7 +24,7 @@ layout: compress
 {% include scripts/vendor-cdn.html %}
 {% include scripts/google-api.html %}
 {% include scripts/kcc-theme.html %}
-{%- if page.sheet_key -%}
+{%- if page.sheet_key or page.include_datatables -%}
 {% include scripts/table-cdn.html %}{% endif %}
 {% include scripts/custom.html %}
 {%- if site.translate == true -%}<!-- Link to this site's custom google translate stylesheet -->

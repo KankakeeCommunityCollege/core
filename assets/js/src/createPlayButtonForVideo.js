@@ -32,7 +32,7 @@ function playVideoClickHandler(e) {
 }
 
 function showVideoPlayButton(buttonParent, button, cb) {
-  button.innerHTML = '<span class="sr-only">Download and play the video...</span>' + PLAY_SVG;
+  button.innerHTML = '<span class="visually-hidden">Download and play the video...</span>' + PLAY_SVG;
   buttonParent.classList.remove(VIDEO_CONTROLS_HIDDEN_CLASS);
   buttonParent.setAttribute('aria-hidden', 'false');
   return cb();

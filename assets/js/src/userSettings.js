@@ -9,7 +9,7 @@ function recallSetting(button) {
   if (button.dataset.value === window.localStorage.getItem(setting)) return;
   
   window.localStorage.getItem(setting) == 'false' ? savedSetting = false : savedSetting = true;
-  const settingSpan = `<span class="sr-only sr-only-focusable">Turn setting ${!savedSetting ? 'on' : 'off'}</span>`;
+  const settingSpan = `<span class="visually-hidden">Turn setting ${!savedSetting ? 'on' : 'off'}</span>`;
 
   button.dataset.value = savedSetting.toString();
   button.classList.remove(`setting__button--${!savedSetting ? 'on' : 'off'}`);
@@ -31,7 +31,7 @@ function settingsButtonClickHandler(e) {
 Make sure you have a "data-value" attribute set to "true" or "false"`
   ) : null;
 
-  const settingMessage = `<span class="sr-only">Turn setting ${currentSettingState ? 'on' : 'off'}</span>`;
+  const settingMessage = `<span class="visually-hidden">Turn setting ${currentSettingState ? 'on' : 'off'}</span>`;
   
   window.localStorage.setItem(settingButton.dataset.setting, (!currentSettingState).toString());
 
