@@ -34,6 +34,3 @@ node_modules/
 
 # Jekyll 4's new cache dir
 .jekyll-cache/
-
-# DO NOT PUSH `.ruby-version` FILE TO CLOUDCANNON PROJECTS
-.ruby-version
