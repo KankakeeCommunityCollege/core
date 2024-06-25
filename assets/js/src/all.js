@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
       .then(({ default: toggleSettingVisibilityOnScrollBottom }) => toggleSettingVisibilityOnScrollBottom());
   }
 
-  if (path == '/settings/') {
+  if (path.search(/^\/settings\/?$/) !== -1) {
     import('./userSettings')
       .then(({ default: userSettings }) => userSettings());
   }
