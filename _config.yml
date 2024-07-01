@@ -15,15 +15,6 @@ sass: # Use jekyll to compile a simple CloudCannon (CC) stylesheet found in `/as
   sass_dir: /assets/scss/ # tell Jekyll where our sass partials are (default is _sass/)
   sourcemap: never # Jekyll command breaks with default sourcemap settings - it's tiny stylesheet anyways
   style: expanded # CC requires an expanded css file for custom CC styles
-compress_html:
-    clippings: all
-    comments: []
-    endings: []
-    ignore:
-    envs: []
-    blanklines: false
-    profile: false
-    startings: []
 #translate: true ## Uncomment to activate Google Translate Powers!!
 collections:
   contacts:
