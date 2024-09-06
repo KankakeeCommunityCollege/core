@@ -24,4 +24,7 @@
   <sitemap>
     <loc>https://www.kcc.edu/adulted/sitemap.xml</loc>
   </sitemap>
+  <sitemap>
+    <loc>https://www.kcc.edu/continuinged/sitemap.xml</loc>
+  </sitemap>
 </sitemapindex>
