@@ -5,6 +5,8 @@ layout: null
 
 # Allow crawling of all content
 User-agent: *
-Disallow:
+## The /wioa/partners/ and /wioa/applying-for-wioa/ folders and contents are not public ##
+Disallow: /wioa/partners/
+Disallow: /wioa/applying-for-wioa/
 
 Sitemap: https://www.kcc.edu/sitemap-index.html
