@@ -30,4 +30,7 @@
   <sitemap>
     <loc>https://www.kcc.edu/library/sitemap.xml</loc>
   </sitemap>
+  <sitemap>
+    <loc>https://www.kcc.edu/workforceservices/sitemap.xml</loc>
+  </sitemap>
 </sitemapindex>
