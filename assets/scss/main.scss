@@ -1,38 +1,37 @@
 // Variables
-@import '0-tools/vars';
-@import '0-tools/overrides';
+@use '0-tools/overrides';
 
 // Base items
-@import '1-base/typography';
-@import '1-base/links';
-@import '1-base/buttons';
-@import '1-base/svg';
+@use '1-base/typography';
+@use '1-base/links';
+@use '1-base/buttons';
+@use '1-base/svg';
 
 // Modular components
-@import '2-modules/header';
-@import '2-modules/sliders';
-@import '2-modules/local-nav';
-@import '2-modules/social-icons';
-@import '2-modules/error';
-@import '2-modules/hero-slider';
-@import '2-modules/news';
-@import '2-modules/video';
-@import '2-modules/benefits';
-@import '2-modules/programs';
-@import '2-modules/setting';
-@import '2-modules/loader';
-@import '2-modules/jotform';
-@import '2-modules/pathways';
+@use '2-modules/header';
+@use '2-modules/sliders';
+@use '2-modules/local-nav';
+@use '2-modules/social-icons';
+@use '2-modules/error';
+@use '2-modules/hero-slider';
+@use '2-modules/news';
+@use '2-modules/video';
+@use '2-modules/benefits';
+@use '2-modules/programs';
+@use '2-modules/setting';
+@use '2-modules/loader';
+@use '2-modules/jotform';
+@use '2-modules/pathways';
 
 // Layout items
-// @import "3-layout/...";
-@import '3-layout/positioning';
-@import '3-layout/posts';
-@import '3-layout/padding';
-@import '3-layout/width';
-@import '3-layout/section';
-@import '3-layout/margins';
+// @use "3-layout/...";
+@use '3-layout/positioning';
+@use '3-layout/posts';
+@use '3-layout/padding';
+@use '3-layout/width';
+@use '3-layout/section';
+@use '3-layout/margins';
 
 // Page specific styling
-// @import "4-pages/...";
-//@import '4-pages/index/home';
+// @use "4-pages/...";
+// @use '4-pages/index/home';
