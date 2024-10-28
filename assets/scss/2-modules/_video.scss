@@ -1,3 +1,5 @@
+@use '../0-tools/vars' as *;
+
 .video__controls {
   display: block;
   &--hidden {
