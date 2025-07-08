@@ -87,6 +87,14 @@ Webpack will also set its mode (production/dev) depending on what the `NODE_ENV`
 
 <br>
 
+## Accessibility Testing
+
+See our developer page on [accessibility testing with Pa11y](https://developer.kcc.edu/docs/accessibility/pa11y/).
+
+-----
+
+<br>
+
 ## Production
 
 ***Only production builds should be pushed to the GitHub repo.***
