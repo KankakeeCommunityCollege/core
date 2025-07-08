@@ -1,0 +1,9 @@
+{
+  "timeout": 120000,
+  "hideElements": "table.gstl_50.gssb_c, div.pathways__heading-wrapper h4",
+  "chromeLaunchConfig": {
+    "args": [
+      "--no-sandbox"
+    ]
+  }
+}
