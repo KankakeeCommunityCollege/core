@@ -1,0 +1,35 @@
+---
+title: 'Accessibility in Document Creation'
+layout: default-core
+baseurl: '../../'
+core-alert-offset: true
+banner_image:
+banner_alt_text:
+---
+<main id="content" class="container">
+  <div class="row">
+    <div class="col">
+      {% include breadcrumbs.html %}
+      {% if page.banner_image and page.banner_image != '' %}
+        {% assign first_char = page.banner_image | slice: 0 %}
+        {% if first_char == '/' %}
+          {% assign banner = page.banner_image | remove_first: '/' %}
+        {% else %}
+          {% assign banner = page.banner_image %}
+        {% endif %}
+        <div class="text-center">
+          <img
+          role="img"
+          src="{{ page.baseurl }}{{ banner }}"
+          class="img-fluid"
+          alt="{{ page.banner_alt_text | replace: '"', '&quot;' }}">
+        </div>
+          <br>
+      {% endif %}
+      <h2 class="typography__h2">{{ page.title }}</h2>
+      <div class="editable">
+
+      </div>
+    </div>
+  </div>
+</main>
