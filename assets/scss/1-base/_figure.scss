@@ -1,0 +1,21 @@
+@use '../0-tools/vars' as *;
+
+.figure {
+  border-color: #555;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: .5rem;
+}
+
+.figure__img {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.figure__figcaption {
+  background-color: #313131;
+  color: $white;
+  padding: .25rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
