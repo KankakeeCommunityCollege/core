@@ -5,11 +5,13 @@ baseurl: '../../'
 core-alert-offset: true
 banner_image:
 banner_alt_text:
+disclaimer: >-
+  Disclaimer: KCC is neither affiliated with nor authorized, sponsored, or approved by Adobe, Google, or Microsoft Corporation.
 ---
 <main id="content" class="container">
   <div class="row">
     <div class="col">
-      {% include breadcrumbs.html %}
+      {% include breadcrumbs-core.html %}
       {% if page.banner_image and page.banner_image != '' %}
         {% assign first_char = page.banner_image | slice: 0 %}
         {% if first_char == '/' %}
@@ -27,8 +29,17 @@ banner_alt_text:
           <br>
       {% endif %}
       <h2 class="typography__h2">{{ page.title }}</h2>
+      {% if page.disclaimer and page.disclaimer != '' %}
+      <p><small>{{ page.disclaimer }}</small></p>
+      {% endif %}
       <div class="editable">
-
+        <h3 class="typography__h3">Overview</h3>
+        <p>
+          This guide is intended to explain how to make accessible Microsoft Word Documents. Word documents are often used
+          to generate PDF files. For these PDF documents to be accessible, they need to be created from accessible Word documents.
+          If the Word document is not accessible, the resulting PDF document will not be accessible.
+        </p>
+        
       </div>
     </div>
   </div>
