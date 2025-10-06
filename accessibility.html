@@ -521,6 +521,101 @@ banner_alt_text: Icons
           <li>Click to print</li>
           <li>Click to print the PDF document</li>
         </ul>
+        <h4 class="typography__h4">What is an informative image?</h4>
+        <p>
+          Informative images are images that represent information or concepts. Ensure the alt text is concise and conveys sufficient information to the audience. Remember that the alt text also depends on the context in which the image is being displayed.
+        </p>
+        <p>
+          For this image, the alt text can be any of the following:
+        </p>
+        <div class="text-center">
+          <img
+          data-src="{{ page.baseurl }}uploads/accessibility-student-on-laptop.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid"
+          alt="A student with a laptop">
+        </div>
+        <ul>
+          <li>Student</li>
+          <li>A student with a laptop</li>
+          <li>A student sitting in the library with a laptop, smiling at the camera</li>
+        </ul>
+        <p>
+          It is up to content creators to decide which alt text best suits the information being conveyed. It may be helpful when writing alt text to close your eyes and write down what you were able to see.
+        </p>
+        <p>
+          <strong>Note:</strong> The words “picture of” or “image of” are unnecessary within the alt text because the screen readers automatically announce the file type.
+        </p>
+        <h4 class="typography__h4">Why are images of text inaccessible?</h4>
+        <p>
+          The images with text are problematic because the screen readers cannot read the text in the image. If these images are
+          not avoidable, add the proper alt text that contains the text inside the image. Logos are an exception to this case.
+        </p>
+        <img
+          data-src="{{ page.baseurl }}uploads/accessibility-page_color-logo-with-name.png"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid"
+          height="125"
+          width="300"
+          alt="Kankakee Community College logo">
+        <p>
+          Good examples of alt text for the image above would be:
+        </p>
+        <ul>
+          <li>Empty alt text, decorative</li>
+          <li>Kankakee Community College logo</li>
+        </ul>
+        <img
+          data-src="{{ page.baseurl }}uploads/accessibilibty-page_short-term-classes.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid border"
+          alt="">
+        <p>
+          For the image above, a good example of alt text would be:
+        </p>
+        <ul>
+          <li>Find a short-term class that works for you. Focus on one or more classes — and get it done!</li>
+        </ul>
+        <h4 class="typography__h4">What is a decorative image in accessibility?</h4>
+        <p>
+          Decorative images are displayed for decorative purposes and do not convey meaningful information. These images usually
+          include background images. You can have empty alt text for decorative images or mark them as decorative. When a screen
+          reader comes across an image with empty alt text or an image marked as decorative, it will still skip reading the file
+          name. The bottom line is that all images must have alt text or be marked decorative.
+        </p>
+        <h4 class="typography__h4">Increase readability through color contrast</h4>
+        <p>
+          Color contrast means how well one color stands out from another, which determines the readability. People with low
+          vision or color blindness have difficulty reading content that does not have a high color-contrast ratio. These ratios
+          define the luminance difference between two colors, usually background and foreground colors. Below are a few examples:
+        </p>
+        <ul>
+          <li>RED COLOR: The contrast between the red (#FF0000) text and white (#FFFFFF) background is 3.99:1.</li>
+          <li>RED COLOR: The contrast between the red (#FF0000) text and yellow (#FFFF00) background is 3.72:1.</li>
+          <li>GRAY COLOR: The contrast between the gray (#666666) text and white (#FFFFFF) background is 5.74:1.</li>
+          <li>GRAY COLOR: The contrast between the gray (#666666) text and light gray (#B7B7B7) background is 2.86:1.</li>
+        </ul>
+        <p>
+          (Hex color codes are a 6-digit combination of letters and numbers that define the color. For example, RED is defined by
+          #FF0000, and GRAY is defined by #666666. Each hex code is unique.) As you can see in the examples above, a higher
+          contrast ratio increases the readability of the text. <strong>WCAG 2.1 AA requires a minimum contrast ratio of 4.5:1.</strong>
+        </p>
+        <p>
+          Always check the contrast ratio of the content. You can apply this principle to images that include text by checking the
+          contrast ratio between the text and the image. Use our color <a href="https://styleguide.kcc.edu/tools/contrast-checker/">contrast checker tool</a>
+          to verify color contrast. If the ratio is less than 4.5:1, you can adjust the colors to get the desired ratio.
+        </p>
+        <p>
+          Additional tools to check color contrast:
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.audioeye.com/color-contrast-checker/" target="_blank" rel="noopener noreferrer">AudioEye® Color contrast checker</a>
+          </li>
+          <li>
+            <a href="https://dequeuniversity.com/rules/axe/2.2/color-contrast" target="_blank" rel="noopener noreferrer">Deque University color Contrast Analyzer</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
