@@ -35,287 +35,285 @@ disclaimer: >-
       {% if page.disclaimer and page.disclaimer != '' %}
       <p><small>{{ page.disclaimer }}</small></p>
       {% endif %}
-      <div class="editable">
-        <h3 class="typography__h3">Overview</h3>
-        <p>
-          This guide explains how to make accessible Microsoft Word Documents and Adobe PDF files. Word documents are often used
-          to generate PDF files. For these PDF documents to be accessible, they need to be created from accessible Word documents.
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 class="typography__h3">Contents</h3>
-        <ul>
-          <li>
-            <a href="#templates">Accessible Templates</a>
-            <ul>
-              <li><a href="#online">Online</a></li>
-              <li><a href="#within-word">Within Word</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#styles">Styles</a>
-            <ul>
-              <li><a href="#modify-heading-styles">Modify Heading Styles</a></li>
-            </ul>
-          </li>
-          <li><a href="#headings">Headings</a></li>
-          <li><a href="#hyperlinks">Hyperlinks</a></li>
-          <li><a href="#lists">Lists</a></li>
-          <li>
-            <a href="#alternative-text">Alternative Text</a>
-            <ul>
-              <li><a href="#images">Images</a></li>
-              <li><a href="#tables">Tables</a></li>
-              <li><a href="#charts-and-graphs">Charts and Graphs</a></li>
-              <li><a href="#other-graphics">Other Graphics</a></li>
-              <li><a href="#grouped-graphics">Grouped Graphics</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#table-headers">Tables and table headers</a>
-            <ul>
-              <li><a href="#header-row">Header row</a></li>
-              <li><a href="#header-col">Header column</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#spacing">Spacing</a>
-            <ul>
-              <li>
-                <a href="#spacing-horizontal">Horizontal spacing (indentation)</a>
-                <ul>
-                  <li><a href="#spacing-custom-indentation">Custom indentation</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#spacing-vertical">Vertical spacing</a>
-                <ul>
-                  <li><a href="#spacing-line">Line spacing</a></li>
-                  <li><a href="#spacing-paragraph">Paragraph spacing</a></li>
-                  <li><a href="#spacing-page-breaks">Page breaks</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <br>
-        <hr>
-        <br>
-        <h3 id="templates" class="typography__h3 links__offset">Accessible Templates</h3>
-        <p>
-          Microsoft Word offers accessible templates that have the following improvements:
-        </p>
-        <ul>
-          <li>Better color contrast</li>
-          <li>Meaningful alt text</li>
-          <li>Simple table structures</li>
-          <li>Larger font size</li>
-          <li>Input messages</li>
-          <li>And more</li>
-        </ul>
-        <p>
-          You can find accessible templates online or in Microsoft Word.
-        </p>
-        <h4 id="online" class="typography__h4 links__offset">Online</h4>
-        <ol>
-          <li>
-            Go to <a href="https://create.microsoft.com/" class="links__launch" target="_blank" rel="noopener noreferrer">create.microsoft.com<span class="visually-hidden"> (opens in new tab/window)</span></a>.
-          </li>
-          <li>
-            Searching for "accessible templates".
-          </li>
-        </ol>
-        <h4 id="within-word" class="typography__h4 links__offset">Within Word</h4>
-        <ol>
-          <li>
-            Go to <strong>File &gt; New</strong>.
-          </li>
-          <li>
-            Type "accessible templates" in the <em>Search for online templates</em> box.
-          </li>
-        </ol>
-        <p>
-          More information can be found on Microsoft's <a href="https://support.microsoft.com/en-us/office/get-accessible-templates-for-office-ca086caa-2bd2-4ac8-8c12-4cd495bd4d76" class="links__launch" target="_blank" rel="noopener noreferrer">Get accessible templates for Office<span class="visually-hidden"> (opens in new tab/window)</span></a> page.
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 id="styles" class="typography__h3 links__offset">Styles</h3>
-        <p>
-          Microsoft Word offers built-in styles to add headings, paragraphs, quotes, and other elements. These styles are semantic and not just visual.
-          They tell screen readers that the text or element has a specific function.
-        </p>
-        <p>
-          Do not create everything as normal text and then increase font-size, boldness and/or change the font-family to make it look like a heading.
-          Instead, you should use Word's predefined heading and other styles. If these styles don't have the look you want, you should
-          create your own styles and/or modify existing ones. You cannot create new heading styles, but you can modify the existing ones.
-        </p>
-        <div class="text-center">
+      <h3 class="typography__h3">Overview</h3>
+      <p>
+        This guide explains how to make accessible Microsoft Word Documents and Adobe PDF files. Word documents are often used
+        to generate PDF files. For these PDF documents to be accessible, they need to be created from accessible Word documents.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 class="typography__h3">Contents</h3>
+      <ul>
+        <li>
+          <a href="#templates">Accessible templates</a>
+          <ul>
+            <li><a href="#online">Online</a></li>
+            <li><a href="#within-word">Within Word</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#styles">Styles</a>
+          <ul>
+            <li><a href="#modify-heading-styles">Modify heading styles</a></li>
+          </ul>
+        </li>
+        <li><a href="#headings">Headings</a></li>
+        <li><a href="#hyperlinks">Hyperlinks</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li>
+          <a href="#alternative-text">Alternative text</a>
+          <ul>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#charts-and-graphs">Charts and graphs</a></li>
+            <li><a href="#other-graphics">Other graphics</a></li>
+            <li><a href="#grouped-graphics">Grouped graphics</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#table-headers">Tables and table headers</a>
+          <ul>
+            <li><a href="#header-row">Header row</a></li>
+            <li><a href="#header-col">Header column</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#spacing">Spacing</a>
+          <ul>
+            <li>
+              <a href="#spacing-horizontal">Horizontal spacing (indentation)</a>
+              <ul>
+                <li><a href="#spacing-custom-indentation">Custom indentation</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#spacing-vertical">Vertical spacing</a>
+              <ul>
+                <li><a href="#spacing-line">Line spacing</a></li>
+                <li><a href="#spacing-paragraph">Paragraph spacing</a></li>
+                <li><a href="#spacing-page-breaks">Page breaks</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 id="templates" class="typography__h3 links__offset">Accessible templates</h3>
+      <p>
+        Microsoft Word offers accessible templates that have the following improvements:
+      </p>
+      <ul>
+        <li>Better color contrast</li>
+        <li>Meaningful alt text</li>
+        <li>Simple table structures</li>
+        <li>Larger font size</li>
+        <li>Input messages</li>
+        <li>And more</li>
+      </ul>
+      <p>
+        You can find accessible templates online or in Microsoft Word.
+      </p>
+      <h4 id="online" class="typography__h4 links__offset">Online</h4>
+      <ol>
+        <li>
+          Go to <a href="https://create.microsoft.com/" class="links__launch" target="_blank" rel="noopener noreferrer">create.microsoft.com<span class="visually-hidden"> (opens in new tab/window)</span></a>.
+        </li>
+        <li>
+          Searching for "accessible templates".
+        </li>
+      </ol>
+      <h4 id="within-word" class="typography__h4 links__offset">Within Word</h4>
+      <ol>
+        <li>
+          Go to <strong>File &gt; New</strong>.
+        </li>
+        <li>
+          Type "accessible templates" in the <em>Search for online templates</em> box.
+        </li>
+      </ol>
+      <p>
+        More information can be found on Microsoft's <a href="https://support.microsoft.com/en-us/office/get-accessible-templates-for-office-ca086caa-2bd2-4ac8-8c12-4cd495bd4d76" class="links__launch" target="_blank" rel="noopener noreferrer">Get accessible templates for Office<span class="visually-hidden"> (opens in new tab/window)</span></a> page.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 id="styles" class="typography__h3 links__offset">Styles</h3>
+      <p>
+        Microsoft Word offers built-in styles to add headings, paragraphs, quotes, and other elements. These styles are semantic and not just visual.
+        They tell screen readers that the text or element has a specific function.
+      </p>
+      <p>
+        Do not create everything as normal text and then increase font-size, boldness and/or change the font-family to make it look like a heading.
+        Instead, you should use Word's predefined heading and other styles. If these styles don't have the look you want, you should
+        create your own styles and/or modify existing ones. You cannot create new heading styles, but you can modify the existing ones.
+      </p>
+      <div class="text-center">
+        <figure class="figure">
+          <img
+            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_word-styles.jpg"
+            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            class="img-fluid figure__img"
+            height="257"
+            width="800"
+            alt="Screenshot of a Word document on the 'Home' tab with a green rectangle highlighting the 'Styles' panel">
+          <figcaption class="figure__figcaption">Screenshot showing the <strong>Styles</strong> panel of the <strong>Home</strong> tab.</figcaption>
+        </figure>
+      </div>
+      <p>
+        To apply heading (or other) styles:
+      </p>
+      <ol>
+        <li>Select the text.</li>
+        <li>From the <strong>Home</strong> tab, in the <strong>Styles</strong> panel, select the heading (or other style) you want to apply.</li>
+      </ol>
+      <h4 id="modify-heading-styles" class="typography__h4 links__offset">Modify heading styles</h4>
+      <ol>
+        <li>
+          Right-click on the style you want to change and select <strong>Modify...</strong>.<br>
           <figure class="figure">
             <img
-              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_word-styles.jpg"
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_modify-styles.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              height="296"
+              width="680"
+              class="img-fluid figure__img"
+              alt="Screenshot of a Word document showing the menu from right-clicking the 'Heading 1' style with a green rectangle highlighting the 'Modify...' option">
+            <figcaption class="figure__figcaption text-center">Screenshot showing the <strong>Modify...</strong> option when right-clicking a style.</figcaption>
+          </figure>
+        </li>
+        <li>
+          The <strong>Modify Style</strong> window will appear where you can change the styling (<strong>Formatting</strong>).<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_modify-styles-window.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              height="715"
+              width="680"
+              class="img-fluid figure__img"
+              alt="Screenshot of a Word document showing the menu from right-clicking the 'Heading 1' style with a green rectangle highlighting the 'Modify...' option">
+            <figcaption class="figure__figcaption text-center">Screenshot showing the <strong>Modify Styles</strong> window.</figcaption>
+          </figure>
+        </li>
+        <li>Selecting the <strong>Add to template</strong> checkbox will save your modifications to the default template used to create new documents (Normal.dotm).</li>
+      </ol>
+      <p>
+        <strong>Note:</strong> Modifying a style will change it throughout the whole document. For example, modifying the Heading 2 style will affect all elements that already have Heading 2 applied.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 id="headings" class="typography__h3 links__offset">Headings</h3>
+      <p>
+        Use appropriate heading levels. This allows screen readers to create an ordered list of all headings in the
+        document making it easier to navigate the&nbsp;document.
+      </p>
+      <p>
+        You should have only one heading 1. Ideally, your heading 1 should be the main heading for the entire document.
+        Do not skip heading levels.
+      </p>
+      <p>
+        <strong>Bad example:</strong>
+      </p>
+      <figure class="figure">
+        <img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_headings-bad.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid figure__img"
+          height="241"
+          width="700"
+          alt="Screenshot of a Word document's table of contents where the order is heading 1, heading 3, heading 2, heading 1, heading 2, and heading 4">
+        <figcaption class="figure__figcaption text-center">Screenshot of a bad heading example with multiple heading 1s and skipped heading levels.</figcaption>
+      </figure>
+      <p>
+        <strong>Good example:</strong>
+      </p>
+      <figure class="figure">
+        <img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_headings-good.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid figure__img"
+          height="235"
+          width="700"
+          alt="Screenshot of a Word document's table of contents where the order is heading 1, heading 2, heading 3, heading 2, heading 2, heading 3, heading 4, and heading 5">
+        <figcaption class="figure__figcaption text-center">Screenshot of a good heading example.</figcaption>
+      </figure>
+      <br>
+      <hr>
+      <br>
+      <h3 id="hyperlinks" class="typography__h3 links__offset">Hyperlinks</h3>
+      <p>
+        See <a href="../#hyperlinks">creating accessible hyperlinks</a> for more information on creating appropriate link text.
+      </p>
+      <p>To add hyperlinks in a word document:</p>
+      <ol>
+        <li>Select the text you want to become a link</li>
+        <li>
+          Right-click the selected link text and choose <strong>Hyperlink...</strong>.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_links.jpg"
               src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
               class="img-fluid figure__img"
-              height="257"
-              width="800"
-              alt="Screenshot of a Word document on the 'Home' tab with a green rectangle highlighting the 'Styles' panel">
-            <figcaption class="figure__figcaption">Screenshot showing the <strong>Styles</strong> panel of the <strong>Home</strong> tab.</figcaption>
+              height="539"
+              width="500"
+              alt="Screenshot of the right-click menu of selected text highlighting the 'Hyperlink...' option.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Hyperlink...</strong> option<br>
+              while right-clicking selected text.
+            </figcaption>
           </figure>
-        </div>
-        <p>
-          To apply heading (or other) styles:
-        </p>
-        <ol>
-          <li>Select the text.</li>
-          <li>From the <strong>Home</strong> tab, in the <strong>Styles</strong> panel, select the heading (or other style) you want to apply.</li>
-        </ol>
-        <h4 id="modify-heading-styles" class="typography__h4 links__offset">Modify Heading Styles</h4>
-        <ol>
-          <li>
-            Right-click on the style you want to change and select <strong>Modify...</strong>.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_modify-styles.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                height="296"
-                width="680"
-                class="img-fluid figure__img"
-                alt="Screenshot of a Word document showing the menu from right-clicking the 'Heading 1' style with a green rectangle highlighting the 'Modify...' option">
-              <figcaption class="figure__figcaption text-center">Screenshot showing the <strong>Modify...</strong> option when right-clicking a style.</figcaption>
-            </figure>
-          </li>
-          <li>
-            The <strong>Modify Style</strong> window will appear where you can change the styling (<strong>Formatting</strong>).<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_modify-styles-window.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                height="715"
-                width="680"
-                class="img-fluid figure__img"
-                alt="Screenshot of a Word document showing the menu from right-clicking the 'Heading 1' style with a green rectangle highlighting the 'Modify...' option">
-              <figcaption class="figure__figcaption text-center">Screenshot showing the <strong>Modify Styles</strong> window.</figcaption>
-            </figure>
-          </li>
-          <li>Selecting the <strong>Add to template</strong> checkbox will save your modifications to the default template used to create new documents (Normal.dotm).</li>
-        </ol>
-        <p>
-          <strong>Note:</strong> Modifying a style will change it throughout the whole document. For example, modifying the Heading 2 style will affect all elements that already have Heading 2 applied.
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 id="headings" class="typography__h3 links__offset">Headings</h3>
-        <p>
-          Use appropriate heading levels. This allows screen readers to create an ordered list of all headings in the
-          document making it easier to navigate the&nbsp;document.
-        </p>
-        <p>
-          You should have only one heading 1. Ideally, your heading 1 should be the main heading for the entire document.
-          Do not skip heading levels.
-        </p>
-        <p>
-          <strong>Bad example:</strong>
-        </p>
-        <figure class="figure">
-          <img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_headings-bad.jpg"
-            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-            class="img-fluid figure__img"
-            height="241"
-            width="700"
-            alt="Screenshot of a Word document's table of contents where the order is heading 1, heading 3, heading 2, heading 1, heading 2, and heading 4">
-          <figcaption class="figure__figcaption text-center">Screenshot of a bad heading example with multiple heading 1s and skipped heading levels.</figcaption>
-        </figure>
-        <p>
-          <strong>Good example:</strong>
-        </p>
-        <figure class="figure">
-          <img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_headings-good.jpg"
-            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-            class="img-fluid figure__img"
-            height="235"
-            width="700"
-            alt="Screenshot of a Word document's table of contents where the order is heading 1, heading 2, heading 3, heading 2, heading 2, heading 3, heading 4, and heading 5">
-          <figcaption class="figure__figcaption text-center">Screenshot of a good heading example.</figcaption>
-        </figure>
-        <br>
-        <hr>
-        <br>
-        <h3 id="hyperlinks" class="typography__h3 links__offset">Hyperlinks</h3>
-        <p>
-          See <a href="../#hyperlinks">creating accessible hyperlinks</a> for more information on creating appropriate link text.
-        </p>
-        <p>To add hyperlinks in a word document:</p>
-        <ol>
-          <li>Select the text you want to become a link</li>
-          <li>
-            Right-click the selected link text and choose <strong>Hyperlink...</strong>.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_links.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="539"
-                width="500"
-                alt="Screenshot of the right-click menu of selected text highlighting the 'Hyperlink...' option.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the <strong>Hyperlink...</strong> option<br>
-                while right-clicking selected text.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            This will open the <strong>Insert Hyperlink</strong> window.
-            Add the web address you want to link to in the <strong>Address</strong> field.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_links-window.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="440"
-                width="580"
-                alt="Screenshot showing the 'Insert Hyperlink' window highlighting the 'Address' field used to add the web address.">
-              <figcaption class="figure__figcaption text-center">Screenshot of the <strong>Insert Hyperlink</strong> window used for creating links.</figcaption>
-            </figure>
-            <br>
-            You can also adjust the link text using the <strong>Text to Display</strong> field.
-          </li>
-        </ol>
-        <br>
-        <hr>
-        <br>
-        <h3 id="lists" class="typography__h3 links__offset">Lists</h3>
-        <p>
-          Lists are great for grouping and organizing information.
-          Use ordered lists when the order of the list items is important (e.g. step-by-step instructions).
-          Use unordered lists when the order does not matter (e.g. a list of ingredients).
-          See <a href="../#lists">using lists within accessible content</a> for more information on using lists.
-        </p>
-        <p>To add lists in a document:</p>
-        <ol>
-          <li>
-            On the <strong>Home</strong> tab, in the <strong>Paragraph</strong> panel, choose <strong>Bulleted</strong> (<img src="{{ page.baseurl }}uploads/accessibility-doc-creation_bulleted.jpg" height="29" width="40" alt="Screenshot of the 'Bulleted' list icon in Word">)
-            for unordered lists, <strong>Numbered</strong> (<img src="{{ page.baseurl }}uploads/accessibility-doc-creation_numbered.jpg" height="29" width="40" alt="Screenshot of the 'Numbered' list icon in Word">) for ordered&nbsp;lists,
-            and <strong>Multilevel&nbsp;Lists</strong>&nbsp;(<img src="{{ page.baseurl }}uploads/accessibility-doc-creation_numbered.jpg" height="29" width="40" alt="Screenshot of the 'Multilevel Lists' icon in Word">) for multilevel ordered and unordered lists.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_lists.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="228"
-                width="650"
-                alt="Screenshot highlighting the 'Bulleted' and 'Numbered' list options in a Word document">
-              <figcaption class="figure__figcaption text-center">Screenshot showing the list options in the <strong>Paragraph</strong> panel of the <strong>Home</strong> tab.</figcaption>
-            </figure>
-          </li>
-          <li>
-            Use the little carrot next to the list icon to select different list styles for each type of list.
-          </li>
-        </ol>
-      </div>
+        </li>
+        <li>
+          This will open the <strong>Insert Hyperlink</strong> window.
+          Add the web address you want to link to in the <strong>Address</strong> field.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_links-window.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="440"
+              width="580"
+              alt="Screenshot showing the 'Insert Hyperlink' window highlighting the 'Address' field used to add the web address.">
+            <figcaption class="figure__figcaption text-center">Screenshot of the <strong>Insert Hyperlink</strong> window used for creating links.</figcaption>
+          </figure>
+          <br>
+          You can also adjust the link text using the <strong>Text to Display</strong> field.
+        </li>
+      </ol>
+      <br>
+      <hr>
+      <br>
+      <h3 id="lists" class="typography__h3 links__offset">Lists</h3>
+      <p>
+        Lists are great for grouping and organizing information.
+        Use ordered lists when the order of the list items is important (e.g. step-by-step instructions).
+        Use unordered lists when the order does not matter (e.g. a list of ingredients).
+        See <a href="../#lists">using lists within accessible content</a> for more information on using lists.
+      </p>
+      <p>To add lists in a document:</p>
+      <ol>
+        <li>
+          On the <strong>Home</strong> tab, in the <strong>Paragraph</strong> panel, choose <strong>Bulleted</strong> (<img src="{{ page.baseurl }}uploads/accessibility-doc-creation_bulleted.jpg" height="29" width="40" alt="Screenshot of the 'Bulleted' list icon in Word">)
+          for unordered lists, <strong>Numbered</strong> (<img src="{{ page.baseurl }}uploads/accessibility-doc-creation_numbered.jpg" height="29" width="40" alt="Screenshot of the 'Numbered' list icon in Word">) for ordered&nbsp;lists,
+          and <strong>Multilevel&nbsp;Lists</strong>&nbsp;(<img src="{{ page.baseurl }}uploads/accessibility-doc-creation_numbered.jpg" height="29" width="40" alt="Screenshot of the 'Multilevel Lists' icon in Word">) for multilevel ordered and unordered lists.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_lists.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="228"
+              width="650"
+              alt="Screenshot highlighting the 'Bulleted' and 'Numbered' list options in a Word document">
+            <figcaption class="figure__figcaption text-center">Screenshot showing the list options in the <strong>Paragraph</strong> panel of the <strong>Home</strong> tab.</figcaption>
+          </figure>
+        </li>
+        <li>
+          Use the little carrot next to the list icon to select different list styles for each type of list.
+        </li>
+      </ol>
       <div class="row">
         <div class="col-12 col-lg-4">
           <figure class="figure">
@@ -363,615 +361,668 @@ disclaimer: >-
           </figure>
         </div>
       </div>
-      <div class="editable">
-        <br>
-        <hr>
-        <br>
-        <h3 id="alternative-text" class="typography__h3 links__offset">Alternative Text</h3>
-        <h4 id="images" class="typography__h4 links__offset">Images</h4>
-        <p>
-          <em><strong>If you insert an image into your document, it must have alternative text (alt-text).
-          The only exception is when the graphic is purely decorative</strong> and does not add meaningful info needed to understand the content.</em>
-          Without alt-text, screen reader users will not be able understand what your image or graphic is about.
-        </p>
-        <p>
-          For more information and best practices on creating helpful and appropriate alternative text, see <a href="../#alt-text">how to use alternative text to aid understanding</a>.
-        </p>
-        <p>
-          To add alternative text to images:
-        </p>
-        <ol>
-          <li>
-            Right-click the image or graphic and select <strong>View Alt Text...</strong><br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_alt-text-menu.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="562"
-                width="500"
-                alt="Screenshot highlighting the 'View Alt Text...' option when right clicking on an image">  
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the <strong>View Alt Text...</strong><br>
-                option when right-clicking on an image.
-              </figcaption>
-            </figure>
-            <ul>
-              <li>
-                On newer versions of Microsoft Word, it may attempt to automatically generate alternative text when you insert an image.
-                This AI generated alt-text usually needs to be adjusted. Clicking on the auto-generated alt-text will also open
-                the <strong>Alt Text</strong> window.<br>
-                <figure class="figure">
-                  <img
-                    data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_ai-alt-text.jpg"
-                    src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                    class="img-fluid figure__img"
-                    height="257"
-                    width="480"
-                    alt="Screenshot highlighting the AI generated alternative text">
-                  <figcaption class="figure__figcaption text-center">
-                    Screenshot showing the AI generated alternative text.
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </li>
-          <li>
-            This opens the <strong>Alt Text</strong> panel to the right side of the document.<br>
-            Add (or edit) the alternative text using the text box.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_alt-text-panel.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="501"
-                width="350"
-                alt="Screenshot highlighting the text box for adjusting alternative text in Word">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot of the <strong>Alt Text</strong> panel<br>
-                showing the text box for adding<br>
-                and editing alt-text.
-              </figcaption>
-            </figure>
-            <ul>
-              <li>
-                You can also activate the <strong>Mark as decorative</strong> toggle switch for
-                images that are purely decorative and don't add meaning to the content.<br>
-                <figure class="figure">
-                  <img
-                    data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_alt-text-decorative.jpg"
-                    src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                    class="img-fluid figure__img"
-                    height="559"
-                    width="350"
-                    alt="Screenshot highlighting the 'Mark as decorative' option of the Alt Text panel">
-                  <figcaption class="figure__figcaption text-center">
-                    Screenshot of the <strong>Mark as decorative</strong><br>
-                    option of the <strong>Alt Text</strong> panel.
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </li>
-        </ol>
-        <h4 id="tables" class="typography__h4 links__offset">Tables</h4>
-        <p>
-          <strong>Do not use a screenshot or picture of a table</strong>; you should create it as content in the page.
-          You can add alternative text to tables, which can help screen reader users in understanding the table and its context.
-        </p>
-        <p>
-          To add alt-text to a table:
-        </p>
-        <ol>
-          <li>
-            Right-click anywhere on the table and choose <strong>Table Properties...</strong>.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-props-option.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="441"
-                width="500"
-                alt="Screenshot highlighting the 'Table properties...' option while right clicking a table in Word">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot of the <strong>Table Properties...</strong> option<br>
-                when right-clicking in a table.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            This opens the <strong>Table Properties</strong> window. Choose the <strong>Alt Text</strong> tab.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-props.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="487"
-                width="500"
-                alt="Screenshot highlighting where the 'Alt Text' tab is located in the 'Table Properties' window.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot of the <strong>Table Properties</strong> window<br>
-                showing where the <strong>Alt Text</strong> tab is.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            Enter a <strong>Title</strong> and <strong>Description</strong> for the table and then select the <strong>OK</strong> button.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-props-alt-text.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="487"
-                width="500"
-                alt="Screenshot highlighting the 'Title' and 'Description' fields of the 'Alt Text' tab in 'Table Properties' of Word">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot of the <strong>Title</strong> and <strong>Description</strong> fields<br>
-                for adding alt text to a table.
-              </figcaption>
-            </figure>
-          </li>
-        </ol>
-        <h4 id="charts-and-graphs" class="typography__h4 links__offset">Charts and Graphs</h4>
-        <p>
-          The information contained in charts and graphs also need to be conveyed in a way that non-visual users can understand.
-          Whenever possible, you should include a simple table underneath it containing the data.
-        </p>
-        <figure class="figure">
-          <img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_chart.jpg"
-            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-            class="img-fluid figure__img"
-            height="454"
-            width="650"
-            alt="Screenshot of 'Global Smartphone OS Market Share' pie chart and a table containing the same data below it">
-          <figcaption class="figure__figcaption text-center">
-            Screenshot showing a pie chart with the data in a<br>
-            table underneath for non-visual users.
-          </figcaption>
-        </figure>
-        <p>
-          If you cannot add the data in a table, you need to add alternative text. Describe the chart or graph like you're
-          explaining it to a friend who cannot see it. Include any data contained within the chart or graph and any other important details.
-        </p>
-        <p>
-          Add alternative text just like you would for an image:
-        </p>
-        <figure class="figure">
-          <img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_chart-alt-text.jpg"
-            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-            class="img-fluid figure__img"
-            height="603"
-            width="900"
-            alt="Screenshot highlighting the 'View Alt Text' option when right clicking on a pie chart in Word. The text field for adding alternative text is also highlighted.">
-          <figcaption class="figure__figcaption text-center">
-            Screenshot showing the <strong>View Alt Text</strong> option when right-clicking<br>
-            a pie chart and the text box for adding alternative text.
-          </figcaption>
-        </figure>
-        <h4 id="other-graphics" class="typography__h4 links__offset">Other graphics</h4>
-        <p>
-          Other forms of graphics like shapes, icons, 3D models, SmartArt, and charts require alternative text too.
-        </p>
-        <p>Add alt-text to these types of graphics just like you would for images. Right-click the graphic and select <strong>Edit Alt Text...</strong></p>
-        <figure class="figure">
-          <img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_3d-model-alt-text.jpg"
-            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-            class="img-fluid figure__img"
-            height="550"
-            width="500"
-            alt="Screenshot highlighting the location of the 'Header Row' checkbox in Word">
-          <figcaption class="figure__figcaption text-center">
-            Screenshot showing the <strong>View Alt Text...</strong><br>
-            option when right-clicking a 3D Model.
-          </figcaption>
-        </figure>
-        <h4 id="grouped-graphics" class="typography__h4 links__offset">Grouped graphics</h4>
-        <p>
-          If you use multiple icons, shapes, or other objects to create a single graphic (e.g. flow-chart or node map), it still needs alternative text.
-          Since the various objects are used to create a single graphic, they need to be grouped so that you can add alt text to your design as a whole.
-        </p>
-        <p>To group multiple objects:</p>
-        <ol>
-          <li>
-            Select all the objects. You can select the first object and
-            then hold the shift key add more to your selection.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_object-selection.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="398"
-                width="400"
-                alt="Screenshot of a simple flow-chart where all the objects are selected in word">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the selection of multiple<br>
-                shapes making up a flow-chart.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            With all the objects selected, navigate to the <strong>Shape Format</strong>
-            (or <strong>Picture Format</strong> tab depending on what kind of objects you selected).<br>
-            Open the <strong>Group Objects</strong> dropdown (<img
-              src="{{ page.baseurl }}uploads/accessibility-doc-creation_group-objects-icon.jpg"
-              class="img-fluid"
-              height="38"
-              width="50"
-              alt="Group Objects icon">) and select <strong>Group</strong>.<br>
+      <br>
+      <hr>
+      <br>
+      <h3 id="alternative-text" class="typography__h3 links__offset">Alternative text</h3>
+      <h4 id="images" class="typography__h4 links__offset">Images</h4>
+      <p>
+        <em><strong>If you insert an image into your document, it must have alternative text (alt-text).
+        The only exception is when the graphic is purely decorative</strong> and does not add meaningful info needed to understand the content.</em>
+        Without alt-text, screen reader users will not be able understand what your image or graphic is about.
+      </p>
+      <p>
+        For more information and best practices on creating helpful and appropriate alternative text, see <a href="../#alt-text">how to use alternative text to aid understanding</a>.
+      </p>
+      <p>
+        To add alternative text to images:
+      </p>
+      <ol>
+        <li>
+          Right-click the image or graphic and select <strong>View Alt Text...</strong><br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_alt-text-menu.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="562"
+              width="500"
+              alt="Screenshot highlighting the 'View Alt Text...' option when right clicking on an image">  
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>View Alt Text...</strong><br>
+              option when right-clicking on an image.
+            </figcaption>
+          </figure>
+          <ul>
+            <li>
+              On newer versions of Microsoft Word, it may attempt to automatically generate alternative text when you insert an image.
+              This AI generated alt-text usually needs to be adjusted. Clicking on the auto-generated alt-text will also open
+              the <strong>Alt Text</strong> window.<br>
               <figure class="figure">
                 <img
-                  data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_group-objects.jpg"
+                  data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_ai-alt-text.jpg"
                   src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
                   class="img-fluid figure__img"
-                  height="444"
-                  width="750"
-                  alt="Screenshot highlighting the 'Group' option in the 'Group Objects' dropdown in Word">
+                  height="257"
+                  width="480"
+                  alt="Screenshot highlighting the AI generated alternative text">
                 <figcaption class="figure__figcaption text-center">
-                  Screenshot showing the <strong>Group</strong> option of the <strong>Shape Format</strong> tab.
+                  Screenshot showing the AI generated alternative text.
                 </figcaption>
               </figure>
-          </li>
-          <li>
-            Now that all the shapes are grouped, you can add alternative text like you would with an image.<br>
-            Right-click the grouped objects and select <strong>View Alt Text</strong>.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_group-alt.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="723"
-                width="500"
-                alt="Screenshot highlighting the 'View Alt Text' option when right clicking grouped shapes in Word">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the <strong>View Alt Text</strong><br>
-                option when right-clicking grouped objects.
-              </figcaption>
-            </figure>
-          </li>
-        </ol>
-        <br>
-        <hr>
-        <br>
-        <h3 id="table-headers" class="typography__h3 links__offset">Tables and table headers</h3>
-        <p>
-          It is especially important that tables in documents not be overly complex.
-          Ideally, you should have a single header row and no merged cells anywhere.
-          Empty cells should also be avoided — use values like <strong>n/a</strong> instead.
-          If a table is too complex, you can usually break it up into multiple simple tables.
-        </p>
-        <h4 id="header-row" class="typography__h4">Header row</h4>
-        <p>To make sure your table has a header row:</p>
-        <ol>
-          <li>
-            Click anywhere in the table and activate the <strong>Table Design</strong> tab.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-design.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="291"
-                width="900"
-                alt="Screenshot highlighting the location of the 'Table Design' tab in Word">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the <strong>Table Design</strong> tab.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            Make sure the <strong>Header Row</strong> checkbox is active.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-header.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="126"
-                width="900"
-                alt="Screenshot highlighting the location of the 'Header Row' checkbox in Word">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the <strong>Header Row</strong> checkbox.
-              </figcaption>
-            </figure>
-          </li>
-        </ol>
-        <h4 id="header-col" class="typography__h4">Header column</h4>
-        <p>A simple table can also contain a header column as its first column. To add a header column:</p>
-        <ol>
-          <li>Click anywhere in the table and activate teh <strong>Table Design</strong> tab.</li>
-          <li>
-            Make sure the <strong>First Column</strong> checkbox is active.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-header-col.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="308"
-                width="900"
-                alt="Screenshot highlighting the 'First Column' checkbox in Word">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing a table with a header column, the <strong>Table Design</strong> tab<br>
-                active, and the <strong>First Column</strong> checkbox checked.
-              </figcaption>
-            </figure>
-          </li>
-        </ol>
-        <br>
-        <hr>
-        <br>
-        <h3 id="spacing" class="typography__h3">Spacing</h3>
-        <p>
-          Improperly positioned text blocks in Microsoft Word using the <kbd>tab</kbd>, <kbd>spacebar</kbd>, and <kbd>enter</kbd> keys
-          can cause screen readers to announce all the extra spacing characters. These keys are often used to adjust layouts by adding
-          horizontal and vertical spacing and indentation. This can make the document difficult to understand for those users.
-        </p>
-        <p>
-          <em>Microsoft Word has multiple built-in features for adjusting spacing and indentation in your document layout. You should use these instead.</em>
-        </p>
-        <p>
-          The horizontal spacing tools include the <strong>Decrease Indent</strong> (<img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent.jpg"
-            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            </li>
+          </ul>
+        </li>
+        <li>
+          This opens the <strong>Alt Text</strong> panel to the right side of the document.<br>
+          Add (or edit) the alternative text using the text box.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_alt-text-panel.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="501"
+              width="350"
+              alt="Screenshot highlighting the text box for adjusting alternative text in Word">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot of the <strong>Alt Text</strong> panel<br>
+              showing the text box for adding<br>
+              and editing alt-text.
+            </figcaption>
+          </figure>
+          <ul>
+            <li>
+              You can also activate the <strong>Mark as decorative</strong> toggle switch for
+              images that are purely decorative and don't add meaning to the content.<br>
+              <figure class="figure">
+                <img
+                  data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_alt-text-decorative.jpg"
+                  src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                  class="img-fluid figure__img"
+                  height="559"
+                  width="350"
+                  alt="Screenshot highlighting the 'Mark as decorative' option of the Alt Text panel">
+                <figcaption class="figure__figcaption text-center">
+                  Screenshot of the <strong>Mark as decorative</strong><br>
+                  option of the <strong>Alt Text</strong> panel.
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <h4 id="tables" class="typography__h4 links__offset">Tables</h4>
+      <p>
+        <strong>Do not use a screenshot or picture of a table</strong>; you should create it as content in the page.
+        You can add alternative text to tables, which can help screen reader users in understanding the table and its context.
+      </p>
+      <p>
+        To add alt-text to a table:
+      </p>
+      <ol>
+        <li>
+          Right-click anywhere on the table and choose <strong>Table Properties...</strong>.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-props-option.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="441"
+              width="500"
+              alt="Screenshot highlighting the 'Table properties...' option while right clicking a table in Word">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot of the <strong>Table Properties...</strong> option<br>
+              when right-clicking in a table.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          This opens the <strong>Table Properties</strong> window. Choose the <strong>Alt Text</strong> tab.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-props.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="487"
+              width="500"
+              alt="Screenshot highlighting where the 'Alt Text' tab is located in the 'Table Properties' window.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot of the <strong>Table Properties</strong> window<br>
+              showing where the <strong>Alt Text</strong> tab is.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Enter a <strong>Title</strong> and <strong>Description</strong> for the table and then select the <strong>OK</strong> button.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-props-alt-text.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="487"
+              width="500"
+              alt="Screenshot highlighting the 'Title' and 'Description' fields of the 'Alt Text' tab in 'Table Properties' of Word">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot of the <strong>Title</strong> and <strong>Description</strong> fields<br>
+              for adding alt text to a table.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <h4 id="charts-and-graphs" class="typography__h4 links__offset">Charts and graphs</h4>
+      <p>
+        The information contained in charts and graphs also need to be conveyed in a way that non-visual users can understand.
+        Whenever possible, you should include a simple table underneath it containing the data.
+      </p>
+      <figure class="figure">
+        <img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_chart.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid figure__img"
+          height="454"
+          width="650"
+          alt="Screenshot of 'Global Smartphone OS Market Share' pie chart and a table containing the same data below it">
+        <figcaption class="figure__figcaption text-center">
+          Screenshot showing a pie chart with the data in a<br>
+          table underneath for non-visual users.
+        </figcaption>
+      </figure>
+      <p>
+        If you cannot add the data in a table, you need to add alternative text. Describe the chart or graph like you're
+        explaining it to a friend who cannot see it. Include any data contained within the chart or graph and any other important details.
+      </p>
+      <p>
+        Add alternative text just like you would for an image:
+      </p>
+      <figure class="figure">
+        <img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_chart-alt-text.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid figure__img"
+          height="603"
+          width="900"
+          alt="Screenshot highlighting the 'View Alt Text' option when right clicking on a pie chart in Word. The text field for adding alternative text is also highlighted.">
+        <figcaption class="figure__figcaption text-center">
+          Screenshot showing the <strong>View Alt Text</strong> option when right-clicking<br>
+          a pie chart and the text box for adding alternative text.
+        </figcaption>
+      </figure>
+      <h4 id="other-graphics" class="typography__h4 links__offset">Other graphics</h4>
+      <p>
+        Other forms of graphics like shapes, icons, 3D models, SmartArt, and charts require alternative text too.
+      </p>
+      <p>Add alt-text to these types of graphics just like you would for images. Right-click the graphic and select <strong>Edit Alt Text...</strong></p>
+      <figure class="figure">
+        <img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_3d-model-alt-text.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid figure__img"
+          height="550"
+          width="500"
+          alt="Screenshot highlighting the location of the 'Header Row' checkbox in Word">
+        <figcaption class="figure__figcaption text-center">
+          Screenshot showing the <strong>View Alt Text...</strong><br>
+          option when right-clicking a 3D Model.
+        </figcaption>
+      </figure>
+      <h4 id="grouped-graphics" class="typography__h4 links__offset">Grouped graphics</h4>
+      <p>
+        If you use multiple icons, shapes, or other objects to create a single graphic (e.g. flow-chart or node map), it still needs alternative text.
+        Since the various objects are used to create a single graphic, they need to be grouped so that you can add alt text to your design as a whole.
+      </p>
+      <p>To group multiple objects:</p>
+      <ol>
+        <li>
+          Select all the objects. You can select the first object and
+          then hold the shift key add more to your selection.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_object-selection.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="398"
+              width="400"
+              alt="Screenshot of a simple flow-chart where all the objects are selected in word">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the selection of multiple<br>
+              shapes making up a flow-chart.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          With all the objects selected, navigate to the <strong>Shape Format</strong>
+          (or <strong>Picture Format</strong> tab depending on what kind of objects you selected).<br>
+          Open the <strong>Group Objects</strong> dropdown (<img
+            src="{{ page.baseurl }}uploads/accessibility-doc-creation_group-objects-icon.jpg"
             class="img-fluid"
-            height="27"
-            width="35"
-            alt="'Decrease Indent' icon"
-          >) and <strong>Increase Indent</strong> (<img
+            height="38"
+            width="50"
+            alt="Group Objects icon">) and select <strong>Group</strong>.<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_group-objects.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="444"
+                width="750"
+                alt="Screenshot highlighting the 'Group' option in the 'Group Objects' dropdown in Word">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing the <strong>Group</strong> option of the <strong>Shape Format</strong> tab.
+              </figcaption>
+            </figure>
+        </li>
+        <li>
+          Now that all the shapes are grouped, you can add alternative text like you would with an image.<br>
+          Right-click the grouped objects and select <strong>View Alt Text</strong>.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_group-alt.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="723"
+              width="500"
+              alt="Screenshot highlighting the 'View Alt Text' option when right clicking grouped shapes in Word">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>View Alt Text</strong><br>
+              option when right-clicking grouped objects.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <br>
+      <hr>
+      <br>
+      <h3 id="table-headers" class="typography__h3 links__offset">Tables and table headers</h3>
+      <p>
+        It is especially important that tables in documents not be overly complex.
+        Ideally, you should have a single header row and no merged cells anywhere.
+        Empty cells should also be avoided — use values like <strong>n/a</strong> instead.
+        If a table is too complex, you can usually break it up into multiple simple tables.
+      </p>
+      <h4 id="header-row" class="typography__h4">Header row</h4>
+      <p>To make sure your table has a header row:</p>
+      <ol>
+        <li>
+          Click anywhere in the table and activate the <strong>Table Design</strong> tab.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-design.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="291"
+              width="900"
+              alt="Screenshot highlighting the location of the 'Table Design' tab in Word">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Table Design</strong> tab.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Make sure the <strong>Header Row</strong> checkbox is active.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-header.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="126"
+              width="900"
+              alt="Screenshot highlighting the location of the 'Header Row' checkbox in Word">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Header Row</strong> checkbox.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <h4 id="header-col" class="typography__h4">Header column</h4>
+      <p>A simple table can also contain a header column as its first column. To add a header column:</p>
+      <ol>
+        <li>Click anywhere in the table and activate teh <strong>Table Design</strong> tab.</li>
+        <li>
+          Make sure the <strong>First Column</strong> checkbox is active.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-header-col.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="308"
+              width="900"
+              alt="Screenshot highlighting the 'First Column' checkbox in Word">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing a table with a header column, the <strong>Table Design</strong> tab<br>
+              active, and the <strong>First Column</strong> checkbox checked.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <br>
+      <hr>
+      <br>
+      <h3 id="spacing" class="typography__h3">Spacing</h3>
+      <p>
+        Improperly positioned text blocks in Microsoft Word using the <kbd>tab</kbd>, <kbd>spacebar</kbd>, and <kbd>enter</kbd>/<kbd>return</kbd> keys
+        can cause screen readers to announce all the extra spacing characters. These keys are often used to adjust layouts by adding
+        horizontal and vertical spacing and indentation. This can make the document difficult to understand for those users.
+      </p>
+      <p>
+        <em>Microsoft Word has multiple built-in features for adjusting spacing and indentation in your document layout. You should use these instead.</em>
+      </p>
+      <p><a href="#page-breaks">Page breaks</a> should be created using the <strong>Page Break</strong> tool found in the <strong>Layout</strong> tab.</p>
+      <p>
+        The horizontal spacing tools include the <strong>Decrease Indent</strong> (<img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid"
+          height="27"
+          width="35"
+          alt="'Decrease Indent' icon"
+        >) and <strong>Increase Indent</strong> (<img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indent.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid"
+          height="27"
+          width="35"
+          alt="'Increase Indent' icon"
+        >) tools. The vertical spacing tools include the <strong>Line and Paragraph Spacing</strong> (<img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-vertical.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid"
+          height="25.5px"
+          width="40px"
+          alt="'Line and Paragraph Spacing' icon"
+        >) dropdown which has multiple options. These can be found in the <strong>Home</strong> tab of Word, within the <strong>Paragraph</strong> panel.
+      </p>
+      <figure class="figure">
+        <img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-tools.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid figure__img"
+          height="117"
+          width="750"
+          alt="Screenshot highlighting the locations of the 'Decrease Indent', 'Increase Indent', and 'Line and Paragraph Spacing' tools in Word">
+        <figcaption class="figure__figcaption text-center">
+          Screenshot showing the <strong>Decrease Indent</strong>, <strong>Increase indent</strong>, and<br>
+          <strong>Line and Paragraph Spacing</strong> tools.
+        </figcaption>
+      </figure>
+      <h4 id="spacing-horizontal" class="typography__h4 links__offset">Horizontal spacing (indentation)</h4>
+      <p>
+        To adjust horizontal spacing (i.e. add or remove indentation):
+      </p>
+      <ol>
+        <li>
+          Select the text you want to indent (or remove indentation from).<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indent-highlight.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="336"
+              width="700"
+              alt="Screenshot showing a block of text selected in Word.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing a selected block of text for indenting.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_home-tab-paragraph.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="140"
+              width="900"
+              alt="Screenshot highlighting the 'Paragraph' panel within the 'Home' tab of a Word document.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Paragraph</strong> panel location within the <strong>Home</strong> tab.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Use the <strong>Increase Indent</strong> (<img
             data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indent.jpg"
             src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
             class="img-fluid"
             height="27"
             width="35"
             alt="'Increase Indent' icon"
-          >) tools. The vertical spacing tools include the <strong>Line and Paragraph Spacing</strong> (<img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-vertical.jpg"
+          >) tool to add horizontal spacing (indentation).<br>
+          You can increase the indentation multiple times to further position your text.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indented.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="336"
+              width="700"
+              alt="Screenshot showing a document with multiple blocks of indented text and non-indented block between them.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing a document with multiple blocks of indented text.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          To decrease or remove horizontal spacing, use the <strong>Decrease Indent</strong> (<img
+            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent.jpg"
             src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
             class="img-fluid"
-            height="25.5px"
-            width="40px"
-            alt="'Line and Paragraph Spacing' icon"
-          >) dropdown which has multiple options. These can be found in the <strong>Home</strong> tab of Word, within the <strong>Paragraph</strong> panel.
-        </p>
-        <figure class="figure">
-          <img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-tools.jpg"
-            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-            class="img-fluid figure__img"
-            height="117"
-            width="750"
-            alt="Screenshot highlighting the locations of the 'Decrease Indent', 'Increase Indent', and 'Line and Paragraph Spacing' tools in Word">
-          <figcaption class="figure__figcaption text-center">
-            Screenshot showing the <strong>Decrease Indent</strong>, <strong>Increase indent</strong>, and<br>
-            <strong>Line and Paragraph Spacing</strong> tools.
-          </figcaption>
-        </figure>
-        <h4 id="spacing-horizontal" class="typography__h4 links__offset">Horizontal spacing (indentation)</h4>
-        <p>
-          To adjust horizontal spacing (i.e. add or remove indentation):
-        </p>
-        <ol>
-          <li>
-            Select the text you want to indent (or remove indentation from).<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indent-highlight.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="336"
-                width="700"
-                alt="Screenshot showing a block of text selected in Word.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing a selected block of text for indenting.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_home-tab-paragraph.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="140"
-                width="900"
-                alt="Screenshot highlighting the 'Paragraph' panel within the 'Home' tab of a Word document.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the <strong>Paragraph</strong> panel location within the <strong>Home</strong> tab.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            Use the <strong>Increase Indent</strong> (<img
-              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indent.jpg"
+            height="27"
+            width="35"
+            alt="'Decrease Indent' icon"
+          >) tool while the text you want to adjust is highlighted.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent-location.jpg"
               src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-              class="img-fluid"
-              height="27"
-              width="35"
-              alt="'Increase Indent' icon"
-            >) tool to add horizontal spacing (indentation).<br>
-            You can increase the indentation multiple times to further position your text.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indented.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="336"
-                width="700"
-                alt="Screenshot showing a document with multiple blocks of indented text and non-indented block between them.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing a document with multiple blocks of indented text.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            To decrease or remove horizontal spacing, use the <strong>Decrease Indent</strong> (<img
-              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent.jpg"
+              class="img-fluid figure__img"
+              height="140"
+              width="900"
+              alt="Screenshot highlighting the 'Decrease Indent' tool in the 'Paragraph' panel of the 'Home' tab.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the location of the <strong>Decrease Indent</strong> tool.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <h5 id="spacing-custom-indentation" class="typography__h5">Custom indentation</h5>
+      <p>
+        To customize the amount of indentation, you can use <strong>Line Spacing Options...</strong> found in the
+        <strong>Line and Paragraph Spacing</strong> dropdown:
+      </p>
+      <ol>
+        <li>Select the text you want to adjust.</li>
+        <li>
+          Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
+          Open the <strong>Line and Paragraph Spacing</strong> dropdown and select <strong>Line Spacing Options...</strong>:<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-spacing-options.jpg"
               src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-              class="img-fluid"
-              height="27"
-              width="35"
-              alt="'Decrease Indent' icon"
-            >) tool while the text you want to adjust is highlighted.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent-location.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="140"
-                width="900"
-                alt="Screenshot highlighting the 'Decrease Indent' tool in the 'Paragraph' panel of the 'Home' tab.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the location of the <strong>Decrease Indent</strong> tool.
-              </figcaption>
-            </figure>
-          </li>
-        </ol>
-        <h5 id="spacing-custom-indentation" class="typography__h5">Custom indentation</h5>
-        <p>
-          To customize the amount of indentation, you can use <strong>Line Spacing Options...</strong> found in the
-          <strong>Line and Paragraph Spacing</strong> dropdown:
-        </p>
-        <ol>
-          <li>Select the text you want to adjust.</li>
-          <li>
-            Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
-            Open the <strong>Line and Paragraph Spacing</strong> dropdown and select <strong>Line Spacing Options...</strong>:<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-spacing-options.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="493"
-                width="900"
-                alt="Screenshot highlighting 'Line Spacing Options...' in the 'Line and Paragraph Spacing' dropdown.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing <strong>Line Spacing Options...</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            This will open the <strong>Paragraph</strong> window.<br>
-            Under <strong>Indentation</strong> use the <strong>Left</strong> and <strong>Right</strong> fields to specify
-            indentation values in inches.<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-window-indent.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="700"
-                width="600"
-                alt="Screenshot highlighting the 'Left' and 'Right' fields under 'Indentation' in the 'Paragraph' window.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the <strong>Left</strong> and <strong>Right</strong> fields for adjusting<br>
-                <strong>Indentation</strong> in the <strong>Paragraph</strong> window.
-              </figcaption>
-            </figure>
-          </li>
-        </ol>
-        <p>
-          
-        </p>
-        <h4 id="spacing-vertical" class="typography__h4 links__offset">Vertical spacing</h4>
-        <p>
-          You can adjust line and paragraph spacing using the tools found in the <strong>Line and Paragraph Spacing</strong> (<img
-            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-vertical.jpg"
+              class="img-fluid figure__img"
+              height="493"
+              width="900"
+              alt="Screenshot highlighting 'Line Spacing Options...' in the 'Line and Paragraph Spacing' dropdown.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing <strong>Line Spacing Options...</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          This will open the <strong>Paragraph</strong> window.<br>
+          Under <strong>Indentation</strong> use the <strong>Left</strong> and <strong>Right</strong> fields to specify
+          indentation values in inches.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-window-indent.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="700"
+              width="600"
+              alt="Screenshot highlighting the 'Left' and 'Right' fields under 'Indentation' in the 'Paragraph' window.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Left</strong> and <strong>Right</strong> fields for adjusting<br>
+              <strong>Indentation</strong> in the <strong>Paragraph</strong> window.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <h4 id="spacing-vertical" class="typography__h4 links__offset">Vertical spacing</h4>
+      <p>
+        You can adjust line and paragraph spacing using the tools found in the <strong>Line and Paragraph Spacing</strong> (<img
+          data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-vertical.jpg"
+          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+          class="img-fluid"
+          height="25.5px"
+          width="40px"
+          alt="'Line and Paragraph Spacing' icon"
+        >) dropdown.
+      </p>
+      <h5 id="spacing-line" class="typography__h5 links__offset">Line spacing</h5>
+      <p>
+        To adjust line spacing:
+      </p>
+      <ol>
+        <li>Select the text you want to adjust.</li>
+        <li>
+          Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
+          Open the <strong>Line and Paragraph Spacing</strong> dropdown and select the line spacing value you want
+          (e.g. <strong>1.0</strong>, <strong>1.15</strong>, <strong>1.5</strong>, <strong>2.0</strong>, etc.).<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-par-dropdown.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="392"
+              width="900"
+              alt="Screenshot highlighting the 'Line and Paragraph Spacing' dropdown in the 'Paragraph' panel of the 'Home' tab.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Line and Paragraph Spacing</strong> dropdown.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <p>
+        The line spacing values adjust the line-height relative to the text-hight.
+        For example, <strong>2.0</strong> line spacing will make each line two-times the text height.
+      </p>
+      <h5 id="spacing-paragraph" class="typography__h5 links__offset">Paragraph spacing</h5>
+      <p>To adjust paragraph spacing (i.e. the amount of space before and after paragraphs):</p>
+      <ol>
+        <li>Select the paragraph(s) you want to adjust and navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.</li>
+        <li>
+          Open the <strong>Line and Paragraph Spacing</strong> dropdown:
+          <ul>
+            <li>
+              You can use <strong>Add Space Before Paragraph</strong> and <strong>Remove Space After Paragraph</strong>, or...<br>
+              <figure class="figure">
+                <img
+                  data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-add-remove.jpg"
+                  src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                  class="img-fluid figure__img"
+                  height="493"
+                  width="900"
+                  alt="Screenshot highlighting the 'Add Space Before Paragraph' and 'Remove Space After Paragraph' options.">
+                <figcaption class="figure__figcaption text-center">
+                  Screenshot showing the <strong>Add Space Before Paragraph</strong> and <strong>Remove Space After Paragraph</strong><br>
+                  options of the <strong>Line and Paragraph Spacing</strong> dropdown.
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              use <strong>Line Spacing Options...</strong> for more granular control.<br>
+              <figure class="figure">
+                <img
+                  data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-spacing-options.jpg"
+                  src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                  class="img-fluid figure__img"
+                  height="493"
+                  width="900"
+                  alt="Screenshot highlighting 'Line Spacing Options...' in the 'Line and Paragraph Spacing' dropdown.">
+                <figcaption class="figure__figcaption text-center">
+                  Screenshot showing <strong>Line Spacing Options...</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
+                </figcaption>
+              </figure><br>
+              This will open the <strong>Paragraph</strong> window where you can specify exact values for paragraph spacing.<br>
+              Modify the <strong>Before</strong> and <strong>After</strong> fields to adjust the spacing before and after paragraphs.<br>
+              <figure class="figure">
+                <img
+                  data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-options-window.jpg"
+                  src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                  class="img-fluid figure__img"
+                  height="701"
+                  width="600"
+                  alt="Screenshot highlighting the 'Before' and 'After' fields for adjusting spacing in the 'Paragraph' spacing window.">
+                <figcaption class="figure__figcaption text-center">
+                  Screenshot showing the <strong>Before</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <h5 id="page-breaks" class="typography__h5">Page breaks</h5>
+      <p>
+        Page breaks should be added using Word's <strong>Page Break</strong> tool instead of the <kbd>enter</kbd>/<kbd>return</kbd> key.
+      </p>
+      <p>Tp add a page break:</p>
+      <ol>
+        <li>
+          Place your cursor before the text that you want to move to the next page.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-breaks-cursor.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="622"
+              width="530"
+              alt="Screenshot highlighting the cursor placement before a new section's heading towards the end of a page.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing cursor placement before a heading that<br>
+              starts a new section towards the end of a page.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Navigate to the <strong>Insert</strong> tab and select <strong>Page Break</strong> (<img
+            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-page-break-icon.jpg"
             src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
             class="img-fluid"
-            height="25.5px"
-            width="40px"
-            alt="'Line and Paragraph Spacing' icon"
-          >) dropdown.
-        </p>
-        <h5 id="spacing-line" class="typography__h5 links__offset">Line spacing</h5>
-        <p>
-          To adjust line spacing:
-        </p>
-        <ol>
-          <li>Select the text you want to adjust.</li>
-          <li>
-            Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
-            Open the <strong>Line and Paragraph Spacing</strong> dropdown and select the line spacing value you want
-            (e.g. <strong>1.0</strong>, <strong>1.15</strong>, <strong>1.5</strong>, <strong>2.0</strong>, etc.).<br>
-            <figure class="figure">
-              <img
-                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-par-dropdown.jpg"
-                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                class="img-fluid figure__img"
-                height="392"
-                width="900"
-                alt="Screenshot highlighting the 'Line and Paragraph Spacing' dropdown in the 'Paragraph' panel of the 'Home' tab.">
-              <figcaption class="figure__figcaption text-center">
-                Screenshot showing the <strong>Line and Paragraph Spacing</strong> dropdown.
-              </figcaption>
-            </figure>
-          </li>
-        </ol>
-        <p>
-          The line spacing values adjust the line-height relative to the text-hight.
-          For example, <strong>2.0</strong> line spacing will make each line two-times the text height.
-        </p>
-        <h5 id="spacing-paragraph" class="typography__h5 links__offset">Paragraph spacing</h5>
-        <p>To adjust paragraph spacing (i.e. the amount of space before and after paragraphs):</p>
-        <ol>
-          <li>Select the paragraph(s) you want to adjust and navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.</li>
-          <li>
-            Open the <strong>Line and Paragraph Spacing</strong> dropdown:
-            <ul>
-              <li>
-                You can use <strong>Add Space Before Paragraph</strong> and <strong>Remove Space After Paragraph</strong>, or...<br>
-                <figure class="figure">
-                  <img
-                    data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-add-remove.jpg"
-                    src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                    class="img-fluid figure__img"
-                    height="493"
-                    width="900"
-                    alt="Screenshot highlighting the 'Add Space Before Paragraph' and 'Remove Space After Paragraph' options.">
-                  <figcaption class="figure__figcaption text-center">
-                    Screenshot showing the <strong>Add Space Before Paragraph</strong> and <strong>Remove Space After Paragraph</strong><br>
-                    options of the <strong>Line and Paragraph Spacing</strong> dropdown.
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                use <strong>Line Spacing Options...</strong> for more granular control.<br>
-                <figure class="figure">
-                  <img
-                    data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-spacing-options.jpg"
-                    src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                    class="img-fluid figure__img"
-                    height="493"
-                    width="900"
-                    alt="Screenshot highlighting 'Line Spacing Options...' in the 'Line and Paragraph Spacing' dropdown.">
-                  <figcaption class="figure__figcaption text-center">
-                    Screenshot showing <strong>Line Spacing Options...</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
-                  </figcaption>
-                </figure><br>
-                This will open the <strong>Paragraph</strong> window where you can specify exact values for paragraph spacing.<br>
-                Modify the <strong>Before</strong> and <strong>After</strong> fields to adjust the spacing before and after paragraphs.<br>
-                <figure class="figure">
-                  <img
-                    data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-options-window.jpg"
-                    src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-                    class="img-fluid figure__img"
-                    height="701"
-                    width="600"
-                    alt="Screenshot highlighting the 'Before' and 'After' fields for adjusting spacing in the 'Paragraph' spacing window.">
-                  <figcaption class="figure__figcaption text-center">
-                    Screenshot showing the <strong>Before</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </li>
-        </ol>
-        <h5 id="spacing-page-breaks" class="typography__h5">Page breaks</h5>
-        <p></p>
-        <br>
-        <hr>
-        <br>
-      </div>
+            height="68"
+            width="40"
+            alt="'Page Break' icon"
+          >)<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-insert-page-break.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="113"
+              width="700"
+              alt="Screenshot highlighting the 'Page Break' tool in the 'Insert' tab">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the location of the <strong>Page Break</strong> tool<br>
+              within the <strong>Insert</strong> tab.
+            </figcaption>
+          </figure><br>
+          This will create a page break without excessive spacing characters being announced for screen reader users.<br>
+          <figure class="figure">
+            <img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-page-break-example.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="622"
+              width="530"
+              alt="Screenshot showing the same page but with the new section and heading moved to the next page">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the same page with a page break inserted.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <br>
+      <hr>
+      <br>
     </div>
   </div>
 </main>
