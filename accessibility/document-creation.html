@@ -72,7 +72,32 @@ disclaimer: >-
               <li><a href="#grouped-graphics">Grouped Graphics</a></li>
             </ul>
           </li>
-          <li><a href="#table-headers">Tables and Table Headers</a></li>
+          <li>
+            <a href="#table-headers">Tables and table headers</a>
+            <ul>
+              <li><a href="#header-row">Header row</a></li>
+              <li><a href="#header-col">Header column</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#spacing">Spacing</a>
+            <ul>
+              <li>
+                <a href="#spacing-horizontal">Horizontal spacing (indentation)</a>
+                <ul>
+                  <li><a href="#spacing-custom-indentation">Custom indentation</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#spacing-vertical">Vertical spacing</a>
+                <ul>
+                  <li><a href="#spacing-line">Line spacing</a></li>
+                  <li><a href="#spacing-paragraph">Paragraph spacing</a></li>
+                  <li><a href="#spacing-page-breaks">Page breaks</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
         <br>
         <hr>
@@ -610,13 +635,14 @@ disclaimer: >-
         <br>
         <hr>
         <br>
-        <h3 id="table-headers" class="typography__h3 links__offset">Tables and Table Headers</h3>
+        <h3 id="table-headers" class="typography__h3 links__offset">Tables and table headers</h3>
         <p>
           It is especially important that tables in documents not be overly complex.
           Ideally, you should have a single header row and no merged cells anywhere.
           Empty cells should also be avoided — use values like <strong>n/a</strong> instead.
           If a table is too complex, you can usually break it up into multiple simple tables.
         </p>
+        <h4 id="header-row" class="typography__h4">Header row</h4>
         <p>To make sure your table has a header row:</p>
         <ol>
           <li>
@@ -650,6 +676,298 @@ disclaimer: >-
             </figure>
           </li>
         </ol>
+        <h4 id="header-col" class="typography__h4">Header column</h4>
+        <p>A simple table can also contain a header column as its first column. To add a header column:</p>
+        <ol>
+          <li>Click anywhere in the table and activate teh <strong>Table Design</strong> tab.</li>
+          <li>
+            Make sure the <strong>First Column</strong> checkbox is active.<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_table-header-col.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="308"
+                width="900"
+                alt="Screenshot highlighting the 'First Column' checkbox in Word">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing a table with a header column, the <strong>Table Design</strong> tab<br>
+                active, and the <strong>First Column</strong> checkbox checked.
+              </figcaption>
+            </figure>
+          </li>
+        </ol>
+        <br>
+        <hr>
+        <br>
+        <h3 id="spacing" class="typography__h3">Spacing</h3>
+        <p>
+          Improperly positioned text blocks in Microsoft Word using the <kbd>tab</kbd>, <kbd>spacebar</kbd>, and <kbd>enter</kbd> keys
+          can cause screen readers to announce all the extra spacing characters. These keys are often used to adjust layouts by adding
+          horizontal and vertical spacing and indentation. This can make the document difficult to understand for those users.
+        </p>
+        <p>
+          <em>Microsoft Word has multiple built-in features for adjusting spacing and indentation in your document layout. You should use these instead.</em>
+        </p>
+        <p>
+          The horizontal spacing tools include the <strong>Decrease Indent</strong> (<img
+            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent.jpg"
+            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            class="img-fluid"
+            height="27"
+            width="35"
+            alt="'Decrease Indent' icon"
+          >) and <strong>Increase Indent</strong> (<img
+            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indent.jpg"
+            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            class="img-fluid"
+            height="27"
+            width="35"
+            alt="'Increase Indent' icon"
+          >) tools. The vertical spacing tools include the <strong>Line and Paragraph Spacing</strong> (<img
+            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-vertical.jpg"
+            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            class="img-fluid"
+            height="25.5px"
+            width="40px"
+            alt="'Line and Paragraph Spacing' icon"
+          >) dropdown which has multiple options. These can be found in the <strong>Home</strong> tab of Word, within the <strong>Paragraph</strong> panel.
+        </p>
+        <figure class="figure">
+          <img
+            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-tools.jpg"
+            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            class="img-fluid figure__img"
+            height="117"
+            width="750"
+            alt="Screenshot highlighting the locations of the 'Decrease Indent', 'Increase Indent', and 'Line and Paragraph Spacing' tools in Word">
+          <figcaption class="figure__figcaption text-center">
+            Screenshot showing the <strong>Decrease Indent</strong>, <strong>Increase indent</strong>, and<br>
+            <strong>Line and Paragraph Spacing</strong> tools.
+          </figcaption>
+        </figure>
+        <h4 id="spacing-horizontal" class="typography__h4 links__offset">Horizontal spacing (indentation)</h4>
+        <p>
+          To adjust horizontal spacing (i.e. add or remove indentation):
+        </p>
+        <ol>
+          <li>
+            Select the text you want to indent (or remove indentation from).<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indent-highlight.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="336"
+                width="700"
+                alt="Screenshot showing a block of text selected in Word.">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing a selected block of text for indenting.
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_home-tab-paragraph.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="140"
+                width="900"
+                alt="Screenshot highlighting the 'Paragraph' panel within the 'Home' tab of a Word document.">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing the <strong>Paragraph</strong> panel location within the <strong>Home</strong> tab.
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            Use the <strong>Increase Indent</strong> (<img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indent.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid"
+              height="27"
+              width="35"
+              alt="'Increase Indent' icon"
+            >) tool to add horizontal spacing (indentation).<br>
+            You can increase the indentation multiple times to further position your text.<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-indented.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="336"
+                width="700"
+                alt="Screenshot showing a document with multiple blocks of indented text and non-indented block between them.">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing a document with multiple blocks of indented text.
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            To decrease or remove horizontal spacing, use the <strong>Decrease Indent</strong> (<img
+              data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent.jpg"
+              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+              class="img-fluid"
+              height="27"
+              width="35"
+              alt="'Decrease Indent' icon"
+            >) tool while the text you want to adjust is highlighted.<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-outdent-location.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="140"
+                width="900"
+                alt="Screenshot highlighting the 'Decrease Indent' tool in the 'Paragraph' panel of the 'Home' tab.">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing the location of the <strong>Decrease Indent</strong> tool.
+              </figcaption>
+            </figure>
+          </li>
+        </ol>
+        <h5 id="spacing-custom-indentation" class="typography__h5">Custom indentation</h5>
+        <p>
+          To customize the amount of indentation, you can use <strong>Line Spacing Options...</strong> found in the
+          <strong>Line and Paragraph Spacing</strong> dropdown:
+        </p>
+        <ol>
+          <li>Select the text you want to adjust.</li>
+          <li>
+            Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
+            Open the <strong>Line and Paragraph Spacing</strong> dropdown and select <strong>Line Spacing Options...</strong>:<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-spacing-options.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="493"
+                width="900"
+                alt="Screenshot highlighting 'Line Spacing Options...' in the 'Line and Paragraph Spacing' dropdown.">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing <strong>Line Spacing Options...</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            This will open the <strong>Paragraph</strong> window.<br>
+            Under <strong>Indentation</strong> use the <strong>Left</strong> and <strong>Right</strong> fields to specify
+            indentation values in inches.<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-window-indent.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="700"
+                width="600"
+                alt="Screenshot highlighting the 'Left' and 'Right' fields under 'Indentation' in the 'Paragraph' window.">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing the <strong>Left</strong> and <strong>Right</strong> fields for adjusting<br>
+                <strong>Indentation</strong> in the <strong>Paragraph</strong> window.
+              </figcaption>
+            </figure>
+          </li>
+        </ol>
+        <p>
+          
+        </p>
+        <h4 id="spacing-vertical" class="typography__h4 links__offset">Vertical spacing</h4>
+        <p>
+          You can adjust line and paragraph spacing using the tools found in the <strong>Line and Paragraph Spacing</strong> (<img
+            data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-vertical.jpg"
+            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            class="img-fluid"
+            height="25.5px"
+            width="40px"
+            alt="'Line and Paragraph Spacing' icon"
+          >) dropdown.
+        </p>
+        <h5 id="spacing-line" class="typography__h5 links__offset">Line spacing</h5>
+        <p>
+          To adjust line spacing:
+        </p>
+        <ol>
+          <li>Select the text you want to adjust.</li>
+          <li>
+            Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
+            Open the <strong>Line and Paragraph Spacing</strong> dropdown and select the line spacing value you want
+            (e.g. <strong>1.0</strong>, <strong>1.15</strong>, <strong>1.5</strong>, <strong>2.0</strong>, etc.).<br>
+            <figure class="figure">
+              <img
+                data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-par-dropdown.jpg"
+                src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="392"
+                width="900"
+                alt="Screenshot highlighting the 'Line and Paragraph Spacing' dropdown in the 'Paragraph' panel of the 'Home' tab.">
+              <figcaption class="figure__figcaption text-center">
+                Screenshot showing the <strong>Line and Paragraph Spacing</strong> dropdown.
+              </figcaption>
+            </figure>
+          </li>
+        </ol>
+        <p>
+          The line spacing values adjust the line-height relative to the text-hight.
+          For example, <strong>2.0</strong> line spacing will make each line two-times the text height.
+        </p>
+        <h5 id="spacing-paragraph" class="typography__h5 links__offset">Paragraph spacing</h5>
+        <p>To adjust paragraph spacing (i.e. the amount of space before and after paragraphs):</p>
+        <ol>
+          <li>Select the paragraph(s) you want to adjust and navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.</li>
+          <li>
+            Open the <strong>Line and Paragraph Spacing</strong> dropdown:
+            <ul>
+              <li>
+                You can use <strong>Add Space Before Paragraph</strong> and <strong>Remove Space After Paragraph</strong>, or...<br>
+                <figure class="figure">
+                  <img
+                    data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-add-remove.jpg"
+                    src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                    class="img-fluid figure__img"
+                    height="493"
+                    width="900"
+                    alt="Screenshot highlighting the 'Add Space Before Paragraph' and 'Remove Space After Paragraph' options.">
+                  <figcaption class="figure__figcaption text-center">
+                    Screenshot showing the <strong>Add Space Before Paragraph</strong> and <strong>Remove Space After Paragraph</strong><br>
+                    options of the <strong>Line and Paragraph Spacing</strong> dropdown.
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                use <strong>Line Spacing Options...</strong> for more granular control.<br>
+                <figure class="figure">
+                  <img
+                    data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-line-spacing-options.jpg"
+                    src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                    class="img-fluid figure__img"
+                    height="493"
+                    width="900"
+                    alt="Screenshot highlighting 'Line Spacing Options...' in the 'Line and Paragraph Spacing' dropdown.">
+                  <figcaption class="figure__figcaption text-center">
+                    Screenshot showing <strong>Line Spacing Options...</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
+                  </figcaption>
+                </figure><br>
+                This will open the <strong>Paragraph</strong> window where you can specify exact values for paragraph spacing.<br>
+                Modify the <strong>Before</strong> and <strong>After</strong> fields to adjust the spacing before and after paragraphs.<br>
+                <figure class="figure">
+                  <img
+                    data-src="{{ page.baseurl }}uploads/accessibility-doc-creation_spacing-options-window.jpg"
+                    src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+                    class="img-fluid figure__img"
+                    height="701"
+                    width="600"
+                    alt="Screenshot highlighting the 'Before' and 'After' fields for adjusting spacing in the 'Paragraph' spacing window.">
+                  <figcaption class="figure__figcaption text-center">
+                    Screenshot showing the <strong>Before</strong> in the <strong>Line and Paragraph Spacing</strong> dropdown.
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <h5 id="spacing-page-breaks" class="typography__h5">Page breaks</h5>
+        <p></p>
         <br>
         <hr>
         <br>
