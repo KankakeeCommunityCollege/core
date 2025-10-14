@@ -27,681 +27,679 @@ banner_alt_text: Icons
           <br>
       {% endif %}
       <h2 class="typography__h2">{{ page.title }}</h2>
-      <div class="editable">
-        <br>
-        <hr>
-        <br>
-        <h3 class="typography__h3 links__offset">Overview</h3>
-        <p>
-          Accessibility means accessing, reaching, or obtaining products, services, facilities, or information. It should be
-          considered when information is shared electronically. Creating accessible content helps everyone, including people
-          who rely on assistive technologies, such as screen readers, text-to-speech software, magnifiers, and mouth sticks,
-          to accomplish their day-to-day tasks. Imagine using only your keyboard to fill out a PDF form. If the form is not
-          accessible, you will not be able to complete it.
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 class="typography__h3 links__offset">Contents</h3>
-        <ul>
-          <li>
-            <a href="#writing-text">Writing text that follows accessibility guidelines</a>
-            <ul>
-              <li><a href="#readability">Readability</a></li>
-              <li><a href="#abbreviations">Abbreviations</a></li>
-              <li><a href="#symbols">Symbols</a></li>
-              <li><a href="#fonts">Fonts</a></li>
-              <li><a href="#text-alignment">Text alignment</a></li>
-            </ul>
-          </li>
-          <li><a href="#headings">Creating an accessible structure through headings</a></li>
-          <li><a href="#lists">Using lists within accessible content</a></li>
-          <li><a href="#hyperlinks">Creating accessible hyperlinks</a></li>
-          <li><a href="#tables">Tips for creating tables that follow WCAG guidelines</a></li>
-          <li>
-            <a href="#alt-text">How to use alternative text to aid understanding</a>
-            <ul>
-              <li><a href="#alt-text-images">Alt text for images</a></li>
-              <li><a href="#alt-text-images-functional">What is a functional image?</a></li>
-              <li><a href="#alt-text-images-informative">What is an informative image?</a></li>
-              <li><a href="#alt-text-images-text">Why are images of text inaccessible?</a></li>
-              <li><a href="#alt-text-decorative-images">What is a decorative image in accessibility?</a></li>
-            </ul>
-          </li>
-          <li><a href="#color-contrast">Increase readability through color contrast</a></li>
-          <li><a href="#document-language">Identify document language</a></li>
-          <li><a href="#accessibility-checkers">Accessibility checkers</a></li>
-          <li><a href="#manual-testing">Getting started with manual content accessibility testing</a></li>
-          <li><a href="#additional-resources">Additional resources</a></li>
-        </ul>
-        <br>
-        <hr>
-        <br>
-        <h3 id="writing-text" class="typography__h3 links__offset">Writing text that follows accessibility guidelines</h3>
-        <h4 id="readability" class="typography__h4 links__offset">Readability</h4>
-        <p>
-          The text should be understandable. WCAG recommends the reading level to be in the 9th grade. Do not use unnecessary
-          complex words. For example,
-        </p>
-        <p><strong>Instead of the sentence:</strong></p>
-        <p>Use this voluminous document for didactic purposes only.</p>
-        <p><strong>Use this:</strong></p>
-        <p>Use this broad document for academic purposes only.</p>
-        <p>
-          Remember that people with cognitive disabilities or people whose first language is not English should be able to
-          understand the content. Learn more about the
-          <a href="https://readable.com/blog/the-flesch-reading-ease-and-flesch-kincaid-grade-level/" class="links__launch" target="_blank" rel="noopener noreferrer">plain language initiative<span class="visually-hidden"> (opens in new tab/window)</span></a>.
-        </p>
-        <p>The <a href="https://hemingwayapp.com/" class="links__launch" target="_blank" rel="noopener noreferrer">Hemingway App<span class="visually-hidden"> (opens in new tab/window)</span></a> is a free tool that can help you reduce the complexity of your writing.</p>
-        <h4 id="abbreviations" class="typography__h4 links__offset">Abbreviations</h4>
-        <p>
-          Avoid abbreviations because some screen readers will not understand the word's context. For example, “WHO” can be read
-          as “Who” instead of “World Health Organization.” In cases where the acronym is well know, you can
-          include abbreviations and full names. For example, you can write.
-        </p>
-        <ul>
-          <li>
-            WHO as “World Health Organization (WHO)”
-          </li>
-          <li>
-            PTA as “Parent Teacher Association (PTA)”.
-          </li>
-        </ul>
-        <p>
-          <strong>Do not write:</strong> Mon, Jan 20, 2020
-        </p>
-        <p>
-          Some screen readers will announce the text as “Mon Jan 20 2020”.
-        </p>
-        <p>
-          <strong>Instead, write:</strong> Monday, January 20, 2020
-        </p>
-        <h4 id="symbols" class="typography__h4 links__offset">Symbols</h4>
-        <p>
-          Screen readers behave differently with symbols. For example, the NVDA screen reader does not announce “dash” for “-” but
-          the JAWS screen reader does. Avoid writing unnecessary symbols when possible.
-        </p>
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th>Do not use</th>
-                <th>Instead, use</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2021/2022 (Screen reader will read it as “2021 slash 2022” or “2021 2022”)</td>
-                <td>2021 or 2022</td>
-              </tr>
-              <tr>
-                <td>2021-2022 (Screen reader will read it as “2021 dash 2022” or “2021 2022” or “2021 to 2022”)</td>
-                <td>2021 to 2022</td>
-              </tr>
-              <tr>
-                <td>Apt #22 (Screen reader will read it as “apt number 22” or “apartment 22”)</td>
-                <td>Apartment number 22</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p>
-          The screen reader will announce and skip some symbols. Avoiding excessive symbol use will help you convey
-          important information.
-        </p>
-        <h4 class="typography__h4 links__offset">Convey information in multiple ways</h4>
-        <p>
-          Do not use color or shape alone to convey information. People with low vision or color blindness have difficulty
-          understanding the information conveyed only by color or shape. If you use color alone to differentiate information, the
-          audience may not see what you are highlighting when only color is used. Use text to display the differences, as
-          highlighted in the text below.
-        </p>
-        <p><strong>Bad example:</strong></p>
-        <p>
-          “Use the green button if you would like to attend the MS Word accessibility training. Use the red button
-          otherwise.”
-        </p>
-        <img
-          data-src="{{ page.baseurl }}uploads/accessibility-color-bad.svg"
-          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-          height="100"
-          width="400"
-          class="img-fluid"
-          alt="A green and a red button with no button text">
-        <p>
-          Users who have red-green color blindness will not be able to tell the difference between the two buttons.
-        </p>
-        <p><strong>Good example:</strong></p>
-        <p>
-          “Use the green button if you would like to attend the MS Word accessibility training. Use the red button
-          otherwise.”
-        </p>
-        <img
-          data-src="{{ page.baseurl }}uploads/accessibility-color-good.svg"
-          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-          height="100"
-          width="400"
-          class="img-fluid"
-          alt="Green and a red button with button text">
-        <h4 id="fonts" class="typography__h4 links__offset">Fonts</h4>
-        <p>
-          Many font properties can be modified to make the text more readable. People with reading disabilities may have
-          difficulty reading text with a low line or character space. People with low vision may struggle to read text with small
-          font sizes. Here are some tips related to choosing proper fonts:
-        </p>
-        <ul>
-          <li>Use sans serif fonts like Arial, Calibri, Verdana, Century Gothic, etc.</li>
-          <li>Avoid using small fonts. Font size for normal text should be 12-14 points to increase readability.</li>
-          <li>Choose the fonts with a higher font weight.</li>
-          <li>Avoid using cursive fonts.</li>
-          <li>Use bold for emphasis.</li>
-          <li>
-            Choose fonts with sufficient letter space. For example,<br>
-            Papyrus Condensed with low letter space:<br>
-            <img
-              data-src="{{ page.baseurl }}uploads/accessibility_condensed-font.jpg"
-              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-              height="50"
-              width="200"
-              class="img-fluid"
-              alt="'Kankakee Community College' in the Papyrus Condensed font which has low letter spacing">
-            <br>
-            Is harder to read than Arial font:<br>
-            <img
-              data-src="{{ page.baseurl }}uploads/accessibility_good-font.jpg"
-              src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-              height="50"
-              width="250"
-              class="img-fluid"
-              alt="'Kankakee Community College' in the Arial font which is easier to read"
-            >
-          </li>
-        </ul>
-        <h4 id="text-alignment" class="typography__h4 links__offset">Text alignment</h4>
-        <p>
-          When you align text in the center, it can add extra space between words, which can be confusing for screen readers and
-          people with reading disabilities. It's better to avoid centering text and keep it left-aligned.
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 id="headings" class="typography__h3 links__offset">Creating an accessible structure through headings</h3>
-        <p>
-          Headings help provide an easy way for readers to digest information in chunks. Plus, screen reader users can scan
-          through the headings on the page. Use correct heading levels in a logical order. When you skip heading levels, it can
-          confuse screen reader users. For example, heading 3 should be used after heading 2, and heading 2 should be used after
-          heading 1. When following best practices, heading 3 should not be used right after heading 1. This confuses the screen
-          readers.
-        </p>
-        <p><strong>Bad example:</strong></p>
-        <ul>
-          <li>
-            Heading 1
-            <ul>
-              <li>
-                Heading 3
-                <ul>
-                  <li>Heading 2</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            Heading 1
-            <ul>
-              <li>
-                Heading 2
-                <ul>
-                  <li>Heading 4</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <p><strong>Good example:</strong></p>
-        <ul>
-          <li>
-            Heading 1
-            <ul>
-              <li>
-                Heading 2
-                <ul>
-                  <li>Heading 3</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            Heading 1
-            <ul>
-              <li>
-                Heading 2
-                <ul>
-                  <li>
-                    Heading 3
-                    <ul>
-                      <li>Heading 4</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <br>
-        <hr>
-        <br>
-        <h3 id="lists" class="typography__h3 links__offset">Using lists within accessible content</h3>
-        <p>
-          Lists are a great way to organize information by making scanning easier. Use ordered lists to demonstrate a step-by-step
-          process. Use unordered lists when the order of information does not matter.
-        </p>
-        <p><strong>Bad example:</strong></p>
-        <p>
-          Following is a step-by-step process on how to make a strawberry banana smoothie:
-        </p>
-        <ul>
-          <li>Chop strawberries and bananas.</li>
-          <li>Add wet ingredients to the blender.</li>
-          <li>Add 1 cup of milk.</li>
-          <li>Add ½ cup yogurt.</li>
-          <li>Add all the dry ingredients to the blender.</li>
-          <li>Add 1 scoop of protein powder.</li>
-          <li>Add chopped fruits.</li>
-          <li>Blend and serve.</li>
-        </ul>
-        <p>
-          As you can see, using unordered lists for step-by-step instructions can confuse the audience.
-        </p>
-        <p><strong>Good example:</strong></p>
-        <p>Ordered list:</p>
-        <p>Following is a step-by-step process on how to make a strawberry-banana smoothie:</p>
-        <ol>
-          <li>Chop strawberries and bananas.</li>
-          <li>
-            Add wet ingredients to the blender.
-            <ol>
-              <li>Add 1 cup of milk.</li>
-              <li>Add ½ cup yogurt.</li>
-            </ol>
-          </li>
-          <li>
-            Add all the dry ingredients to the blender.
-            <ol>
-              <li>Add 1 scoop of protein powder.</li>
-              <li>Add chopped fruits.</li>
-            </ol>
-          </li>
-          <li>Blend and serve.</li>
-        </ol>
-        <p>Unordered list:</p>
-        <p>
-          Below are the ingredients you need to make a strawberry banana smoothie.
-        </p>
-        <ul>
-          <li>1 banana</li>
-          <li>1 cup of strawberries</li>
-          <li>1 cup of milk</li>
-          <li>½ cup yogurt</li>
-          <li>1 scoop of protein powder</li>
-        </ul>
-        <br>
-        <hr>
-        <br>
-        <h3 id="hyperlinks" class="typography__h3 links__offset">Creating accessible hyperlinks</h3>
-        <p>
-          Hyperlinks are pieces of text that link to another file, webpage, or content. Do not type out the web address in the link text;
-          screen readers will announce each character and symbol in the link. Do not write “Link to” or “Link
-          of”. Screen readers automatically announce when they come across a link. You should also avoid language using the word "click" (e.g. "click here...").
-          Screen reader and keyboard users often don't use a mouse and don't actually click on links.
-          Write link text that describes where the link will take the user (the content of the link target).
-          You can also specify if the link opens in a new window/tab or opens a document (e.g. PDF).
-        </p>
-        <p><strong>Do not use:</strong></p>
-        <p>Please visit our website at <a href="https://www.kcc.edu/">https://www.kcc.edu/</a>.</p>
-        <p><a href="https://www.kcc.edu/about/">Click here</a> to learn more about our college.</p>
-        <p><a href="mailto:registration@kcc.edu">Email us</a> to find out more about the registration process. (<em>The screen reader users will not know if the text links to an
-        email address or contact information page.</em>)</p>
-        <p><a href="https://www.kcc.edu/tuition-and-aid/uploads/pdf/25-26%20Financial%20Aid%20Calendar.pdf" target="_blank">Click here</a> to view the 2025 to 2026 financial aid calendar.</p>
-        <p>To log in to the online course management system, click <a href="https://kcc.instructure.com/">here</a>.</p>
-
-        <p><strong>Instead, use the following:</strong></p>
-        <p>Please visit the <a href="https://www.kcc.edu">Kankakee Community College website</a> for more information.</p>
-        <p>Visit the <a href="https://www.kcc.edu/about/">Kankakee Community College website</a> to learn more about our college.</p>
-        <p>
-          Email us at <a href="mailto:registration@kcc.edu" target="_blank">registration@kcc.edu</a> to find out more about the registration process. (<em>You can type out the email address
-          because when the screen reader reads the link, the user will know it is an email address and expect it to open in a new
-          window when clicked.</em>)
-        </p>
-        <p>
-          View the 2025 to 2026 academic calendar:
-          <a href="https://www.kcc.edu/tuition-and-aid/uploads/pdf/25-26%20Financial%20Aid%20Calendar.pdf" target="_blank">2023-2024 academic calendar - PDF</a>.
-          (<em>The user will know that the link will open a PDF document.</em>)
-        </p>
-        <p>
-          Visit <a href="https://kcc.instructure.com/">Canvas (opens in a new window)</a> to login into the online course management system. (<em>This will
-          tell the user that the link opens in a new window.</em>)
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 id="tables" class="typography__h3 links__offset">Tips for creating tables that follow WCAG guidelines</h3>
-        <p>
-          Tables are used to represent tabular data. When creating tables, use simple tables if possible. A simple table is a
-          table with one row and one column header. A complex table is a table with merged cells, multiple columns or row headers,
-          etc. Using simple tables helps screen reader users tremendously. The reason is that the screen reader announces the row
-          number, column number, row header, column header, and the content in the cell itself. It can be very confusing when you
-          have merged cells or multiple headers. Do not create tables without headers. Designate at least one column or row
-          header. Below is an example of a simple table.
-        </p>
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr class="table-primary">
-                <th>Course</th>
-                <th>Student name</th>
-                <th>Grade</th>
-                <th>Enrollment year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Chemistry</td>
-                <td>James Smith</td>
-                <td>85%</td>
-                <td>2022</td>
-              </tr>
-              <tr>
-                <td>Physics</td>
-                <td>Elaina Garcia</td>
-                <td>95%</td>
-                <td>2021</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p>
-          The table contains column and row headers highlighted in bold. For example, for the cell “James Smith,” the NVDA screen
-          reader announces “Student Name column 2 James Smith”.
-        </p>
-        <p>
-          Below is an example of a complex table.
-        </p>
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr class="table-primary">
-                <th rowspan="5" scope="col">Course</th>
-                <th rowspan="5" scope="col">Student name</th>
-                <th colspan="2" scope="col">Enrollment year</th>
-              </tr>
-              <tr class="table-primary">
-                <th scope="col">2022</th>
-                <th scope="col">2021</th>
-              </tr>
-              <tr class="table-primary">
-                <th colspan="2" scope="col">Grade</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row" data-th="Course">Chemistry</th>
-                <td data-th="Student name">James Smith</td>
-                <td data-th="Grade">85%</td>
-                <td data-th="Enrollment year">2022</td>
-              </tr>
-              <tr>
-                <th scope="row" data-th="Course">Physics</th>
-                <td data-th="Student name">Elaina Garcia</td>
-                <td data-th="Grade">95%</td>
-                <td data-th="Enrollment year">2021</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p>
-          As you can see, the table has multiple headers and merged cells. For example, for cell 85%, the NVDA screen reader
-          announces “Enrollment Year column 3 85%.” However, it does not announce “2022” and “Grade.”
-        </p>
-        <p>
-          This shows why complex tables can be confusing. If you have a choice, use simple tables. Multiple simple tables are
-          better than cramming everything into one complex table.
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 id="alt-text" class="typography__h3 links__offset">How to use alternative text to aid understanding</h3>
-        <p>
-          Alternative text (alt text) is the text that is read instead of the content. In content creation, alt text is added to
-          images, links, tables, charts, buttons, and other graphics.
-        </p>
-        <h4 id="alt-text-images" class="typography__h4 links__offset">Alt text for images</h4>
-        <p>
-          Images are essential parts of content creation. They add meaning to the content. Since they are available for sighted
-          users, you can also make them accessible for screen readers. This can be done by adding alt text to images. If you don't
-          add alt text to the image, the screen reader will read the name of the image file instead.
-        </p>
-        <p>
-          Adding alt text to images also helps people with poor internet connections because the site will display the alt text if
-          the file does not load on a site. When you write the alt text for images, do not include “image of” or “picture of” in
-          the text. The screen reader automatically announces it is an image. Alt text should only include what the content is
-          about. There are different types of images:
-        </p>
-        <ul>
-          <li><strong>Functional images:</strong> images that act as buttons or links.</li>
-          <li><strong>Informative images:</strong> images that are used to convey information.</li>
-          <li><strong>Images of text:</strong> images that have text in them.</li>
-          <li><strong>Decorative images:</strong> images that are used for visual appeal only. These images convey no information.</li>
-        </ul>
-        <h4 id="alt-text-images-functional" class="typography__h4 links__offset">What is a functional image?</h4>
-        <p>
-          When you add functional images to your content, add proper alt text to convey the function of the image. For example, if
-          you are using an image for a link:
-        </p>
-        <img
-          data-src="{{ page.baseurl }}assets/img/kcc-logo.svg"
-          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-          height="50"
-          width="100"
-          class="img-fluid"
-          alt="KCC logo">
-        <p>
-          A good example of alt text would be “Click to go to the Elgin Community College website, which opens in a new window.”
-          It is important to announce the link destination if it opens in a new window. If you have an image that acts as a button
-          that downloads a file, the best practice is to announce the file format.
-        </p>
-        <p>
-          Below is an image of a print icon used as a print button. A proper alt text should describe the function or destination,
-          not the image itself.
-        </p>
-        <img
-          data-src="{{ page.baseurl }}uploads/print_24dp_E8EAED.svg"
-          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-          height="50"
-          width="50"
-          class="img-fluid"
-          alt="Print icon">
-        <p>
-          Examples of <strong>bad</strong> alt text:
-        </p>
-        <ul>
-          <li>Print icon</li>
-          <li>Black and white print icon</li>
-        </ul>
-        <p>
-          Examples of good alt text:
-        </p>
-        <ul>
-          <li>Click to print</li>
-          <li>Click to print the PDF document</li>
-        </ul>
-        <h4 id="alt-text-images-informative" class="typography__h4 links__offset">What is an informative image?</h4>
-        <p>
-          Informative images are images that represent information or concepts. Ensure the alt text is concise and conveys sufficient information to the audience. Remember that the alt text also depends on the context in which the image is being displayed.
-        </p>
-        <p>
-          For this image, the alt text can be any of the following:
-        </p>
-        <div class="text-center">
-          <img
-          data-src="{{ page.baseurl }}uploads/accessibility-student-on-laptop.jpg"
-          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-          class="img-fluid"
-          alt="A student with a laptop">
-        </div>
-        <ul>
-          <li>Student</li>
-          <li>A student with a laptop</li>
-          <li>A student sitting in the library with a laptop, smiling at the camera</li>
-        </ul>
-        <p>
-          It is up to content creators to decide which alt text best suits the information being conveyed. It may be helpful when writing alt text to close your eyes and write down what you were able to see.
-        </p>
-        <p>
-          <strong>Note:</strong> The words “picture of” or “image of” are unnecessary within the alt text because the screen readers automatically announce the file type.
-        </p>
-        <h4 id="alt-text-images-text" class="typography__h4 links__offset">Why are images of text inaccessible?</h4>
-        <p>
-          The images with text are problematic because the screen readers cannot read the text in the image. If these images are
-          not avoidable, add the proper alt text that contains the text inside the image. Logos are an exception to this case.
-        </p>
-        <img
-          data-src="{{ page.baseurl }}uploads/accessibility-page_color-logo-with-name.png"
-          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-          class="img-fluid"
-          height="125"
-          width="300"
-          alt="Kankakee Community College logo">
-        <p>
-          Good examples of alt text for the image above would be:
-        </p>
-        <ul>
-          <li>Empty alt text, decorative</li>
-          <li>Kankakee Community College logo</li>
-        </ul>
-        <img
-          data-src="{{ page.baseurl }}uploads/accessibilibty-page_short-term-classes.jpg"
-          src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
-          class="img-fluid border"
-          alt="">
-        <p>
-          For the image above, a good example of alt text would be:
-        </p>
-        <ul>
-          <li>Find a short-term class that works for you. Focus on one or more classes — and get it done!</li>
-        </ul>
-        <h4 id="alt-text-decorative-images" class="typography__h4 links__offset">What is a decorative image in accessibility?</h4>
-        <p>
-          Decorative images are displayed for decorative purposes and do not convey meaningful information. These images usually
-          include background images. You can have empty alt text for decorative images or mark them as decorative. When a screen
-          reader comes across an image with empty alt text or an image marked as decorative, it will still skip reading the file
-          name. The bottom line is that all images must have alt text or be marked decorative.
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 id="color-contrast" class="typography__h3 links__offset">Increase readability through color contrast</h3>
-        <p>
-          Color contrast means how well one color stands out from another, which determines the readability. People with low
-          vision or color blindness have difficulty reading content that does not have a high color-contrast ratio. These ratios
-          define the luminance difference between two colors, usually background and foreground colors. Below are a few examples:
-        </p>
-        <ul>
-          <li>RED COLOR: The contrast between the red (#FF0000) text and white (#FFFFFF) background is 3.99:1.</li>
-          <li>RED COLOR: The contrast between the red (#FF0000) text and yellow (#FFFF00) background is 3.72:1.</li>
-          <li>GRAY COLOR: The contrast between the gray (#666666) text and white (#FFFFFF) background is 5.74:1.</li>
-          <li>GRAY COLOR: The contrast between the gray (#666666) text and light gray (#B7B7B7) background is 2.86:1.</li>
-        </ul>
-        <p>
-          (Hex color codes are a 6-digit combination of letters and numbers that define the color. For example, RED is defined by
-          #FF0000, and GRAY is defined by #666666. Each hex code is unique.) As you can see in the examples above, a higher
-          contrast ratio increases the readability of the text. <strong>WCAG 2.1 AA requires a minimum contrast ratio of 4.5:1.</strong>
-        </p>
-        <p>
-          Always check the contrast ratio of the content. You can apply this principle to images that include text by checking the
-          contrast ratio between the text and the image. Use our color <a href="https://styleguide.kcc.edu/tools/contrast-checker/">contrast checker tool</a>
-          to verify color contrast. If the ratio is less than 4.5:1, you can adjust the colors to get the desired ratio.
-        </p>
-        <p>
-          Additional tools to check color contrast:
-        </p>
-        <ul>
-          <li>
-            <a href="https://www.audioeye.com/color-contrast-checker/" class="links__launch" target="_blank" rel="noopener noreferrer">AudioEye® Color contrast checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          </li>
-          <li>
-            <a href="https://dequeuniversity.com/rules/axe/2.2/color-contrast" class="links__launch" target="_blank" rel="noopener noreferrer">Deque University color Contrast Analyzer<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          </li>
-        </ul>
-        <br>
-        <hr>
-        <br>
-        <h3 id="document-language" class="typography__h3 links__offset">Identify document language</h3>
-        <p>
-          Indicate the main language used within the document and any additional languages that may be used for specific content.
-          This ensures that screen reading software is accurately reading the document.
-        </p>
-        <p>
-          <a href="./document-creation/">Learn how to define the document properties in Word</a>.
-        </p>
-        <br>
-        <hr>
-        <br>
-        <h3 id="accessibility-checkers" class="typography__h3 links__offset">Accessibility checkers</h3>
-        <p>
-          Using <a href="https://support.microsoft.com/en-us/office/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f" class="links__launch" target="_blank" rel="noopener noreferrer">Microsoft's Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          and <a href="https://workspace.google.com/marketplace/app/grackle_docs/1085622905455" class="links__launch" target="_blank" rel="noopener noreferrer">Grackle Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          for G Suite, a Google add-on, we can easily and quickly verify that our digital materials are accessible to the growing population of people with disabilities. The
-          accessibility checker will provide simple step-by-step instructions on changing your materials to improve accessibility.
-        </p>
-        <p>
-          Free tools to check the accessibility of your webpage.
-        </p>
-        <ul>
-          <li>
-            <a title="WAVE Web Accessibility Evaluation Tools" href="https://wave.webaim.org/" class="links__launch" target="_blank" rel="noopener noreferrer">WAVE Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          </li>
-          <li>
-            <a title="accessScan Website Accessibility Checker" href="https://accessibe.com/accessscan" class="links__launch" target="_blank" rel="noopener noreferrer">accessScan by accessiBe<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          </li>
-          <li>
-            <a title="Accessibility Resource for Products and Apps" href="https://about.google/belonging/accessibility-resources/" class="links__launch" target="_blank" rel="noopener noreferrer">Accessibility Developer Tools by Google<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          </li>
-          <li>
-            <a title="Accessibility Insights for Web" href="https://accessibilityinsights.io/docs/en/web/overview/" class="links__launch" target="_blank" rel="noopener noreferrer">Accessibility Insights for Web by Microsoft<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          </li>
-        </ul>
-        <br>
-        <hr>
-        <br>
-        <h3 id="manual-testing" class="typography__h3 links__offset">Getting started with manual content accessibility testing</h3>
-        <p>
-          Accessibility checkers are useful, but manual testing is just as important. Automated accessibility checkers can detect
-          that the image has alt text, but they cannot check if it conveys the meaning of the image. In that case, the content
-          creator needs to verify that information. You can perform manual tests on:
-        </p>
-        <ul>
-          <li>Color contrast</li>
-          <li>Text inside images</li>
-          <li>Proper alternative text</li>
-          <li>Broken links</li>
-          <li>Proper heading levels</li>
-          <li>Meaningful hyperlinks</li>
-          <li>Document titles</li>
-        </ul>
-        <br>
-        <hr>
-        <br>
-        <h3 id="additional-resources" class="typography__h3 links__offset">Additional resources</h3>
-        <ul>
-          <li>
-            <a title="How to Meet WCAG (Quick Reference)" href="https://www.w3.org/WAI/WCAG21/quickref/" class="links__launch" target="_blank" rel="noopener noreferrer">WCAG 2.1 Guidelines<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          </li>
-          <li>
-            <a title="Web Accessibility Evaluation Tools by W3C" href="https://www.w3.org/WAI/ER/tools/" class="links__launch" target="_blank" rel="noopener noreferrer">Web Accessibility Evaluation Tools by W3C<span class="visually-hidden"> (opens in new tab/window)</span></a>
-          </li>
-        </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 class="typography__h3 links__offset">Overview</h3>
+      <p>
+        Accessibility means accessing, reaching, or obtaining products, services, facilities, or information. It should be
+        considered when information is shared electronically. Creating accessible content helps everyone, including people
+        who rely on assistive technologies, such as screen readers, text-to-speech software, magnifiers, and mouth sticks,
+        to accomplish their day-to-day tasks. Imagine using only your keyboard to fill out a PDF form. If the form is not
+        accessible, you will not be able to complete it.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 class="typography__h3 links__offset">Contents</h3>
+      <ul>
+        <li>
+          <a href="#writing-text">Writing text that follows accessibility guidelines</a>
+          <ul>
+            <li><a href="#readability">Readability</a></li>
+            <li><a href="#abbreviations">Abbreviations</a></li>
+            <li><a href="#symbols">Symbols</a></li>
+            <li><a href="#fonts">Fonts</a></li>
+            <li><a href="#text-alignment">Text alignment</a></li>
+          </ul>
+        </li>
+        <li><a href="#headings">Creating an accessible structure through headings</a></li>
+        <li><a href="#lists">Using lists within accessible content</a></li>
+        <li><a href="#hyperlinks">Creating accessible hyperlinks</a></li>
+        <li><a href="#tables">Tips for creating tables that follow WCAG guidelines</a></li>
+        <li>
+          <a href="#alt-text">How to use alternative text to aid understanding</a>
+          <ul>
+            <li><a href="#alt-text-images">Alt text for images</a></li>
+            <li><a href="#alt-text-images-functional">What is a functional image?</a></li>
+            <li><a href="#alt-text-images-informative">What is an informative image?</a></li>
+            <li><a href="#alt-text-images-text">Why are images of text inaccessible?</a></li>
+            <li><a href="#alt-text-decorative-images">What is a decorative image in accessibility?</a></li>
+          </ul>
+        </li>
+        <li><a href="#color-contrast">Increase readability through color contrast</a></li>
+        <li><a href="#document-language">Identify document language</a></li>
+        <li><a href="#accessibility-checkers">Accessibility checkers</a></li>
+        <li><a href="#manual-testing">Getting started with manual content accessibility testing</a></li>
+        <li><a href="#additional-resources">Additional resources</a></li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 id="writing-text" class="typography__h3 links__offset">Writing text that follows accessibility guidelines</h3>
+      <h4 id="readability" class="typography__h4 links__offset">Readability</h4>
+      <p>
+        The text should be understandable. WCAG recommends the reading level to be in the 9th grade. Do not use unnecessary
+        complex words. For example,
+      </p>
+      <p><strong>Instead of the sentence:</strong></p>
+      <p>Use this voluminous document for didactic purposes only.</p>
+      <p><strong>Use this:</strong></p>
+      <p>Use this broad document for academic purposes only.</p>
+      <p>
+        Remember that people with cognitive disabilities or people whose first language is not English should be able to
+        understand the content. Learn more about the
+        <a href="https://readable.com/blog/the-flesch-reading-ease-and-flesch-kincaid-grade-level/" class="links__launch" target="_blank" rel="noopener noreferrer">plain language initiative<span class="visually-hidden"> (opens in new tab/window)</span></a>.
+      </p>
+      <p>The <a href="https://hemingwayapp.com/" class="links__launch" target="_blank" rel="noopener noreferrer">Hemingway App<span class="visually-hidden"> (opens in new tab/window)</span></a> is a free tool that can help you reduce the complexity of your writing.</p>
+      <h4 id="abbreviations" class="typography__h4 links__offset">Abbreviations</h4>
+      <p>
+        Avoid abbreviations because some screen readers will not understand the word's context. For example, “WHO” can be read
+        as “Who” instead of “World Health Organization.” In cases where the acronym is well know, you can
+        include abbreviations and full names. For example, you can write.
+      </p>
+      <ul>
+        <li>
+          WHO as “World Health Organization (WHO)”
+        </li>
+        <li>
+          PTA as “Parent Teacher Association (PTA)”.
+        </li>
+      </ul>
+      <p>
+        <strong>Do not write:</strong> Mon, Jan 20, 2020
+      </p>
+      <p>
+        Some screen readers will announce the text as “Mon Jan 20 2020”.
+      </p>
+      <p>
+        <strong>Instead, write:</strong> Monday, January 20, 2020
+      </p>
+      <h4 id="symbols" class="typography__h4 links__offset">Symbols</h4>
+      <p>
+        Screen readers behave differently with symbols. For example, the NVDA screen reader does not announce “dash” for “-” but
+        the JAWS screen reader does. Avoid writing unnecessary symbols when possible.
+      </p>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Do not use</th>
+              <th>Instead, use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2021/2022 (Screen reader will read it as “2021 slash 2022” or “2021 2022”)</td>
+              <td>2021 or 2022</td>
+            </tr>
+            <tr>
+              <td>2021-2022 (Screen reader will read it as “2021 dash 2022” or “2021 2022” or “2021 to 2022”)</td>
+              <td>2021 to 2022</td>
+            </tr>
+            <tr>
+              <td>Apt #22 (Screen reader will read it as “apt number 22” or “apartment 22”)</td>
+              <td>Apartment number 22</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <p>
+        The screen reader will announce and skip some symbols. Avoiding excessive symbol use will help you convey
+        important information.
+      </p>
+      <h4 class="typography__h4 links__offset">Convey information in multiple ways</h4>
+      <p>
+        Do not use color or shape alone to convey information. People with low vision or color blindness have difficulty
+        understanding the information conveyed only by color or shape. If you use color alone to differentiate information, the
+        audience may not see what you are highlighting when only color is used. Use text to display the differences, as
+        highlighted in the text below.
+      </p>
+      <p><strong>Bad example:</strong></p>
+      <p>
+        “Use the green button if you would like to attend the MS Word accessibility training. Use the red button
+        otherwise.”
+      </p>
+      <img
+        data-src="{{ page.baseurl }}uploads/accessibility-color-bad.svg"
+        src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+        height="100"
+        width="400"
+        class="img-fluid"
+        alt="A green and a red button with no button text">
+      <p>
+        Users who have red-green color blindness will not be able to tell the difference between the two buttons.
+      </p>
+      <p><strong>Good example:</strong></p>
+      <p>
+        “Use the green button if you would like to attend the MS Word accessibility training. Use the red button
+        otherwise.”
+      </p>
+      <img
+        data-src="{{ page.baseurl }}uploads/accessibility-color-good.svg"
+        src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+        height="100"
+        width="400"
+        class="img-fluid"
+        alt="Green and a red button with button text">
+      <h4 id="fonts" class="typography__h4 links__offset">Fonts</h4>
+      <p>
+        Many font properties can be modified to make the text more readable. People with reading disabilities may have
+        difficulty reading text with a low line or character space. People with low vision may struggle to read text with small
+        font sizes. Here are some tips related to choosing proper fonts:
+      </p>
+      <ul>
+        <li>Use sans serif fonts like Arial, Calibri, Verdana, Century Gothic, etc.</li>
+        <li>Avoid using small fonts. Font size for normal text should be 12-14 points to increase readability.</li>
+        <li>Choose the fonts with a higher font weight.</li>
+        <li>Avoid using cursive fonts.</li>
+        <li>Use bold for emphasis.</li>
+        <li>
+          Choose fonts with sufficient letter space. For example,<br>
+          Papyrus Condensed with low letter space:<br>
+          <img
+            data-src="{{ page.baseurl }}uploads/accessibility_condensed-font.jpg"
+            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            height="50"
+            width="200"
+            class="img-fluid"
+            alt="'Kankakee Community College' in the Papyrus Condensed font which has low letter spacing">
+          <br>
+          Is harder to read than Arial font:<br>
+          <img
+            data-src="{{ page.baseurl }}uploads/accessibility_good-font.jpg"
+            src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+            height="50"
+            width="250"
+            class="img-fluid"
+            alt="'Kankakee Community College' in the Arial font which is easier to read"
+          >
+        </li>
+      </ul>
+      <h4 id="text-alignment" class="typography__h4 links__offset">Text alignment</h4>
+      <p>
+        When you align text in the center, it can add extra space between words, which can be confusing for screen readers and
+        people with reading disabilities. It's better to avoid centering text and keep it left-aligned.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 id="headings" class="typography__h3 links__offset">Creating an accessible structure through headings</h3>
+      <p>
+        Headings help provide an easy way for readers to digest information in chunks. Plus, screen reader users can scan
+        through the headings on the page. Use correct heading levels in a logical order. When you skip heading levels, it can
+        confuse screen reader users. For example, heading 3 should be used after heading 2, and heading 2 should be used after
+        heading 1. When following best practices, heading 3 should not be used right after heading 1. This confuses the screen
+        readers.
+      </p>
+      <p><strong>Bad example:</strong></p>
+      <ul>
+        <li>
+          Heading 1
+          <ul>
+            <li>
+              Heading 3
+              <ul>
+                <li>Heading 2</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Heading 1
+          <ul>
+            <li>
+              Heading 2
+              <ul>
+                <li>Heading 4</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p><strong>Good example:</strong></p>
+      <ul>
+        <li>
+          Heading 1
+          <ul>
+            <li>
+              Heading 2
+              <ul>
+                <li>Heading 3</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Heading 1
+          <ul>
+            <li>
+              Heading 2
+              <ul>
+                <li>
+                  Heading 3
+                  <ul>
+                    <li>Heading 4</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 id="lists" class="typography__h3 links__offset">Using lists within accessible content</h3>
+      <p>
+        Lists are a great way to organize information by making scanning easier. Use ordered lists to demonstrate a step-by-step
+        process. Use unordered lists when the order of information does not matter.
+      </p>
+      <p><strong>Bad example:</strong></p>
+      <p>
+        Following is a step-by-step process on how to make a strawberry banana smoothie:
+      </p>
+      <ul>
+        <li>Chop strawberries and bananas.</li>
+        <li>Add wet ingredients to the blender.</li>
+        <li>Add 1 cup of milk.</li>
+        <li>Add ½ cup yogurt.</li>
+        <li>Add all the dry ingredients to the blender.</li>
+        <li>Add 1 scoop of protein powder.</li>
+        <li>Add chopped fruits.</li>
+        <li>Blend and serve.</li>
+      </ul>
+      <p>
+        As you can see, using unordered lists for step-by-step instructions can confuse the audience.
+      </p>
+      <p><strong>Good example:</strong></p>
+      <p>Ordered list:</p>
+      <p>Following is a step-by-step process on how to make a strawberry-banana smoothie:</p>
+      <ol>
+        <li>Chop strawberries and bananas.</li>
+        <li>
+          Add wet ingredients to the blender.
+          <ol>
+            <li>Add 1 cup of milk.</li>
+            <li>Add ½ cup yogurt.</li>
+          </ol>
+        </li>
+        <li>
+          Add all the dry ingredients to the blender.
+          <ol>
+            <li>Add 1 scoop of protein powder.</li>
+            <li>Add chopped fruits.</li>
+          </ol>
+        </li>
+        <li>Blend and serve.</li>
+      </ol>
+      <p>Unordered list:</p>
+      <p>
+        Below are the ingredients you need to make a strawberry banana smoothie.
+      </p>
+      <ul>
+        <li>1 banana</li>
+        <li>1 cup of strawberries</li>
+        <li>1 cup of milk</li>
+        <li>½ cup yogurt</li>
+        <li>1 scoop of protein powder</li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 id="hyperlinks" class="typography__h3 links__offset">Creating accessible hyperlinks</h3>
+      <p>
+        Hyperlinks are pieces of text that link to another file, webpage, or content. Do not type out the web address in the link text;
+        screen readers will announce each character and symbol in the link. Do not write “Link to” or “Link
+        of”. Screen readers automatically announce when they come across a link. You should also avoid language using the word "click" (e.g. "click here...").
+        Screen reader and keyboard users often don't use a mouse and don't actually click on links.
+        Write link text that describes where the link will take the user (the content of the link target).
+        You can also specify if the link opens in a new window/tab or opens a document (e.g. PDF).
+      </p>
+      <p><strong>Do not use:</strong></p>
+      <p>Please visit our website at <a href="https://www.kcc.edu/">https://www.kcc.edu/</a>.</p>
+      <p><a href="https://www.kcc.edu/about/">Click here</a> to learn more about our college.</p>
+      <p><a href="mailto:registration@kcc.edu">Email us</a> to find out more about the registration process. (<em>The screen reader users will not know if the text links to an
+      email address or contact information page.</em>)</p>
+      <p><a href="https://www.kcc.edu/tuition-and-aid/uploads/pdf/25-26%20Financial%20Aid%20Calendar.pdf" target="_blank">Click here</a> to view the 2025 to 2026 financial aid calendar.</p>
+      <p>To log in to the online course management system, click <a href="https://kcc.instructure.com/">here</a>.</p>
+
+      <p><strong>Instead, use the following:</strong></p>
+      <p>Please visit the <a href="https://www.kcc.edu">Kankakee Community College website</a> for more information.</p>
+      <p>Visit the <a href="https://www.kcc.edu/about/">Kankakee Community College website</a> to learn more about our college.</p>
+      <p>
+        Email us at <a href="mailto:registration@kcc.edu" target="_blank">registration@kcc.edu</a> to find out more about the registration process. (<em>You can type out the email address
+        because when the screen reader reads the link, the user will know it is an email address and expect it to open in a new
+        window when clicked.</em>)
+      </p>
+      <p>
+        View the 2025 to 2026 academic calendar:
+        <a href="https://www.kcc.edu/tuition-and-aid/uploads/pdf/25-26%20Financial%20Aid%20Calendar.pdf" target="_blank">2023-2024 academic calendar - PDF</a>.
+        (<em>The user will know that the link will open a PDF document.</em>)
+      </p>
+      <p>
+        Visit <a href="https://kcc.instructure.com/">Canvas (opens in a new window)</a> to login into the online course management system. (<em>This will
+        tell the user that the link opens in a new window.</em>)
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 id="tables" class="typography__h3 links__offset">Tips for creating tables that follow WCAG guidelines</h3>
+      <p>
+        Tables are used to represent tabular data. When creating tables, use simple tables if possible. A simple table is a
+        table with one row and one column header. A complex table is a table with merged cells, multiple columns or row headers,
+        etc. Using simple tables helps screen reader users tremendously. The reason is that the screen reader announces the row
+        number, column number, row header, column header, and the content in the cell itself. It can be very confusing when you
+        have merged cells or multiple headers. Do not create tables without headers. Designate at least one column or row
+        header. Below is an example of a simple table.
+      </p>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th>Course</th>
+              <th>Student name</th>
+              <th>Grade</th>
+              <th>Enrollment year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chemistry</td>
+              <td>James Smith</td>
+              <td>85%</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Physics</td>
+              <td>Elaina Garcia</td>
+              <td>95%</td>
+              <td>2021</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The table contains column and row headers highlighted in bold. For example, for the cell “James Smith,” the NVDA screen
+        reader announces “Student Name column 2 James Smith”.
+      </p>
+      <p>
+        Below is an example of a complex table.
+      </p>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th rowspan="5" scope="col">Course</th>
+              <th rowspan="5" scope="col">Student name</th>
+              <th colspan="2" scope="col">Enrollment year</th>
+            </tr>
+            <tr class="table-primary">
+              <th scope="col">2022</th>
+              <th scope="col">2021</th>
+            </tr>
+            <tr class="table-primary">
+              <th colspan="2" scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" data-th="Course">Chemistry</th>
+              <td data-th="Student name">James Smith</td>
+              <td data-th="Grade">85%</td>
+              <td data-th="Enrollment year">2022</td>
+            </tr>
+            <tr>
+              <th scope="row" data-th="Course">Physics</th>
+              <td data-th="Student name">Elaina Garcia</td>
+              <td data-th="Grade">95%</td>
+              <td data-th="Enrollment year">2021</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        As you can see, the table has multiple headers and merged cells. For example, for cell 85%, the NVDA screen reader
+        announces “Enrollment Year column 3 85%.” However, it does not announce “2022” and “Grade.”
+      </p>
+      <p>
+        This shows why complex tables can be confusing. If you have a choice, use simple tables. Multiple simple tables are
+        better than cramming everything into one complex table.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 id="alt-text" class="typography__h3 links__offset">How to use alternative text to aid understanding</h3>
+      <p>
+        Alternative text (alt text) is the text that is read instead of the content. In content creation, alt text is added to
+        images, links, tables, charts, buttons, and other graphics.
+      </p>
+      <h4 id="alt-text-images" class="typography__h4 links__offset">Alt text for images</h4>
+      <p>
+        Images are essential parts of content creation. They add meaning to the content. Since they are available for sighted
+        users, you can also make them accessible for screen readers. This can be done by adding alt text to images. If you don't
+        add alt text to the image, the screen reader will read the name of the image file instead.
+      </p>
+      <p>
+        Adding alt text to images also helps people with poor internet connections because the site will display the alt text if
+        the file does not load on a site. When you write the alt text for images, do not include “image of” or “picture of” in
+        the text. The screen reader automatically announces it is an image. Alt text should only include what the content is
+        about. There are different types of images:
+      </p>
+      <ul>
+        <li><strong>Functional images:</strong> images that act as buttons or links.</li>
+        <li><strong>Informative images:</strong> images that are used to convey information.</li>
+        <li><strong>Images of text:</strong> images that have text in them.</li>
+        <li><strong>Decorative images:</strong> images that are used for visual appeal only. These images convey no information.</li>
+      </ul>
+      <h4 id="alt-text-images-functional" class="typography__h4 links__offset">What is a functional image?</h4>
+      <p>
+        When you add functional images to your content, add proper alt text to convey the function of the image. For example, if
+        you are using an image for a link:
+      </p>
+      <img
+        data-src="{{ page.baseurl }}assets/img/kcc-logo.svg"
+        src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+        height="50"
+        width="100"
+        class="img-fluid"
+        alt="KCC logo">
+      <p>
+        A good example of alt text would be “Click to go to the Elgin Community College website, which opens in a new window.”
+        It is important to announce the link destination if it opens in a new window. If you have an image that acts as a button
+        that downloads a file, the best practice is to announce the file format.
+      </p>
+      <p>
+        Below is an image of a print icon used as a print button. A proper alt text should describe the function or destination,
+        not the image itself.
+      </p>
+      <img
+        data-src="{{ page.baseurl }}uploads/print_24dp_E8EAED.svg"
+        src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+        height="50"
+        width="50"
+        class="img-fluid"
+        alt="Print icon">
+      <p>
+        Examples of <strong>bad</strong> alt text:
+      </p>
+      <ul>
+        <li>Print icon</li>
+        <li>Black and white print icon</li>
+      </ul>
+      <p>
+        Examples of good alt text:
+      </p>
+      <ul>
+        <li>Click to print</li>
+        <li>Click to print the PDF document</li>
+      </ul>
+      <h4 id="alt-text-images-informative" class="typography__h4 links__offset">What is an informative image?</h4>
+      <p>
+        Informative images are images that represent information or concepts. Ensure the alt text is concise and conveys sufficient information to the audience. Remember that the alt text also depends on the context in which the image is being displayed.
+      </p>
+      <p>
+        For this image, the alt text can be any of the following:
+      </p>
+      <div class="text-center">
+        <img
+        data-src="{{ page.baseurl }}uploads/accessibility-student-on-laptop.jpg"
+        src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+        class="img-fluid"
+        alt="A student with a laptop">
+      </div>
+      <ul>
+        <li>Student</li>
+        <li>A student with a laptop</li>
+        <li>A student sitting in the library with a laptop, smiling at the camera</li>
+      </ul>
+      <p>
+        It is up to content creators to decide which alt text best suits the information being conveyed. It may be helpful when writing alt text to close your eyes and write down what you were able to see.
+      </p>
+      <p>
+        <strong>Note:</strong> The words “picture of” or “image of” are unnecessary within the alt text because the screen readers automatically announce the file type.
+      </p>
+      <h4 id="alt-text-images-text" class="typography__h4 links__offset">Why are images of text inaccessible?</h4>
+      <p>
+        The images with text are problematic because the screen readers cannot read the text in the image. If these images are
+        not avoidable, add the proper alt text that contains the text inside the image. Logos are an exception to this case.
+      </p>
+      <img
+        data-src="{{ page.baseurl }}uploads/accessibility-page_color-logo-with-name.png"
+        src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+        class="img-fluid"
+        height="125"
+        width="300"
+        alt="Kankakee Community College logo">
+      <p>
+        Good examples of alt text for the image above would be:
+      </p>
+      <ul>
+        <li>Empty alt text, decorative</li>
+        <li>Kankakee Community College logo</li>
+      </ul>
+      <img
+        data-src="{{ page.baseurl }}uploads/accessibilibty-page_short-term-classes.jpg"
+        src="{{ page.baseurl }}assets/img/placeholder_16to9.jpg"
+        class="img-fluid border"
+        alt="">
+      <p>
+        For the image above, a good example of alt text would be:
+      </p>
+      <ul>
+        <li>Find a short-term class that works for you. Focus on one or more classes — and get it done!</li>
+      </ul>
+      <h4 id="alt-text-decorative-images" class="typography__h4 links__offset">What is a decorative image in accessibility?</h4>
+      <p>
+        Decorative images are displayed for decorative purposes and do not convey meaningful information. These images usually
+        include background images. You can have empty alt text for decorative images or mark them as decorative. When a screen
+        reader comes across an image with empty alt text or an image marked as decorative, it will still skip reading the file
+        name. The bottom line is that all images must have alt text or be marked decorative.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 id="color-contrast" class="typography__h3 links__offset">Increase readability through color contrast</h3>
+      <p>
+        Color contrast means how well one color stands out from another, which determines the readability. People with low
+        vision or color blindness have difficulty reading content that does not have a high color-contrast ratio. These ratios
+        define the luminance difference between two colors, usually background and foreground colors. Below are a few examples:
+      </p>
+      <ul>
+        <li>RED COLOR: The contrast between the red (#FF0000) text and white (#FFFFFF) background is 3.99:1.</li>
+        <li>RED COLOR: The contrast between the red (#FF0000) text and yellow (#FFFF00) background is 3.72:1.</li>
+        <li>GRAY COLOR: The contrast between the gray (#666666) text and white (#FFFFFF) background is 5.74:1.</li>
+        <li>GRAY COLOR: The contrast between the gray (#666666) text and light gray (#B7B7B7) background is 2.86:1.</li>
+      </ul>
+      <p>
+        (Hex color codes are a 6-digit combination of letters and numbers that define the color. For example, RED is defined by
+        #FF0000, and GRAY is defined by #666666. Each hex code is unique.) As you can see in the examples above, a higher
+        contrast ratio increases the readability of the text. <strong>WCAG 2.1 AA requires a minimum contrast ratio of 4.5:1.</strong>
+      </p>
+      <p>
+        Always check the contrast ratio of the content. You can apply this principle to images that include text by checking the
+        contrast ratio between the text and the image. Use our color <a href="https://styleguide.kcc.edu/tools/contrast-checker/">contrast checker tool</a>
+        to verify color contrast. If the ratio is less than 4.5:1, you can adjust the colors to get the desired ratio.
+      </p>
+      <p>
+        Additional tools to check color contrast:
+      </p>
+      <ul>
+        <li>
+          <a href="https://www.audioeye.com/color-contrast-checker/" class="links__launch" target="_blank" rel="noopener noreferrer">AudioEye® Color contrast checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        </li>
+        <li>
+          <a href="https://dequeuniversity.com/rules/axe/2.2/color-contrast" class="links__launch" target="_blank" rel="noopener noreferrer">Deque University color Contrast Analyzer<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        </li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 id="document-language" class="typography__h3 links__offset">Identify document language</h3>
+      <p>
+        Indicate the main language used within the document and any additional languages that may be used for specific content.
+        This ensures that screen reading software is accurately reading the document.
+      </p>
+      <p>
+        <a href="./document-creation/">Learn how to define the document properties in Word</a>.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 id="accessibility-checkers" class="typography__h3 links__offset">Accessibility checkers</h3>
+      <p>
+        Using <a href="https://support.microsoft.com/en-us/office/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f" class="links__launch" target="_blank" rel="noopener noreferrer">Microsoft's Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        and <a href="https://workspace.google.com/marketplace/app/grackle_docs/1085622905455" class="links__launch" target="_blank" rel="noopener noreferrer">Grackle Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        for G Suite, a Google add-on, we can easily and quickly verify that our digital materials are accessible to the growing population of people with disabilities. The
+        accessibility checker will provide simple step-by-step instructions on changing your materials to improve accessibility.
+      </p>
+      <p>
+        Free tools to check the accessibility of your webpage.
+      </p>
+      <ul>
+        <li>
+          <a title="WAVE Web Accessibility Evaluation Tools" href="https://wave.webaim.org/" class="links__launch" target="_blank" rel="noopener noreferrer">WAVE Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        </li>
+        <li>
+          <a title="accessScan Website Accessibility Checker" href="https://accessibe.com/accessscan" class="links__launch" target="_blank" rel="noopener noreferrer">accessScan by accessiBe<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        </li>
+        <li>
+          <a title="Accessibility Resource for Products and Apps" href="https://about.google/belonging/accessibility-resources/" class="links__launch" target="_blank" rel="noopener noreferrer">Accessibility Developer Tools by Google<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        </li>
+        <li>
+          <a title="Accessibility Insights for Web" href="https://accessibilityinsights.io/docs/en/web/overview/" class="links__launch" target="_blank" rel="noopener noreferrer">Accessibility Insights for Web by Microsoft<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        </li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 id="manual-testing" class="typography__h3 links__offset">Getting started with manual content accessibility testing</h3>
+      <p>
+        Accessibility checkers are useful, but manual testing is just as important. Automated accessibility checkers can detect
+        that the image has alt text, but they cannot check if it conveys the meaning of the image. In that case, the content
+        creator needs to verify that information. You can perform manual tests on:
+      </p>
+      <ul>
+        <li>Color contrast</li>
+        <li>Text inside images</li>
+        <li>Proper alternative text</li>
+        <li>Broken links</li>
+        <li>Proper heading levels</li>
+        <li>Meaningful hyperlinks</li>
+        <li>Document titles</li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 id="additional-resources" class="typography__h3 links__offset">Additional resources</h3>
+      <ul>
+        <li>
+          <a title="How to Meet WCAG (Quick Reference)" href="https://www.w3.org/WAI/WCAG21/quickref/" class="links__launch" target="_blank" rel="noopener noreferrer">WCAG 2.1 Guidelines<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        </li>
+        <li>
+          <a title="Web Accessibility Evaluation Tools by W3C" href="https://www.w3.org/WAI/ER/tools/" class="links__launch" target="_blank" rel="noopener noreferrer">Web Accessibility Evaluation Tools by W3C<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        </li>
+      </ul>
     </div>
   </div>
 </main>
