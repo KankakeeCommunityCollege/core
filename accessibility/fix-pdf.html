@@ -1,0 +1,131 @@
+---
+title: 'PDF accessibility in Acrobat'
+layout: default-core
+baseurl: '../../'
+core-alert-offset: true
+banner_image:
+banner_alt_text:
+disclaimer:
+---
+<main id="content" class="container">
+  <div class="row">
+    <div class="col">
+      {% include breadcrumbs-core.html %}
+      {% if page.banner_image and page.banner_image != '' %}
+        {% assign first_char = page.banner_image | slice: 0 %}
+        {% if first_char == '/' %}
+          {% assign banner = page.banner_image | remove_first: '/' %}
+        {% else %}
+          {% assign banner = page.banner_image %}
+        {% endif %}
+        <div class="text-center">
+          <img
+          role="img"
+          src="../../{{ banner }}"
+          class="img-fluid"
+          alt="{{ page.banner_alt_text | replace: '"', '&quot;' }}">
+        </div>
+          <br>
+      {% endif %}
+      <h2 class="typography__h2">{{ page.title }}</h2>
+      <br>
+      <hr>
+      <br>
+      {% if page.disclaimer and page.disclaimer != '' %}
+      <p><small>{{ page.disclaimer }}</small></p>
+      {% endif %}
+      <h3 class="typography__h3">Overview</h3>
+      <p>
+        This guide explains how to fix accessibility issues in Adobe Acrobat.
+        Ideally, the PDF was generated from an accessible source document (see <a href="../document-creation/">Creating accessible documents</a>).
+        If you don't have access to the source document you can resolve many issues in Acrobat.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 class="typography__h3">Contents</h3>
+      <ul>
+        <li><a href="#accessibility-checker">Accessibility Checker</a></li>
+        <li><a href="#document-title">Document title</a></li>
+        <li><a href="#document-language">Document language</a></li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h3 id="accessibility-checker" class="typography__h3 links__offset">Accessibility checker</h3>
+      <p>
+        Acrobat has a built in <strong>Accessibility Checker</strong> which can help you find and fix issues.
+        Some items (like color contrast) must be checked manually.
+      </p>
+      <p>To run the <strong>Accessibility Checker</strong> follow these steps:</p>
+      <ol>
+        <li>
+          Open the <strong>Accessibility</strong> tools found on the right-hand side of Acrobat and select <strong>Accessibility Check</strong>.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-check.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height="731"
+              width="300"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting 'Accessibility Check' in Acrobat's accessibility tools">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the<br>
+              <strong>Accessibility Check</strong><br>
+              option found in the<br>
+              <strong>Accessibility</strong> tools.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          This will open an <strong>Accessibility Checker Options</strong> window.<br>
+          Use the <strong>Start Checking</strong> button with the default options.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-checker-options.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height="626"
+              width="580"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting 'Start Checking' button in the 'Accessibility Checker Options' window.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Accessibility Checker Options</strong> window.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Running the checker will open the results on the left-hand side of Acrobat.<br>
+          Expand the results using the carrot symbols to see which items have passed and which have failed.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-checker-results.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height="660"
+              width="410"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting 'Start Checking' button in the 'Accessibility Checker Options' window.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the<br>
+              <strong>Accessibility Checker</strong> results.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+      <p>
+        Some issues can be resolved directly in the <strong>Accessibility Checker</strong> results.
+        
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h3 id="document-title" class="typography__h3 links__offset">Document title</h3>
+      <br>
+      <hr>
+      <br>
+      <h3 id="document-language" class="typography__h3 links__offset">Document language</h3>
+      <br>
+      <hr>
+      <br>
+    </div>
+  </div>
+</main>

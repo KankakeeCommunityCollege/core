@@ -1,5 +1,5 @@
 ---
-title: 'Creating Accessible Documents'
+title: 'Creating accessible documents'
 layout: default-core
 baseurl: '../../'
 core-alert-offset: true
@@ -37,8 +37,12 @@ disclaimer: >-
       {% endif %}
       <h3 class="typography__h3">Overview</h3>
       <p>
-        This guide explains how to make accessible Microsoft Word Documents and Adobe PDF files. Word documents are often used
-        to generate PDF files. For these PDF documents to be accessible, they need to be created from accessible Word documents.
+        This guide explains how to make accessible Microsoft Word documents and PDF files. Word documents are often used
+        to generate PDF files. For the PDF to be accessible, it needs to start from an accessible Word document.
+      </p>
+      <p>
+        If all you have is a PDF and not the source file used to create it you can fix many accessibility issues in Acrobat.<br>
+        <a href="../fix-pdf/">Learn how to fix PDF accessibility issues in Acrobat</a>.
       </p>
       <br>
       <hr>
@@ -1088,7 +1092,7 @@ disclaimer: >-
               data-src="../../uploads/accessibility/accessibility-doc-creation_document-title.jpg"
               src="../../assets/img/placeholder_16to9.jpg"
               class="img-fluid figure__img"
-              height=""
+              height="476"
               width="450"
               alt="Screenshot highlighting the 'Title' field of the 'Summary' tab">
             <figcaption class="figure__figcaption text-center">
@@ -1100,10 +1104,169 @@ disclaimer: >-
         <li>Click <strong>OK</strong> to save the properties and close the box.</li>
       </ol>
       <h4 id="language" class="typography__h4 links__offset">Language</h4>
+      <p>
+        Usually, Word will automatically detect the language of your document.
+        If you are going to generate a PDF, the language should be set automatically.
+      </p>
+      <p>
+        If you need to modify the language or designate a portion of the document as another language you can do the following:
+      </p>
+      <ol>
+        <li>
+          Select the text (or entire document) you want to chang the language for.
+        </li>
+        <li>
+          Navigate to the <strong>Review</strong> tab and select <strong>Language</strong> tool (within the <strong>Language</strong> panel).<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_review-language.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="108"
+              width="700"
+              alt="Screenshot highlighting the 'Language' tool of the 'Review' tab">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Language</strong> tool<br>
+              in the <strong>Review</strong> tab.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          This will open a <strong>Language</strong> window.<br>
+          Select the correct language from the list in the <strong>Mark selected text as</strong> field then use the <strong>OK</strong> button.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_language-window.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="545"
+              width="300"
+              alt="Screenshot highlighting the 'Language' tool of the 'Review' tab">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot of the <strong>Language</strong><br>
+              window showing the<br>
+              <strong>Mark selected text as</strong> field.
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
       <br>
       <hr>
       <br>
       <h3 id="converting-to-pdf" class="typography__h3 links__offset">Converting to PDF</h3>
+      <p>Use Word's <strong>Save As...</strong> dialog box once your document is ready to be made into a PDF file.</p>
+      <ol>
+        <li>
+          In the <strong>File</strong> menu select <strong>Save As...</strong>.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_file-save-as.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="594"
+              width="400"
+              alt="Screenshot of the open 'File' menu with 'Save As...' highlighted">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Save As...</strong><br>
+              option in the <strong>File</strong> menu.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          This opens the save as dialog.<br>
+          Expand the <strong>File Format</strong> dropdown and select <strong>PDF</strong>.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_pdf-file-format.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="632"
+              width="700"
+              alt="Screenshot of the open 'File' menu with 'Save As...' highlighted">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>PDF</strong><br>
+              option of the <strong>File Format</strong> menu.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Select the <strong>Best for electronic distribution and accessibility (uses Microsoft online service)</strong> checkbox and <em>not the "Best for print" checkbox</em>.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_pdf-digital.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="392"
+              width="700"
+              alt="Screenshot of the open 'File' menu with 'Save As...' highlighted">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Best for electronic...</strong> checkbox<br>
+              in the <strong>Save As</strong> dialog box.
+            </figcaption>
+          </figure>
+        </li>
+        <li>Use the <strong>Export</strong> button after you've selected the correct settings and specified your filename.</li>
+      </ol>
+      <h4 id="dont-use-acrobat" class="typography__h4 links__offset">Don't use Acrobat</h4>
+      <p>
+        Your installation of Word may have an <strong>Acrobat</strong> tab.
+        You can use the <strong>Create PDF</strong> tool which takes you to the save window mentioned above.
+        If you have a paid version of Acrobat installed, you may be asked if you want to use Acrobat to generate the PDF.
+        <strong>Do not use Acrobat.</strong> The tagged elements may not carry over which are required for accessibility.
+      </p>
+      <p>To use the <strong>Create PDF</strong> tool:</p>
+      <ol>
+        <li>
+          Activate the <strong>Acrobat</strong> tab and select the <strong>Create PDF</strong> tool.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-tab.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="119"
+              width="760"
+              alt="Screenshot of the 'Acrobat' tab highlighting the 'Create PDF' icon.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Create PDF</strong> tool<br>
+              in the <strong>Acrobat</strong> tab.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <em>If a small <strong>Acrobat Create PDF</strong> window pops up, select the <strong>No</strong> button.</em><br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-no.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="455"
+              width="320"
+              alt="Screenshot of the 'Adobe Create PDF' window highlighting the 'No' button.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the<br>
+              <strong>Acrobat Create PDF</strong> window.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          This will open a <strong>Save</strong> window.<br>
+          Make sure the checkbox for <strong>Best for electronic distribution and accessibility (uses Microsoft online service)</strong> is&nbsp;active.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_no-acrobat-save.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              class="img-fluid figure__img"
+              height="387"
+              width="700"
+              alt="Screenshot of the 'Save' window highlighting the 'Best for electronic...' checkbox selected.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Save</strong> window<br>
+              with the <strong>Best for electronic...</strong> checkbox active.
+            </figcaption>
+          </figure>
+        </li>
+        <li>Use the <strong>Export</strong> button to save the file as a PDF.</li>
+      </ol>
       <br>
       <hr>
       <br>
