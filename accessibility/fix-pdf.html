@@ -48,11 +48,21 @@ disclaimer:
         <li><a href="#accessibility-checker">Accessibility Checker</a></li>
         <li><a href="#document-title">Document title</a></li>
         <li><a href="#document-language">Document language</a></li>
+        {% comment %}
+        <li>
+          <a href="#tagging-a-pdf-file">Tagging a PDF file</a>
+          <ul>
+            <li><a href="#autotag-document">Autotag Document</a></li>
+            <li><a href="#manual-tagging">Manual tagging with the Reading Order tool</a></li>
+            <li><a href="#tags-panel">Creating tags in the Tags panel</a></li>
+          </ul>
+        </li>
+        {% endcomment %}
       </ul>
       <br>
       <hr>
       <br>
-      <h3 id="accessibility-checker" class="typography__h3 links__offset">Accessibility checker</h3>
+      <h3 id="accessibility-checker" class="typography__h3 links__offset">Accessibility Checker</h3>
       <p>
         Acrobat has a built in <strong>Accessibility Checker</strong> which can help you find and fix issues.
         Some items (like color contrast) must be checked manually.
@@ -65,7 +75,7 @@ disclaimer:
             <img
               data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-check.jpg"
               src="../../assets/img/placeholder_16to9.jpg"
-              height="731"
+              height="738"
               width="300"
               class="img-fluid figure__img"
               alt="Screenshot highlighting 'Accessibility Check' in Acrobat's accessibility tools">
@@ -100,7 +110,7 @@ disclaimer:
             <img
               data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-checker-results.jpg"
               src="../../assets/img/placeholder_16to9.jpg"
-              height="660"
+              height="610"
               width="410"
               class="img-fluid figure__img"
               alt="Screenshot highlighting 'Start Checking' button in the 'Accessibility Checker Options' window.">
@@ -112,20 +122,198 @@ disclaimer:
         </li>
       </ol>
       <p>
-        Some issues can be resolved directly in the <strong>Accessibility Checker</strong> results.
-        
+        Some issues can be resolved directly in the <strong>Accessibility Checker</strong> results.<br>
+        For example, if you see a <strong>Tab order - Failed</strong> issue, you can simply right-click it and select
+        <strong>Fix</strong> from the right-click menu.
+      </p>
+      <figure class="figure">
+        <img
+          data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-fix-tab-order.jpg"
+          src="../../assets/img/placeholder_16to9.jpg"
+          height="494"
+          width="410"
+          class="img-fluid figure__img"
+          alt="Screenshot highlighting 'Fix' option when right-clicking 'Tab order - Failed' in the 'Accessibility Checker' results.">
+        <figcaption class="figure__figcaption text-center">
+          Screenshot showing the <strong>Fix</strong> option when<br>
+          right clicking <strong>Tab order - Failed</strong>.
+        </figcaption>
+      </figure>
+      <p>
+        You can also right-click an issue and choose <strong>Explain</strong> and you will be taken to an Acrobat support
+        page that offers an explanation of the issue an how to fix it.
+      </p>
+      <p>
+        Don't forget to save your file (Win: <kbd>Ctrl</kbd> + <kbd>S</kbd> or Mac: <kbd>⌘ command</kbd> + <kbd>S</kbd>) after fixing any accessibility issues.</li>
       </p>
       <br>
       <hr>
       <br>
       <h3 id="document-title" class="typography__h3 links__offset">Document title</h3>
+      <p>
+        A missing document title is one of the most common issues when evaluating PDF accessibility.
+        The document title is what appears for users in search results. <em>The title should be unique.</em>
+        For example, if I have a bunch of agenda PDF files and they all have the title "Agenda" it will make
+        finding a specific file very difficult. All of my search results will show the same title for each.
+        Instead, a title like "Meeting Agenda for October 20, 2025" would be much more helpful.
+      </p>
+      <p>
+        When creating a PDF from a Word document, it's best to add the document title in the source file before generating the PDF.<br>
+        <a href="../document-creation/#document-properties">Learn how to add document title to a word document</a>.
+      </p>
+      <p>A good indicator that you're missing a title is seeing the filename at the top of your open PDF file.</p>
+      <figure class="figure">
+        <img
+          data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-missing-title.jpg"
+          src="../../assets/img/placeholder_16to9.jpg"
+          height="62"
+          width="410"
+          class="img-fluid figure__img"
+          alt="Screenshot of the title bar at the top of an open PDF file where the filename is displayed indicating a missing document title.">
+        <figcaption class="figure__figcaption text-center">
+          Screenshot showing the filename<br>
+          at the top of an open PDF.
+        </figcaption>
+      </figure>
+      <p>To add or adjust your document title in Adobe Acrobat, do the following:</p>
+      <ol>
+        <li>
+          Open the <strong>File</strong> menu and select <strong>Properties...</strong>.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-file-props.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height="482"
+              width="410"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting the 'Properties...' option in the open 'File' menu of a PDF file in Acrobat.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Properties...</strong> option<br>
+              in the open <strong>File</strong> menu.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          This will open the <strong>Document Properties</strong> window.<br>
+          Activate the <strong>Description</strong> tab.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-doc-props-desc.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height="563"
+              width="580"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting the 'Description' tab in the 'Document Properties' window of Acrobat.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the active <strong>Description</strong> tab<br>
+              of the <strong>Document Properties</strong> window.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Enter your unique title in the <strong>Title</strong> field then use the <strong>OK</strong> button to commit your change.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-doc-props-title.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height="568"
+              width="580"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting the 'Description' tab in the 'Document Properties' window of Acrobat.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the active <strong>Description</strong> tab<br>
+              of the <strong>Document Properties</strong> window.
+            </figcaption>
+          </figure>
+        </li>
+        <li>Don't forget to save your file (Win: <kbd>Ctrl</kbd> + <kbd>S</kbd> or Mac: <kbd>⌘ command</kbd> + <kbd>S</kbd>) after modifying the document title.</li>
+      </ol>
       <br>
       <hr>
       <br>
       <h3 id="document-language" class="typography__h3 links__offset">Document language</h3>
+      <p>PDF files also need a document language set for accessibility.</p>
+      <p>
+        When creating a PDF from a Word document, it's best to add the document language in the source file before generating the PDF.<br>
+        <a href="../document-creation/#document-properties">Learn how to add document language to a word document</a>.
+      </p>
+      <p>You can set or modify the document language in the <strong>Document Properties</strong>:</p>
+      <ol>
+        <li>
+          Open the <strong>File</strong> menu and select <strong>Properties...</strong>.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-file-props.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height="482"
+              width="410"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting the 'Properties...' option in the open 'File' menu of a PDF file in Acrobat.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Properties...</strong> option<br>
+              in the open <strong>File</strong> menu.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          This will open the <strong>Document Properties</strong> window.<br>
+          Activate the <strong>Advanced</strong> tab.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-doc-props-advanced.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height="529"
+              width="540"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting the 'Advanced' tab in the 'Document Properties' window of a PDF in Acrobat.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Advanced</strong> tab<br>
+              in the <strong>Document Properties</strong> window.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          Use the <strong>Language</strong> field to specify the document language.<br>
+          Either select the language from the dropdown menu or type into the field.<br>
+          <figure class="figure">
+            <img
+              data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-doc-props-language.jpg"
+              src="../../assets/img/placeholder_16to9.jpg"
+              height=""
+              width="540"
+              class="img-fluid figure__img"
+              alt="Screenshot highlighting the 'Advanced' tab in the 'Document Properties' window of a PDF in Acrobat.">
+            <figcaption class="figure__figcaption text-center">
+              Screenshot showing the <strong>Language</strong> field<br>
+              in the <strong>Document Properties</strong> window.
+            </figcaption>
+          </figure>
+        </li>
+        <li>Use the <strong>OK</strong> button to commit your change.</li>
+        <li>Don't forget to save your file (Win: <kbd>Ctrl</kbd> + <kbd>S</kbd> or Mac: <kbd>⌘ command</kbd> + <kbd>S</kbd>) after modifying the document language.</li>
+      </ol>
       <br>
       <hr>
       <br>
+      {% comment %}
+      <h3 id="tagging-a-pdf-file" class="typography__h3 links__offset">Tagging a PDF file</h3>
+      <p>
+        Tags represent the elements and structure of a document.
+        They help screen readers interpret the document properly.
+        Ideally, the source document was setup and exported correctly and your PDF already has tags (see <a href="../document-creation/">Creating accessible documents</a>).
+        However, if you don't have access to the source document there are a couple of methods for tagging in Acrobat.
+      </p>
+      <h4 id="autotag-document" class="typography__h4 links__offset">Autotag Document</h4>
+      <p>
+        Acrobat has an <strong>Autotag Document</strong> tool which does its best to identify and tag the various elements.
+        You will need to check the tag structure and sometimes make adjustments.
+      </p>
+      <h4 id="manual-tagging" class="typography__h4 links__offset">Manual tagging with the Reading Order tool</h4>
+      <h4 id="tags-panel" class="typography__h4 links__offset">Creating tags in the Tags panel</h4>
+      <br>
+      <hr>
+      <br>
+      {% endcomment %}
     </div>
   </div>
 </main>
