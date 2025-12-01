@@ -32,11 +32,27 @@ banner_alt_text: Icons
       <br>
       <h3 class="typography__h3 links__offset">Overview</h3>
       <p>
-        Accessibility means accessing, reaching, or obtaining products, services, facilities, or information. It should be
-        considered when information is shared electronically. Creating accessible content helps everyone, including people
-        who rely on assistive technologies, such as screen readers, text-to-speech software, magnifiers, and mouth sticks,
-        to accomplish their day-to-day tasks. Imagine using only your keyboard to fill out a PDF form. If the form is not
-        accessible, you will not be able to complete it.
+        Imagine trying to navigate a website using only a keyboard and screen reader while not being able to see the screen.
+        Or, trying to fill out a PDF form using only your keyboard. If the content is not accessible, it can be difficult or
+        impossible to do.
+      </p>
+      <p>
+        Digital accessibility means removing the barriers that prevent people from using digital content. 
+        It is the inclusive practice of ensuring that all users, especially those with disabilities, can perceive, understand, navigate, and interact
+        with digital content. This is crucial for those who use assistive technologies like screen readers, magnifiers, 
+        or voice-control software. We align our accessibility goals with the
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" class="links__launch" target="_blank" rel="noopener noreferrer">
+        Web Content Accessibility Guidelines (WCAG)<span class="visually-hidden"> (open in new tab or window)</span></a>, the international standard
+        developed by the World Wide Web Consortium (W3C).
+      </p>
+      <p>
+        Digital accessibility is not limited to websites; it also includes documents, social media, multimedia (e.g. video, audio, etc.), and other digital content and software.
+        <strong>Making digital content accessible benefits everyone, not just people with disabilities.</strong>
+      </p>
+      <p>
+        This page provides general guidelines and best practices for creating accessible digital content, including text, images, tables, links, and more.
+        It is not specific to any particular software or platform but can be applied across various tools and technologies.
+        To learn how to create accessible Word documents and PDF files, please visit <a href="./document-creation/">creating accessible documents</a>.
       </p>
       <br>
       <hr>
@@ -44,16 +60,15 @@ banner_alt_text: Icons
       <h3 class="typography__h3 links__offset">Contents</h3>
       <ul>
         <li>
-          <a href="#writing-text">Writing text that follows accessibility guidelines</a>
+          <a href="#writing-text">Write accessible text</a>
           <ul>
             <li><a href="#readability">Readability</a></li>
-            <li><a href="#abbreviations">Abbreviations</a></li>
-            <li><a href="#symbols">Symbols</a></li>
-            <li><a href="#fonts">Fonts</a></li>
-            <li><a href="#text-alignment">Text alignment</a></li>
+            <li><a href="#abbreviations">Avoid abbreviations</a></li>
+            <li><a href="#symbols">Avoid symbols</a></li>
+            <li><a href="#fonts">Font selection</a></li>
           </ul>
         </li>
-        <li><a href="#headings">Creating an accessible structure through headings</a></li>
+        <li><a href="#headings">Accessible structure using headings</a></li>
         <li><a href="#lists">Using lists within accessible content</a></li>
         <li><a href="#hyperlinks">Creating accessible hyperlinks</a></li>
         <li><a href="#tables">Tips for creating tables that follow WCAG guidelines</a></li>
@@ -77,89 +92,68 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="writing-text" class="typography__h3 links__offset">Writing text that follows accessibility guidelines</h3>
+      <h3 id="writing-text" class="typography__h3 links__offset">Write accessible text</h3>
       <h4 id="readability" class="typography__h4 links__offset">Readability</h4>
       <p>
-        The text should be understandable. WCAG recommends the reading level to be in the 9th grade. Do not use unnecessary
-        complex words. For example,
+        Text should be easy to understand for all users. Write so that people whose first language is not English
+        or those with cognitive disabilities are able to understand. Avoid overly complex vocabulary and sentence structures.
+        WCAG recommends writing text that can be understood at a lower secondary education level (9th grade or below).
       </p>
-      <p><strong>Instead of the sentence:</strong></p>
-      <p>Use this voluminous document for didactic purposes only.</p>
-      <p><strong>Use this:</strong></p>
-      <p>Use this broad document for academic purposes only.</p>
+      <p class="mb-1"><strong>Instead of...</strong></p>
+      <p>"The efficacy of the programmatic initiative was significantly circumscribed by the deleterious effects of its obfuscated procedural paradigm."</p>
+      <p class="mb-1"><strong>Say...</strong></p>
+      <p>The success of the program was limited by the negative effects of its confusing rules."</p>
       <p>
-        Remember that people with cognitive disabilities or people whose first language is not English should be able to
-        understand the content. Learn more about the
-        <a href="https://readable.com/blog/the-flesch-reading-ease-and-flesch-kincaid-grade-level/" class="links__launch" target="_blank" rel="noopener noreferrer">plain language initiative<span class="visually-hidden"> (opens in new tab/window)</span></a>.
+
       </p>
-      <p>The <a href="https://hemingwayapp.com/" class="links__launch" target="_blank" rel="noopener noreferrer">Hemingway App<span class="visually-hidden"> (opens in new tab/window)</span></a> is a free tool that can help you reduce the complexity of your writing.</p>
-      <h4 id="abbreviations" class="typography__h4 links__offset">Abbreviations</h4>
       <p>
-        Avoid abbreviations because some screen readers will not understand the word's context. For example, “WHO” can be read
-        as “Who” instead of “World Health Organization.” In cases where the acronym is well know, you can
-        include abbreviations and full names. For example, you can write.
+        The <a href="https://hemingwayapp.com/" class="links__launch" target="_blank" rel="noopener noreferrer">Hemingway App<span class="visually-hidden"> (opens in new tab/window)</span></a>
+        is a free tool that can help you reduce the complexity of your writing.
+      </p>
+      <p>
+        Another option is to prompt AI: “Rewrite this text so it's easy to understand for someone reading at a 9th-grade level
+        or lower. Keep the original meaning and tone, and avoid complex vocabulary or sentence structures: (enter content)”
+      </p>
+      <h4 id="abbreviations" class="typography__h4 links__offset">Avoid abbreviations</h4>
+      <p>
+        Screen readers may not read abbreviations correctly. To ensure that all users understand the content, spell out the
+        abbreviations the first time they are used, followed by the abbreviation in parentheses. For example:
       </p>
       <ul>
         <li>
-          WHO as “World Health Organization (WHO)”
+          <strong>NOAA</strong> as "National Oceanic and Atmospheric Administration (NOAA)".
         </li>
         <li>
-          PTA as “Parent Teacher Association (PTA)”.
+          <strong>WHO</strong> as "World Health Organization (WHO)".
         </li>
       </ul>
       <p>
-        <strong>Do not write:</strong> Mon, Jan 20, 2020
+        Write out the full date instead of using abbreviations.
       </p>
       <p>
-        Some screen readers will announce the text as “Mon Jan 20 2020”.
+        <strong>Instead of...</strong><br>
+        Tue, Jan 13, 2025
       </p>
       <p>
-        <strong>Instead, write:</strong> Monday, January 20, 2020
+        <strong>Say...</strong><br>
+        Tuesday, January 13, 2025
       </p>
-      <h4 id="symbols" class="typography__h4 links__offset">Symbols</h4>
+      <h4 id="symbols" class="typography__h4 links__offset">Avoid symbols</h4>
       <p>
-        Screen readers behave differently with symbols. For example, the NVDA screen reader does not announce “dash” for “-” but
-        the JAWS screen reader does. Avoid writing unnecessary symbols when possible.
+        Avoid using symbols in your text when possible. Some screen readers may not read symbols correctly or will omit them, which can lead to
+        confusion.
       </p>
-      <div class="table-responsive">
-        <table class="table table-striped table-hover">
-          <thead>
-            <tr>
-              <th>Do not use</th>
-              <th>Instead, use</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2021/2022 (Screen reader will read it as “2021 slash 2022” or “2021 2022”)</td>
-              <td>2021 or 2022</td>
-            </tr>
-            <tr>
-              <td>2021-2022 (Screen reader will read it as “2021 dash 2022” or “2021 2022” or “2021 to 2022”)</td>
-              <td>2021 to 2022</td>
-            </tr>
-            <tr>
-              <td>Apt #22 (Screen reader will read it as “apt number 22” or “apartment 22”)</td>
-              <td>Apartment number 22</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
       <p>
-        The screen reader will announce and skip some symbols. Avoiding excessive symbol use will help you convey
-        important information.
+        For example, "2024-2025" can be read as "2024 dash 2025” or "2024 2025" or "2024 to 2025" depending on the screen reader software used.
       </p>
       <h4 class="typography__h4 links__offset">Convey information in multiple ways</h4>
       <p>
-        Do not use color or shape alone to convey information. People with low vision or color blindness have difficulty
-        understanding the information conveyed only by color or shape. If you use color alone to differentiate information, the
-        audience may not see what you are highlighting when only color is used. Use text to display the differences, as
-        highlighted in the text below.
+        People with visual impairments or color blindness may have difficulty understanding information conveyed only by color or shape.
+        Where possible, include text to ensure the information is conveyed in multiple ways.
       </p>
       <p><strong>Bad example:</strong></p>
       <p>
-        “Use the green button if you would like to attend the MS Word accessibility training. Use the red button
-        otherwise.”
+        "To reserve a seat in the training, use the green button. Use the red button to decline."
       </p>
       <img
         data-src="../uploads/accessibility/accessibility-color-bad.svg"
@@ -169,12 +163,11 @@ banner_alt_text: Icons
         class="img-fluid"
         alt="A green and a red button with no button text">
       <p>
-        Users who have red-green color blindness will not be able to tell the difference between the two buttons.
+        Someone with red-green color blindness will not be able to tell the difference between the two buttons.
       </p>
       <p><strong>Good example:</strong></p>
       <p>
-        “Use the green button if you would like to attend the MS Word accessibility training. Use the red button
-        otherwise.”
+        "To reserve a seat in the training, use the green button. Use the red button to decline."
       </p>
       <img
         data-src="../uploads/accessibility/accessibility-color-good.svg"
@@ -183,49 +176,66 @@ banner_alt_text: Icons
         width="400"
         class="img-fluid"
         alt="Green and a red button with button text">
-      <h4 id="fonts" class="typography__h4 links__offset">Fonts</h4>
       <p>
-        Many font properties can be modified to make the text more readable. People with reading disabilities may have
-        difficulty reading text with a low line or character space. People with low vision may struggle to read text with small
-        font sizes. Here are some tips related to choosing proper fonts:
+        Hyperlinks are another example where color alone should not be used to convey information.
+        Users with visual impairments may not be able to see the difference in color compared to surrounding text.
+        Include an underline or other visual indicator to show that the text is a link.
+      </p>
+      <h4 id="fonts" class="typography__h4 links__offset">Font selection</h4>
+      <p>
+        Small font sizes and cramped character and line spacing can make text difficult to read especially for those with 
+        reading disabilities or vision impairments. Serif fonts can produce unnecessary visual clutter.
+        The following tips can help improve text legibility:
       </p>
       <ul>
-        <li>Use sans serif fonts like Arial, Calibri, Verdana, Century Gothic, etc.</li>
-        <li>Avoid using small fonts. Font size for normal text should be 12-14 points to increase readability.</li>
-        <li>Choose the fonts with a higher font weight.</li>
-        <li>Avoid using cursive fonts.</li>
+        <li>
+          Use sans serif fonts like Arial, Calibri, Verdana, Century Gothic, etc.
+          <ul>
+            <li>
+              To match KCC branding, use
+              <a href="https://fonts.google.com/specimen/Open+Sans" class="links__launch" target="_blank" rel="noopener noreferrer">Open Sans<span class="visually-hidden"> (open in new tab/window)</span></a>
+              for normal text and
+              <a href="https://fonts.google.com/specimen/Roboto" class="links__launch" target="_blank" rel="noopener noreferrer">Roboto<span class="visually-hidden"> (open in new tab/window)</span></a>
+              and <a href="https://fonts.google.com/specimen/Oswald" class="links__launch" target="_blank" rel="noopener noreferrer">Oswald<span class="visually-hidden"> (open in new tab/window)</span></a>
+              for headings.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Avoid small fonts:
+          <ul>
+            <li>Font size for normal text should be 12-14 points.</li>
+          </ul>
+        </li>
+        <li>Avoid light/thin font weights.</li>
+        <li>Do not use cursive fonts, those that mimic handwriting, or decorative fonts.</li>
         <li>Use bold for emphasis.</li>
         <li>
-          Choose fonts with sufficient letter space. For example,<br>
-          Papyrus Condensed with low letter space:<br>
+          Avoid condensed fonts. For example,<br>
+          Papyrus Condensed has low letter spacing:<br>
           <img
             data-src="../uploads/accessibility/accessibility_condensed-font.jpg"
             src="../assets/img/placeholder_16to9.jpg"
             height="50"
-            width="200"
+            width="144"
             class="img-fluid"
             alt="'Kankakee Community College' in the Papyrus Condensed font which has low letter spacing">
           <br>
-          Is harder to read than Arial font:<br>
+          Open Sans provides better letter spacing:<br>
           <img
             data-src="../uploads/accessibility/accessibility_good-font.jpg"
             src="../assets/img/placeholder_16to9.jpg"
             height="50"
-            width="250"
+            width="200"
             class="img-fluid"
             alt="'Kankakee Community College' in the Arial font which is easier to read"
           >
         </li>
       </ul>
-      <h4 id="text-alignment" class="typography__h4 links__offset">Text alignment</h4>
-      <p>
-        When you align text in the center, it can add extra space between words, which can be confusing for screen readers and
-        people with reading disabilities. It's better to avoid centering text and keep it left-aligned.
-      </p>
       <br>
       <hr>
       <br>
-      <h3 id="headings" class="typography__h3 links__offset">Creating an accessible structure through headings</h3>
+      <h3 id="headings" class="typography__h3 links__offset">Accessible structure using headings</h3>
       <p>
         Headings help provide an easy way for readers to digest information in chunks. Plus, screen reader users can scan
         through the headings on the page. Use correct heading levels in a logical order. When you skip heading levels, it can
