@@ -518,43 +518,43 @@ banner_alt_text: Icons
           <p>The following complex table example has multiple header rows, multiple header columns, and merged&nbsp;cells.</p>
           <p class="h4">Semester Course Schedule and Instructor Details</p>
           <div class="table-responsive">
-            <table class="table table-striped table-hover">
+            <table id="complexTable" class="table table-striped table-hover">
               <thead>
                 <tr>
-                  <th scope="col" colspan="2" rowspan="2" id="H1">Course Details</th>
-                  <th scope="col" colspan="2" id="H2">Fall 2025</th>
-                  <th scope="col" rowspan="2" id="H5">Instructor Office</th>
+                  <th scope="col" colspan="2" rowspan="2">Course Details</th>
+                  <th scope="col" colspan="2">Fall 2025</th>
+                  <th scope="col" rowspan="2">Instructor Office</th>
                 </tr>
                 <tr>
-                  <th scope="col" id="H3">Section A</th>
-                  <th scope="col" id="H4">Section B</th>
+                  <th scope="col">Section A</th>
+                  <th scope="col">Section B</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row" rowspan="2" id="H6">Mathematics</th>
-                  <th scope="row" id="H7">Calculus I</th>
-                  <td headers="H1 H2 H3 H6 H7">M/W/F 9:00 a.m.</td>
-                  <td headers="H1 H2 H4 H6 H7">T/Th 1:00 p.m.</td>
-                  <td headers="H1 H5 H6 H7">Room 301</td>
+                  <th scope="row" rowspan="2">Mathematics</th>
+                  <th scope="row">Calculus I</th>
+                  <td>M/W/F 9:00 a.m.</td>
+                  <td>T/Th 1:00 p.m.</td>
+                  <td>Room 301</td>
                 </tr>
                 <tr>
-                  <th scope="row" id="H8">Linear Algebra</th>
-                  <td class="table-primary" headers="H1 H2 H3 H6 H8">T/Th 9:00 a.m.</td>
-                  <td headers="H1 H2 H4 H6 H8">M/W 3:00 p.m.</td>
-                  <td headers="H1 H5 H6 H8">Room 301</td>
+                  <th scope="row">Linear Algebra</th>
+                  <td class="table-primary">T/Th 9:00 a.m.</td>
+                  <td>M/W 3:00 p.m.</td>
+                  <td>Room 301</td>
                 </tr>
                 <tr>
-                  <th scope="row" rowspan="2" id="H9">Computer Science</th>
-                  <th scope="row" id="H10">Intro to Python</th>
-                  <td headers="H1 H2 H3 H9 H10">M/W/F 11:00 a.m.</td>
-                  <td headers="H1 H2 H4 H9 H10">T/Th 11:00 a.m.</td>
-                  <td rowspan="2" headers="H1 H5 H9">Room 405</td>
+                  <th scope="row" rowspan="2">Computer Science</th>
+                  <th scope="row">Intro to Python</th>
+                  <td>M/W/F 11:00 a.m.</td>
+                  <td>T/Th 11:00 a.m.</td>
+                  <td rowspan="2">Room 405</td>
                 </tr>
                 <tr>
-                  <th scope="row" id="H11">Data Structures</th>
-                  <td headers="H1 H2 H3 H9 H11">W 5:00 p.m.</td>
-                  <td headers="H1 H2 H4 H9 H11">Th 5:00 p.m.</td>
+                  <th scope="row">Data Structures</th>
+                  <td>W 5:00 p.m.</td>
+                  <td>Th 5:00 p.m.</td>
                 </tr>
               </tbody>
               <tfoot>
