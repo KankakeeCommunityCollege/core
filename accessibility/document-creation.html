@@ -5,8 +5,7 @@ baseurl: '../../'
 core-alert-offset: true
 banner_image:
 banner_alt_text:
-disclaimer: >-
-  Disclaimer: KCC is neither affiliated with nor authorized, sponsored, or approved by Adobe, Google, or Microsoft Corporation.
+disclaimer:
 ---
 <main id="content" class="container">
   <div class="row">
@@ -37,12 +36,12 @@ disclaimer: >-
       {% endif %}
       <h3 class="typography__h3">Overview</h3>
       <p>
-        This guide explains how to make accessible Microsoft Word documents and PDF files. Word documents are often used
-        to generate PDF files. For the PDF to be accessible, it needs to start from an accessible Word document.
+        This guide explains how to make accessible Microsoft Word documents and PDF files.
+        To generate accessible PDF files from Word, the Word document needs to be accessible.
       </p>
       <p>
-        Most people are in the habit of formatting their documents visually instead of semantically. By doing simple things
-        like using the built-in heading, list, and other styles, your document will be much more accessible. Changing bad habits
+        Most people are in the habit of formatting their documents visually instead of semantically. By making simple changes
+        like using the built-in heading, list, and other styles, your document will be much more accessible. Changing habits
         like using the <kbd>enter</kbd>/<kbd>return</kbd> key instead of adjusting the line and paragraph
         spacing means your document can be easier for everyone to use.
       </p>
@@ -121,12 +120,12 @@ disclaimer: >-
       <br>
       <h3 id="styles" class="typography__h3 links__offset">Styles</h3>
       <p>
-        Microsoft Word offers built-in styles to add headings, paragraphs, quotes, and other elements. These styles are semantic and not just visual.
+        Microsoft Word offers built-in styles to add headings, paragraphs, quotes and other elements. These styles are semantic and not just visual.
         They tell screen readers that the text or element has a specific function.
       </p>
       <p>
         Do not create everything as normal text and then increase font-size, boldness and/or change the font-family to make it look like a heading.
-        Instead, you should use Word's predefined heading and other styles. If these styles don't have the look you want, you should
+        Instead, use Word's predefined heading and other styles. If these styles don't have the look you want,
         create your own styles and/or modify existing ones. You cannot create new heading styles, but you can modify the existing ones.
       </p>
       <div class="text-center">
@@ -146,7 +145,7 @@ disclaimer: >-
       </p>
       <ol>
         <li>Select the text.</li>
-        <li>From the <strong>Home</strong> tab, in the <strong>Styles</strong> panel, select the heading (or other style) you want to apply.</li>
+        <li>From the <strong>Home</strong> tab, in the <strong>Styles</strong> panel, select the heading (or other style) to apply.</li>
       </ol>
       <h4 id="modify-heading-styles" class="typography__h4 links__offset">Modify heading styles</h4>
       <ol>
@@ -164,7 +163,7 @@ disclaimer: >-
           </figure>
         </li>
         <li>
-          The <strong>Modify Style</strong> window will appear where you can change the styling (<strong>Formatting</strong>).<br>
+          The <strong>Modify Style</strong> window will appear where the styles (<strong>Formatting</strong>) can be changed.<br>
           <figure class="figure">
             <img
               data-src="../../uploads/accessibility/accessibility-doc-creation_modify-styles-window.jpg"
@@ -176,25 +175,28 @@ disclaimer: >-
             <figcaption class="figure__figcaption text-center">Screenshot showing the <strong>Modify Styles</strong> window.</figcaption>
           </figure>
         </li>
-        <li>Selecting the <strong>Add to template</strong> checkbox will save your modifications to the default template used to create new documents (Normal.dotm).</li>
+        <li>Select the <strong>Add to template</strong> checkbox to save your modifications to the default template used to create new documents (Normal.dotm).</li>
       </ol>
       <p>
-        <strong>Note:</strong> Modifying a style will change it throughout the whole document. For example, modifying the Heading 2 style will affect all elements that already have Heading 2 applied.
+        <strong>Note:</strong> Modifying a style will change it throughout the whole document. For example, modifying the Heading 2 style will affect all elements with Heading 2 applied.
       </p>
       <br>
       <hr>
       <br>
       <h3 id="headings" class="typography__h3 links__offset">Headings</h3>
       <p>
-        Use appropriate heading levels. This allows screen readers to create an ordered list of all headings in the
-        document making it easier to navigate the&nbsp;document.
+        Use appropriate heading levels to allow screen readers to create an ordered list of all headings in the
+        document and make it easier to navigate.
       </p>
       <p>
-        You should have only one heading 1. Ideally, your heading 1 should be the main heading for the entire document.
+        You should have only one heading 1. Heading 1 should be the main heading for the entire document.
         Do not skip heading levels.
       </p>
       <p>
-        <strong>Bad example:</strong>
+        See <a href="../#headings">accessible structure using headings</a> for more information on creating appropriate headings.
+      </p>
+      <p>
+        <strong>Bad:</strong>
       </p>
       <figure class="figure">
         <img
@@ -207,7 +209,7 @@ disclaimer: >-
         <figcaption class="figure__figcaption text-center">Screenshot of a bad heading example with multiple heading 1s and skipped heading levels.</figcaption>
       </figure>
       <p>
-        <strong>Good example:</strong>
+        <strong>Good:</strong>
       </p>
       <figure class="figure">
         <img
@@ -268,8 +270,8 @@ disclaimer: >-
       <h3 id="lists" class="typography__h3 links__offset">Lists</h3>
       <p>
         Lists are great for grouping and organizing information.
-        Use ordered lists when the order of the list items is important (e.g. step-by-step instructions).
-        Use unordered lists when the order does not matter (e.g. a list of ingredients).
+        Use ordered lists when the order of the items is important (such as for step-by-step instructions).
+        Use unordered lists when the order does not matter (such as for a list of ingredients).
         See <a href="../#lists">using lists within accessible content</a> for more information on using lists.
       </p>
       <p>To add lists in a document:</p>
@@ -346,12 +348,12 @@ disclaimer: >-
       <h3 id="alternative-text" class="typography__h3 links__offset">Alternative text</h3>
       <h4 id="images" class="typography__h4 links__offset">Images</h4>
       <p>
-        <em><strong>If you insert an image into your document, it must have alternative text (alt-text).
-        The only exception is when the graphic is purely decorative</strong> and does not add meaningful info needed to understand the content.</em>
-        Without alt-text, screen reader users will not be able understand what your image or graphic is about.
+        <em><strong>If you insert an image into your document, it must have alternative text (alt-text) unless
+        the graphic is purely decorative</strong> and does not add information to understand the content.</em>
+        Without alt text, screen reader users will not be able understand what your image or graphic is about.
       </p>
       <p>
-        For more information and best practices on creating helpful and appropriate alternative text, see <a href="../#alt-text">how to use alternative text to aid understanding</a>.
+        For more information and best practices on creating helpful and appropriate alternative text, see <a href="../#alt-text">alternative text</a>.
       </p>
       <p>
         To add alternative text to images:
@@ -375,7 +377,7 @@ disclaimer: >-
           <ul>
             <li>
               On newer versions of Microsoft Word, it may attempt to automatically generate alternative text when you insert an image.
-              This AI generated alt-text usually needs to be adjusted. Clicking on the auto-generated alt-text will also open
+              This AI generated alt text usually needs to be adjusted. Clicking on the auto-generated alt text will also open
               the <strong>Alt Text</strong> window.<br>
               <figure class="figure">
                 <img
@@ -394,7 +396,7 @@ disclaimer: >-
         </li>
         <li>
           This opens the <strong>Alt Text</strong> panel to the right side of the document.<br>
-          Add (or edit) the alternative text using the text box.<br>
+          Add (or edit) the alt text using the text box.<br>
           <figure class="figure">
             <img
               data-src="../../uploads/accessibility/accessibility-doc-creation_alt-text-panel.jpg"
@@ -432,11 +434,11 @@ disclaimer: >-
       </ol>
       <h4 id="tables" class="typography__h4 links__offset">Tables</h4>
       <p>
-        <strong>Do not use a screenshot or picture of a table</strong>; you should create it as content in the page.
-        You can add alternative text to tables, which can help screen reader users in understanding the table and its context.
+        <strong>Do not use a screenshot or picture of a table.</strong> Create it as content in the page.
+        You can add alt text to tables, which can help screen reader users understand the table and its context.
       </p>
       <p>
-        To add alt-text to a table:
+        To add alt text to a table:
       </p>
       <ol>
         <li>
@@ -490,8 +492,8 @@ disclaimer: >-
       </ol>
       <h4 id="charts-and-graphs" class="typography__h4 links__offset">Charts and graphs</h4>
       <p>
-        The information contained in charts and graphs also need to be conveyed in a way that non-visual users can understand.
-        Whenever possible, you should include a simple table underneath it containing the data.
+        The information contained in charts and graphs needs to be conveyed in a way that non-visual users can understand.
+        Whenever possible, include a simple table underneath it containing the data.
       </p>
       <figure class="figure">
         <img
@@ -507,11 +509,11 @@ disclaimer: >-
         </figcaption>
       </figure>
       <p>
-        If you cannot add the data in a table, you need to add alternative text. Describe the chart or graph like you're
-        explaining it to a friend who cannot see it. Include any data contained within the chart or graph and any other important details.
+        If you cannot add the data in a table, add alternative text. Describe the chart or graph like you're
+        explaining it to a friend who cannot see it. Include data contained in the chart or graph and any other important details.
       </p>
       <p>
-        Add alternative text just like you would for an image:
+        Add alt text just like you would for an image:
       </p>
       <figure class="figure">
         <img
@@ -530,7 +532,7 @@ disclaimer: >-
       <p>
         Other forms of graphics like shapes, icons, 3D models, SmartArt, and charts require alternative text too.
       </p>
-      <p>Add alt-text to these types of graphics just like you would for images. Right-click the graphic and select <strong>Edit Alt Text...</strong></p>
+      <p>Add alt text to these graphics just like you would for images. Right-click the graphic and select <strong>Edit Alt Text...</strong></p>
       <figure class="figure">
         <img
           data-src="../../uploads/accessibility/accessibility-doc-creation_3d-model-alt-text.jpg"
@@ -552,8 +554,8 @@ disclaimer: >-
       <p>To group multiple objects:</p>
       <ol>
         <li>
-          Select all the objects. You can select the first object and
-          then hold the shift key add more to your selection.<br>
+          Select all objects. Select the first object,
+          then hold the shift key to add more to your selection.<br>
           <figure class="figure">
             <img
               data-src="../../uploads/accessibility/accessibility-doc-creation_object-selection.jpg"
@@ -613,8 +615,8 @@ disclaimer: >-
       <br>
       <h3 id="table-headers" class="typography__h3 links__offset">Tables and table headers</h3>
       <p>
-        It is especially important that tables in documents not be overly complex.
-        Ideally, you should have a single header row and no merged cells anywhere.
+        It is important that tables in documents not be overly complex.
+        Ideally, have a single header row and no merged cells anywhere.
         Empty cells should also be avoided — use values like <strong>n/a</strong> instead.
         If a table is too complex, you can usually break it up into multiple simple tables.
       </p>
@@ -622,7 +624,7 @@ disclaimer: >-
       <p>To make sure your table has a header row:</p>
       <ol>
         <li>
-          Click anywhere in the table and activate the <strong>Table Design</strong> tab.<br>
+          Click anywhere in the table and select the <strong>Table Design</strong> tab.<br>
           <figure class="figure">
             <img
               data-src="../../uploads/accessibility/accessibility-doc-creation_table-design.jpg"
@@ -653,9 +655,9 @@ disclaimer: >-
         </li>
       </ol>
       <h4 id="header-col" class="typography__h4">Header column</h4>
-      <p>A simple table can also contain a header column as its first column. To add a header column:</p>
+      <p>A simple table can contain a header column as its first column. To add a header column:</p>
       <ol>
-        <li>Click anywhere in the table and activate teh <strong>Table Design</strong> tab.</li>
+        <li>Click anywhere in the table and select the <strong>Table Design</strong> tab.</li>
         <li>
           Make sure the <strong>First Column</strong> checkbox is active.<br>
           <figure class="figure">
@@ -683,11 +685,11 @@ disclaimer: >-
         horizontal and vertical spacing and indentation. This can make the document difficult to understand for those users.
       </p>
       <p>
-        <em>Microsoft Word has multiple built-in features for adjusting spacing and indentation in your document layout. You should use these instead.</em>
+        <em>Microsoft Word has multiple built-in features you should use to adjust spacing and indentation in your document layout.</em>
       </p>
-      <p><a href="#spacing-page-breaks">Page breaks</a> should be created using the <strong>Page Break</strong> tool found in the <strong>Layout</strong> tab.</p>
+      <p><a href="#spacing-page-breaks">Page breaks</a> should be created using the <strong>Page Break</strong> tool in the <strong>Layout</strong> tab.</p>
       <p>
-        The horizontal spacing tools include the <strong>Decrease Indent</strong> (<img
+        Horizontal spacing tools include <strong>Decrease Indent</strong> (<img
           data-src="../../uploads/accessibility/accessibility-doc-creation_spacing-outdent.jpg"
           src="../../assets/img/placeholder_16to9.jpg"
           class="img-fluid"
@@ -701,14 +703,14 @@ disclaimer: >-
           height="27"
           width="35"
           alt="'Increase Indent' icon"
-        >) tools. The vertical spacing tools include the <strong>Line and Paragraph Spacing</strong> (<img
+        >). Vertical spacing tools include the <strong>Line and Paragraph Spacing</strong> (<img
           data-src="../../uploads/accessibility/accessibility-doc-creation_spacing-vertical.jpg"
           src="../../assets/img/placeholder_16to9.jpg"
           class="img-fluid"
           height="25.5px"
           width="40px"
           alt="'Line and Paragraph Spacing' icon"
-        >) dropdown which has multiple options. These can be found in the <strong>Home</strong> tab of Word, within the <strong>Paragraph</strong> panel.
+        >) dropdown which has multiple options. These can be found in the <strong>Home</strong> tab of Word, in the <strong>Paragraph</strong> panel.
       </p>
       <figure class="figure">
         <img
@@ -725,7 +727,7 @@ disclaimer: >-
       </figure>
       <h4 id="spacing-horizontal" class="typography__h4 links__offset">Horizontal spacing (indentation)</h4>
       <p>
-        To adjust horizontal spacing (i.e. add or remove indentation):
+        To adjust horizontal spacing (to add or remove indentation):
       </p>
       <ol>
         <li>
@@ -782,14 +784,14 @@ disclaimer: >-
           </figure>
         </li>
         <li>
-          To decrease or remove horizontal spacing, use the <strong>Decrease Indent</strong> (<img
+          To decrease or remove horizontal spacing, highlight the text to adjust and use the <strong>Decrease Indent</strong> (<img
             data-src="../../uploads/accessibility/accessibility-doc-creation_spacing-outdent.jpg"
             src="../../assets/img/placeholder_16to9.jpg"
             class="img-fluid"
             height="27"
             width="35"
             alt="'Decrease Indent' icon"
-          >) tool while the text you want to adjust is highlighted.<br>
+          >) tool.<br>
           <figure class="figure">
             <img
               data-src="../../uploads/accessibility/accessibility-doc-creation_spacing-outdent-location.jpg"
@@ -806,13 +808,13 @@ disclaimer: >-
       </ol>
       <h5 id="spacing-custom-indentation" class="typography__h5">Custom indentation</h5>
       <p>
-        To customize the amount of indentation, you can use <strong>Line Spacing Options...</strong> found in the
+        To customize the amount of indentation, use <strong>Line Spacing Options...</strong> in the
         <strong>Line and Paragraph Spacing</strong> dropdown:
       </p>
       <ol>
         <li>Select the text you want to adjust.</li>
         <li>
-          Navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.<br>
+          On the <strong>Home</strong> tab, find the <strong>Paragraph</strong> panel.<br>
           Open the <strong>Line and Paragraph Spacing</strong> dropdown and select <strong>Line Spacing Options...</strong>:<br>
           <figure class="figure">
             <img
@@ -848,7 +850,7 @@ disclaimer: >-
       </ol>
       <h4 id="spacing-vertical" class="typography__h4 links__offset">Vertical spacing</h4>
       <p>
-        You can adjust line and paragraph spacing using the tools found in the <strong>Line and Paragraph Spacing</strong> (<img
+        You can adjust line and paragraph spacing using the tools in the <strong>Line and Paragraph Spacing</strong> (<img
           data-src="../../uploads/accessibility/accessibility-doc-creation_spacing-vertical.jpg"
           src="../../assets/img/placeholder_16to9.jpg"
           class="img-fluid"
@@ -882,7 +884,7 @@ disclaimer: >-
         </li>
       </ol>
       <p>
-        The line spacing values adjust the line-height relative to the text-hight.
+        The line spacing values adjust the line-height relative to the text-height.
         For example, <strong>2.0</strong> line spacing will make each line two-times the text height.
       </p>
       <h5 id="spacing-paragraph" class="typography__h5 links__offset">Paragraph spacing</h5>
@@ -1172,19 +1174,19 @@ disclaimer: >-
             </figcaption>
           </figure>
         </li>
-        <li>Use the <strong>Export</strong> button after you've selected the correct settings and specified your filename.</li>
+        <li>Use the <strong>Export</strong> button after you've selected the correct settings and specified the filename.</li>
       </ol>
       <h4 id="dont-use-acrobat" class="typography__h4 links__offset">Don't use Acrobat</h4>
       <p>
         Your installation of Word may have an <strong>Acrobat</strong> tab.
-        You can use the <strong>Create PDF</strong> tool which takes you to the save window mentioned above.
-        If you have a paid version of Acrobat installed, you may be asked if you want to use Acrobat to generate the PDF.
+        The <strong>Create PDF</strong> tool takes you to the same save window mentioned above.
+        If you have a paid version of Acrobat installed, it may ask you if you want to use Acrobat to generate the PDF.
         <strong>Do not use Acrobat.</strong> The tagged elements may not carry over which are required for accessibility.
       </p>
       <p>To use the <strong>Create PDF</strong> tool:</p>
       <ol>
         <li>
-          Activate the <strong>Acrobat</strong> tab and select the <strong>Create PDF</strong> tool.<br>
+          Open the <strong>Acrobat</strong> tab and select the <strong>Create PDF</strong> tool.<br>
           <figure class="figure">
             <img
               data-src="../../uploads/accessibility/accessibility-doc-creation_acrobat-tab.jpg"
@@ -1239,7 +1241,7 @@ disclaimer: >-
       <br>
       <h3 id="templates" class="typography__h3 links__offset">Accessible templates</h3>
       <p>
-        Microsoft Word offers accessible templates that have the following improvements:
+        Microsoft Word offers accessible templates that have the following:
       </p>
       <ul>
         <li>Better color contrast</li>
@@ -1255,10 +1257,10 @@ disclaimer: >-
       <h4 id="online" class="typography__h4 links__offset">Online</h4>
       <ol>
         <li>
-          Go to <a href="https://create.microsoft.com/" class="links__launch" target="_blank" rel="noopener noreferrer">create.microsoft.com<span class="visually-hidden"> (opens in new tab/window)</span></a>.
+          Go to <a href="https://create.microsoft.com/" class="links__launch" target="_blank" rel="noopener noreferrer">create.microsoft.com<span class="visually-hidden"> (opens in new tab/window)</span></a>
         </li>
         <li>
-          Searching for "accessible templates".
+          Search for "accessible templates"
         </li>
       </ol>
       <h4 id="within-word" class="typography__h4 links__offset">Within Word</h4>
@@ -1271,7 +1273,7 @@ disclaimer: >-
         </li>
       </ol>
       <p>
-        More information can be found on Microsoft's <a href="https://support.microsoft.com/en-us/office/get-accessible-templates-for-office-ca086caa-2bd2-4ac8-8c12-4cd495bd4d76" class="links__launch" target="_blank" rel="noopener noreferrer">Get accessible templates for Office<span class="visually-hidden"> (opens in new tab/window)</span></a> page.
+        More information is on Microsoft's <a href="https://support.microsoft.com/en-us/office/get-accessible-templates-for-office-ca086caa-2bd2-4ac8-8c12-4cd495bd4d76" class="links__launch" target="_blank" rel="noopener noreferrer">Get accessible templates for Office<span class="visually-hidden"> (opens in new tab/window)</span></a> page.
       </p>
       <br>
       <hr>
