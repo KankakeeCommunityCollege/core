@@ -79,21 +79,16 @@ banner_alt_text: Icons
         <li><a href="#hyperlinks">Accessible hyperlink text</a></li>
         <li><a href="#tables">Create accessible tables</a></li>
         <li>
-          <a href="#alt-text">How to use alternative text to aid understanding</a>
+          <a href="#alt-text">Alternative text</a>
           <ul>
-            <li><a href="#alt-text-images">Alt text for images</a></li>
-            <li><a href="#alt-text-images-functional">What is a functional image?</a></li>
-            <li><a href="#alt-text-images-informative">What is an informative image?</a></li>
-            <li><a href="#alt-text-images-text">Why are images of text inaccessible?</a></li>
-            <li><a href="#alt-text-decorative-images">What is a decorative image in accessibility?</a></li>
+            <li><a href="#alt-text-images-functional">Functional images</a></li>
+            <li><a href="#alt-text-images-informative">Informative images</a></li>
+            <li><a href="#alt-text-decorative-images">Decorative images</a></li>
           </ul>
         </li>
-        <li><a href="#color-contrast">Increase readability through color contrast</a></li>
+        <li><a href="#color-contrast">Use sufficient color contrast</a></li>
         <li><a href="#accessible-documents">Accessible documents</a></li>
-        <li><a href="#document-language">Identify document language</a></li>
-        <li><a href="#accessibility-checkers">Accessibility checkers</a></li>
-        <li><a href="#manual-testing">Getting started with manual content accessibility testing</a></li>
-        <li><a href="#additional-resources">Additional resources</a></li>
+        <li><a href="#accessibility-checkers">Accessibility checkers and other resources</a></li>
       </ul>
       <br>
       <hr>
@@ -667,162 +662,204 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="alt-text" class="typography__h3 links__offset">How to use alternative text to aid understanding</h3>
+      <h3 id="alt-text" class="typography__h3 links__offset">Alternative text</h3>
       <p>
-        Alternative text (alt text) is the text that is read instead of the content. In content creation, alt text is added to
-        images, links, tables, charts, buttons, and other graphics.
-      </p>
-      <h4 id="alt-text-images" class="typography__h4 links__offset">Alt text for images</h4>
-      <p>
-        Images are essential parts of content creation. They add meaning to the content. Since they are available for sighted
-        users, you can also make them accessible for screen readers. This can be done by adding alt text to images. If you don't
-        add alt text to the image, the screen reader will read the name of the image file instead.
+        Alternative text, also known as alt text, is a brief description of an image or graphic. It is used
+        by screen readers to provide context for users who cannot see the image.
       </p>
       <p>
-        Adding alt text to images also helps people with poor internet connections because the site will display the alt text if
-        the file does not load on a site. When you write the alt text for images, do not include “image of” or “picture of” in
-        the text. The screen reader automatically announces it is an image. Alt text should only include what the content is
-        about. There are different types of images:
-      </p>
-      <ul>
-        <li><strong>Functional images:</strong> images that act as buttons or links.</li>
-        <li><strong>Informative images:</strong> images that are used to convey information.</li>
-        <li><strong>Images of text:</strong> images that have text in them.</li>
-        <li><strong>Decorative images:</strong> images that are used for visual appeal only. These images convey no information.</li>
-      </ul>
-      <h4 id="alt-text-images-functional" class="typography__h4 links__offset">What is a functional image?</h4>
-      <p>
-        When you add functional images to your content, add proper alt text to convey the function of the image. For example, if
-        you are using an image for a link:
-      </p>
-      <img
-        data-src="../assets/img/kcc-logo.svg"
-        src="../assets/img/placeholder_16to9.jpg"
-        height="50"
-        width="100"
-        class="img-fluid"
-        alt="KCC logo">
-      <p>
-        A good example of alt text would be “Click to go to the Elgin Community College website, which opens in a new window.”
-        It is important to announce the link destination if it opens in a new window. If you have an image that acts as a button
-        that downloads a file, the best practice is to announce the file format.
+        Images can add meaning and context to your content as well as visual interest. However, if the images are
+        not accessible, they can create barriers for users with visual impairments. Alternative text helps make images
+        accessible by providing a textual description of the image.
       </p>
       <p>
-        Below is an image of a print icon used as a print button. A proper alt text should describe the function or destination,
-        not the image itself.
+        <strong>Do not use the word "image" or "picture" in your alt text.</strong>
+        It becomes redundant because screen readers automatically announce that it is an&nbsp;image.
       </p>
-      <img
-        data-src="../uploads/accessibility/print_24dp_E8EAED.svg"
-        src="../assets/img/placeholder_16to9.jpg"
-        height="50"
-        width="50"
-        class="img-fluid"
-        alt="Print icon">
       <p>
-        Examples of <strong>bad</strong> alt text:
+        How the image is used in the content determines the type of alt text you should provide.
       </p>
       <ul>
-        <li>Print icon</li>
-        <li>Black and white print icon</li>
+        <li>A <strong>functional image</strong> provides a function and can act as a button or link.</li>
+        <li>An <strong>informative image</strong> communicates information.</li>
+        <li>A <strong>decorative image</strong> does not add meaningful information but is purely aesthetic.</li>
       </ul>
       <p>
-        Examples of good alt text:
+        <strong>Images of text should be avoided.</strong> It's best to use actual text instead of an image of it.
+        If your graphic must contain text (e.g. a banner with a photo background and a text overlay), you should include
+        it in the alt text.
+      </p>
+      <h4 id="alt-text-images-functional" class="typography__h4 links__offset">Functional images</h4>
+      <p>The alternative text for a functional image should describe its purpose or function. A common example of a 
+        functional images is a logo that acts as a link to a homepage. 
+      </p>
+      <p>
+        With the KCC logo below (which links to the KCC homepage) you may be tempted to use alt text like "KCC logo" or
+        "Kankakee Community College logo." Instead, the alt text should describe what the link or button does.
+      </p>
+      <a href="https://www.kcc.edu" title="Go to the Kankakee Community College website">
+        <img
+          src="../assets/img/kcc-logo.svg"
+          height="50"
+          width="100"
+          class="img-fluid"
+          alt="Go to the Kankakee Community College website"
+        >
+      </a>
+      <p>
+        Text like “Go to the Kankakee Community College website” would be a great alternative text as it tells the user what
+        will happen if the click the image.
+      </p>
+      <p>
+        Another example of a functional image is an icon used as a print or download button. The alt text should describe the action that
+        will occur when the button is activated.
+      </p>
+      <div class="positioning__card--max-width-800 card border-danger mb-3">
+        <div class="card-header text-bg-danger">
+          <strong>Bad alt text</strong>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <img
+                data-src="../uploads/accessibility/print_24dp_E8EAED.svg"
+                src="../assets/img/placeholder_16to9.jpg"
+                height="50"
+                width="50"
+                class="img-fluid ms-4"
+                alt="Print icon"
+              >
+              <ul>
+                <li>Print icon</li>
+                <li>Icon of a printer</li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6">
+              <img
+                data-src="../uploads/accessibility/download-icon.svg"
+                src="../assets/img/placeholder_16to9.jpg"
+                height="50"
+                width="50"
+                class="img-fluid ms-4"
+                alt="Download icon"
+              >
+              <ul>
+                <li>Download icon</li>
+                <li>Icon of a downward arrow with a line under&nbsp;it</li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="positioning__card--max-width-800 card border-success mb-3">
+        <div class="card-header text-bg-success">
+          <strong>Good alt text</strong>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <img
+                data-src="../uploads/accessibility/print_24dp_E8EAED.svg"
+                src="../assets/img/placeholder_16to9.jpg"
+                height="50"
+                width="50"
+                class="img-fluid ms-4"
+                alt="Print icon"
+              >
+              <ul>
+                <li>Print this page</li>
+                <li>Print the PDF document</li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6">
+              <img
+                data-src="../uploads/accessibility/download-icon.svg"
+                src="../assets/img/placeholder_16to9.jpg"
+                height="50"
+                width="50"
+                class="img-fluid ms-4"
+                alt="Download icon"
+              >
+              <ul>
+                <li>Download the 2025 academic calendar (PDF, 204KB)</li>
+              </ul>
+              <p>
+                With a download button you should include the file type and size in the alt&nbsp;text.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4 id="alt-text-images-informative" class="typography__h4 links__offset">Informative images</h4>
+      <p>
+        An informative image brings meaningful information to your content.
+        Alt text for these types of images should be concise yet descriptive enough to convey what they are adding
+        to the content or page. Imagine yourself giving a brief description of an image to a friend over the phone
+        who cannot see it.
+      </p>
+      <p>
+        Here are some good examples of alt text for the image below:
       </p>
       <ul>
-        <li>Click to print</li>
-        <li>Click to print the PDF document</li>
+        <li>A student with a laptop</li>
+        <li>A smiling student sitting in the library with a laptop</li>
       </ul>
-      <h4 id="alt-text-images-informative" class="typography__h4 links__offset">What is an informative image?</h4>
-      <p>
-        Informative images are images that represent information or concepts. Ensure the alt text is concise and conveys sufficient information to the audience. Remember that the alt text also depends on the context in which the image is being displayed.
-      </p>
-      <p>
-        For this image, the alt text can be any of the following:
-      </p>
       <div class="text-center">
         <img
         data-src="../uploads/accessibility/accessibility-student-on-laptop.jpg"
         src="../assets/img/placeholder_16to9.jpg"
-        class="img-fluid"
+        class="img-fluid mb-3"
         alt="A student with a laptop">
       </div>
-      <ul>
-        <li>Student</li>
-        <li>A student with a laptop</li>
-        <li>A student sitting in the library with a laptop, smiling at the camera</li>
-      </ul>
       <p>
-        It is up to content creators to decide which alt text best suits the information being conveyed. It may be helpful when writing alt text to close your eyes and write down what you were able to see.
-      </p>
-      <p>
-        <strong>Note:</strong> The words “picture of” or “image of” are unnecessary within the alt text because the screen readers automatically announce the file type.
-      </p>
-      <h4 id="alt-text-images-text" class="typography__h4 links__offset">Why are images of text inaccessible?</h4>
-      <p>
-        The images with text are problematic because the screen readers cannot read the text in the image. If these images are
-        not avoidable, add the proper alt text that contains the text inside the image. Logos are an exception to this case.
-      </p>
-      <img
-        data-src="../uploads/accessibility/accessibility-page_color-logo-with-name.png"
-        src="../assets/img/placeholder_16to9.jpg"
-        class="img-fluid"
-        height="125"
-        width="300"
-        alt="Kankakee Community College logo">
-      <p>
-        Good examples of alt text for the image above would be:
-      </p>
-      <ul>
-        <li>Empty alt text, decorative</li>
-        <li>Kankakee Community College logo</li>
-      </ul>
-      <img
-        data-src="../uploads/accessibility/accessibilibty-page_short-term-classes.jpg"
-        src="../assets/img/placeholder_16to9.jpg"
-        class="img-fluid border"
-        alt="">
-      <p>
-        For the image above, a good example of alt text would be:
+        For the banner below, a good example of alt text would be:
       </p>
       <ul>
         <li>Find a short-term class that works for you. Focus on one or more classes — and get it done!</li>
       </ul>
-      <h4 id="alt-text-decorative-images" class="typography__h4 links__offset">What is a decorative image in accessibility?</h4>
+      <img
+        data-src="../uploads/accessibility/accessibilibty-page_short-term-classes.jpg"
+        src="../assets/img/placeholder_16to9.jpg"
+        class="img-fluid border mb-3"
+        alt="Find a short-term class that works for you. Focus on one or more classes — and get it done!">
+      <h4 id="alt-text-decorative-images" class="typography__h4 links__offset">Decorative images</h4>
       <p>
-        Decorative images are displayed for decorative purposes and do not convey meaningful information. These images usually
-        include background images. You can have empty alt text for decorative images or mark them as decorative. When a screen
-        reader comes across an image with empty alt text or an image marked as decorative, it will still skip reading the file
-        name. The bottom line is that all images must have alt text or be marked decorative.
+        Decorative images do not convey meaningful information and are used purely for visual enhancement.
+        A good rule-of-thumb for determining if your image is decorative is to ask yourself,
+        "If this image were removed, would the meaning of the content change?" If the answer is no, then
+        the image is likely decorative. Background graphics are a good example of decorative images.
+      </p>
+      <p>
+        For decorative images, you can either provide empty alt text or mark them as decorative. If your software
+        allows you to mark an image as decorative, use that option. Otherwise, provide empty alt text.
       </p>
       <br>
       <hr>
       <br>
-      <h3 id="color-contrast" class="typography__h3 links__offset">Increase readability through color contrast</h3>
+      <h3 id="color-contrast" class="typography__h3 links__offset">Use sufficient color contrast</h3>
       <p>
-        Color contrast means how well one color stands out from another, which determines the readability. People with low
-        vision or color blindness have difficulty reading content that does not have a high color-contrast ratio. These ratios
-        define the luminance difference between two colors, usually background and foreground colors. Below are a few examples:
+        Having sufficient color contrast is essential for readability and accessibility. If your text does not
+        provide enough contrast against its background, it can be difficult for users with color blindness or visual
+        impairments to read.
+      </p>
+      <p>
+        The contrast between two colors is measured as a ratio. The higher the contrast ratio, the easier
+        the text is to read. <strong>WCAG 2.1 AA requires a minimum contrast ratio of 4.5:1 for normal sized text.</strong>
+      </p>
+      <p>
+        The easiest way to check color contrast is to use a color contrast checker tool. These tools allow you to
+        enter the foreground (text) and background colors and will calculate the contrast ratio for you and usually 
+        provide guidance on whether the contrast meets accessibility standards. Colors are usually input as HEX or RGB color codes
+        in these tools. If you're unsure of the color codes, there are free tools and browser plugins available.
+        <a href="https://annystudio.com/software/colorpicker/" class="links__launch" target="_blank" rel="noopener noreferrer">Just Color Picker<span class="visually-hidden"> (opens in new tab/window)</span></a> is a free color picker tool for both Windows and Mac that allows you to easily
+        sample color codes on your screen.
+      </p>
+      <p>
+        The following are some free color contrast checker tools:
       </p>
       <ul>
-        <li>RED COLOR: The contrast between the red (#FF0000) text and white (#FFFFFF) background is 3.99:1.</li>
-        <li>RED COLOR: The contrast between the red (#FF0000) text and yellow (#FFFF00) background is 3.72:1.</li>
-        <li>GRAY COLOR: The contrast between the gray (#666666) text and white (#FFFFFF) background is 5.74:1.</li>
-        <li>GRAY COLOR: The contrast between the gray (#666666) text and light gray (#B7B7B7) background is 2.86:1.</li>
-      </ul>
-      <p>
-        (Hex color codes are a 6-digit combination of letters and numbers that define the color. For example, RED is defined by
-        #FF0000, and GRAY is defined by #666666. Each hex code is unique.) As you can see in the examples above, a higher
-        contrast ratio increases the readability of the text. <strong>WCAG 2.1 AA requires a minimum contrast ratio of 4.5:1.</strong>
-      </p>
-      <p>
-        Always check the contrast ratio of the content. You can apply this principle to images that include text by checking the
-        contrast ratio between the text and the image. Use our color <a href="https://styleguide.kcc.edu/tools/contrast-checker/">contrast checker tool</a>
-        to verify color contrast. If the ratio is less than 4.5:1, you can adjust the colors to get the desired ratio.
-      </p>
-      <p>
-        Additional tools to check color contrast:
-      </p>
-      <ul>
+        <li>
+          Our <a href="https://styleguide.kcc.edu/tools/contrast-checker/">WCAG Color Contrast Checker</a> page.
+        </li>
         <li>
           <a href="https://www.audioeye.com/color-contrast-checker/" class="links__launch" target="_blank" rel="noopener noreferrer">AudioEye® Color contrast checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
         </li>
@@ -834,68 +871,42 @@ banner_alt_text: Icons
       <hr>
       <br>
       <h3 id="accessible-documents" class="typography__h3 links__offset">Accessible documents</h3>
-      <p>Documents published online need to be accessible. This includes Word<sup>&reg;</sup>, Excel<sup>&reg;</sup>, and PDF files.</p>
+      <p>Documents published online need to be accessible too. This includes Word<sup>&reg;</sup>, Excel<sup>&reg;</sup>, and PDF files.</p>
       <p><a href="./document-creation/">Learn how to create accessible documents</a>.</p>
       <br>
       <hr>
       <br>
-      <h3 id="document-language" class="typography__h3 links__offset">Identify document language</h3>
+      <h3 id="accessibility-checkers" class="typography__h3 links__offset">Accessibility checkers and other resources</h3>
       <p>
-        Indicate the main language used within the document and any additional languages that may be used for specific content.
-        This ensures that screen reading software is accurately reading the document.
-      </p>
-      <p>
-        <a href="./document-creation/">Learn how to define the document properties in Word</a>.
-      </p>
-      <br>
-      <hr>
-      <br>
-      <h3 id="accessibility-checkers" class="typography__h3 links__offset">Accessibility checkers</h3>
-      <p>
-        Using <a href="https://support.microsoft.com/en-us/office/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f" class="links__launch" target="_blank" rel="noopener noreferrer">Microsoft's Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
-        and <a href="https://workspace.google.com/marketplace/app/grackle_docs/1085622905455" class="links__launch" target="_blank" rel="noopener noreferrer">Grackle Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
-        for G Suite, a Google add-on, we can easily and quickly verify that our digital materials are accessible to the growing population of people with disabilities. The
-        accessibility checker will provide simple step-by-step instructions on changing your materials to improve accessibility.
-      </p>
-      <p>
-        Free tools to check the accessibility of your webpage.
+        Accessibility checker software, tools, and plugins can help you create accessible content. However, it is important to
+        remember that these tools are not perfect and cannot catch all accessibility issues. Some accessibility concerns require
+        manual review and testing to ensure that the content is truly accessible. For this reason, it is important to have a good
+        understanding of accessibility principles when using them.
       </p>
       <ul>
         <li>
-          <a title="WAVE Web Accessibility Evaluation Tools" href="https://wave.webaim.org/" class="links__launch" target="_blank" rel="noopener noreferrer">WAVE Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a>
+          <a
+            href="https://support.microsoft.com/en-us/office/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f"
+            class="links__launch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Microsoft's Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a> is built into
+          Microsoft
+          Office applications such as Word, Excel, and PowerPoint.
         </li>
         <li>
-          <a title="accessScan Website Accessibility Checker" href="https://accessibe.com/accessscan" class="links__launch" target="_blank" rel="noopener noreferrer">accessScan by accessiBe<span class="visually-hidden"> (opens in new tab/window)</span></a>
-        </li>
-        <li>
-          <a title="Accessibility Resource for Products and Apps" href="https://about.google/belonging/accessibility-resources/" class="links__launch" target="_blank" rel="noopener noreferrer">Accessibility Developer Tools by Google<span class="visually-hidden"> (opens in new tab/window)</span></a>
-        </li>
-        <li>
-          <a title="Accessibility Insights for Web" href="https://accessibilityinsights.io/docs/en/web/overview/" class="links__launch" target="_blank" rel="noopener noreferrer">Accessibility Insights for Web by Microsoft<span class="visually-hidden"> (opens in new tab/window)</span></a>
+          <a
+            href="https://workspace.google.com/marketplace/app/grackle_docs/1085622905455"
+            class="links__launch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Grackle Accessibility Checker<span class="visually-hidden"> (opens in new tab/window)</span></a> is a browser plugin for
+          Google Docs.
         </li>
       </ul>
-      <br>
-      <hr>
-      <br>
-      <h3 id="manual-testing" class="typography__h3 links__offset">Getting started with manual content accessibility testing</h3>
       <p>
-        Accessibility checkers are useful, but manual testing is just as important. Automated accessibility checkers can detect
-        that the image has alt text, but they cannot check if it conveys the meaning of the image. In that case, the content
-        creator needs to verify that information. You can perform manual tests on:
+        Here are some additional resources to help you learn more about web accessibility:
       </p>
-      <ul>
-        <li>Color contrast</li>
-        <li>Text inside images</li>
-        <li>Proper alternative text</li>
-        <li>Broken links</li>
-        <li>Proper heading levels</li>
-        <li>Meaningful hyperlinks</li>
-        <li>Document titles</li>
-      </ul>
-      <br>
-      <hr>
-      <br>
-      <h3 id="additional-resources" class="typography__h3 links__offset">Additional resources</h3>
       <ul>
         <li>
           <a title="How to Meet WCAG (Quick Reference)" href="https://www.w3.org/WAI/WCAG21/quickref/" class="links__launch" target="_blank" rel="noopener noreferrer">WCAG 2.1 Guidelines<span class="visually-hidden"> (opens in new tab/window)</span></a>
