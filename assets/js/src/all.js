@@ -44,6 +44,7 @@ window.addEventListener('load', () => {
       .then(({ default: landingPage }) => landingPage());
   }
 
+  // Pathways slider on homepage
   if (document.querySelector('.pathways__slider')) {
     $('.pathways__slider').slick({
       dots: false,
