@@ -1,0 +1,80 @@
+---
+title: 'Creating accessible social media posts'
+layout: default-core
+baseurl: '../../'
+core-alert-offset: true
+banner_image:
+banner_alt_text:
+disclaimer:
+---
+<main id="content" class="container">
+  <div class="row">
+    <div class="col">
+      {% include breadcrumbs-core.html %}
+      {% if page.banner_image and page.banner_image != '' %}
+        {% assign first_char = page.banner_image | slice: 0 %}
+        {% if first_char == '/' %}
+          {% assign banner = page.banner_image | remove_first: '/' %}
+        {% else %}
+          {% assign banner = page.banner_image %}
+        {% endif %}
+        <div class="text-center">
+          <img
+          role="img"
+          src="../../{{ banner }}"
+          class="img-fluid"
+          alt="{{ page.banner_alt_text | replace: '"', '&quot;' }}">
+        </div>
+          <br>
+      {% endif %}
+      <h2 class="typography__h2">{{ page.title }}</h2>
+      <hr class="my-5">
+      {% if page.disclaimer and page.disclaimer != '' %}
+      <p><small>{{ page.disclaimer }}</small></p>
+      {% endif %}
+      <h3 class="typography__h3 links__offset">Overview</h3>
+      <p>
+        Social media is a powerful tool for communication and engagement. It's essential to follow best practices
+        when creating social media posts to ensure that your content is accessible to all users, including those
+        with disabilities.
+      </p>
+      <hr class="my-5">
+      <h3 class="typography__h3 links__offset">Contents</h3>
+      <ul>
+        <li>
+          <a href="#social-alt-text">Alternative text for graphics</a>
+          <ul>
+            <li>
+              <a href="#facebook-alt-text">Alternative text in Facebook</a>
+              <ul>
+                <li>
+                  <a href="#computers">Computers</a>
+                </li>
+                <li>
+                  <a href="#iphone-app">iPhone app</a>
+                </li>
+                <li>
+                  <a href="#android-app">Android app</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <hr class="my-5">
+      <h3 class="typography__h3 links__offset" id="social-alt-text">Alternative text for graphics</h3>
+      <p>
+        Alternative text, or alt text, is a text description of an image that is provided when the image is not
+        available. Alt text is not only for users who rely on screen readers but also for those with slow internet
+        connections or who have images disabled in their browsers. Always include alternative text (alt text) for
+        images, infographics, and other visual content.
+      </p>
+      <p>See <a href="../#alt-text">alternative text</a> for more information on writing proper descriptions for your images.</p>
+      <h4 id="facebook-alt-text" class="typography__h4 links__offset">Alternative text in Facebook</h4>
+      <p>
+        The steps for adding alt text to images on Facebook vary depending on whether you're using a desktop or mobile device.
+      </p>
+      {% include tabbed-content.html disable_links_offset="true" %}
+    </div>
+  </div>
+</main>
