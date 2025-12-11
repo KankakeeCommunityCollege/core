@@ -44,20 +44,8 @@ disclaimer:
         <li>
           <a href="#social-alt-text">Alternative text for graphics</a>
           <ul>
-            <li>
-              <a href="#facebook-alt-text">Alternative text in Facebook</a>
-              <ul>
-                <li>
-                  <a href="#computers">Computers</a>
-                </li>
-                <li>
-                  <a href="#iphone-app">iPhone app</a>
-                </li>
-                <li>
-                  <a href="#android-app">Android app</a>
-                </li>
-              </ul>
-            </li>
+            <li><a href="#facebook-alt-text">Alternative text in Facebook</a></li>
+            <li><a href="#instagram-alt-text">Alternative text in Instagram</a></li>
           </ul>
         </li>
       </ul>
@@ -71,10 +59,77 @@ disclaimer:
       </p>
       <p>See <a href="../#alt-text">alternative text</a> for more information on writing proper descriptions for your images.</p>
       <h4 id="facebook-alt-text" class="typography__h4 links__offset">Alternative text in Facebook</h4>
-      <p>
-        The steps for adding alt text to images on Facebook vary depending on whether you're using a desktop or mobile device.
-      </p>
       {% include tabbed-content.html disable_links_offset="true" %}
+      <h4 id="instagram-alt-text" class="typography__h4">Alternative text in Instagram</h4>
+      <ul class="nav nav-tabs navTabs" id="instagram-alt" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="instagram-computer-label" data-bs-toggle="tab" data-bs-target="#instagram-computer" type="target" role="tab" aria-controls="instagram-computer" aria-selected="true">Computers</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="instagram-iphone-label" data-bs-toggle="tab" data-bs-target="#instagram-iphone" type="target" role="tab" aria-controls="instagram-iphone" aria-selected="false">iPhone app</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="instagram-android-label" data-bs-toggle="tab" data-bs-target="#instagram-android" type="target" role="tab" aria-controls="instagram-android" aria-selected="false">Android app</button>
+        </li>
+      </ul>
+      <div class="tab-content mt-3 px-1" id="instagram-alt-content">
+        <div class="tab-pane fade show active" id="instagram-computer" role="tabpanel" aria-labelledby="instagram-computer-label" tabindex="0">
+          <h5 class="typography__h5">Computers</h5>
+          <h6 class="typography__h6">For new posts</h6>
+          <ol>
+            <li>Upload a photo to Instagram.</li>
+            <li>After choosing a filter and editing the image, choose <strong>Next</strong>.</li>
+            <li>Select <strong>Accessibility</strong>, then write the alt text in the box.</li>
+            <li>Select <strong>Share</strong> to post the image.</li>
+          </ol>
+          <h6 class="typography__h6">For existing posts</h6>
+          <ol>
+            <li>Above your photo or video, select <strong><span class="material-icons positioning--v-align-icon">more_horiz</span> Options</strong>.</li>
+            <li>Select <strong>Edit</strong>.</li>
+            <li>Choose <strong>Accessibility</strong>, then write the alt text in the box.</li>
+            <li>Select <strong>Done</strong> to save the changes.</li>
+          </ol>
+        </div>
+        <div class="tab-pane fade" id="instagram-iphone" role="tabpanel" aria-labelledby="instagram-iphone-label" tabindex="0">
+          <h5 class="typography__h5">iPhone app</h5>
+          <h6 class="typography__h6">For new posts</h6>
+          <ol>
+            <li>Upload a photo to Instagram.</li>
+            <li>Choose a filter and edit the image. Tap <strong>Next</strong>.</li>
+            <li>Tap <strong>More options</strong>.</li>
+            <li>Tap <strong>Write alt text</strong>.</li>
+            <li>Enter the alt text and tap <strong>Done</strong>.</li>
+          </ol>
+          <h6 class="typography__h6">For existing posts</h6>
+          <ol>
+            <li>Go to the photo and tap <strong><span class="material-icons positioning--v-align-icon">more_horiz</span> Options</strong>.</li>
+            <li>Tap <strong>Edit</strong>.</li>
+            <li>Tap <strong>Edit Alt Text</strong> in the bottom right.</li>
+            <li>Enter the alt text in the box and tap <strong>Done</strong>.</li>
+          </ol>
+        </div>
+        <div class="tab-pane fade" id="instagram-android" role="tabpanel" aria-labelledby="instagram-android-label" tabindex="0">
+          <h5 class="typography__h5">Android app</h5>
+          <h6 class="typography__h6">For new posts</h6>
+          <ol>
+            <li>Upload a photo to Instagram.</li>
+            <li>Choose a filter and edit the image. Tap <strong>Next</strong>.</li>
+            <li>Tap <strong>More options</strong>.</li>
+            <li>Tap <strong>Write alt text</strong>.</li>
+            <li>Enter the alt text and tap <strong>Done</strong>.</li>
+          </ol>
+          <h6 class="typography__h6">For existing posts</h6>
+          <ol>
+            <li>Go to the photo and tap <strong><span class="material-icons positioning--v-align-icon">more_vert</span> Options</strong>.</li>
+            <li>Tap <strong>Edit</strong>.</li>
+            <li>Tap <strong>Edit alt text</strong> in the bottom right.</li>
+            <li>Enter the alt text in the box and tap <strong><span class="material-icons positioning--v-align-icon">check</span> Done</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <br>
+      <hr>
+
     </div>
   </div>
 </main>
