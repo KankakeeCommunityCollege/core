@@ -50,6 +50,9 @@ disclaimer:
             <li><a href="#tik-tok-alt-text">Alternative text in Tik Tok</a></li>
           </ul>
         </li>
+        <li>
+          <a href="#social-video-captions">Captions for videos</a>
+        </li>
       </ul>
       <hr class="my-5">
       <h3 class="typography__h3 links__offset" id="social-alt-text">Alternative text for graphics</h3>
@@ -222,6 +225,83 @@ disclaimer:
         <li>Enter the alt text next to the photo(s).</li>
         <li>Tap <strong>Done</strong>.</li>
       </ol>
+      <hr class="my-5">
+      <h3 id="#social-video-captions" class="typography__h3">Captions for videos</h3>
+      <p>
+        Captions ensure equitable access to your video's message for users with auditory disabilities, making the content
+        understandable in noisy environments, or when sound must be muted. They are a fundamental component of digital compliance
+        and inclusive communication.
+      </p>
+      <h4 class="typography__h4">Captions for videos in Facebook</h4>
+      <p>
+        The process for adding videos captions on Facebook varies slightly depending on whether it's a personal profile or a page
+        (such as a business page). Pages also give you the option of auto-generating captions &mdash; these should be checked for accuracy.
+      </p>
+      <h5 class="typography__h5">SubRip (.srt) files in Facebook</h5>
+      <p>
+        Uploading a SubRip (.srt) file allows full control over the captions' timing and accuracy.
+        SubRip (.srt) files used in Facebook must be named using the following naming convention:
+      </p>
+      <p>
+        <strong>[filename].[language code]_[country code].srt</strong>
+      </p>
+      <p>For english (US) subtitles, the file name would be:</p>
+      <p>
+        <strong>[filename].en_US.srt</strong>
+      </p>
+      <p>For general spanish subtitles, the file name would be:</p>
+      <p>
+        <strong>[filename].es_LA.srt</strong>
+      </p>
+      <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#srtFileInfo" aria-expanded="false" aria-controls="srtFileInfo">
+          Learn about the SubRip (.srt) file format
+        </button>
+      </p>
+      <div class="collapse" id="srtFileInfo">
+        <div class="card card-body mb-3">
+          <p>
+            The SubRip (.srt) file format consists of a sequence of blocks. Each block is separated by a single
+            line and the last block shouldn't have any spaces or lines after it.
+          </p>
+          <p>Each block includes the following elements:</p>
+          <ol>
+            <li>A <em>unique</em> sequence number. Start with 1 and increment by 1 for each block.</li>
+            <li>A time-span in the <code class="code code__inline">hh:mm:ss,fff --> hh:mm:ss,fff</code> format (hours:minutes:seconds,milliseconds), indicating the start and end times for the caption.</li>
+            <li>The text of the caption itself.</li>
+          </ol>
+          <p>The start and end time markers should always use 2 digits for hours, minutes, and seconds, and 3 digits for milliseconds (for example 01:02:03,004 and not 1:2:3,004).</p>
+          <p><strong>Example SubRip (.srt) file:</strong></p>
+          <pre><code>1
+00:00:01,000 --> 00:00:04,000
+This is the first caption.
+
+2
+00:00:05,000 --> 00:00:08,000
+This is the second caption.
+
+3
+00:00:09,000 --> 00:00:12,000
+This is the third caption.</code></pre>
+        </div>
+      </div>
+      <h5 class="typography__h5">Add captions to your page's video</h5>
+      <ol>
+        <li>Select <strong>What's on your mind, [username]?</strong>, then <strong><img src="../../uploads/accessibility/fb-photo-video.png" height="25" width="25" alt="media icon"> Photo/Video</strong>.</li>
+        <li>
+          Choose <strong><img src="../../uploads/accessibility/fb-add-video.png" height="25" width="25" alt="Add photos/videos icon"> Add photos/videos</strong> and select a video from your computer.
+        </li>
+        <li>After the video has uploaded, select <strong>Video Options</strong> on the video thumbnail.</li>
+        <li>
+          Choose <strong>Add Captions</strong> on the left, then select:
+          <ul>
+            <li>auto-generate captions, or</li>
+            <li>upload a SubRip (.srt) file</li>
+          </ul>
+        </li>
+        <li>Select <strong>Save</strong>, then select <strong>Post</strong>.</li>
+      </ol>
+      <h5 class="typography__h5">Add captions to your profile's video</h5>
     </div>
   </div>
 </main>
