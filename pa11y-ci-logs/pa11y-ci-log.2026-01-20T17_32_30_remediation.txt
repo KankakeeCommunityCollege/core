@@ -1,0 +1,27 @@
+##     Pa11y CI results     ##
+
+Running Pa11y on 8 URLs:
+ > https://www.kcc.edu/404.html - 0 errors
+ > https://www.kcc.edu/accessibility/ - 1 errors
+ > https://www.kcc.edu/amazon-career-choice/ - 0 errors
+ > https://www.kcc.edu/accessibility/document-creation/ - 0 errors
+ > https://www.kcc.edu/accessibility/fix-pdf/ - 0 errors
+ > https://www.kcc.edu/ - 0 errors
+ > https://www.kcc.edu/search/#gsc.tab=0 - 0 errors
+ > https://www.kcc.edu/settings/ - 0 errors
+
+Errors in https://www.kcc.edu/accessibility/:
+
+ ✅ WZ fixed on 1/21/26:
+    * Switch example of bad/complex table from HTML to an image element.
+
+ • The relationship between td elements and their associated th elements is not
+   defined. As this table has multiple levels of th elements, you must use the
+   headers attribute on td elements.
+
+   (#complexTable)
+
+   <table id="complexTable" class="table table-striped
+   table-hover"><thead><tr><th scope="col" cols...</table>
+
+✘ 7/8 URLs passed
