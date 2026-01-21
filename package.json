@@ -29,7 +29,8 @@
     "webpack-dev": "npx webpack --watch --node-env development",
     "browserslist": "npx browserslist@latest --update-db",
     "test:pa11y": "bash pa11y.sh",
-    "test:pa11y-ci": "bash pa11y-ci.sh"
+    "test:pa11y-ci": "bash pa11y-ci.sh",
+    "test:pa11y-ci-log": "bash pa11y-ci.sh -o"
   },
   "author": "https://github.com/wdzajicek",
   "license": "ISC",

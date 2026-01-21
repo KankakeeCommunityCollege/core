@@ -1,0 +1,20 @@
+##############################
+##     Pa11y CI results     ##
+##############################
+
+##     Running Pa11y CI:
+##         DATETIME: 2026-01-21T12_17_43
+##         SITEMAP:  https://www.kcc.edu/pa11y-ci-sitemap.xml
+
+
+Running Pa11y on 8 URLs:
+ > https://www.kcc.edu/404.html - 0 errors
+ > https://www.kcc.edu/accessibility/ - 0 errors
+ > https://www.kcc.edu/amazon-career-choice/ - 0 errors
+ > https://www.kcc.edu/accessibility/document-creation/ - 0 errors
+ > https://www.kcc.edu/accessibility/fix-pdf/ - 0 errors
+ > https://www.kcc.edu/ - 0 errors
+ > https://www.kcc.edu/search/#gsc.tab=0 - 0 errors
+ > https://www.kcc.edu/settings/ - 0 errors
+
+✔ 8/8 URLs passed
