@@ -7,6 +7,9 @@
 <!-- Google Cusom Search -->
 <link rel="preconnect" href="https://clients1.google.com">
 <link rel="preconnect" href="https://www.google.com">
+{%- if page.sheet_key or page.include_datatables %}
+<link rel="preconnect" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+{%- endif %}
 <!-- Google API -->
 <link rel="preconnect" as="script" href="https://apis.google.com/js/api.js">
 <!-- Custom theme JS -->
@@ -18,5 +21,15 @@
 <link rel="preconnect" href="https://cdn.kcc.edu">
 <link rel="preload" as="image" href="{{ page.baseurl }}{{ page.video_loading_image }}">
 <link rel="preload" as="script" href="https://public.tockify.com/browser/embed.js">
+{%- endif -%}
+{% if page.slides %}
+<!--  Slick.js v1.8.1 & slick-theme stylesheet  -->
+<link rel="preconnect" as="style" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.css"/>
+<link rel="preconnect" as="style" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.min.css"/>
+<!-- Slick.js javascript -->
+<link rel="preconnect" as="script" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js">
+{% endif %}
+{%- if site.theme_config != true -%}
+<link rel="preconnect" as="script" href="{{page.baseurl}}assets/js/dist/main{% if site.data.hash %}.{{ site.data.hash }}{% endif %}.bundle.js">
 {%- endif -%}
 <!-- End of preconnects -->
