@@ -4,7 +4,7 @@
   {% comment %}
   <!-- core_root: true is for the core project (project containing the kcc.edu homepage) -->
   {% endcomment %}
-    {% if page.title != '404' and page.title != 'Settings' and page.title != 'Accessibility' and page.title != 'Accessibility in Document Creation' %} 
+    {% if page.title != '404' and page.title != 'Settings' and page.title != 'Accessibility' and page.title != 'Accessibility in Document Creation' and page.title != 'KCC en español' %} 
     <li class="breadcrumb-item">
       <a href="./" aria-current="page">
         <svg id="home-icon" role="img" class="breadcrumbs--home" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="home-icon-title">
@@ -15,7 +15,7 @@
         </svg>
       </a>
     </li>
-    {% else if page.title == '404' or page.title == 'Settings' %}
+    {% else if page.title == '404' or page.title == 'Settings' or page.title == 'KCC en español' %}
     <li class="breadcrumb-item">
       <a href="../">
         <svg id="home-icon" role="img" class="breadcrumbs--home" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="home-icon-title">

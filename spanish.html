@@ -1,0 +1,183 @@
+---
+title: 'KCC en español'
+layout: default-core
+baseurl: '../'
+core-alert-offset: true
+banner_image: uploads/kcc-en-espanol.svg
+banner_alt_text:
+banner_width: 1115px
+banner_height: 438.76px
+page_lead: >-
+  En Kankakee Community College queremos que tú, y toda tu familia, sepan que estamos aquí para apoyarles en cada paso.
+  Les daremos información necesaria, respondiendo a sus preguntas para resolver los problemas que surjan. Nos complacerá
+  ayudarles durante el proceso de inscripción, y continuar apoyando mientras tú o un ser querido esté asistiendo a KCC.
+  ¡Tu éxito es nuestro objetivo! Esperamos sinceramente que al colaborar juntos tengan una experiencia de
+  college&nbsp;gratificante.
+---
+<main id="content" class="container">
+  <div class="row">
+    <div class="col">
+      {% include breadcrumbs.html %}
+      <div lang="es-US">
+        {% comment %}
+          <!-- ============================================
+            Spanish content only within this div!
+            Leave the (English) breadcrumbs outside this div!
+          ============================================ -->
+        {% endcomment %}
+        {% if page.banner_image and page.banner_image != '' %}
+          {% assign first_char = page.banner_image | slice: 0 %}
+          {% if first_char == '/' %}
+            {% assign banner = page.banner_image | remove_first: '/' %}
+          {% else %}
+            {% assign banner = page.banner_image %}
+          {% endif %}
+          <div class="text-center">
+            <img
+              role="img"
+              src="../{{ banner }}"
+              class="img-fluid mb-3"
+              width="{{ page.banner_width }}"
+              height="{{ page.banner_height }}"
+              alt="{{ page.banner_alt_text | replace: '"', '&quot;' }}"
+            >
+          </div>
+        {% endif %}
+        <h2 class="typography__h2">{{ page.title }}</h2>
+        <p class="lead">
+          {{ page.page_lead }}
+        </p>
+        <div class="editable">
+          <h3 class="typography__h3">Contactos importantes</h3>
+          <p>
+            <a href="https://www.kcc.edu/about/contact-us/">
+              <strong>Información General</strong>
+            </a>
+          </p>
+          <ul>
+            <li>
+              <a href="mailto:info@kcc.edu">info@kcc.edu</a>
+            </li>
+            <li>
+              <span class="bg-danger text-white px-3">Chatea en www.kcc.edu</span>
+            </li>
+            <li>
+              <a href="https://direct.lc.chat/9258945" class="links__launch" target="_blank" rel="noopener">Habla con nosotros por LiveChat<span class="visually-hidden"> (abrir en otra ventana)</span></a>
+            </li>
+            <li>
+              <a href="tel:+18158028100">815-802-8100</a>
+            </li>
+          </ul>
+          <div class="alert alert-info">
+            <p class="typography__color--inherit mb-0">
+              We have a dedicated LiveChat page (<a href="https://direct.lc.chat/9258945" target="_blank" rel="noopener">https://direct.lc.chat/9258945</a>) which is a much more direct way to get to it.<br>
+              <strong>Can we do something like the following instead <span class="bg-warning px-3">(AI translation)</span>:</strong>
+            </p>
+          </div>
+          <ul>
+            <li>
+              <a href="mailto:info@kcc.edu">info@kcc.edu</a>
+            </li>
+            <li>
+              <a href="https://direct.lc.chat/9258945" class="links__launch" target="_blank" rel="noopener">Habla con nosotros por LiveChat<span class="visually-hidden"> (abrir en otra ventana)</span></a>
+            </li>
+            <li>
+              <a href="tel:+18158028100">815-802-8100</a>
+            </li>
+          </ul>
+          <p>
+            <a href="https://www.kcc.edu/admissions/">
+              <strong>Admisiones y Registro</strong>
+            </a>
+          </p>
+          <ul>
+            <li>
+              <a href="tel:+18158028500">815-802-8500</a>
+            </li>
+            <li>
+              <a href="mailto:admissions@kcc.edu">admissions@kcc.edu</a>
+            </li>
+          </ul>
+          <p>
+            <a href="https://www.kcc.edu/continuinged/">
+              <strong>Educación Continua y Asociaciones de Negocios</strong>
+            </a>
+          </p>
+          <ul>
+            <li>
+              <a href="mailto:continuinged@kcc.edu">continuinged@kcc.edu</a>
+            </li>
+            <li>
+              <a href="tel:+18158028206">815-802-8206</a>
+            </li>
+          </ul>
+          <p>
+            <a href="https://www.kcc.edu/student-resources/disability-services/">
+              <strong>Servicios para Discapacitados</strong>
+            </a>
+          </p>
+          <ul>
+            <li>
+              <a href="mailto:skinzler@kcc.edu">skinzler@kcc.edu</a>
+            </li>
+            <li>
+              <a href="tel:+18158028632">815-802-8632</a>
+            </li>
+          </ul>
+          <p>
+            <a href="https://www.kcc.edu/tuition-and-aid/financial-aid/">
+              <strong>Ayuda Financiera</strong>
+            </a>
+          </p>
+          <ul>
+            <li>
+              <a href="mailto:finaid@kcc.edu">finaid@kcc.edu</a>
+            </li>
+            <li>
+              <a href="tel:+18158028550">815-802-8550</a>
+            </li>
+          </ul>
+          <p>
+            <a href="https://www.kcc.edu/about/human-resources/">
+              <strong>Recursos Humanos</strong>
+            </a>
+          </p>
+          <ul>
+            <li>
+              <a href="mailto:thundley@kcc.edu">thundley@kcc.edu</a>
+            </li>
+            <li>
+              <a href="tel:+18158028125">815-802-8125</a>
+            </li>
+          </ul>
+          <p>
+            <a href="https://www.kcc.edu/student-resources/career-services/">
+              <strong>Servicios de Carrera</strong>
+            </a>
+          </p>
+          <ul>
+            <li>
+              <a href="mailto:careerservices@kcc.edu">careerservices@kcc.edu</a>
+            </li>
+            <li>
+              <a href="tel:+18158028222">815-802-8222</a>
+            </li>
+          </ul>
+          <p>
+            <a href="https://www.kcc.edu/adulted/">
+              <strong>Oficina de Educacion para Adultos</strong>
+            </a>
+          </p>
+          <ul>
+            <li>
+              <a href="mailto:adulted@kcc.edu">adulted@kcc.edu</a>
+            </li>
+            <li>
+              <a href="tel:+18158028305">815-802-8305</a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
