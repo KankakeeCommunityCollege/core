@@ -1,27 +1,25 @@
 /**
  * 
  * Custom JS written by Wesley Zajicek for:
- * © 2021 Kankakee Community College
+ * © 2026 Kankakee Community College
  * 
  * @author Wesley Zajicek <https://github.com/wdzajicek>
  * @copyright © 2021 Kankakee Community College
  * 
- * @const {string} VIDEO_PLACEHOLDER_ID - ID of a placeholder <div> element with data-attributes that correspond to the video files/info
- * @const {string} VIDEO_CONTAINER_ID - ID for the parent element of the above VIDEO_PLACEHOLDER_ID <div>.
- * if loadVideo() was imported after DOMContentLoaded (from clicking play button) it will be `true`
- * 
  */
 // =========================================================================================
 
-const VIDEO_CONTAINER_ID = 'videoContainer';
-const VIDEO_PLACEHOLDER_ID = 'video';
-
-function createVideoElement(attributesObject) {
+function createVideoElement(poster) {
   const video = document.createElement('video');
 
-  Object.keys(attributesObject).map(key => {
-    video.setAttribute(key, attributesObject[key]);
-  })
+  video.id = 'videoElement';
+  video.className = 'width__full';
+  video.poster = poster;
+  video.muted = true;      // Property must be true for autoplay to work
+  video.autoplay = true;   // Property must be true for autoplay to work
+  video.loop = true;
+  video.playsInline = true; // Required for autoplay in iOS/Mobile Safari, see: <https://developer.apple.com/documentation/webkit/safari_tools_and_features/delivering_video_content_for_safari>
+  video.setAttribute('aria-hidden', 'true');
   return video;
 }
 
@@ -39,25 +37,29 @@ function createSourceElements(video, srcArr, srcTypesArr) {
 function handleSlowNetwork(message, time) {
   window.setTimeout(() => {
     import('./createPlayButtonForVideo').then(({default: createPlayButtonForVideo}) => createPlayButtonForVideo())
-  }, 1e3);
+  }, 500);
   return console.error(message, time);
 }
 
 function loadVideo() {
-  const videoContainer = document.getElementById(VIDEO_CONTAINER_ID);
+  const videoContainer = document.getElementById('videoContainer');
   // `data-*=""` attributes built into the HTML contain the settings for the video sources, types, and poster
-  const data = videoContainer.querySelector(`#${VIDEO_PLACEHOLDER_ID}`).dataset; // This element is a placeholder div for the video w/ it's data-attributes representing video settings
-  let [ srcArr, srcTypesArr, poster ] = [ data.videos.split(','), data.videoTypes.split(','), data.poster ]; /** @var {array} srcArr - array of video-sources separated by a comma + space -- each source corresponds to a video file @var {array} srcTypesArr - array of video-types separated by a comma + space -- each type matches a source in srcArr @var {string} poster - The location of the poster image for the video */
-  const videoAttributes = { // Settings for our video player
-    'autoplay': '',
-    'muted': '',
-    'loop': '',
-    'playsinline': '',  // <https://developer.apple.com/documentation/webkit/safari_tools_and_features/delivering_video_content_for_safari>
-    'poster': poster,
-    'id': 'videoElement',
-    'class': 'width__full'
-  };
-  const video = createVideoElement(videoAttributes);
+  const data = videoContainer.querySelector('#video').dataset; // This element is a placeholder div for the video w/ it's data-attributes representing video settings
+  /**
+   * @var {array} srcArr - array of video-sources separated by a comma + space -- each source corresponds to a video file
+   * @var {array} srcTypesArr - array of video-types separated by a comma + space -- each type matches a source in srcArr
+   * @var {string} poster - The location of the poster image for the video
+   * */
+  let [
+    srcArr,
+    srcTypesArr,
+    poster
+  ] = [
+    data.videos.split(','),
+    data.videoTypes.split(','),
+    data.poster
+  ];
+  const video = createVideoElement(poster);
 
   Promise.resolve()
     .then(() => createSourceElements(video, srcArr, srcTypesArr))
@@ -77,7 +79,7 @@ function loadVideo() {
           video.setAttribute('preload', 'auto');
           videoContainer.innerHTML = '';
           // We need to "flatten" the video element to inject it as HTML for autoplay to work.
-          videoContainer.innerHTML = video.outerHTML; // Autoplay does not work if the video element were injected directly via `appendChild(video)`
+          videoContainer.append(video);
         }
       } else { // Mobile, tablet, and small devices will have `( arguments[0] == undefined )` is true and...
         // ...execute this code:
