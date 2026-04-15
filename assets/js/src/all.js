@@ -14,13 +14,21 @@ window.addEventListener('load', () => {
   const PLAY_VIDEO_SETTING_IS_ON = window.localStorage.getItem('playVideoOnHomePageSetting') != 'false'
   const path = window.location.pathname;
   const mobileMediaQueryList = window.matchMedia('(max-width: 768px)'); // 768px is the Bootstrap tablet breakpoint
+  const userPrefersReducedMotionMql = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  if (!mobileMediaQueryList.matches && PLAY_VIDEO_SETTING_IS_ON && path == '/') {
+  if (
+    !mobileMediaQueryList.matches &&
+    !userPrefersReducedMotionMql.matches &&
+    PLAY_VIDEO_SETTING_IS_ON && path == '/'
+  ) {
     import('./loadVideo')
       .then(({ default: loadVideo }) => loadVideo(t0));
   }
 
-  if (path == '/' && mobileMediaQueryList.matches) {
+  if (
+    path == '/' && mobileMediaQueryList.matches ||
+    path == '/' && userPrefersReducedMotionMql.matches
+  ) {
     import('./createPlayButtonForVideo')
       .then(({ default: createPlayButtonForVideo }) => createPlayButtonForVideo());
   }
