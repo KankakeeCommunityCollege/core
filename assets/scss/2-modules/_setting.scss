@@ -10,10 +10,10 @@
     top: 6px;
     left: 12px;
   }
-  &--on::before {
+  &[data-value="true"]::before {
     background-image: url('/assets/img/toggle-off.svg');
   }
-  &--off::before {
+  &[data-value="false"]::before {
     background-image: url('/assets/img/toggle-on.svg');
     opacity: .75;
   }

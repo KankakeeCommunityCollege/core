@@ -16,26 +16,13 @@ function recallSetting(button) {
 }
 
 function settingsButtonClickHandler(e) {
-  let currentSettingState;
   const settingButton = e.target;
   const settingName = settingButton.dataset.settingName;
-
-  settingButton.dataset.value === 'true' ? currentSettingState = true
-  : settingButton.dataset.value === 'false' ? currentSettingState = false
-  : null;
-
-  currentSettingState === null ? new Error(
-`Error in userSettings.js module
-"currentSettingState" is undefined:
-Make sure you have a "data-value" attribute set to "true" or "false"`
-  ) : null;
-
+  const currentSettingState = (settingButton.dataset.value === 'true') ? true : false;
   const settingMessage = `<span class="visually-hidden">Turn ${settingName} setting ${currentSettingState ? 'on' : 'off'}</span>`;
   
   window.localStorage.setItem(settingButton.dataset.setting, (!currentSettingState).toString());
 
-  settingButton.classList.toggle(`setting__button--${currentSettingState ? 'on' : 'off'}`);
-  settingButton.classList.toggle(`setting__button--${currentSettingState ? 'off' : 'on'}`);
   settingButton.dataset.value = (!currentSettingState).toString()
   return settingButton.innerHTML = settingMessage;
 }
