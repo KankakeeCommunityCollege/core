@@ -24,8 +24,8 @@ description: >-
       <hr>
       <div class="row mt-5">
         <div class="col-9">
-          <p>
-            <strong id="videoSettingLabel">Play video on homepage</strong> - This setting controls the download and display of the
+          <p id="videoSettingDesc">
+            <strong>Play video on homepage</strong> - This setting controls the download and display of the
             video on <a href="/">https://www.kcc.edu</a>. The video is <em>"on"</em> by default for non-mobile users. Switching to
             <em>"off"</em> will prevent downloading and playing plus improve homepage loading speeds.
           </p>
@@ -34,29 +34,33 @@ description: >-
           <button
             id="videoButton"
             data-setting="playVideoOnHomePageSetting"
+            data-setting-name="play video on homepage"
             data-value="true"
             type="button"
             class="btn btn-link setting__button setting__button--on"
-            aria-labelledby="videoSettingLabel">
-            <span class="visually-hidden">Turn setting off</span>
+            aria-describedby="videoSettingDesc">
+            <span class="visually-hidden">Turn play video on homepage setting off</span>
           </button>
         </div>
+        {% comment %}
         <div class="col-9">
-          <p>
-            <strong id="darkModeSettingLabel">Dark mode</strong> - This setting is <em>"off"</em> by default. Turn dark mode <em>"on"</em> to enable a dark color theme that may be easier on the eyes.
+          <p id="darkModeSettingDesc">
+            <strong>Dark mode</strong> - This setting is <em>"off"</em> by default. Turn dark mode <em>"on"</em> to enable a dark color theme that may be easier on the eyes.
           </p>
         </div>
         <div class="col-3">
           <button
             id="darkModeButton"
             data-setting="darkModeSetting"
+            data-setting-name="dark mode"
             data-value="false"
             type="button"
             class="btn btn-link setting__button setting__button--off"
-            aria-labelledby="darkModeSettingLabel">
-            <span class="visually-hidden">Turn setting on</span>
+            aria-describedby="darkModeSettingDesc">
+            <span class="visually-hidden">Turn dark mode setting on</span>
           </button>
         </div>
+        {% endcomment %}
       </div>
     </div>
   </div>

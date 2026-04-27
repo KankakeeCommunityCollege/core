@@ -1,15 +1,13 @@
-const VIDEO_SETTING_BUTTON = document.getElementById('videoButton');
-const SETTING_BUTTON_CLASS = '.setting__button';
-
 function recallSetting(button) {
   const setting = button.dataset.setting;
+  const settingName = button.dataset.settingName;
   let savedSetting;
 
   if (!window.localStorage.getItem(setting)) return;
   if (button.dataset.value === window.localStorage.getItem(setting)) return;
   
   window.localStorage.getItem(setting) == 'false' ? savedSetting = false : savedSetting = true;
-  const settingSpan = `<span class="visually-hidden">Turn setting ${!savedSetting ? 'on' : 'off'}</span>`;
+  const settingSpan = `<span class="visually-hidden">Turn ${settingName} setting ${!savedSetting ? 'on' : 'off'}</span>`;
 
   button.dataset.value = savedSetting.toString();
   button.classList.remove(`setting__button--${!savedSetting ? 'on' : 'off'}`);
@@ -19,7 +17,8 @@ function recallSetting(button) {
 
 function settingsButtonClickHandler(e) {
   let currentSettingState;
-  let settingButton = e.target;
+  const settingButton = e.target;
+  const settingName = settingButton.dataset.settingName;
 
   settingButton.dataset.value === 'true' ? currentSettingState = true
   : settingButton.dataset.value === 'false' ? currentSettingState = false
@@ -31,7 +30,7 @@ function settingsButtonClickHandler(e) {
 Make sure you have a "data-value" attribute set to "true" or "false"`
   ) : null;
 
-  const settingMessage = `<span class="visually-hidden">Turn setting ${currentSettingState ? 'on' : 'off'}</span>`;
+  const settingMessage = `<span class="visually-hidden">Turn ${settingName} setting ${currentSettingState ? 'on' : 'off'}</span>`;
   
   window.localStorage.setItem(settingButton.dataset.setting, (!currentSettingState).toString());
 
@@ -42,9 +41,9 @@ Make sure you have a "data-value" attribute set to "true" or "false"`
 }
 
 function userSettings() {
-  const settingButtons = [...document.querySelectorAll(SETTING_BUTTON_CLASS)];
+  const settingButtonList = [...document.querySelectorAll('.setting__button')];
 
-  settingButtons.forEach(button => {
+  settingButtonList.forEach(button => {
     button.addEventListener('click', settingsButtonClickHandler);
     recallSetting(button);
   });
