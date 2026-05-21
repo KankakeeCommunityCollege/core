@@ -3,6 +3,7 @@ site_name: KCC
 public-url: "https://www.kcc.edu"
 canonical_baseurl: https://www.kcc.edu # NO trailing slash ## Used to build canonical link elements in document head
 port: 3000
+# BUILD
 theme: "kcc-gem-theme"
 timezone: America/Chicago
 google-tag_key: GTM-TNVWT2L
