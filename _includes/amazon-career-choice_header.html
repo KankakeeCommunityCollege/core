@@ -4,16 +4,18 @@
         <div class="col-12 col-xxl-8 header__bg" {% if page.background_image %}style="background-image: url('{{ page.background_image }}');"{% endif %}>
           <div class="row positioning__heading--row">
             <div class="col-5 pe-0 positioning__col--offset text-center">
-              <img
-                src="{{ page.baseurl }}assets/img/amazon_career_choice_purple.png"
-                class="img-fluid header--logo-shadow"
-                alt="Amazon Career Choice">
+              <h1>
+                <img
+                  src="{{ page.baseurl }}assets/img/amazon_career_choice_purple.png"
+                  class="img-fluid header--logo-shadow"
+                  alt="Amazon Career Choice">
+              </h1>
             </div>
           </div>
           {% if page.background_image_caption %}<span class="typography__register--caption">{{ page.background_image_caption }}</span>{% endif %}
         </div>
         <div class="col-12 col-xxl-4 px-0 positioning__form--margins">
-          <h4 id="page-top" class="typography__register-h4 text-center">{{ page.form_heading }}</h4>
+          <h2 id="page-top" class="typography__register-h4 text-center">{{ page.form_heading }}</h2>
           <div class="jotform__wrapper">
             <script
               type="text/javascript"
