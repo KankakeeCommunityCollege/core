@@ -7,7 +7,7 @@ banner_image:
 banner_alt_text:
 disclaimer:
 ---
-<main id="content" class="container">
+<div class="container">
   <div class="row">
     <div class="col">
       {% include breadcrumbs-core.html %}
@@ -27,14 +27,14 @@ disclaimer:
         </div>
           <br>
       {% endif %}
-      <h2 class="typography__h2">{{ page.title }}</h2>
+      <h1 class="typography__h1">{{ page.title }}</h1>
       <br>
       <hr>
       <br>
       {% if page.disclaimer and page.disclaimer != '' %}
       <p><small>{{ page.disclaimer }}</small></p>
       {% endif %}
-      <h3 class="typography__h3">Overview</h3>
+      <h2 class="typography__h2">Overview</h2>
       <p>
         This guide explains how to make accessible Microsoft Word documents and PDF files.
         To generate accessible PDF files from Word, the Word document needs to be accessible.
@@ -52,7 +52,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 class="typography__h3">Contents</h3>
+      <h2 class="typography__h2">Contents</h2>
       <ul>
         <li>
           <a href="#styles">Styles</a>
@@ -118,7 +118,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="styles" class="typography__h3 links__offset">Styles</h3>
+      <h2 id="styles" class="typography__h2 links__offset">Styles</h2>
       <p>
         Microsoft Word offers built-in styles to add headings, paragraphs, quotes and other elements. These styles are semantic and not just visual.
         They tell screen readers that the text or element has a specific function.
@@ -147,7 +147,7 @@ disclaimer:
         <li>Select the text.</li>
         <li>From the <strong>Home</strong> tab, in the <strong>Styles</strong> panel, select the heading (or other style) to apply.</li>
       </ol>
-      <h4 id="modify-heading-styles" class="typography__h4 links__offset">Modify heading styles</h4>
+      <h3 id="modify-heading-styles" class="typography__h3 links__offset">Modify heading styles</h3>
       <ol>
         <li>
           Right-click on the style you want to change and select <strong>Modify...</strong>.<br>
@@ -183,7 +183,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="headings" class="typography__h3 links__offset">Headings</h3>
+      <h2 id="headings" class="typography__h2 links__offset">Headings</h2>
       <p>
         Use appropriate heading levels to allow screen readers to create an ordered list of all headings in the
         document and make it easier to navigate.
@@ -224,7 +224,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="hyperlinks" class="typography__h3 links__offset">Hyperlinks</h3>
+      <h2 id="hyperlinks" class="typography__h2 links__offset">Hyperlinks</h2>
       <p>
         See <a href="../#hyperlinks">creating accessible hyperlinks</a> for more information on creating appropriate link text.
       </p>
@@ -267,7 +267,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="lists" class="typography__h3 links__offset">Lists</h3>
+      <h2 id="lists" class="typography__h2 links__offset">Lists</h2>
       <p>
         See <a href="../#lists">using lists</a> for more information on appropriate uses for bulleted (unordered) and numbered
         (ordered) lists.
@@ -349,8 +349,8 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="alternative-text" class="typography__h3 links__offset">Alternative text</h3>
-      <h4 id="images" class="typography__h4 links__offset">Images</h4>
+      <h2 id="alternative-text" class="typography__h2 links__offset">Alternative text</h2>
+      <h3 id="images" class="typography__h3 links__offset">Images</h3>
       <p>
         <em><strong>If you insert an image into your document, it must have alternative text (alt-text) unless
         the graphic is purely decorative</strong> and does not add information to understand the content.</em>
@@ -436,7 +436,7 @@ disclaimer:
           </ul>
         </li>
       </ol>
-      <h4 id="tables" class="typography__h4 links__offset">Tables</h4>
+      <h3 id="tables" class="typography__h3 links__offset">Tables</h3>
       <p>
         <strong>Do not use a screenshot or picture of a table.</strong> Create it as content in the page.
         You can add alt text to tables, which can help screen reader users understand the table and its context.
@@ -494,7 +494,7 @@ disclaimer:
           </figure>
         </li>
       </ol>
-      <h4 id="charts-and-graphs" class="typography__h4 links__offset">Charts and graphs</h4>
+      <h3 id="charts-and-graphs" class="typography__h3 links__offset">Charts and graphs</h3>
       <p>
         The information contained in charts and graphs needs to be conveyed in a way that non-visual users can understand.
         Whenever possible, include a simple table underneath it containing the data.
@@ -532,7 +532,7 @@ disclaimer:
           a pie chart and the text box for adding alternative text.
         </figcaption>
       </figure>
-      <h4 id="other-graphics" class="typography__h4 links__offset">Other graphics</h4>
+      <h3 id="other-graphics" class="typography__h3 links__offset">Other graphics</h3>
       <p>
         Other forms of graphics like shapes, icons, 3D models, SmartArt, and charts require alternative text too.
       </p>
@@ -550,7 +550,7 @@ disclaimer:
           option when right-clicking a 3D Model.
         </figcaption>
       </figure>
-      <h4 id="grouped-graphics" class="typography__h4 links__offset">Grouped graphics</h4>
+      <h3 id="grouped-graphics" class="typography__h3 links__offset">Grouped graphics</h3>
       <p>
         If you use multiple icons, shapes, or other objects to create a single graphic (e.g. flow-chart or node map), it still needs alternative text.
         Since the various objects are used to create a single graphic, they need to be grouped so that you can add alt text to your design as a whole.
@@ -617,14 +617,14 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="table-headers" class="typography__h3 links__offset">Tables and table headers</h3>
+      <h2 id="table-headers" class="typography__h2 links__offset">Tables and table headers</h2>
       <p>
         It is important that tables in documents not be overly complex.
         Ideally, have a single header row and no merged cells anywhere.
         Empty cells should also be avoided — use values like <strong>n/a</strong> instead.
         If a table is too complex, you can usually break it up into multiple simple tables.
       </p>
-      <h4 id="header-row" class="typography__h4">Header row</h4>
+      <h3 id="header-row" class="typography__h3">Header row</h3>
       <p>To make sure your table has a header row:</p>
       <ol>
         <li>
@@ -658,7 +658,7 @@ disclaimer:
           </figure>
         </li>
       </ol>
-      <h4 id="header-col" class="typography__h4">Header column</h4>
+      <h3 id="header-col" class="typography__h3">Header column</h3>
       <p>A simple table can contain a header column as its first column. To add a header column:</p>
       <ol>
         <li>Click anywhere in the table and select the <strong>Table Design</strong> tab.</li>
@@ -682,7 +682,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="spacing" class="typography__h3 links__offset">Spacing</h3>
+      <h2 id="spacing" class="typography__h2 links__offset">Spacing</h2>
       <p>
         Improperly positioned text blocks in Microsoft Word using the <kbd>tab</kbd>, <kbd>spacebar</kbd>, and <kbd>enter</kbd>/<kbd>return</kbd> keys
         can cause screen readers to announce all the extra spacing characters. These keys are often used to adjust layouts by adding
@@ -729,7 +729,7 @@ disclaimer:
           <strong>Line and Paragraph Spacing</strong> tools.
         </figcaption>
       </figure>
-      <h4 id="spacing-horizontal" class="typography__h4 links__offset">Horizontal spacing (indentation)</h4>
+      <h3 id="spacing-horizontal" class="typography__h3 links__offset">Horizontal spacing (indentation)</h3>
       <p>
         To adjust horizontal spacing (to add or remove indentation):
       </p>
@@ -810,7 +810,7 @@ disclaimer:
           </figure>
         </li>
       </ol>
-      <h5 id="spacing-custom-indentation" class="typography__h5">Custom indentation</h5>
+      <h4 id="spacing-custom-indentation" class="typography__h4">Custom indentation</h4>
       <p>
         To customize the amount of indentation, use <strong>Line Spacing Options...</strong> in the
         <strong>Line and Paragraph Spacing</strong> dropdown:
@@ -852,7 +852,7 @@ disclaimer:
           </figure>
         </li>
       </ol>
-      <h4 id="spacing-vertical" class="typography__h4 links__offset">Vertical spacing</h4>
+      <h3 id="spacing-vertical" class="typography__h3 links__offset">Vertical spacing</h3>
       <p>
         You can adjust line and paragraph spacing using the tools in the <strong>Line and Paragraph Spacing</strong> (<img
           data-src="../../uploads/accessibility/accessibility-doc-creation_spacing-vertical.jpg"
@@ -863,7 +863,7 @@ disclaimer:
           alt="'Line and Paragraph Spacing' icon"
         >) dropdown.
       </p>
-      <h5 id="spacing-line" class="typography__h5 links__offset">Line spacing</h5>
+      <h4 id="spacing-line" class="typography__h4 links__offset">Line spacing</h4>
       <p>
         To adjust line spacing:
       </p>
@@ -891,7 +891,7 @@ disclaimer:
         The line spacing values adjust the line-height relative to the text-height.
         For example, <strong>2.0</strong> line spacing will make each line two-times the text height.
       </p>
-      <h5 id="spacing-paragraph" class="typography__h5 links__offset">Paragraph spacing</h5>
+      <h4 id="spacing-paragraph" class="typography__h4 links__offset">Paragraph spacing</h4>
       <p>To adjust paragraph spacing (i.e. the amount of space before and after paragraphs):</p>
       <ol>
         <li>Select the paragraph(s) you want to adjust and navigate to the <strong>Home</strong> tab and find the <strong>Paragraph</strong> panel.</li>
@@ -946,7 +946,7 @@ disclaimer:
           </ul>
         </li>
       </ol>
-      <h5 id="spacing-page-breaks" class="typography__h5">Page breaks</h5>
+      <h4 id="spacing-page-breaks" class="typography__h4">Page breaks</h4>
       <p>
         Page breaks should be added using Word's <strong>Page Break</strong> tool instead of the <kbd>enter</kbd>/<kbd>return</kbd> key.
       </p>
@@ -1008,9 +1008,9 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="document-properties" class="typography__h3 links__offset">Document properties</h3>
+      <h2 id="document-properties" class="typography__h2 links__offset">Document properties</h2>
       <p>For accessibility, Word documents need their title and language to be set in the document properties.</p>
-      <h4 id="title" class="typography__h4 links__offset">Title</h4>
+      <h3 id="title" class="typography__h3 links__offset">Title</h3>
       <p>
         Setting the document title is slightly different between Windows and macOS.
       </p>
@@ -1076,7 +1076,7 @@ disclaimer:
         </li>
         <li>Click <strong>OK</strong> to save the properties and close the box.</li>
       </ol>
-      <h4 id="language" class="typography__h4 links__offset">Language</h4>
+      <h3 id="language" class="typography__h3 links__offset">Language</h3>
       <p>
         Usually, Word will automatically detect the language of your document.
         If you are going to generate a PDF, the language should be set automatically.
@@ -1126,7 +1126,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="converting-to-pdf" class="typography__h3 links__offset">Converting to PDF</h3>
+      <h2 id="converting-to-pdf" class="typography__h2 links__offset">Converting to PDF</h2>
       <p>Use Word's <strong>Save As...</strong> dialog box once your document is ready to be made into a PDF file.</p>
       <ol>
         <li>
@@ -1180,7 +1180,7 @@ disclaimer:
         </li>
         <li>Use the <strong>Export</strong> button after you've selected the correct settings and specified the filename.</li>
       </ol>
-      <h4 id="dont-use-acrobat" class="typography__h4 links__offset">Don't use Acrobat</h4>
+      <h3 id="dont-use-acrobat" class="typography__h3 links__offset">Don't use Acrobat</h3>
       <p>
         Your installation of Word may have an <strong>Acrobat</strong> tab.
         The <strong>Create PDF</strong> tool takes you to the same save window mentioned above.
@@ -1243,7 +1243,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="templates" class="typography__h3 links__offset">Accessible templates</h3>
+      <h2 id="templates" class="typography__h2 links__offset">Accessible templates</h2>
       <p>
         Microsoft Word offers accessible templates that have the following:
       </p>
@@ -1258,7 +1258,7 @@ disclaimer:
       <p>
         You can find accessible templates online or in Microsoft Word.
       </p>
-      <h4 id="online" class="typography__h4 links__offset">Online</h4>
+      <h3 id="online" class="typography__h3 links__offset">Online</h3>
       <ol>
         <li>
           Go to <a href="https://create.microsoft.com/" class="links__launch" target="_blank" rel="noopener noreferrer">create.microsoft.com<span class="visually-hidden"> (opens in new tab/window)</span></a>
@@ -1267,7 +1267,7 @@ disclaimer:
           Search for "accessible templates"
         </li>
       </ol>
-      <h4 id="within-word" class="typography__h4 links__offset">Within Word</h4>
+      <h3 id="within-word" class="typography__h3 links__offset">Within Word</h3>
       <ol>
         <li>
           Go to <strong>File &gt; New</strong>.
@@ -1284,4 +1284,4 @@ disclaimer:
       <br>
     </div>
   </div>
-</main>
+</div>

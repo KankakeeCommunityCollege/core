@@ -6,7 +6,7 @@ core-alert-offset: true
 banner_image: /uploads/accessibility/accessibility-banner.jpg
 banner_alt_text: Icons
 ---
-<main id="content" class="container">
+<div class="container">
   <div class="row">
     <div class="col">
       {% include breadcrumbs.html %}
@@ -26,11 +26,11 @@ banner_alt_text: Icons
         </div>
           <br>
       {% endif %}
-      <h2 class="typography__h2">{{ page.title }}</h2>
+      <h1 class="typography__h1">{{ page.title }}</h1>
       <br>
       <hr>
       <br>
-      <h3 class="typography__h3 links__offset">KCC Accessibility Statement</h3>
+      <h2 class="typography__h2 links__offset">KCC Accessibility Statement</h2>
       <p>
         Accessibility supports our college mission and reflects our belief that all members of our campus community—students,
         employees, and visitors—should be able to participate fully.
@@ -48,7 +48,7 @@ banner_alt_text: Icons
         </a>, created by the World Wide Web Consortium. These standards guide how we design and maintain access across
         our websites, documents, learning platforms, social media, multimedia, and other digital spaces.
       </p>
-      <h4 class="typography__h4">What You Can Expect from Us</h4>
+      <h3 class="typography__h3">What You Can Expect from Us</h3>
       <ul>
         <li>We design digital materials that allow people using assistive technology to confidently engage with the college, prioritizing practical access.</li>
         <li>We apply <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">WCAG Standards</a> to our digital materials and regularly review content through structured accessibility checks.</li>
@@ -63,7 +63,7 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 class="typography__h3 links__offset">Contents</h3>
+      <h2 class="typography__h2 links__offset">Contents</h2>
       <ul>
         <li>
           <a href="#writing-text">Write accessible text</a>
@@ -99,8 +99,8 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="writing-text" class="typography__h3 links__offset">Write accessible text</h3>
-      <h4 id="readability" class="typography__h4 links__offset">Readability</h4>
+      <h2 id="writing-text" class="typography__h2 links__offset">Write accessible text</h2>
+      <h3 id="readability" class="typography__h3 links__offset">Readability</h3>
       <p>
         Text should be easy to understand for all users. Write so that people whose first language is not English
         or those with cognitive disabilities are able to understand. Avoid overly complex vocabulary and sentence structures.
@@ -130,7 +130,7 @@ banner_alt_text: Icons
         Another option is to prompt AI: “Rewrite this text so it's easy to understand for someone reading at a 9th-grade level
         or lower. Keep the original meaning and tone, and avoid complex vocabulary or sentence structures: (enter content)”
       </p>
-      <h4 id="abbreviations" class="typography__h4 links__offset">Avoid abbreviations</h4>
+      <h3 id="abbreviations" class="typography__h3 links__offset">Avoid abbreviations</h3>
       <p>
         Screen readers may not read abbreviations correctly. To ensure that all users understand the content, spell out the
         abbreviations the first time they are used, followed by the abbreviation in parentheses. For example:
@@ -163,7 +163,7 @@ banner_alt_text: Icons
           <p>Tuesday, January 13, 2025</p>
         </div>
       </div>
-      <h4 id="symbols" class="typography__h4 links__offset">Avoid symbols</h4>
+      <h3 id="symbols" class="typography__h3 links__offset">Avoid symbols</h3>
       <p>
         Avoid using symbols in your text when possible. Some screen readers may not read symbols correctly or will omit them, which can lead to
         confusion.
@@ -171,7 +171,7 @@ banner_alt_text: Icons
       <p>
         For example, "2024-2025" can be read as "2024 dash 2025” or "2024 2025" or "2024 to 2025" depending on the screen reader software used.
       </p>
-      <h4 class="typography__h4 links__offset">Convey information in multiple ways</h4>
+      <h3 class="typography__h3 links__offset">Convey information in multiple ways</h3>
       <p>
         People with visual impairments or color blindness may have difficulty understanding information conveyed only by color or shape.
         Where possible, include text to ensure the information is conveyed in multiple ways.
@@ -221,7 +221,7 @@ banner_alt_text: Icons
         The default settings in most software will usually have underlined links, so avoid modifying the styles to remove
         the underline.
       </p>
-      <h4 id="fonts" class="typography__h4 links__offset">Font selection</h4>
+      <h3 id="fonts" class="typography__h3 links__offset">Font selection</h3>
       <p>
         Small font sizes and cramped character and line spacing can make text difficult to read for those with 
         reading disabilities or vision impairments. Serif fonts can produce unnecessary visual clutter.
@@ -275,7 +275,7 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="headings" class="typography__h3 links__offset">Accessible structure using headings</h3>
+      <h2 id="headings" class="typography__h2 links__offset">Accessible structure using headings</h2>
       <p>
         Headings are used to create a logical structure for the content. They help organize the content and make it easier to
         navigate. Screen reader users can use headings to quickly jump to different sections of the content. It can help all users
@@ -353,13 +353,13 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="lists" class="typography__h3 links__offset">Using lists</h3>
+      <h2 id="lists" class="typography__h2 links__offset">Using lists</h2>
       <p>
         Lists are used to group related items together. They help break up large blocks of text and make it easier for users
         to scan the content. Use an unordered (bulleted) list when the order of items does not matter. Use an ordered (numbered)
         list when the order of items matters such as step-by-step instructions.
       </p>
-      <h4 id="unordered-lists" class="typography__h4 links__offset">Unordered lists</h4>
+      <h3 id="unordered-lists" class="typography__h3 links__offset">Unordered lists</h3>
       <div class="positioning__card--max-width-800 card border-danger mb-3">
         <div class="card-header text-bg-danger">
           <strong>Bad (should be an ordered list):</strong>
@@ -399,7 +399,7 @@ banner_alt_text: Icons
           </ul>
         </div>
       </div>
-      <h4 id="ordered-lists" class="typography__h4 links__offset">Ordered lists</h4>
+      <h3 id="ordered-lists" class="typography__h3 links__offset">Ordered lists</h3>
       <p>Baking instructions are a great example of when to use an ordered list. Nested ordered lists can be used to detail the steps further.</p>
       <div class="positioning__card--max-width-800 card border-success mb-3">
         <div class="card-header text-bg-success">
@@ -429,7 +429,7 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="hyperlinks" class="typography__h3 links__offset">Accessible hyperlink text</h3>
+      <h2 id="hyperlinks" class="typography__h2 links__offset">Accessible hyperlink text</h2>
       <p>
         A hyperlink, often just called a link, is a digital reference that allows a user to jump directly to another location,
         document, or resource. When creating hyperlinks, it is important to use descriptive link text that provides context about
@@ -497,7 +497,7 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="tables" class="typography__h3 links__offset">Create accessible tables</h3>
+      <h2 id="tables" class="typography__h2 links__offset">Create accessible tables</h2>
       <p>
         Tables can be difficult to understand for screen reader users if they are not created properly.
         When you cannot see a table and it's being announced auditorily, it's easy to get lost in
@@ -625,7 +625,7 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="alt-text" class="typography__h3 links__offset">Alternative text</h3>
+      <h2 id="alt-text" class="typography__h2 links__offset">Alternative text</h2>
       <p>
         Alternative text, also known as alt text, is a brief description of an image or graphic. It is used
         by screen readers to provide context for users who cannot see the image.
@@ -652,7 +652,7 @@ banner_alt_text: Icons
         If your graphic must contain text (for example a banner with a photo background and a text overlay), include
         it in the alt text.
       </p>
-      <h4 id="alt-text-images-functional" class="typography__h4 links__offset">Functional images</h4>
+      <h3 id="alt-text-images-functional" class="typography__h3 links__offset">Functional images</h3>
       <p>The alt text for a functional image should describe its purpose or function. A common example of a 
         functional images is a logo that acts as a link to a homepage. 
       </p>
@@ -752,7 +752,7 @@ banner_alt_text: Icons
           </div>
         </div>
       </div>
-      <h4 id="alt-text-images-informative" class="typography__h4 links__offset">Informative images</h4>
+      <h3 id="alt-text-images-informative" class="typography__h3 links__offset">Informative images</h3>
       <p>
         An informative image brings meaningful information to your content.
         Alt text for these types of images should be concise yet descriptive enough to convey what they are adding
@@ -784,7 +784,7 @@ banner_alt_text: Icons
         src="../assets/img/placeholder_16to9.jpg"
         class="img-fluid border mb-3"
         alt="Find a short-term class that works for you. Focus on one or more classes — and get it done!">
-      <h4 id="alt-text-decorative-images" class="typography__h4 links__offset">Decorative images</h4>
+      <h3 id="alt-text-decorative-images" class="typography__h3 links__offset">Decorative images</h3>
       <p>
         Decorative images do not convey meaningful information and are used purely for visual enhancement.
         A good rule-of-thumb for determining if your image is decorative is to ask yourself,
@@ -798,7 +798,7 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="color-contrast" class="typography__h3 links__offset">Use sufficient color contrast</h3>
+      <h2 id="color-contrast" class="typography__h2 links__offset">Use sufficient color contrast</h2>
       <p>
         Having sufficient color contrast is essential for readability and accessibility. If text does not
         provide enough contrast against its background, it can be difficult for users with color blindness or visual
@@ -833,13 +833,13 @@ banner_alt_text: Icons
       <br>
       <hr>
       <br>
-      <h3 id="accessible-documents" class="typography__h3 links__offset">Accessible documents</h3>
+      <h2 id="accessible-documents" class="typography__h2 links__offset">Accessible documents</h2>
       <p>Documents published online need to be accessible too. This includes Word<sup>&reg;</sup>, Excel<sup>&reg;</sup>, and PDF files.</p>
       <p><a href="./document-creation/">Learn how to create accessible documents</a>.</p>
       <br>
       <hr>
       <br>
-      <h3 id="accessibility-checkers" class="typography__h3 links__offset">Accessibility checkers and other resources</h3>
+      <h2 id="accessibility-checkers" class="typography__h2 links__offset">Accessibility checkers and other resources</h2>
       <p>
         Accessibility checker software, tools, and plugins can help you create accessible content. However, it is important to
         remember that these tools are not perfect and cannot catch all accessibility issues. Some accessibility concerns require
@@ -906,4 +906,4 @@ banner_alt_text: Icons
       </ul>
     </div>
   </div>
-</main>
+</div>
