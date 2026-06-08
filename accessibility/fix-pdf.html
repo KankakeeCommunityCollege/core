@@ -7,7 +7,7 @@ banner_image:
 banner_alt_text:
 disclaimer:
 ---
-<main id="content" class="container">
+<div class="container">
   <div class="row">
     <div class="col">
       {% include breadcrumbs-core.html %}
@@ -27,14 +27,14 @@ disclaimer:
         </div>
           <br>
       {% endif %}
-      <h2 class="typography__h2">{{ page.title }}</h2>
+      <h1 class="typography__h1">{{ page.title }}</h1>
       <br>
       <hr>
       <br>
       {% if page.disclaimer and page.disclaimer != '' %}
       <p><small>{{ page.disclaimer }}</small></p>
       {% endif %}
-      <h3 class="typography__h3">Overview</h3>
+      <h2 class="typography__h2">Overview</h2>
       <p>
         This guide explains how to fix accessibility issues in Adobe Acrobat.
         Ideally, the PDF was generated from an accessible source document (see <a href="../document-creation/">Creating accessible documents</a>).
@@ -43,7 +43,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 class="typography__h3">Contents</h3>
+      <h2 class="typography__h2">Contents</h2>
       <ul>
         <li><a href="#accessibility-checker">Accessibility Checker</a></li>
         <li><a href="#document-title">Document title</a></li>
@@ -62,7 +62,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="accessibility-checker" class="typography__h3 links__offset">Accessibility Checker</h3>
+      <h2 id="accessibility-checker" class="typography__h2 links__offset">Accessibility Checker</h2>
       <p>
         Acrobat has a built in <strong>Accessibility Checker</strong> which can help you find and fix issues.
         Some items (like color contrast) must be checked manually.
@@ -149,7 +149,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="document-title" class="typography__h3 links__offset">Document title</h3>
+      <h2 id="document-title" class="typography__h2 links__offset">Document title</h2>
       <p>
         A missing document title is one of the most common issues when evaluating PDF accessibility.
         The document title is what appears for users in search results. <em>The title should be unique.</em>
@@ -231,7 +231,7 @@ disclaimer:
       <br>
       <hr>
       <br>
-      <h3 id="document-language" class="typography__h3 links__offset">Document language</h3>
+      <h2 id="document-language" class="typography__h2 links__offset">Document language</h2>
       <p>PDF files also need a document language for accessibility.</p>
       <p>
         When creating a PDF from a Word document, it's best to add the document language in the source file.<br>
@@ -296,24 +296,24 @@ disclaimer:
       <hr>
       <br>
       {% comment %}
-      <h3 id="tagging-a-pdf-file" class="typography__h3 links__offset">Tagging a PDF file</h3>
+      <h2 id="tagging-a-pdf-file" class="typography__h2 links__offset">Tagging a PDF file</h2>
       <p>
         Tags represent the elements and structure of a document.
         They help screen readers interpret the document properly.
         Ideally, the source document was setup and exported correctly and your PDF already has tags (see <a href="../document-creation/">Creating accessible documents</a>).
         However, if you don't have access to the source document there are a couple of methods for tagging in Acrobat.
       </p>
-      <h4 id="autotag-document" class="typography__h4 links__offset">Autotag Document</h4>
+      <h3 id="autotag-document" class="typography__h3 links__offset">Autotag Document</h3>
       <p>
         Acrobat has an <strong>Autotag Document</strong> tool which does its best to identify and tag the various elements.
         You will need to check the tag structure and sometimes make adjustments.
       </p>
-      <h4 id="manual-tagging" class="typography__h4 links__offset">Manual tagging with the Reading Order tool</h4>
-      <h4 id="tags-panel" class="typography__h4 links__offset">Creating tags in the Tags panel</h4>
+      <h3 id="manual-tagging" class="typography__h3 links__offset">Manual tagging with the Reading Order tool</h3>
+      <h3 id="tags-panel" class="typography__h3 links__offset">Creating tags in the Tags panel</h3>
       <br>
       <hr>
       <br>
       {% endcomment %}
     </div>
   </div>
-</main>
+</div>

@@ -201,3 +201,13 @@
     margin-right: auto;
   }
 }
+
+.position__offset-core-nav {
+  margin-top: 99px
+}
+
+@media screen and (min-width: 992px) {
+  .position__offset-core-nav {
+    margin-top: 80px
+  }
+}
