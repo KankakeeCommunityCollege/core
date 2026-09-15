@@ -14,7 +14,7 @@ The Development of new KCC website is based off of designer mockups and uses ope
 
 You can find the kcc-gem-theme at <https://rubygems.org/gems/kcc-gem-theme> and on GitHub at <https://github.com/KankakeeCommunityCollege/kcc-gem-theme/>
 
-[![Gem Version](https://badge.fury.io/rb/kcc-gem-theme.svg)](https://badge.fury.io/rb/kcc-gem-theme)
+[![Gem Version](https://badge.fury.io/rb/kcc-gem-theme.svg?v=1)](https://badge.fury.io/rb/kcc-gem-theme)
 
 ***This README assumes you are using a modern macOS system***
 
