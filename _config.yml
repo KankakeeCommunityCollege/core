@@ -1,5 +1,6 @@
 title: "Kankakee Community College"
 site_name: KCC
+url: "https://www.kcc.edu"
 public-url: "https://www.kcc.edu"
 canonical_baseurl: https://www.kcc.edu # NO trailing slash ## Used to build canonical link elements in document head
 port: 3000
@@ -19,8 +20,6 @@ collections:
   contacts:
     output: false
 permalink: pretty
-description: > # this means to ignore newlines until "baseurl:"
-# Delete this comment and place description on this line
 baseurl: "" # the subpath of your site, e.g. /blog
 # include:
 #   - "_pages"
@@ -55,6 +54,35 @@ exclude:
   - "look-for-string-in-project-files.mjs"
 
 uploads_dir: "uploads/" # specifies the default uploads directory for CloudCannon
+
+_inputs:
+  homepage:
+    hidden: true
+  schema_json_partial:
+    hidden: true
+  layout:
+    hidden: true
+  baseurl:
+    hidden: true
+  social_title:
+    type: text
+    label: Custom Social Title
+    comment: "Overrides the page title when shared on Facebook, X, LinkedIn, etc."
+  social_description:
+    type: textarea
+    label: Custom Social Description
+    comment: "Overrides the standard page description for social sharing cards."
+  social_image:
+    type: image
+    label: Social Sharing Image
+    comment: "Upload a custom 1200x630px image for social media previews."
+    context:
+      open: false
+      title: Social Image Help
+      icon: help
+      content: |-
+        Ideal image size is 1200×630px.
+        Keep logos and text inside a 100px inner margin to avoid mobile cropping.
 
 _comments: # Custom hjelper comments/descriptions for CloudCannon
   layout: Do NOT modify layouts. It may break things.
