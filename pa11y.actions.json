@@ -1,7 +1,7 @@
 {
   "wait": 3000,
   "timeout": 120000,
-  "hideElements": "table.gstl_50.gssb_c, div.pathways__heading-wrapper h3, #complexTable",
+  "hideElements": "table.gstl_50.gssb_c, div.pathways__heading-wrapper h3, #complexTable, .facts.bg-light .nav-link",
   "chromeLaunchConfig": {
     "args": [
       "--no-sandbox"
