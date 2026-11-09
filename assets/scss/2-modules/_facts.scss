@@ -1,0 +1,47 @@
+@use '../0-tools/vars' as *;
+
+.facts {
+  border-top: 5px solid $color-kcc-blue;
+  padding: 1.5rem;
+  // height: 100%; Use BS5 `.h-100` instead!
+}
+
+// links in the .facts panel with .bg-light need to be darker for WCAG 2.1 AA contrast
+.facts.bg-light a {
+  color: #0267fd;
+}
+
+// .facts .nav-link.active {
+//   border-bottom: solid 5px #c61f48;
+//   // --underline-offset: 30px;
+//   // background-color: #c61f48;
+//   // bottom: 6px;
+//   // content: "";
+//   // display: block;
+//   // height: .225rem;
+//   // position: absolute;
+//   // width: calc(100% - var(--underline-offset));
+// }
+
+// @media screen and (min-width: 992px) {
+//   .facts .nav-link.active::after {
+//     --underline-offset: 20px;
+//   }
+// }
+
+.facts__label {
+  font-size: .82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: $color-kcc-blue;
+}
+
+.facts__value {
+  font-size: 1.05rem;
+  margin-bottom: 1.15rem;
+}
+
+.facts .nav-link.active::before {
+  content: "› ";
+}

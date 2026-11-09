@@ -1,5 +1,5 @@
 ---
-title: 'Creating accessible documents'
+title: 'Creating Accessible Documents'
 layout: default-core
 baseurl: '../../'
 core-alert-offset: true
@@ -27,126 +27,168 @@ disclaimer:
         </div>
           <br>
       {% endif %}
-      <h1 class="typography__h1">{{ page.title }}</h1>
-      <br>
-      <hr>
-      <br>
-      {% if page.disclaimer and page.disclaimer != '' %}
-      <p><small>{{ page.disclaimer }}</small></p>
-      {% endif %}
-      <h2 class="typography__h2">Overview</h2>
-      <p>
-        This guide explains how to make accessible Microsoft Word documents and PDF files.
-        To generate accessible PDF files from Word, the Word document needs to be accessible.
-      </p>
-      <p>
-        Most people are in the habit of formatting their documents visually instead of semantically. By making simple changes
-        like using the built-in heading, list, and other styles, your document will be much more accessible. Changing habits
-        like using the <kbd>enter</kbd>/<kbd>return</kbd> key instead of adjusting the line and paragraph
-        spacing means your document can be easier for everyone to use.
-      </p>
-      <p>
-        If all you have is a PDF and not the source file used to create it you can fix many accessibility issues in Acrobat.<br>
-        <a href="../fix-pdf/">Learn how to fix PDF accessibility issues in Acrobat</a>.
-      </p>
-      <br>
-      <hr>
-      <br>
-      <h2 class="typography__h2">Contents</h2>
-      <ul>
-        <li>
-          <a href="#styles">Styles</a>
-          <ul>
-            <li><a href="#modify-heading-styles">Modify heading styles</a></li>
-          </ul>
-        </li>
-        <li><a href="#headings">Headings</a></li>
-        <li><a href="#hyperlinks">Hyperlinks</a></li>
-        <li><a href="#lists">Lists</a></li>
-        <li>
-          <a href="#alternative-text">Alternative text</a>
-          <ul>
-            <li><a href="#images">Images</a></li>
-            <li><a href="#tables">Tables</a></li>
-            <li><a href="#charts-and-graphs">Charts and graphs</a></li>
-            <li><a href="#other-graphics">Other graphics</a></li>
-            <li><a href="#grouped-graphics">Grouped graphics</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#table-headers">Tables and table headers</a>
-          <ul>
-            <li><a href="#header-row">Header row</a></li>
-            <li><a href="#header-col">Header column</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#spacing">Spacing</a>
-          <ul>
-            <li>
-              <a href="#spacing-horizontal">Horizontal spacing (indentation)</a>
-              <ul>
-                <li><a href="#spacing-custom-indentation">Custom indentation</a></li>
+
+      <div class="row">
+
+        <div class="col-12 col-lg-4 order-1 order-lg-2 mb-3">
+          <nav aria-labelledby="in-this-section">
+            <div class="facts bg-light shadow-sm">
+              <h2 id="in-this-section" class="typography__h2">In This Section</h2>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0 py-2 fw-bold" href="../">Accessibility</a>
+                  <ul class="nav flex-column ps-3 border-start ms-2 my-1">
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#writing-text">Write accessible text</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#headings">Accessible structure using headings</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#lists">Using lists</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#hyperlinks">Accessible hyperlink text</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#tables">Create accessible tables</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#alt-text">Alternative text</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#color-contrast">Use sufficient color contrast</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#accessible-documents">Accessible documents</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../#accessibility-checkers">Accessibility checkers and other resources</a>
+                    </li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item">
+                  <a aria-current="page" class="nav-link px-0 py-2 fw-bold active" href="./">Creating Accessible Documents</a>
+                  <ul class="nav flex-column ps-3 border-start ms-2 my-1">
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#styles">Styles</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#headings">Headings</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#hyperlinks">Hyperlinks</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#lists">Lists</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#alternative-text">Alternative text</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#table-headers">Tables and table headers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#spacing">Spacing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#document-properties">Document properties</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#converting-to-pdf">Converting to PDF</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="#templates">Accessible templates</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-0 py-2 fw-bold" href="../fix-pdf/">PDF Accessibility in Acrobat</a>
+                  <ul class="nav flex-column ps-3 border-start ms-2 my-1">
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#accessibility-checker">Accessibility Checker</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#document-title">Document title</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#document-language">Document language</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-0 py-2 fw-bold" href="../feedback/">Digital Accessibility Feedback Form</a>
+                </li>
+
               </ul>
-            </li>
-            <li>
-              <a href="#spacing-vertical">Vertical spacing</a>
-              <ul>
-                <li><a href="#spacing-line">Line spacing</a></li>
-                <li><a href="#spacing-paragraph">Paragraph spacing</a></li>
-                <li><a href="#spacing-page-breaks">Page breaks</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#document-properties">Document properties</a>
-          <ul>
-            <li><a href="#title">Title</a></li>
-            <li><a href="#language">Language</a></li>
-          </ul>
-        </li>
-        <li><a href="#converting-to-pdf">Converting to PDF</a></li>
-        <li>
-          <a href="#templates">Accessible templates</a>
-          <ul>
-            <li><a href="#online">Online</a></li>
-            <li><a href="#within-word">Within Word</a></li>
-          </ul>
-        </li>
-      </ul>
-      <br>
-      <hr>
-      <br>
-      <h2 id="styles" class="typography__h2 links__offset">Styles</h2>
-      <p>
-        Microsoft Word offers built-in styles to add headings, paragraphs, quotes and other elements. These styles are semantic and not just visual.
-        They tell screen readers that the text or element has a specific function.
-      </p>
-      <p>
-        Do not create everything as normal text and then increase font-size, boldness and/or change the font-family to make it look like a heading.
-        Instead, use Word's predefined heading and other styles. If these styles don't have the look you want,
-        create your own styles and/or modify existing ones. You cannot create new heading styles, but you can modify the existing ones.
-      </p>
-      <div class="text-center">
-        <figure class="figure">
-          <img
-            data-src="../../uploads/accessibility/accessibility-doc-creation_word-styles.jpg"
-            src="../../assets/img/placeholder_16to9.jpg"
-            class="img-fluid figure__img"
-            height="257"
-            width="800"
-            alt="Screenshot of a Word document on the 'Home' tab with a green rectangle highlighting the 'Styles' panel">
-          <figcaption class="figure__figcaption">Screenshot showing the <strong>Styles</strong> panel of the <strong>Home</strong> tab.</figcaption>
-        </figure>
+            </div>
+          </nav>
+        </div>
+
+        <div class="col-12 col-lg-8 order-2 order-lg-1">
+          <h1 class="typography__h1 mt-3">{{ page.title }}</h1>
+          <br>
+          <hr>
+          <br>
+          {% if page.disclaimer and page.disclaimer != '' %}
+          <p><small>{{ page.disclaimer }}</small></p>
+          {% endif %}
+          <h2 class="typography__h2">Overview</h2>
+          <p>
+            This guide explains how to make accessible Microsoft Word documents and PDF files.
+            To generate accessible PDF files from Word, the Word document needs to be accessible.
+          </p>
+          <p>
+            Most people are in the habit of formatting their documents visually instead of semantically. By making simple changes
+            like using the built-in heading, list, and other styles, your document will be much more accessible. Changing habits
+            like using the <kbd>enter</kbd>/<kbd>return</kbd> key instead of adjusting the line and paragraph
+            spacing means your document can be easier for everyone to use.
+          </p>
+          <p>
+            If all you have is a PDF and not the source file used to create it you can fix many accessibility issues in Acrobat.<br>
+            <a href="../fix-pdf/">Learn how to fix PDF accessibility issues in Acrobat</a>.
+          </p>
+          <br>
+          <hr>
+          <br>
+
+          <h2 id="styles" class="typography__h2 links__offset">Styles</h2>
+          <p>
+            Microsoft Word offers built-in styles to add headings, paragraphs, quotes and other elements. These styles are semantic and not just visual.
+            They tell screen readers that the text or element has a specific function.
+          </p>
+          <p>
+            Do not create everything as normal text and then increase font-size, boldness and/or change the font-family to make it look like a heading.
+            Instead, use Word's predefined heading and other styles. If these styles don't have the look you want,
+            create your own styles and/or modify existing ones. You cannot create new heading styles, but you can modify the existing ones.
+          </p>
+          <div class="text-center">
+            <figure class="figure">
+              <img
+                data-src="../../uploads/accessibility/accessibility-doc-creation_word-styles.jpg"
+                src="../../assets/img/placeholder_16to9.jpg"
+                class="img-fluid figure__img"
+                height="257"
+                width="800"
+                alt="Screenshot of a Word document on the 'Home' tab with a green rectangle highlighting the 'Styles' panel">
+              <figcaption class="figure__figcaption">Screenshot showing the <strong>Styles</strong> panel of the <strong>Home</strong> tab.</figcaption>
+            </figure>
+          </div>
+          <p>
+            To apply heading (or other) styles:
+          </p>
+          <ol>
+            <li>Select the text.</li>
+            <li>From the <strong>Home</strong> tab, in the <strong>Styles</strong> panel, select the heading (or other style) to apply.</li>
+          </ol>
+        </div>
+
       </div>
-      <p>
-        To apply heading (or other) styles:
-      </p>
-      <ol>
-        <li>Select the text.</li>
-        <li>From the <strong>Home</strong> tab, in the <strong>Styles</strong> panel, select the heading (or other style) to apply.</li>
-      </ol>
+
+      
       <h3 id="modify-heading-styles" class="typography__h3 links__offset">Modify heading styles</h3>
       <ol>
         <li>
