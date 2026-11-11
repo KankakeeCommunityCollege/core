@@ -2,3 +2,49 @@
 .lists--lower-alpha {
   list-style-type: lower-alpha;
 }
+
+.lists__checklist {
+  list-style: none;
+  // padding: 0;
+  // margin: 0;
+}
+
+.lists__checklist li {
+  position: relative;
+  /* Space for the checkbox plus a clean gap */
+  padding-left: 1.75em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+/* Unchecked state pseudo-checkbox */
+.lists__checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  /* Perfectly centers a 1em box within a 1.5em line-height: (1.5 - 1) / 2 = 0.25em */
+  top: 0.25em;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #9ca3af;
+  border-radius: 0.25em;
+  background-color: #fff;
+}
+
+.lists__checklist li.lists__checklist--completed::before {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Checkmark glyph centered inside the 1em box */
+.lists__checklist li.lists__checklist--completed::after {
+  content: '';
+  position: absolute;
+  left: 0.35em;
+  top: 0.375em;
+  width: 0.3em;
+  height: 0.6em;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
