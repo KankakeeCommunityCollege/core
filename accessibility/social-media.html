@@ -28,373 +28,368 @@ disclaimer:
           <br>
       {% endif %}
 
-      <div class="row">
+      <div class="col-12 col-lg-4 float-none float-lg-end ms-lg-4 mb-3">
+        <nav aria-labelledby="in-this-section">
+          <div class="facts bg-light shadow-sm">
+            <h2 id="in-this-section" class="typography__h2">In This Section</h2>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link px-0 py-2 fw-bold" href="../">Accessibility</a>
+                <ul class="nav flex-column ps-3 border-start ms-2 my-1">
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#writing-text">Write accessible text</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#headings">Accessible structure using headings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#lists">Using lists</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#hyperlinks">Accessible hyperlink text</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#tables">Create accessible tables</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#alt-text">Alternative text</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#color-contrast">Use sufficient color contrast</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#accessible-documents">Accessible documents</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../#accessibility-checkers">Accessibility checkers and other resources</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link px-0 py-2 fw-bold" href="../document-creation/">Creating Accessible Documents</a>
+                <ul class="nav flex-column ps-3 border-start ms-2 my-1">
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#styles">Styles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#headings">Headings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#hyperlinks">Hyperlinks</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#lists">Lists</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#alternative-text">Alternative text</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#table-headers">Tables and table headers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#spacing">Spacing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#document-properties">Document properties</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#converting-to-pdf">Converting to PDF</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#templates">Accessible templates</a>
+                  </li>
+                </ul>
+              </li>
 
-        <div class="col-12 col-lg-4 order-1 order-lg-2 mb-3">
-          <nav aria-labelledby="in-this-section">
-            <div class="facts bg-light shadow-sm">
-              <h2 id="in-this-section" class="typography__h2">In This Section</h2>
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-2 fw-bold" href="../">Accessibility</a>
-                  <ul class="nav flex-column ps-3 border-start ms-2 my-1">
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#writing-text">Write accessible text</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#headings">Accessible structure using headings</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#lists">Using lists</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#hyperlinks">Accessible hyperlink text</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#tables">Create accessible tables</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#alt-text">Alternative text</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#color-contrast">Use sufficient color contrast</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#accessible-documents">Accessible documents</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../#accessibility-checkers">Accessibility checkers and other resources</a>
-                    </li>
-                  </ul>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-2 fw-bold" href="../document-creation/">Creating Accessible Documents</a>
-                  <ul class="nav flex-column ps-3 border-start ms-2 my-1">
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#styles">Styles</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#headings">Headings</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#hyperlinks">Hyperlinks</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#lists">Lists</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#alternative-text">Alternative text</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#table-headers">Tables and table headers</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#spacing">Spacing</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#document-properties">Document properties</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#converting-to-pdf">Converting to PDF</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../document-creation/#templates">Accessible templates</a>
-                    </li>
-                  </ul>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link px-0 py-2 fw-bold" href="../fix-pdf/">PDF Accessibility in Acrobat</a>
+                <ul class="nav flex-column ps-3 border-start ms-2 my-1">
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#accessibility-checker">Accessibility Checker</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#document-title">Document title</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#document-language">Document language</a>
+                  </li>
+                </ul>
+              </li>
 
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-2 fw-bold" href="../fix-pdf/">PDF Accessibility in Acrobat</a>
-                  <ul class="nav flex-column ps-3 border-start ms-2 my-1">
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#accessibility-checker">Accessibility Checker</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#document-title">Document title</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="../fix-pdf/#document-language">Document language</a>
-                    </li>
-                  </ul>
-                </li>
+              <li class="nav-item">
+                <a aria-current="true" class="nav-link px-0 py-2 fw-bold active" href="./">Social Media Accessibility</a>
+                <ul class="nav flex-column ps-3 border-start ms-2 my-1">
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="#all-platforms">Core Accessibility Guidelines (All&nbsp;Platforms)</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="#platform-specific">Platform-Specific Implementation</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0 py-1 text-muted" href="#checklist">Pre-Publishing Checklist</a>
+                  </li>
+                </ul>
+              </li>
 
-                <li class="nav-item">
-                  <a aria-current="true" class="nav-link px-0 py-2 fw-bold active" href="./">Social Media Accessibility</a>
-                  <ul class="nav flex-column ps-3 border-start ms-2 my-1">
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="#all-platforms">Core Accessibility Guidelines (All&nbsp;Platforms)</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="#platform-specific">Platform-Specific Implementation</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link px-0 py-1 text-muted" href="#checklist">Pre-Publishing Checklist</a>
-                    </li>
-                  </ul>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link px-0 py-2 fw-bold" href="../feedback/">Digital Accessibility Feedback Form</a>
+              </li>
 
-                <li class="nav-item">
-                  <a class="nav-link px-0 py-2 fw-bold" href="../feedback/">Digital Accessibility Feedback Form</a>
-                </li>
-
-              </ul>
-            </div>
-          </nav>
-        </div>
-
-        <div class="col-12 col-lg-8 order-2 order-lg-1">
-          <h1 class="typography__h1">{{ page.title }}</h1>
-          <br>
-          <hr>
-          <br>
-          {% if page.disclaimer and page.disclaimer != '' %}
-          <p><small>{{ page.disclaimer }}</small></p>
-          {% endif %}
-          <p>
-            As a community college, our institutional digital communications must comply with <strong>ADA Title II digital
-            accessibility standards</strong> by meeting <strong>WCAG 2.1 Level AA</strong>.
-          </p>
-          <p class="mb-1">
-            This requirement applies to all college-affiliated accounts including:
-          </p>
-          <ul>
-            <li>official institutional channels</li>
-            <li>academic department pages</li>
-            <li>faculty-run accounts for courses or programs</li>
-            <li>athletic teams</li>
-            <li>student organization profiles</li>
-            <li>any social media presence used to communicate with students, community members, or the general public.</li>
-          </ul>
-          <p>
-            Because native social media applications have platform-specific accessibility
-            constraints, content creators must follow these guidelines to ensure public communications are equitable and fully
-            accessible to individuals who rely on screen readers, captions, high-contrast visuals, or keyboard navigation.
-          </p>
-          <h2 id="all-platforms" class="typography__h2">Core Accessibility Guidelines (All Platforms)</h2>
-          <h3 class="typography__h3">Alternative Text (Alt Text) for Images</h3>
-          <p>
-            Images must convey the same information to screen reader users as they do to sighted users
-            (<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank" rel="noopener noreferrer">
-             WCAG 2.1 SC 1.1.1 Non-Text Content
-            </a>).
-          </p>
-          <ul>
-            <li>
-              <strong>Describe the Information, Not Just the Scene:</strong><br>
-              Focus on the intent of the image.
-              Include essential details such as text embedded in the image, key actions, or critical context.
-            </li>
-            <li>
-              <strong>Avoid Redundancy:</strong><br>
-              Do not start descriptions with "Image of..." or "Photo of..."
-              Screen readers already announce the presence of a graphic.
-            </li>
-            <li>
-              <strong>Decorative Graphics:</strong><br>
-              If an image is purely decorative and carries no unique
-              informational value, mark it as decorative in the platform settings or leave the alt text blank
-              if the platform allows (do not type "decorative").
-            </li>
-            <li>
-              <strong>Text in Images:</strong><br>
-              Avoid images that only consist of text (e.g., a photo of a printed
-              paper flyer). If text must be embedded in an image, the exact text must be duplicated in either the
-              alt text or the post's main caption body.
-            </li>
-          </ul>
-          <h3 class="typography__h3">Video & Audio Accessibility</h3>
-          <p>
-            All video and audio content must be accessible to users who are deaf, hard of hearing,
-            blind, or have low vision.
-          </p>
-          <ul>
-            <li>
-              <strong>Video Captions:</strong>
-              <ul>
-                <li>
-                  <strong>Prerecorded Video Captions</strong> (<a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 SC 1.2.2</a>):<br>
-                  Every pre-edited video containing spoken audio or essential sound effects must have accurate, synchronized closed captions before it is published.
-                </li>
-                <li>
-                  <strong>Audit Automated Captions:</strong><br>
-                  Platform-generated captions (such as YouTube, Instagram, or TikTok
-                  auto-captions) fail compliance standards out-of-the-box due to errors in punctuation, proper nouns, and technical
-                  terminology. Always review and edit automated captions for 100% accuracy.
-                </li>
-                <li>
-                  <strong>Livestreamed Video Captions</strong> (<a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 SC 1.2.4</a>):<br>
-                  Real-time broadcasts (such as live-streamed commencement ceremonies, board meetings, or campus announcements) must have live closed captions enabled (e.g., using
-                  CART captioning services or platform live-captioning features).
-                </li>
-                <li>
-                  <strong>Archived Livestreams:</strong><br>
-                  Once a live stream ends and is saved to a channel as a permanent video post, it
-                  becomes "prerecorded media." The recorded video's captions must be audited and corrected for accuracy if the
-                  auto-generated live captions contained errors or&nbsp;gaps.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Audio-Only Content</strong>
-              (<a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 SC 1.2.1</a>):<br>
-              Any audio-only media (such as podcasts or recorded voice interviews) must include a full text transcript published in the caption, post body, or linked landing page.
-            </li>
-            <li>
-              <strong>Visual Context & Audio Descriptions:</strong><br>
-              Ensure your video's spoken narrative explains key visual details (e.g., reading aloud text appearing on screen or describing physical demonstrations) so visually impaired users do not miss critical context.
-            </li>
-          </ul>
-          <h3 class="typography__h3">Copy, Formatting, and Hashtags</h3>
-          <p>
-            Text content must remain readable by screen readers and text-to-speech engine parsers.
-          </p>
-          <ul>
-            <li>
-              <strong>CamelCase for Hashtags:</strong><br>
-              Always capitalize the first letter of each word in a hashtag (e.g., #KankakeeCommunityCollege,
-              #FinancialAidDeadline). This allows screen readers to synthesize individual words rather than pronouncing the hashtag as
-              an unreadable string of letters.
-            </li>
-            <li>
-              <strong>Avoid Custom Fancy Unicode Fonts:</strong><br>
-              Do not use third-party font generators (e.g., converting text into mathematical bold
-              or script Unicode characters like 𝓯𝓪𝓷𝓬𝔂 𝓽𝓮𝓯𝓽). Screen readers read these characters as obscure Unicode
-              mathematical symbols or skip them entirely.
-            </li>
-            <li>
-              <strong>Limit Emojis & Place Them at the End:</strong><br>
-              Emojis are read aloud by screen readers using their underlying text descriptions
-              (e.g., 👏 is read as "Clapping Hands"). Never substitute words with emojis, do not repeat more than two emojis in a row,
-              and place emojis at the end of captions rather than mid-sentence.
-            </li>
-            <li>
-              <strong>Plain Language & Formatting:</strong><br>
-              Write in clear, concise language. Break up large blocks of text with line returns.
-            </li>
-          </ul>
-          <h3 class="typography__h3">Hyperlinks & Destinations</h3>
-          <ul>
-            <li>
-              <strong>Descriptive Call to Action:</strong><br>
-              Avoid vague link text like "Click Here" or bare short-links without context. Ensure the post
-              copy clearly states the destination (e.g., "View the academic calendar at kcc.edu/calendar").
-            </li>
-            <li>
-              <strong>Accessible Landing Pages:</strong><br>
-              Never link a social media post to an inaccessible destination. Any linked web page or PDF
-              document must also fully comply with WCAG 2.1 AA standards.
-            </li>
-          </ul>
-          <br>
-          <hr>
-          <br>
-          <h2 id="platform-specific" class="typography__h2">Platform-Specific Implementation</h2>
-          <h3 class="typography__h3">Meta Platforms (Facebook & Instagram)</h3>
-          <div class="table-responsive">
-            <table class="table table-striped table-hover">
-              <thead>
-                <tr>
-                  <th>Feature</th>
-                  <th>Facebook Guidance</th>
-                  <th>Instagram Guidance</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Alt Text</th>
-                  <td>
-                    Automatically generated alt text is insufficient. Edit the alt text prior to posting via
-                    <em>Edit Photo &gt; Alt Text</em>, or update existing posts via the ... options menu.
-                  </td>
-                  <td>
-                    Access alt text during post creation under
-                    <strong>Advanced Settings &gt; Write Alt Text</strong>. For existing posts, tap <em>Edit &gt; Edit Alt Text</em>.
-                  </td>
-                </tr>
-                <tr>
-                  <th>Stories & Reels</th>
-                  <td>
-                    Add closed captions using the native Captions sticker. Review the generated text for accuracy before
-                    publishing. Ensure overlay text doesn't overlap native UI elements.
-                  </td>
-                  <td>
-                    Use the native Captions sticker for Reels/Stories.
-                    Edit incorrect words directly in the sticker interface prior to posting.
-                  </td>
-                </tr>
-                <tr>
-                  <th>Link Placement</th>
-                  <td>Hyperlinks in post copy are functional. Keep URLs clean and descriptive.</td>
-                  <td>Post copy does not support active links. Direct users to the "link in bio".</td>
-                </tr>
-              </tbody>
-            </table>
-            <h3 class="typography__h3">X (formerly Twitter)</h3>
-            <ul>
-              <li>
-                <strong>Adding Alt Text:</strong><br>
-                Click Edit on an attached image, then select the ALT tab to enter a detailed description (up to 1,000
-                characters).
-              </li>
-              <li>
-                <strong>Character Constraints:</strong><br>
-                Due to character limits, if an image contains extensive text, put the essential summary in the
-                alt text field and host the full text on an accessible college web page linked in the tweet.
-              </li>
-              <li>
-                <strong>Video Captions:</strong><br>
-                Upload .srt caption files directly within the Media Studio publisher or enable and edit automatic
-                captions before publishing.
-              </li>
-            </ul>
-            <h3 class="typography__h3">YouTube</h3>
-            <ul>
-              <li>
-                <strong>Closed Captions (CC):</strong><br>
-                Do not rely solely on YouTube’s automatic speech-recognition captions. Go into
-                <strong>YouTube Studio &gt; Subtitles</strong>, select the video language, and manually edit the auto-generated
-                transcript for accuracy, capitalization, and punctuation.
-              </li>
-              <li>
-                <strong>Video Descriptions:</strong><br>
-                Include a comprehensive video description, relevant timestamps for navigation, and links to
-                accessible transcript files if the video contains visual-only content.
-              </li>
-              <li>
-                <strong>Title & Thumbnail:</strong><br>
-                Thumbnails containing text must have that text duplicated in the video title or the top two lines of
-                the video description.
-              </li>
-            </ul>
-            <h3 class="typography__h3">LinkedIn</h3>
-            <ul>
-              <li>
-                <strong>Image Alt Text:</strong><br>
-                Select <strong>Add alt text</strong> below the uploaded image preview before publishing (up to 4,000 characters).
-              </li>
-              <li>
-                <strong>Document/PDF Uploads:</strong><br>
-                When uploading multi-page slide decks or PDFs as carousel posts, ensure the source document is a
-                fully tagged, accessible PDF created to WCAG 2.1 AA standards.
-              </li>
-            </ul>
-            <br>
-            <hr>
-            <br>
-            <h2 id="checklist" class="typography__h2">Pre-Publishing Checklist</h2>
-            <ul class="lists__checklist">
-              <li class="lists__checklist--completed"><strong>Images:</strong> Custom Alt Text added to all informative graphics; text in images duplicated in caption copy.</li>
-              <li class="lists__checklist--completed"><strong>Video/Audio:</strong> Accurate, synchronized captions verified (not unedited auto-captions).</li>
-              <li class="lists__checklist--completed"><strong>Hashtags:</strong> Formatted in #CamelCase.</li>
-              <li class="lists__checklist--completed"><strong>Text Styling:</strong> No third-party Unicode fancy fonts used.</li>
-              <li class="lists__checklist--completed"><strong>Emojis:</strong> Kept minimal (1–2 max) and placed at the end of sentences/posts.</li>
-              <li class="lists__checklist--completed"><strong>Links:</strong> Destination web pages and attached PDFs meet WCAG 2.1 Level AA compliance.</li>
             </ul>
           </div>
-        </div>
+        </nav>
       </div>
-    
+
+      <h1 class="typography__h1">{{ page.title }}</h1>
+      <br>
+      <hr>
+      <br>
+      {% if page.disclaimer and page.disclaimer != '' %}
+      <p><small>{{ page.disclaimer }}</small></p>
+      {% endif %}
+      <p>
+        As a community college, our institutional digital communications must comply with <strong>ADA Title II digital
+        accessibility standards</strong> by meeting <strong>WCAG 2.1 Level AA</strong>.
+      </p>
+      <p class="mb-1">
+        This requirement applies to all college-affiliated accounts including:
+      </p>
+      <ul>
+        <li>official institutional channels</li>
+        <li>academic department pages</li>
+        <li>faculty-run accounts for courses or programs</li>
+        <li>athletic teams</li>
+        <li>student organization profiles</li>
+        <li>any social media presence used to communicate with students, community members, or the general public.</li>
+      </ul>
+      <p>
+        Because native social media applications have platform-specific accessibility
+        constraints, content creators must follow these guidelines to ensure public communications are equitable and fully
+        accessible to individuals who rely on screen readers, captions, high-contrast visuals, or keyboard navigation.
+      </p>
+      <h2 id="all-platforms" class="typography__h2">Core Accessibility Guidelines (All Platforms)</h2>
+      <h3 class="typography__h3">Alternative Text (Alt Text) for Images</h3>
+      <p>
+        Images must convey the same information to screen reader users as they do to sighted users
+        (<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank" rel="noopener noreferrer">
+          WCAG 2.1 SC 1.1.1 Non-Text Content
+        </a>).
+      </p>
+      <ul>
+        <li>
+          <strong>Describe the Information, Not Just the Scene:</strong><br>
+          Focus on the intent of the image.
+          Include essential details such as text embedded in the image, key actions, or critical context.
+        </li>
+        <li>
+          <strong>Avoid Redundancy:</strong><br>
+          Do not start descriptions with "Image of..." or "Photo of..."
+          Screen readers already announce the presence of a graphic.
+        </li>
+        <li>
+          <strong>Decorative Graphics:</strong><br>
+          If an image is purely decorative and carries no unique
+          informational value, mark it as decorative in the platform settings or leave the alt text blank
+          if the platform allows (do not type "decorative").
+        </li>
+        <li>
+          <strong>Text in Images:</strong><br>
+          Avoid images that only consist of text (e.g., a photo of a printed
+          paper flyer). If text must be embedded in an image, the exact text must be duplicated in either the
+          alt text or the post's main caption body.
+        </li>
+      </ul>
+      <h3 class="typography__h3">Video & Audio Accessibility</h3>
+      <p>
+        All video and audio content must be accessible to users who are deaf, hard of hearing,
+        blind, or have low vision.
+      </p>
+      <ul>
+        <li>
+          <strong>Video Captions:</strong>
+          <ul>
+            <li>
+              <strong>Prerecorded Video Captions</strong> (<a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 SC 1.2.2</a>):<br>
+              Every pre-edited video containing spoken audio or essential sound effects must have accurate, synchronized closed captions before it is published.
+            </li>
+            <li>
+              <strong>Audit Automated Captions:</strong><br>
+              Platform-generated captions (such as YouTube, Instagram, or TikTok
+              auto-captions) fail compliance standards out-of-the-box due to errors in punctuation, proper nouns, and technical
+              terminology. Always review and edit automated captions for 100% accuracy.
+            </li>
+            <li>
+              <strong>Livestreamed Video Captions</strong> (<a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 SC 1.2.4</a>):<br>
+              Real-time broadcasts (such as live-streamed commencement ceremonies, board meetings, or campus announcements) must have live closed captions enabled (e.g., using
+              CART captioning services or platform live-captioning features).
+            </li>
+            <li>
+              <strong>Archived Livestreams:</strong><br>
+              Once a live stream ends and is saved to a channel as a permanent video post, it
+              becomes "prerecorded media." The recorded video's captions must be audited and corrected for accuracy if the
+              auto-generated live captions contained errors or&nbsp;gaps.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Audio-Only Content</strong>
+          (<a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 SC 1.2.1</a>):<br>
+          Any audio-only media (such as podcasts or recorded voice interviews) must include a full text transcript published in the caption, post body, or linked landing page.
+        </li>
+        <li>
+          <strong>Visual Context & Audio Descriptions:</strong><br>
+          Ensure your video's spoken narrative explains key visual details (e.g., reading aloud text appearing on screen or describing physical demonstrations) so visually impaired users do not miss critical context.
+        </li>
+      </ul>
+      <h3 class="typography__h3">Copy, Formatting, and Hashtags</h3>
+      <p>
+        Text content must remain readable by screen readers and text-to-speech engine parsers.
+      </p>
+      <ul>
+        <li>
+          <strong>CamelCase for Hashtags:</strong><br>
+          Always capitalize the first letter of each word in a hashtag (e.g., #KankakeeCommunityCollege,
+          #FinancialAidDeadline). This allows screen readers to synthesize individual words rather than pronouncing the hashtag as
+          an unreadable string of letters.
+        </li>
+        <li>
+          <strong>Avoid Custom Fancy Unicode Fonts:</strong><br>
+          Do not use third-party font generators (e.g., converting text into mathematical bold
+          or script Unicode characters like 𝓯𝓪𝓷𝓬𝔂 𝓽𝓮𝓯𝓽). Screen readers read these characters as obscure Unicode
+          mathematical symbols or skip them entirely.
+        </li>
+        <li>
+          <strong>Limit Emojis & Place Them at the End:</strong><br>
+          Emojis are read aloud by screen readers using their underlying text descriptions
+          (e.g., 👏 is read as "Clapping Hands"). Never substitute words with emojis, do not repeat more than two emojis in a row,
+          and place emojis at the end of captions rather than mid-sentence.
+        </li>
+        <li>
+          <strong>Plain Language & Formatting:</strong><br>
+          Write in clear, concise language. Break up large blocks of text with line returns.
+        </li>
+      </ul>
+      <h3 class="typography__h3">Hyperlinks & Destinations</h3>
+      <ul>
+        <li>
+          <strong>Descriptive Call to Action:</strong><br>
+          Avoid vague link text like "Click Here" or bare short-links without context. Ensure the post
+          copy clearly states the destination (e.g., "View the academic calendar at kcc.edu/calendar").
+        </li>
+        <li>
+          <strong>Accessible Landing Pages:</strong><br>
+          Never link a social media post to an inaccessible destination. Any linked web page or PDF
+          document must also fully comply with WCAG 2.1 AA standards.
+        </li>
+      </ul>
+      <br>
+      <hr>
+      <br>
+      <h2 id="platform-specific" class="typography__h2">Platform-Specific Implementation</h2>
+      <h3 class="typography__h3">Meta Platforms (Facebook & Instagram)</h3>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Facebook Guidance</th>
+              <th>Instagram Guidance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Alt Text</th>
+              <td>
+                Automatically generated alt text is insufficient. Edit the alt text prior to posting via
+                <em>Edit Photo &gt; Alt Text</em>, or update existing posts via the ... options menu.
+              </td>
+              <td>
+                Access alt text during post creation under
+                <strong>Advanced Settings &gt; Write Alt Text</strong>. For existing posts, tap <em>Edit &gt; Edit Alt Text</em>.
+              </td>
+            </tr>
+            <tr>
+              <th>Stories & Reels</th>
+              <td>
+                Add closed captions using the native Captions sticker. Review the generated text for accuracy before
+                publishing. Ensure overlay text doesn't overlap native UI elements.
+              </td>
+              <td>
+                Use the native Captions sticker for Reels/Stories.
+                Edit incorrect words directly in the sticker interface prior to posting.
+              </td>
+            </tr>
+            <tr>
+              <th>Link Placement</th>
+              <td>Hyperlinks in post copy are functional. Keep URLs clean and descriptive.</td>
+              <td>Post copy does not support active links. Direct users to the "link in bio".</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 class="typography__h3">X (formerly Twitter)</h3>
+        <ul>
+          <li>
+            <strong>Adding Alt Text:</strong><br>
+            Click Edit on an attached image, then select the ALT tab to enter a detailed description (up to 1,000
+            characters).
+          </li>
+          <li>
+            <strong>Character Constraints:</strong><br>
+            Due to character limits, if an image contains extensive text, put the essential summary in the
+            alt text field and host the full text on an accessible college web page linked in the tweet.
+          </li>
+          <li>
+            <strong>Video Captions:</strong><br>
+            Upload .srt caption files directly within the Media Studio publisher or enable and edit automatic
+            captions before publishing.
+          </li>
+        </ul>
+        <h3 class="typography__h3">YouTube</h3>
+        <ul>
+          <li>
+            <strong>Closed Captions (CC):</strong><br>
+            Do not rely solely on YouTube’s automatic speech-recognition captions. Go into
+            <strong>YouTube Studio &gt; Subtitles</strong>, select the video language, and manually edit the auto-generated
+            transcript for accuracy, capitalization, and punctuation.
+          </li>
+          <li>
+            <strong>Video Descriptions:</strong><br>
+            Include a comprehensive video description, relevant timestamps for navigation, and links to
+            accessible transcript files if the video contains visual-only content.
+          </li>
+          <li>
+            <strong>Title & Thumbnail:</strong><br>
+            Thumbnails containing text must have that text duplicated in the video title or the top two lines of
+            the video description.
+          </li>
+        </ul>
+        <h3 class="typography__h3">LinkedIn</h3>
+        <ul>
+          <li>
+            <strong>Image Alt Text:</strong><br>
+            Select <strong>Add alt text</strong> below the uploaded image preview before publishing (up to 4,000 characters).
+          </li>
+          <li>
+            <strong>Document/PDF Uploads:</strong><br>
+            When uploading multi-page slide decks or PDFs as carousel posts, ensure the source document is a
+            fully tagged, accessible PDF created to WCAG 2.1 AA standards.
+          </li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+        <h2 id="checklist" class="typography__h2">Pre-Publishing Checklist</h2>
+        <ul class="lists__checklist">
+          <li class="lists__checklist--completed"><strong>Images:</strong> Custom Alt Text added to all informative graphics; text in images duplicated in caption copy.</li>
+          <li class="lists__checklist--completed"><strong>Video/Audio:</strong> Accurate, synchronized captions verified (not unedited auto-captions).</li>
+          <li class="lists__checklist--completed"><strong>Hashtags:</strong> Formatted in #CamelCase.</li>
+          <li class="lists__checklist--completed"><strong>Text Styling:</strong> No third-party Unicode fancy fonts used.</li>
+          <li class="lists__checklist--completed"><strong>Emojis:</strong> Kept minimal (1–2 max) and placed at the end of sentences/posts.</li>
+          <li class="lists__checklist--completed"><strong>Links:</strong> Destination web pages and attached PDFs meet WCAG 2.1 Level AA compliance.</li>
+        </ul>
+
+      </div>
     </div>
   </div>
 </div>
